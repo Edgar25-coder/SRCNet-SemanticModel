@@ -1,0 +1,64 @@
+{
+  "@context": {
+    "@vocab": "http://schema.org/",
+    "Place": "http://schema.org/Place",
+    "Country": "http://schema.org/addressCountry",
+    "Locality": "http://schema.org/addressLocality",
+    "Adress": "http://schema.org/address",
+    "GeoCoordinates": "http://schema.org/GeoCoordinates",
+    "latitude": "http://schema.org/latitude",
+    "longitude": "http://schema.org/longitude",
+    "contactPoint": "http://schema.org/contactPoint",
+    "name": "http://schema.org/name",
+    "telephone": "http://schema.org/telephone",
+    "email": "http://schema.org/email",
+    "faxNumber": "https://schema.org/faxNumber",
+    "URL": "https://schema.org/url",
+    "person": "http://schema.org/Person",
+    "Organization": "http://schema.org/Organization"
+  },
+  "Place": {
+    "@type": "place",
+    "@id": "http://schema.org/Place/granada",
+    "name": "Granada",
+    "is_in": {
+      "@type": "Country",
+      "@id": "http://schema.org/addressCountry/spain",
+      "name": "Spain",
+      "region": "Andalucia",
+      "Locality": "Granada",
+      "addressLocality": {
+        "type": "@postalAddress",
+        "address": "xxxxxxxxxxxxxxxx"
+      }
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "@id": "http://schema.org/GeoCoordinates",
+      "latitude": 10.0,
+      "longitude": -1.0
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "@id": "http://schema.org/contactPoint/amigaGroup",
+      "name": "AMIGA group",
+      "telephone": "+34 958121311",
+      "email": "infospsrc@iaa.csic.es",
+      "adress": "Gta de la Astronom\u00eda, s/n, Genil, 18008 ",
+      "faxNumber": "+34 958814530",
+      "URL": "iaa.csic.es"
+    }
+  },
+  "Person": {
+    "@type": "Person",
+    "@id": "http://schema.org/Person/manu_parra",
+    "name": "Manu Parra",
+    "telephone": "XXXXXXXXXXXXX",
+    "email": "manuparra@iaa.csic.es",
+    "works_in": {
+      "@type": "Organization",
+      "@id": "http://example.com/organization/iaa_csic",
+      "name": "iaa_csic"
+    }
+  }
+}
