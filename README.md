@@ -6,7 +6,7 @@ This repository serves to store all information from my research on the definiti
 ## How to collaborate:
 
 - One: Clone this repository.
-- Two: Add your features and collaborate with us on this research project.
+- Two: Add your features and collaborate on this research project.
 
 ## How to cite this repository
 
