@@ -21,7 +21,7 @@
     "@type": "place",
     "@id": "http://schema.org/Place/granada",
     "name": "Granada",
-    "is_in": {
+    "country": {
       "@type": "Country",
       "@id": "http://schema.org/addressCountry/spain",
       "name": "Spain",
@@ -35,13 +35,13 @@
     "geo": {
       "@type": "GeoCoordinates",
       "@id": "http://schema.org/GeoCoordinates",
-      "latitude": 10.0,
-      "longitude": -1.0
+      "latitude": "xxxxxxxx",
+      "longitude": "xxxxxxxx"
     },
     "contactPoint": {
       "@type": "ContactPoint",
       "@id": "http://schema.org/contactPoint/amigaGroup",
-      "name": "AMIGA group",
+      "name": "spsrc group",
       "telephone": "+34 958121311",
       "email": "infospsrc@iaa.csic.es",
       "adress": "Gta de la Astronom\u00eda, s/n, Genil, 18008 ",
