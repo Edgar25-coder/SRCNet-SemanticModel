@@ -1,4 +1,4 @@
-# srcnode_definition
+# srcnode_description
 
 ## Aim of this repository
 This repository serves to store all information from my research on the definition and description of srcnode.
