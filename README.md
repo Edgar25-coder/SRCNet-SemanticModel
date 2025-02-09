@@ -1,4 +1,4 @@
-# srcnode_description
+## srcnode_description
 
 ## Aim of this repository
 This repository serves to store all information from my research on the definition and description of srcnode.
@@ -12,7 +12,7 @@ This repository serves to store all information from my research on the definiti
 
 	@misc{Edgar2024,
   		author = {Edgar},
-  		title = {srcnode_definition},
+  		title = {srcnode_description},
   		year = {2024},
   		publisher = {GitHub},
   		journal = {GitHub repository},
