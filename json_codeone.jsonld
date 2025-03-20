@@ -6,6 +6,7 @@
     "Place": "https://schema.org/Place",
     "Country": "https://schema.org/Country",
     "Region": "https://schema.org/Region",
+    "postalAddress":"https://schema.org/postalAddress",
     "Geo": "https://schema.org/Geo",
     "ContactPoint": "https://schema.org/ContactPoint",
     "Person": "https://schema.org/Person",
@@ -14,77 +15,92 @@
     "CPU": "http://example.org/CPU",
     "Disk": "http://example.org/Disk",
     "Memory": "http://example.org/Memory",
+    "Storage":"http://example.org/Storage",
+    "Control":"http://example.org/Control",
     "qudt": "http://qudt.org/schema/qudt/",
     "Architecture": "http://example.org/Architecture",
     "Network": "http://example.org/Network",
-    "Service": "http://example.org/Service"
+    "Services": "http://example.org/Services"
   },
   "@graph": [
     {
-      "@id": "http://example.org/spSRC1",
-      "@type": "http://example.org/computing",
-      "name": "Nodes",
+      "@id": "http://example.org/espSRC",
+      "@type": "http://example.org/SRCNodes",
+      "name": "SRCNodes",
       "isComposedBy": {
         "@type": "SRCNode",
-        "name": "spSRC1",
-        "locatedIn": {
+        "name": "espSRC",
+        "location": {
           "@type": "Place",
-          "name": "Granada",
+          "name": "IAA-CSIC",
           "isInAcountry": {
             "@type": "Country",
             "name": "Spain",
+            "membership":"EU",
             "Locality": "Granada",
             "addressLocality": {
-              "type": "@postalAddress",
-              "address": "xxxxxxxxxxxxxxxx"
+              "type": "postalAddress",
+              "address": 18008
             }
           },
           "isInAregion": {
             "@type": "region",
-            "name": "andalucia",
+            "name": "Andalucia",
             "postalCode": "",
             "addressRegion": ""
           },
           "has_geo": {
             "@type": "GeoCoordinates",
-            "latitude": 10.0,
-            "longitude": -1.0
+            "latitude": 37.16,
+            "longitude": -3.59
           },
           "has_contacts": {
             "@type": "ContactPoint",
             "name": "Spsrc Team",
             "telephone": "+34 958121311",
-            "email": "infospsrc@iaa.csic.es",
+            "email": "infospsrc@iaa.es",
             "adress": "Gta de la Astronom\u00eda, s/n, Genil, 18008 ",
             "faxNumber": "+34 958814530",
-            "URL": "iaa.csic.es"
+            "URL": "https://iaa.es"
           }
         },
         "has_PI": {
           "@type": "Person",
           "name": "Manu Parra",
-          "email": "manu@example.com",
-          "telephone": "xxxxxxxxxxx",
+          "email": "manu@example.es",
+          "telephone": "+34 668500600",
           "worksIn": {
             "@type": "Organization",
-            "name": "iaa_csic"
+            "name": "IAA-CSIC"
           }
         },
-        "isComposedBy": {
+        "hasComputing": {
           "@type": "Computing",
           "hasCPU": {
             "@type": "CPU",
-            "cores": 8,
+            "cores": 240,
+            "pflops":{
+              "@type":"QuantityValue",
+              "unit":"Petaflops",
+              "value":0.034
+            },
             "clock": {
-              "@type": "quantityValue",
+              "@type": "QuantityValue",
               "unit": "GHz",
               "value": 3.5
             }
           },
+
+          "hasGPU":{
+            "@type":"GPU",
+            "numberOfGPUs":1,
+            "type":"not defined"
+          },
+
           "hasMemory": {
             "@type": "QuantityValue",
             "unit": "http://qudt.org/vocab/unit/Gigabyte",
-            "value": 32
+            "value": 1392
           },
           "hasDisk": {
             "@type": "Disk",
@@ -95,76 +111,970 @@
             },
             "type": "SSD"
           }
-        }
-      }
+        },
+
+        "hasStorage":{
+          "@type":"Storage",
+            "size":{
+              "@type":"QuantityValue",
+              "unit": "http://qudt.org/vocab/unit/Terabyte",
+              "value": 750
+            }
+          },
+        
+          "hasControl":{
+              "@type":"Control",
+              "hasCPU":{
+                "@type":"CPU",
+                "cores":120
+              },
+              "hasMemory": {
+                "@type": "QuantityValue",
+                "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                "value": 368
+              }
+            },
+            
+          "hasNetwork":{
+            "@type":"Network",
+            "hasInternalbandawidth":{
+              "@type": "QuantityValue",
+              "unit": "http://qudt.org/vocab/unit/Gbps",
+              "value": 100
+            },
+            "hasExternalBandawidth":{
+                "@type":"QuantityValue",
+                "unit":"http://qudt.org/vocab/unit/Gbps",
+                "value":10
+              }
+            }
+          }
     },
     {
-      "@id": "http://example.org/spSRC2",
-      "@type": "SRCNode",
-      "name": "spSRC2",
-      "locatedIn": {
-        "@type": "Place",
-        "name": "Madrid",
-        "isInAcountry": {
-          "@type": "Country",
-          "name": "Spain",
-          "Locality": "Madrid Centro",
-          "addressLocality": {
-            "type": "@postalAddress",
-            "address": "xxxxxxxxxxxxxxxx"
-          }
-        },
-        "has_geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 40.4168,
-          "longitude": -3.7038
-        },
-        "has_contacts": {
-          "@type": "ContactPoint",
-          "name": "Support Team",
-          "telephone": "+34 912345678",
-          "email": "supportsrc@example.com",
-          "adress": "xxxxxxxxxxx",
-          "faxNumber": "+34 958172013",
-          "URL": "iaa.csic.es"
-        }
-      },
-      "has_PI": {
-        "@type": "Person",
-        "name": "Juli\u00e1n Garrido",
-        "email": "jgarrido@example.com",
-        "telephone": "xxxxxxxxxxx",
-        "worksIn": {
-          "@type": "Organization",
-          "name": "iaa_csic"
-        }
-      },
+      "@id": "http://example.org/swedishSRC",
+      "@type": "http://example.org/SRCNodes",
+      "name": "SRCNodes",
       "isComposedBy": {
-        "@type": "Computing",
-        "hasCPU": {
-          "@type": "CPU",
-          "cores": 16,
-          "clock": {
-            "@type": "quantityValue",
-            "unit": "GHz",
-            "value": 3.0
+        "@type": "SRCNode",
+        "name": "swedishSRC",
+        "location": {
+          "@type": "Place",
+          "name": "Gothenburg",
+          "isInAcountry": {
+            "@type": "Country",
+            "name": "Sweden",
+            "membership":"EU",
+            "Locality": "Gothenburg",
+            "addressLocality": {
+              "type": "postalAddress",
+              "address": "yyyyyyyyyyy"
+            }
+          },
+          "isInAregion": {
+            "@type": "region",
+            "name": "not defined",
+            "postalCode": "",
+            "addressRegion": ""
+          },
+          "has_geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 57.71,
+            "longitude": 11.97
+          },
+          "has_contacts": {
+            "@type": "ContactPoint",
+            "name": "swedishSRC team",
+            "telephone": 333333,
+            "email": "infospsrc@swedish.src.sw",
+            "adress": "Gta de la Astronom\u00eda, s/n, Genil, 18008 ",
+            "faxNumber": 958814530,
+            "URL": "not defined"
           }
         },
-        "hasMemory": {
-          "@type": "QuantityValue",
-          "unit": "http://qudt.org/vocab/unit/Gigabyte",
-          "value": 64
+        "has_PI": {
+          "@type": "Person",
+          "name": "Julián Garrido",
+          "email": "jgarrido@example.es",
+          "telephone": "+46 701234567",
+          "worksIn": {
+            "@type": "Organization",
+            "name": "University of Sweden"
+          }
         },
-        "hasDisk": {
-          "@type": "Disk",
-          "size": {
-            "@type": "QuantityValue",
-            "unit": "http://qudt.org/vocab/unit/Terabyte",
-            "value": 2
+        "hasComputing": {
+          "@type": "Computing",
+          "hasCPU": {
+            "@type": "CPU",
+            "cores": 64,
+            "pflops":{
+              "@type":"QuantityValue",
+              "unit":"Petaflops",
+              "value":0.039
+            },
+            "clock": {
+              "@type": "QuantityValue",
+              "unit": "GHz",
+              "value": 2.60
+            }
           },
-          "type": "HDD"
+          "hasMemory": {
+            "@type": "QuantityValue",
+            "unit": "http://qudt.org/vocab/unit/Gigabyte",
+            "value": 512
+          },
+          "hasDisk": {
+            "@type": "Disk",
+            "size": {
+              "@type": "QuantityValue",
+              "unit": "http://qudt.org/vocab/unit/Terabyte",
+              "value": 960
+            },
+            "type": "SSD"
+          }
+        },
+
+        "hasStorage":{                   
+          "@type":"Storage",
+            "size":{
+              "@type":"QuantityValue",
+              "unit": "http://qudt.org/vocab/unit/Terabyte",
+              "value": 50
+            }
+          },
+        
+          "hasControl":{
+              "@type":"Control",
+              "hasCPU":{
+                "@type":"CPU",
+                "cores":40,
+                "clock": {
+                  "@type": "QuantityValue",
+                  "unit": "GHz",
+                  "value": 2.30
+                }
+              },
+              "hasMemory": {
+                "@type": "QuantityValue",
+                "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                "value": 256
+              },
+
+              "hasDisk": {
+                "@type": "Disk",
+                "size": {
+                  "@type": "QuantityValue",
+                  "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                  "value": 1920
+                },
+                "type": "SATA SSD"
+              },
+
+
+              "hasNetwork":{
+                "@type":"NetworkControl",
+                "hasInternalbandawidth":{
+                  "@type": "QuantityValue",
+                  "unit": "http://qudt.org/vocab/unit/Gbps",
+                  "value": 6
+              }
+            }
+
+            },
+          
+            "hasNetwork":{
+              "@type":"Network",
+              "hasInternalbandawidth":{
+                "@type": "QuantityValue",
+                "unit": "http://qudt.org/vocab/unit/Gbps",
+                "value": 100
+            },
+              "hasExternalBandawidth":{
+                "@type":"QuantityValue",
+                "unit":"http://qudt.org/vocab/unit/Gbps",
+                "value":5
+              }
+            }
+          }
+        },
+        {
+          "@id": "http://example.org/canadianSRC",
+          "@type": "http://example.org/SRCNodes",
+          "name": "SRCNodes",
+          "isComposedBy": {
+            "@type": "SRCNode",
+            "name": "canadianSRC",
+            "location": {
+              "@type": "Place",
+              "name": "CADC",
+              "isInAcountry": {
+                "@type": "Country",
+                "name": "Canada",
+                "membership":"North America",
+                "Locality": "Victoria",
+                "addressLocality": {
+                  "type": "postalAddress",
+                  "address": "LLLLLLLLLLLLLL"
+                }
+              },
+              "isInAregion": {
+                "@type": "region",
+                "name": "not defined",
+                "postalCode": "",
+                "addressRegion": ""
+              },
+              "has_geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 48.43,
+                "longitude": -123.36
+              },
+              "has_contacts": {
+                "@type": "ContactPoint",
+                "name": "canadianSRC team",
+                "telephone": 64646474747,
+                "email": "infosrc@canadian.src.ca",
+                "adress": "Gta de la Astronom\u00eda, s/n, Genil, 18008 ",
+                "faxNumber": "658814530",
+                "URL": "not defined"
+              }
+            },
+            "has_PI": {
+              "@type": "Person",
+              "name": "Susana Sánchez",
+              "email": "sanchezs@canadiansrc.ca",
+              "telephone": "+1 416 123 4567",
+              "worksIn": {
+                "@type": "Organization",
+                "name": "CADC"
+              }
+            },
+            "hasComputing": {
+              "@type": "Computing",
+              "hasCPU": {
+                "@type": "CPU",
+                "cores": 3840,
+                "pflops":{
+                  "@type":"QuantityValue",
+                  "unit":"Petaflops",
+                  "value":0.042
+            },
+                "clock": {
+                  "@type": "QuantityValue",
+                  "unit": "GHz",
+                  "value": 2.60
+                }
+              },
+              
+              "hasGPU":{
+                "@type":"GPU",
+                "numberOfGPUs":10,
+                "type":"H200"
+              },
+
+              "hasMemory": {
+                "@type": "QuantityValue",
+                "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                "value": 20480
+              },
+              "hasDisk": {
+                "@type": "Disk",
+                "size": {
+                  "@type": "QuantityValue",
+                  "unit": "http://qudt.org/vocab/unit/Terabyte",
+                  "value": 1024
+                },
+                "type": "HDD"
+              }
+            },
+    
+            "hasStorage":{
+              "@type":"Storage",
+                "size":{
+                  "@type":"QuantityValue",
+                  "unit": "http://qudt.org/vocab/unit/Terabyte",
+                  "value": 7618.56
+                }
+              },
+            
+              "hasControl":{
+                  "@type":"Control",
+                  "hasCPU":{
+                    "@type":"CPU",
+                    "cores":40,
+                    "clock": {
+                      "@type": "QuantityValue",
+                      "unit": "GHz",
+                      "value": 2.30
+                    }
+                  },
+                  "hasMemory": {
+                    "@type": "QuantityValue",
+                    "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                    "value": 250
+                  },
+    
+                  "hasDisk": {
+                    "@type": "Disk",
+                    "size": {
+                      "@type": "QuantityValue",
+                      "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                      "value": 1920
+                    },
+                    "type": "SATA SSD"
+                  },
+    
+    
+                  "hasNetwork":{
+                    "@type":"NetworkControl",
+                    "hasInternalbandawidth":{
+                      "@type": "QuantityValue",
+                      "unit": "http://qudt.org/vocab/unit/Gbps",
+                      "value": 4
+                  }
+                }
+    
+    
+                },
+              
+                "hasNetwork":{
+                  "@type":"Network",
+                  "hasInternalbandawidth":{
+                    "@type": "QuantityValue",
+                    "unit": "http://qudt.org/vocab/unit/Gbps",
+                    "value": 400
+                  },
+                  "hasExternalBandawidth":{
+                    "@type":"QuantityValue",
+                    "unit":"http://qudt.org/vocab/unit/Gbps",
+                    "value":400
+                  }
+                }
+              }
+            },
+            
+            {
+              "@id": "http://example.org/itSRC",
+              "@type": "http://example.org/SRCNodes",
+              "name": "SRCNodes",
+              "isComposedBy": {
+                "@type": "SRCNode",
+                "name": "itSRC",
+                "location": {
+                  "@type": "Place",
+                  "name": "CINECA ",
+                  "isInAcountry": {
+                    "@type": "Country",
+                    "name": "Italy",
+                    "membership":"EU",
+                    "Locality": "Bologna",
+                    "addressLocality": {
+                      "type": "postalAddress",
+                      "address": "not defined"
+                    }
+                  },
+                  "isInAregion": {
+                    "@type": "region",
+                    "name": "not defined",
+                    "postalCode": "",
+                    "addressRegion": ""
+                  },
+                  "has_geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 44.49,
+                    "longitude": 11.26
+                  },
+                  "has_contacts": {
+                    "@type": "ContactPoint",
+                    "name": "itSRC Team",
+                    "telephone": "958121311",
+                    "email": "info@itsrc.it",
+                    "adress": "Gta de la Astronom\u00eda, s/n, Genil, 18008 ",
+                    "faxNumber": "61958814530",
+                    "URL": "not defined"
+                  }
+                },
+                "has_PI": {
+                  "@type": "Person",
+                  "name": "L. Verdes-Montenegro",
+                  "email": "lvm@example.it",
+                  "telephone": "+39 0612345678",
+                  "worksIn": {
+                    "@type": "Organization",
+                    "name": "CINECA"
+                  }
+                },
+                "hasComputing": {
+                  "@type": "Computing",
+                  "hasCPU": {
+                    "@type": "CPU",
+                    "cores": 210,
+                    "pflops":{
+                      "@type":"QuantityValue",
+                      "unit":"Petaflops",
+                      "value":0.0005 
+                    },
+                    "clock": {
+                      "@type": "QuantityValue",
+                      "unit": "GHz",
+                      "value": 3.5
+                    }
+                  },
+                  "hasMemory": {
+                    "@type": "QuantityValue",
+                    "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                    "value": 800   
+                  },
+                  "hasDisk": {
+                    "@type": "Disk",
+                    "size": {
+                      "@type": "QuantityValue",
+                      "unit": "http://qudt.org/vocab/unit/Terabyte",
+                      "value": 2
+                    },
+                    "type": "not defined"
+                  }
+                },
+        
+                "hasStorage":{
+                  "@type":"Storage",
+                    "size":{
+                      "@type":"QuantityValue",
+                      "unit": "http://qudt.org/vocab/unit/Terabyte",
+                      "value": 27
+                    }
+                  },
+                
+                  "hasControl":{
+                      "@type":"Control",
+                      "hasCPU":{
+                        "@type":"CPU",
+                        "cores":120
+                      },
+                      "hasMemory": {
+                        "@type": "QuantityValue",
+                        "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                        "value": 0
+                      }
+                    },
+                  
+                    "hasNetwork":{
+                      "@type":"Network",
+                      "hasInternalbandawidth":{
+                        "@type": "QuantityValue",
+                        "unit": "http://qudt.org/vocab/unit/Gbps",
+                        "value": 1
+                      },
+                      "hasExternalBandawidth":{
+                        "@type":"QuantityValue",
+                        "unit":"http://qudt.org/vocab/unit/Gbps",
+                        "value":0
+                      }
+                    }
+                  }
+                },
+
+                {
+                  "@id": "http://example.org/swissSRC",
+                  "@type": "http://example.org/SRCNodes",
+                  "name": "SRCNodes",
+                  "isComposedBy": {
+                    "@type": "SRCNode",
+                    "name": "swissSRC",
+                    "location": {
+                      "@type": "Place",
+                      "name": "Lungano",
+                      "isInAcountry": {
+                        "@type": "Country",
+                        "name": "Switzerland",
+                        "membership":"Europe",
+                        "Locality": "Lungano",
+                        "addressLocality": {
+                          "type": "postalAddress",
+                          "address": 18008
+                        }
+                      },
+                      "isInAregion": {
+                        "@type": "region",
+                        "name": "not defined",
+                        "postalCode": "",
+                        "addressRegion": ""
+                      },
+                      "has_geo": {
+                        "@type": "GeoCoordinates",
+                        "latitude": 46.01,
+                        "longitude": 9.06
+                      },
+                      "has_contacts": {
+                        "@type": "ContactPoint",
+                        "name": "swissSRC team",
+                        "telephone": "+34 958121311",
+                        "email": "infoswissrc@src.sw",
+                        "adress": "Gta de la Astronom\u00eda, s/n, Genil, 18008 ",
+                        "faxNumber": "+34 958814530",
+                        "URL": "https://swissrc.sw"
+                      }
+                    },
+                    "has_PI": {
+                      "@type": "Person",
+                      "name": "Javier Moldón",
+                      "email": "jmoldon@example.sw",
+                      "telephone": "+41 728823799",
+                      "worksIn": {
+                        "@type": "Organization",
+                        "name": "University of Zurich"
+                      }
+                    },
+                    "hasComputing": {
+                      "@type": "Computing",
+                      "hasCPU": {
+                        "@type": "CPU",
+                        "cores": 44,
+                        "pflops":{
+                          "@type":"QuantityValue",
+                          "unit":"Petaflops",
+                          "value":0.014
+                        },
+                        "clock": {
+                          "@type": "QuantityValue",
+                          "unit": "GHz",
+                          "value": 3.5
+                        }
+                      },
+                      "hasMemory": {
+                        "@type": "QuantityValue",
+                        "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                        "value": 88
+                      },
+                      "hasDisk": {
+                        "@type": "Disk",
+                        "size": {
+                          "@type": "QuantityValue",
+                          "unit": "http://qudt.org/vocab/unit/Terabyte",
+                          "value": 0
+                        },
+                        "type": "not defined"
+                      }
+                    },
+            
+                    "hasStorage":{
+                      "@type":"Storage",
+                        "size":{
+                          "@type":"QuantityValue",
+                          "unit": "http://qudt.org/vocab/unit/Terabyte",
+                          "value": 50
+                        }
+                      },
+                    
+                      "hasControl":{
+                          "@type":"Control",
+                          "hasCPU":{
+                            "@type":"CPU",
+                            "cores":0
+                          },
+                          "hasMemory": {
+                            "@type": "QuantityValue",
+                            "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                            "value": 0
+                          }
+                        },
+                      
+                        "hasNetwork":{
+                          "@type":"Network",
+                          "hasInternalbandawidth":{
+                            "@type": "QuantityValue",
+                            "unit": "http://qudt.org/vocab/unit/Gbps",
+                            "value": 0
+                          },
+                          "hasExternalBandawidth":{
+                            "@type":"QuantityValue",
+                            "unit":"http://qudt.org/vocab/unit/Gbps",
+                            "value":0
+                          }
+                        }
+                      }
+                },
+
+                {
+                  "@id": "http://example.org/chinaSRC",
+                  "@type": "http://example.org/SRCNodes",
+                  "name": "SRCNodes",
+                  "isComposedBy": {
+                    "@type": "SRCNode",
+                    "name": "chinaSRC",
+                    "location": {
+                      "@type": "Place",
+                      "name": "Shangai",
+                      "isInAcountry": {
+                        "@type": "Country",
+                        "name": "China",
+                        "membership":"Asia",
+                        "Locality": "Shangai",
+                        "addressLocality": {
+                          "type": "postalAddress",
+                          "address": 18008
+                        }
+                      },
+                      "isInAregion": {
+                        "@type": "region",
+                        "name": "not defined",
+                        "postalCode": "",
+                        "addressRegion": ""
+                      },
+                      "has_geo": {
+                        "@type": "GeoCoordinates",
+                        "latitude": 31.24,
+                        "longitude": 121.47
+                      },
+                      "has_contacts": {
+                        "@type": "ContactPoint",
+                        "name": "ChinaSRC Team",
+                        "telephone": "+34 958121311",
+                        "email": "infospsrc@iaa.es",
+                        "adress": "Gta de la Astronom\u00eda, s/n, Genil, 18008 ",
+                        "faxNumber": "+34 958814530",
+                        "URL": "https://iaa.es"
+                      }
+                    },
+                    "has_PI": {
+                      "@type": "Person",
+                      "name": "Laura Derriba",
+                      "email": "lderriba@example.ch",
+                      "telephone": "+86 13812345678",
+                      "worksIn": {
+                        "@type": "Organization",
+                        "name": "University of Shangai"
+                      }
+                    },
+                    "hasComputing": {
+                      "@type": "Computing",
+                      "hasCPU": {
+                        "@type": "CPU",
+                        "cores": 0,
+                        "pflops":{
+                          "@type":"QuantityValue",
+                          "unit":"Petaflops",
+                          "value":0.0125
+                        },
+                        "clock": {
+                          "@type": "QuantityValue",
+                          "unit": "GHz",
+                          "value": 3.5
+                        }
+                      },
+            
+                      "hasGPU":{
+                        "@type":"GPU",
+                        "numberOfGPUs":0,
+                        "type":"not defined"
+                      },
+            
+                      "hasMemory": {
+                        "@type": "QuantityValue",
+                        "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                        "value": 0
+                      },
+                      "hasDisk": {
+                        "@type": "Disk",
+                        "size": {
+                          "@type": "QuantityValue",
+                          "unit": "http://qudt.org/vocab/unit/Terabyte",
+                          "value": 0
+                        },
+                        "type": "not defined"
+                      }
+                    },
+            
+                    "hasStorage":{
+                      "@type":"Storage",
+                        "size":{
+                          "@type":"QuantityValue",
+                          "unit": "http://qudt.org/vocab/unit/Terabyte",
+                          "value": 1024
+                        }
+                      },
+                    
+                      "hasControl":{
+                          "@type":"Control",
+                          "hasCPU":{
+                            "@type":"CPU",
+                            "cores":0
+                          },
+                          "hasMemory": {
+                            "@type": "QuantityValue",
+                            "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                            "value": 0
+                          }
+                        },
+                        
+                      "hasNetwork":{
+                        "@type":"Network",
+                        "hasInternalbandawidth":{
+                          "@type": "QuantityValue",
+                          "unit": "http://qudt.org/vocab/unit/Gbps",
+                          "value": 2
+                        },
+                        "hasExternalBandawidth":{
+                            "@type":"QuantityValue",
+                            "unit":"http://qudt.org/vocab/unit/Gbps",
+                            "value":0
+                          }
+                        }
+                      }
+                },
+
+                {
+                  "@id": "http://example.org/japanSRC",
+                  "@type": "http://example.org/SRCNodes",
+                  "name": "SRCNodes",
+                  "isComposedBy": {
+                    "@type": "SRCNode",
+                    "name": "japanSRC",
+                    "location": {
+                      "@type": "Place",
+                      "name": "Tokyo",
+                      "isInAcountry": {
+                        "@type": "Country",
+                        "name": "Japan",
+                        "membership":"Asia",
+                        "Locality": "Tokyo",
+                        "addressLocality": {
+                          "type": "postalAddress",
+                          "address": 18008
+                        }
+                      },
+                      "isInAregion": {
+                        "@type": "region",
+                        "name": "not defined",
+                        "postalCode": "",
+                        "addressRegion": ""
+                      },
+                      "has_geo": {
+                        "@type": "GeoCoordinates",
+                        "latitude": 36.66,
+                        "longitude": 138.19
+                      },
+                      "has_contacts": {
+                        "@type": "ContactPoint",
+                        "name": "japanSRC Team",
+                        "telephone": "+34 958121311",
+                        "email": "info@jsrc.es",
+                        "adress": "Gta de la Astronom\u00eda, s/n, Genil, 18008 ",
+                        "faxNumber": "+34 958814530",
+                        "URL": "https://iaa.es"
+                      }
+                    },
+                    "has_PI": {
+                      "@type": "Person",
+                      "name": "Maria Ángeles",
+                      "email": "ma@example.ja",
+                      "telephone": "+81 90-1234-5678",
+                      "worksIn": {
+                        "@type": "Organization",
+                        "name": "University of Tokyo"
+                      }
+                    },
+                    "hasComputing": {
+                      "@type": "Computing",
+                      "hasCPU": {
+                        "@type": "CPU",
+                        "cores": 0,
+                        "pflops":{
+                          "@type":"QuantityValue",
+                          "unit":"Petaflops",
+                          "value":0.014
+                        },
+                        "clock": {
+                          "@type": "QuantityValue",
+                          "unit": "GHz",
+                          "value": 3.5
+                        }
+                      },
+            
+                      "hasGPU":{
+                        "@type":"GPU",
+                        "numberOfGPUs":0,
+                        "type":"not defined"
+                      },
+            
+                      "hasMemory": {
+                        "@type": "QuantityValue",
+                        "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                        "value": 0
+                      },
+                      "hasDisk": {
+                        "@type": "Disk",
+                        "size": {
+                          "@type": "QuantityValue",
+                          "unit": "http://qudt.org/vocab/unit/Terabyte",
+                          "value": 0
+                        },
+                        "type": "HDD"
+                      }
+                    },
+            
+                    "hasStorage":{
+                      "@type":"Storage",
+                        "size":{
+                          "@type":"QuantityValue",
+                          "unit": "http://qudt.org/vocab/unit/Terabyte",
+                          "value": 600
+                        }
+                      },
+                    
+                      "hasControl":{
+                          "@type":"Control",
+                          "hasCPU":{
+                            "@type":"CPU",
+                            "cores":0
+                          },
+                          "hasMemory": {
+                            "@type": "QuantityValue",
+                            "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                            "value": 0
+                          }
+                        },
+                        
+                      "hasNetwork":{
+                        "@type":"Network",
+                        "hasInternalbandawidth":{
+                          "@type": "QuantityValue",
+                          "unit": "http://qudt.org/vocab/unit/Gbps",
+                          "value": 10
+                        },
+                        "hasExternalBandawidth":{
+                            "@type":"QuantityValue",
+                            "unit":"http://qudt.org/vocab/unit/Gbps",
+                            "value":0
+                          }
+                        }
+                      }
+                },
+                {
+                  "@id": "http://example.org/ukSRC",
+                  "@type": "http://example.org/SRCNodes",
+                  "name": "SRCNodes",
+                  "isComposedBy": {
+                    "@type": "SRCNode",
+                    "name": "ukSRC",
+                    "location": {
+                      "@type": "Place",
+                      "name": "Jodrell Bank Observatory",
+                      "isInAcountry": {
+                        "@type": "Country",
+                        "name": "United Kingdom",
+                        "membership":"EU",
+                        "Locality": "Jodrell Bank",
+                        "addressLocality": {
+                          "type": "postalAddress",
+                          "address": 18008
+                        }
+                      },
+                      "isInAregion": {
+                        "@type": "region",
+                        "name": "not defined",
+                        "postalCode": "",
+                        "addressRegion": ""
+                      },
+                      "has_geo": {
+                        "@type": "GeoCoordinates",
+                        "latitude": 53.24,
+                        "longitude": -2.30
+                      },
+                      "has_contacts": {
+                        "@type": "ContactPoint",
+                        "name": "ukSRC Team",
+                        "telephone": "+34 958121311",
+                        "email": "info@juksrc.uk",
+                        "adress": "Gta de la Astronom\u00eda, s/n, Genil, 18008 ",
+                        "faxNumber": "+34 958814530",
+                        "URL": "https://jodrellbanko.uk"
+                      }
+                    },
+                    "has_PI": {
+                      "@type": "Person",
+                      "name": "Kelley Hess",
+                      "email": "khess@example.uk",
+                      "telephone": "+44 20 7946 0958",
+                      "worksIn": {
+                        "@type": "Organization",
+                        "name": "Jodrell Bank Observatory"
+                      }
+                    },
+                    "hasComputing": {
+                      "@type": "Computing",
+                      "hasCPU": {
+                        "@type": "CPU",
+                        "cores": 0,
+                        "pflops":{
+                          "@type":"QuantityValue",
+                          "unit":"Petaflops",
+                          "value":0
+                        },
+                        "clock": {
+                          "@type": "QuantityValue",
+                          "unit": "GHz",
+                          "value": 3.5
+                        }
+                      },
+            
+                      "hasGPU":{
+                        "@type":"GPU",
+                        "numberOfGPUs":0,
+                        "type":"not defined"
+                      },
+            
+                      "hasMemory": {
+                        "@type": "QuantityValue",
+                        "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                        "value": 0
+                      },
+                      "hasDisk": {
+                        "@type": "Disk",
+                        "size": {
+                          "@type": "QuantityValue",
+                          "unit": "http://qudt.org/vocab/unit/Terabyte",
+                          "value": 0
+                        },
+                        "type": "not defined"
+                      }
+                    },
+            
+                    "hasStorage":{
+                      "@type":"Storage",
+                        "size":{
+                          "@type":"QuantityValue",
+                          "unit": "http://qudt.org/vocab/unit/Terabyte",
+                          "value": 0
+                        }
+                      },
+                    
+                      "hasControl":{
+                          "@type":"Control",
+                          "hasCPU":{
+                            "@type":"CPU",
+                            "cores":0
+                          },
+                          "hasMemory": {
+                            "@type": "QuantityValue",
+                            "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                            "value": 0
+                          }
+                        },
+                        
+                      "hasNetwork":{
+                        "@type":"Network",
+                        "hasInternalbandawidth":{
+                          "@type": "QuantityValue",
+                          "unit": "http://qudt.org/vocab/unit/Gbps",
+                          "value": 0
+                        },
+                        "hasExternalBandawidth":{
+                            "@type":"QuantityValue",
+                            "unit":"http://qudt.org/vocab/unit/Gbps",
+                            "value":0
+                          }
+                        }
+                      }
+                }
+
+          ]
         }
-      }
-    }
-  ]
-}
