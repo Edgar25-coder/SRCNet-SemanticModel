@@ -1,20 +1,39 @@
-# srcnode_description
+# SRCNet-SemanticModel
 
-## Aim of this repository
-This repository serves to store all information from my research on the definition and description of srcnode.
+## Description
+This repository contains important files related to the semantic model for the SKA Regional Centre Network (SRCNet). It is organized into three main folders:
 
-## How to collaborate:
+- **Model/**
+  Hosts JSON files (SRCNet_model and SRCNet_model_TestData)
+
+- **Competency_Questions/**
+  Includes SPARQL queries and their respective outputs
+
+- **Diagrams/**
+  Visual representations of the model and its components.
+
+This structure enables to demonstrate the consistency and robustness of the semantic model for the SRCNet, providing more clarity and a better understanding of the model.
+
+## Usage
+
+Replicate the SRCNet_model json file, load it with your data, convert it into RDF, use the RDF file to create your dataset in Apache Jena Fuseki and make your SPARQL queries.
+
+
+## Contributions
 
 - One: Clone this repository.
-- Two: Add your features and collaborate on this research project.
+- Two: Add your features and suggestions to collaborate on this research project.
 
-## How to cite this repository
+## Citation
 
-	@misc{Edgar2024,
+	@misc{Edgar2025,
   		author = {Edgar},
-  		title = {srcnode_description},
-  		year = {2024},
+  		title = {SRCNet-SemanticModel},
+  		year = {2025},
   		publisher = {GitHub},
   		journal = {GitHub repository},
   		howpublished = {\url{URL_OF_THIS_REPO}}
 		}
+## License
+
+CCB License
