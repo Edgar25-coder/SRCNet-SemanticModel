@@ -1,0 +1,2667 @@
+{
+  "@context": {
+    "@vocab": "http://schema.org/",
+    "SRCNet": "http://example.org/SRCNet",
+    "SRC": "http://example.org/SRC",
+    "Place": "https://schema.org/Place",
+    "Country": "https://schema.org/Country",
+    "EU":"http://example.org/geopoliticalClassification/EU",
+    "Europe":"http://example.org/geopoliticalClassification/Europe",
+    "Asia":"http://example.org/geopoliticalClassification/Asia",
+    "NorthAmerica":"http://example.org/geopoliticalClassification/NorthAmerica",
+    "Region": "https://schema.org/Region",
+    "postalAddress":"https://schema.org/postalAddress",
+    "Geo": "https://schema.org/Geo",
+    "ContactPoint": "https://schema.org/ContactPoint",
+    "Person": "https://schema.org/Person",
+    "Organization": "https://schema.org/Organization",
+    "Computing": "http://example.org/Computing",
+    "CPU": "http://example.org/CPU",
+    "Disk": "http://example.org/Disk",
+    "Memory": "http://example.org/Memory",
+    "Storage":"http://example.org/Storage",
+    "Control":"http://example.org/Control",
+    "LocalServiceCatalogue":"http://example.org/LocalServiceCatalogue",
+    "GlobalServiceCatalogue":"http://example.org/GlobalServiceCatalogue",
+    "DataLake":"http://example.org/DataLake",
+    "Dataset":"http://example.org/Dataset",
+    "Visualisation":"http://example.org/Visualisation",
+    "Notebook":"http://example.org/Notebook",
+    "VisualizationTool":"http://example.org/VisualisationTool",
+    "qudt": "http://qudt.org/schema/qudt/",
+    "Architecture": "http://example.org/Architecture",
+    "Network": "http://example.org/Network",
+    "energyLabel":"http://example.org/energyLabel"
+   
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org/espSRC",
+      "@type": "http://example.org/SRCs",
+      "name": "SRCs",
+      "isComposedBy": {
+        "@type": "SRC",
+        "name": "espSRC",
+        "location": {
+          "@type": "Place",
+          "name": "IAA-CSIC",
+          "isInAcountry": {
+            "@type": "Country",
+            "name": "Spain",
+            "membership":"EU",
+            "Locality": "Granada",
+            "addressLocality": {
+              "type": "postalAddress",
+              "address": 18008
+            }
+          },
+          "isInAregion": {
+            "@type": "region",
+            "name": "Andalucia",
+            "postalCode": "",
+            "addressRegion": ""
+          },
+          "has_geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 37.16,
+            "longitude": -3.59
+          }
+        },
+        
+        "has-contactPoint": {
+            "@type": "ContactPoint",
+            "name": "espSRC Team",
+            "telephone": "+34 958121311",
+            "email": "infospsrc@iaa.es",
+            "address": "Gta de la Astronom\u00eda, s/n, Genil, 18008 ",
+            "faxNumber": "+34 958814530",
+            "URL": "https://iaa.es"
+          },
+
+
+        "has_PI": {
+          "@type": "Person",
+          "name": "Manu Parra",
+          "email": "mparra@example.es",
+          "telephone": "+34 668500600",
+          "worksIn": {
+            "@type": "Organization",
+            "name": "IAA-CSIC"
+          }
+        },
+        "hasComputing": {
+          "@type": "Computing",
+          "PowerConsumption":"",
+          "hasCPU": {
+            "@type": "CPU",
+            "numberOfCPUs":12,
+            "cores": 240,
+            "pflops":{
+              "@type":"QuantityValue",
+              "unit":"Petaflops",
+              "value":0.034
+            },
+            "clock": {
+              "@type": "QuantityValue",
+              "unit": "GHz",
+              "value": 3.5
+            }
+          },
+          
+          "hasGPU":{
+            "@type":"GPU",
+            "numberOfGPUs":1,
+            "type":"not defined"
+          },
+
+          "hasMemory": {
+            "@type": "QuantityValue",
+            "unit": "http://qudt.org/vocab/unit/Gigabyte",
+            "value": 1392
+          },
+          "hasDisk": {
+            "@type": "Disk",
+            "size": {
+              "@type": "QuantityValue",
+              "unit": "http://qudt.org/vocab/unit/Terabyte",
+              "value": 1
+            },
+            "type": "SSD"
+          }
+        },
+
+        "hasStorage":{
+          "@type":"Storage",
+            "size":{
+              "@type":"QuantityValue",
+              "unit": "http://qudt.org/vocab/unit/Terabyte",
+              "value": 750
+            }
+          },
+             
+          "hasNetwork":{
+            "@type":"Network",
+            "hasInternalbandawidth":{
+              "@type": "QuantityValue",
+              "unit": "http://qudt.org/vocab/unit/Gbps",
+              "value": 100
+            },
+            "hasExternalBandawidth":{
+                "@type":"QuantityValue",
+                "unit":"http://qudt.org/vocab/unit/Gbps",
+                "value":10
+              }
+            },
+          
+          "has-energyLabel":{
+            "@type":"energyLabel",
+            "has-energySource":{
+              "@type":"energySource",
+              "renewableEnergyFactor":"",
+              "energyReuseFactor":""
+            },
+            "has-energyEfficiency":{
+              "@type":"efficiencyEnergy",
+              "energyEfficiencyPUE":"",
+              "waterEfficiencyWUE":""
+            }
+
+          },
+
+        "providesLocalServiceCatalogue": {
+            "@type": "LocalServiceCatalogue",
+            "localServiceCatalogue": [
+                {
+                    "@type": "DatalakeService",
+                    "name": "Datalake",
+                    "serviceId": "datalake-service-001",
+                    "serviceVersion": "1.2.0",
+                    "description": "A scalable data lake service for storing and processing large volumes of data.",
+                    "hasDataset": {
+                        "@type": "Dataset",
+                        "name": "Wallaby Dataset",
+                        "ivo": "ivo://espsrc.../test/wallaby-center-fits",
+                        "did": "paramtest:wallaby-center-fits",
+                        "localPath": "/test/af/07/wallaby-center-fits",
+                        "createdDate": "2023-01-01",
+                        "description": "A dataset containing wallaby observation data."
+                    }
+                },
+                {
+                    "@type": "VisualizationService",
+                    "name": "Visualization",
+                    "serviceId": "visualization-service-001",
+                    "serviceVersion": "1.0.0",
+                    "description": "A service that provides visualization tools for analyzing wallaby data.",
+                    "hasVisualizationTool": {
+                        "@type": "VisualizationTool",
+                        "name": "Carta",
+                        "version": "7.0",
+                        "description": "A tool for visualizing data in various formats."
+                    }
+                },
+                {
+                    "@type": "NotebookService",
+                    "name": "Notebook",
+                    "serviceId": "notebook-service-001",
+                    "serviceVersion": "1.0.0",
+                    "description": "A service that allows users to create and share notebooks for data analysis and collaboration.",
+                    "hasJupyterNotebook":{
+                        "@type":"JupyterNotebook",
+                        "name":"Jupyternotebook"
+                    },
+                    "resourceRequirements": {
+                        "@type": "Requirements",
+                        "cpu": {
+                            "@type": "CPU",
+                            "cores": 4,
+                            "clockSpeed": {
+                                "@type": "QuantityValue",
+                                "unit": "GHz",
+                                "value": 2.5
+                            },
+                             "memory": {
+                                "@type": "QuantityValue",
+                                "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                                "value": 16
+                            }
+                        }
+                    }
+                },
+                {
+                    "@type": "SciencePlatformService",
+                    "name": "Science Platform",
+                    "serviceId": "science-platform-service-001",
+                    "serviceVersion": "1.0.0",
+                    "description": "A platform for conducting scientific research, offering tools and resources for scientists.",
+                    "hasResearchTool": {
+                      "@type": "ResearchTool",
+                      "name": "Research Assistant",
+                      "version": "1.0",
+                      "description": "A tool for managing and analyzing research data."
+                    }
+                },
+                {
+                  
+                    "@type": "SODAService",
+                    "name": "SODA",
+                    "serviceId": "soda-service-001",
+                    "serviceVersion": "1.0.0",
+                    "description": "A service for providing access to streaming data and real-time analytics.",
+                    "dataAccess": {
+                      "@type": "DataAccess",
+                      "protocol": "HTTP",
+                      "endpoint": "https://api.example.com/soda"
+                      }
+                    
+                },
+                {   
+                  "@type": "MonitoringService",
+                  "name": "Monitoring Service",
+                  "serviceId": "monitoring-service-001",
+                  "serviceVersion": "1.0.0",
+                  "description": "A service that provides monitoring and alerting capabilities for applications and systems.",
+                  "alertType": {
+                    "@type": "Alert",
+                    "name": "Health Check",
+                    "frequency": "5 minutes",
+                    "threshold": "2 failures"
+                  }
+                }
+
+            ]
+        },
+
+    "providesGlobalServiceCatalogue": {
+        "@type": "GlobalServiceCatalogue",
+        "globalServiceCatalogue": [
+          
+          {
+            "@type": "ScienceGatewayService",
+            "name": "Science Gateway",
+            "serviceId": "science-gateway-service-001",
+            "serviceVersion": "1.0.0",
+            "description": "A web-based platform for accessing scientific resources, tools, and applications.",
+            "supportedDomains": ["astronomy", "biology", "physics"]
+          },
+          {
+            "@type": "AuthService",
+            "name": "Authentication Service",
+            "serviceId": "auth-service-001",
+            "serviceVersion": "1.0.0",
+            "description": "A service that provides authentication and authorization for access to applications and data.",
+            "authMethods": [
+              {
+                "type": "OAuth2",
+                "description": "OAuth 2.0 based authentication method."
+              },
+                    {
+                        "type": "SAML",
+                        "description": "Security Assertion Markup Language (SAML) for single sign-on."
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "DataDistributionPlatformService",
+                    "name": "Data Distribution Platform",
+                    "serviceId": "data-distribution-service-001",
+                    "serviceVersion": "1.0.0",
+                    "description": "A platform for distributing data across various services and applications.",
+                    "supportedFormats": ["CSV", "JSON", "XML"],
+                    "deliveryMethods": {
+                      "api": {
+                        "protocol": "REST",
+                        "endpoint": "https://api.example.com/distribute"
+                        },
+                        "files": {
+                        "method": "FTP",
+                        "endpoint": "ftp://ftp.example.com/data"
+                        }
+                      }
+                    },
+                    {
+                      "@type": "RegistryService",
+                      "name": "Service Registry",
+                      "serviceId": "registry-service-001",
+                      "serviceVersion": "1.0.0",
+                      "description": "A service for registering and discovering available services in the system.",
+                      "registryType": "Central",
+                      "endpoint": "https://api.example.com/registry"
+                      }
+                    ]
+                  }
+                }
+              },
+            
+
+
+    {
+      "@id": "http://example.org/swedishSRC",
+      "@type": "http://example.org/SRCs",
+      "name": "SRCs",
+      "isComposedBy": {
+        "@type": "SRC",
+        "name": "swedishSRC",
+        "location": {
+          "@type": "Place",
+          "name": "Gothenburg",
+          "isInAcountry": {
+            "@type": "Country",
+            "name": "Sweden",
+            "membership":"EU",
+            "Locality": "Gothenburg",
+            "addressLocality": {
+              "type": "postalAddress",
+              "address": "yyyyyyyyyyy"
+            }
+          },
+          "isInAregion": {
+            "@type": "region",
+            "name": "not defined",
+            "postalCode": "",
+            "addressRegion": ""
+          },
+          "has_geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 57.71,
+            "longitude": 11.97
+          }
+        },
+
+
+        "has-contactPoint": {
+            "@type": "ContactPoint",
+            "name": "swedishSRC Team",
+            "telephone": "+46 601234510",
+            "email": "infospsrc@swedish.src.sw",
+            "address": "SkÃ¤rgÃ¥rdsgatan 45, 411 10 Gothenburg, Sweden",
+            "faxNumber": "958814530",
+            "URL": "not defined"
+          },
+        
+
+        "has_PI": {
+          "@type": "Person",
+          "name": "Kalle Forsberg",
+          "email": "kforsberg@example.sw",
+          "telephone": "+46 701234567",
+          "worksIn": {
+            "@type": "Organization",
+            "name": "University of Sweden"
+          }
+        },
+        "hasComputing": {
+          "@type": "Computing",
+          "PowerConsumption":"",
+          "hasCPU": {
+            "@type": "CPU",
+            "numberOfCPUs":2,
+            "cores": 64,
+            "pflops":{
+              "@type":"QuantityValue",
+              "unit":"Petaflops",
+              "value":0.039
+            },
+            "clock": {
+              "@type": "QuantityValue",
+              "unit": "GHz",
+              "value": 2.60
+            }
+          },
+          "hasMemory": {
+            "@type": "QuantityValue",
+            "unit": "http://qudt.org/vocab/unit/Gigabyte",
+            "value": 512
+          },
+          "hasDisk": {
+            "@type": "Disk",
+            "size": {
+              "@type": "QuantityValue",
+              "unit": "http://qudt.org/vocab/unit/Terabyte",
+              "value": 960
+            },
+            "type": "SSD"
+          }
+        },
+
+        "hasStorage":{                   
+          "@type":"Storage",
+            "size":{
+              "@type":"QuantityValue",
+              "unit": "http://qudt.org/vocab/unit/Terabyte",
+              "value": 50
+            }
+          },
+    
+            "hasNetwork":{
+              "@type":"Network",
+              "hasInternalbandawidth":{
+                "@type": "QuantityValue",
+                "unit": "http://qudt.org/vocab/unit/Gbps",
+                "value": 100
+            },
+              "hasExternalBandawidth":{
+                "@type":"QuantityValue",
+                "unit":"http://qudt.org/vocab/unit/Gbps",
+                "value":6
+              }
+            },
+
+            "has-energyLabel":{
+              "@type":"energyLabel",
+              "has-energySource":{
+                "@type":"energySource",
+                "renewableEnergyFactor":"",
+                "energyReuseFactor":""
+              },
+              
+              "has-energyEfficiency":{
+                "@type":"efficiencyEnergy",
+                "energyEfficiencyPUE":"",
+                "waterEfficiencyWUE":""
+              }
+            },
+
+         "providesLocalServiceCatalogue": {
+            "@type": "LocalServiceCatalogue",
+            "localServiceCatalogue": [
+                {
+                    "@type": "DatalakeService",
+                    "name": "Datalake",
+                    "serviceId": "datalake-service-001",
+                    "serviceVersion": "1.2.0",
+                    "description": "A scalable data lake service for storing and processing large volumes of data.",
+                    "hasDataset": {
+                        "@type": "Dataset",
+                        "name": "Wallaby Dataset",
+                        "ivo": "ivo://espsrc.../test/wallaby-center-fits",
+                        "did": "paramtest:wallaby-center-fits",
+                        "localPath": "/test/af/07/wallaby-center-fits",
+                        "createdDate": "2023-01-01",
+                        "description": "A dataset containing wallaby observation data."
+                    }
+                },
+                {
+                    "@type": "VisualizationService",
+                    "name": "Visualization",
+                    "serviceId": "visualization-service-001",
+                    "serviceVersion": "1.0.0",
+                    "description": "A service that provides visualization tools for analyzing wallaby data.",
+                    "hasVisualizationTool": {
+                        "@type": "VisualizationTool",
+                        "name": "Carta",
+                        "version": "7.0",
+                        "description": "A tool for visualizing data in various formats."
+                    }
+                },
+                {
+                    "@type": "NotebookService",
+                    "name": "Notebook",
+                    "serviceId": "notebook-service-001",
+                    "serviceVersion": "1.0.0",
+                    "description": "A service that allows users to create and share notebooks for data analysis and collaboration.",
+                    "hasJupyterNotebook":{
+                        "@type":"JupyterNotebook",
+                        "name":"Jupyternotebook"
+                    },
+                    "resourceRequirements": {
+                        "@type": "Requirements",
+                        "cpu": {
+                            "@type": "CPU",
+                            "cores": 4,
+                            "clockSpeed": {
+                                "@type": "QuantityValue",
+                                "unit": "GHz",
+                                "value": 2.5
+                            },
+                             "memory": {
+                                "@type": "QuantityValue",
+                                "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                                "value": 16
+                            }
+                        }
+                    }
+                },
+                {
+                    "@type": "SciencePlatformService",
+                    "name": "Science Platform",
+                    "serviceId": "science-platform-service-001",
+                    "serviceVersion": "1.0.0",
+                    "description": "A platform for conducting scientific research, offering tools and resources for scientists.",
+                    "hasResearchTool": {
+                      "@type": "ResearchTool",
+                      "name": "Research Assistant",
+                      "version": "1.0",
+                      "description": "A tool for managing and analyzing research data."
+                    }
+                },
+                {
+                  
+                    "@type": "SODAService",
+                    "name": "SODA",
+                    "serviceId": "soda-service-001",
+                    "serviceVersion": "1.0.0",
+                    "description": "A service for providing access to streaming data and real-time analytics.",
+                    "dataAccess": {
+                      "@type": "DataAccess",
+                      "protocol": "HTTP",
+                      "endpoint": "https://api.example.com/soda"
+                      }
+                    
+                },
+                {   
+                  "@type": "MonitoringService",
+                  "name": "Monitoring Service",
+                  "serviceId": "monitoring-service-001",
+                  "serviceVersion": "1.0.0",
+                  "description": "A service that provides monitoring and alerting capabilities for applications and systems.",
+                  "alertType": {
+                    "@type": "Alert",
+                    "name": "Health Check",
+                    "frequency": "5 minutes",
+                    "threshold": "2 failures"
+                  }
+                },
+                {
+                    "@type": "SciencePlatformService",
+                    "name": "Science Platform",
+                    "serviceId": "science-platform-service-001",
+                    "serviceVersion": "1.0.0",
+                    "description": "A platform for conducting scientific research, offering tools and resources for scientists.",
+                    "hasResearchTool": {
+                      "@type": "ResearchTool",
+                      "name": "Research Assistant",
+                      "version": "1.0",
+                      "description": "A tool for managing and analyzing research data."
+                    }
+                },
+                {
+                  
+                    "@type": "SODAService",
+                    "name": "SODA",
+                    "serviceId": "soda-service-001",
+                    "serviceVersion": "1.0.0",
+                    "description": "A service for providing access to streaming data and real-time analytics.",
+                    "dataAccess": {
+                      "@type": "DataAccess",
+                      "protocol": "HTTP",
+                      "endpoint": "https://api.example.com/soda"
+                      }
+                    
+                },
+                {   
+                  "@type": "MonitoringService",
+                  "name": "Monitoring Service",
+                  "serviceId": "monitoring-service-001",
+                  "serviceVersion": "1.0.0",
+                  "description": "A service that provides monitoring and alerting capabilities for applications and systems.",
+                  "alertType": {
+                    "@type": "Alert",
+                    "name": "Health Check",
+                    "frequency": "5 minutes",
+                    "threshold": "2 failures"
+                  }
+                }
+
+            ]
+        },
+
+          
+        "providesGlobalServiceCatalogue": {
+        "@type": "GlobalServiceCatalogue",
+        "globalServiceCatalogue": [
+          
+          {
+            "@type": "ScienceGatewayService",
+            "name": "Science Gateway",
+            "serviceId": "science-gateway-service-001",
+            "serviceVersion": "1.0.0",
+            "description": "A web-based platform for accessing scientific resources, tools, and applications.",
+            "supportedDomains": ["astronomy", "biology", "physics"]
+          },
+          {
+            "@type": "AuthService",
+            "name": "Authentication Service",
+            "serviceId": "auth-service-001",
+            "serviceVersion": "1.0.0",
+            "description": "A service that provides authentication and authorization for access to applications and data.",
+            "authMethods": [
+              {
+                "type": "OAuth2",
+                "description": "OAuth 2.0 based authentication method."
+              },
+                    {
+                        "type": "SAML",
+                        "description": "Security Assertion Markup Language (SAML) for single sign-on."
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "DataDistributionPlatformService",
+                    "name": "Data Distribution Platform",
+                    "serviceId": "data-distribution-service-001",
+                    "serviceVersion": "1.0.0",
+                    "description": "A platform for distributing data across various services and applications.",
+                    "supportedFormats": ["CSV", "JSON", "XML"],
+                    "deliveryMethods": {
+                      "api": {
+                        "protocol": "REST",
+                        "endpoint": "https://api.example.com/distribute"
+                        },
+                        "files": {
+                        "method": "FTP",
+                        "endpoint": "ftp://ftp.example.com/data"
+                        }
+                      }
+                    },
+                    {
+                      "@type": "RegistryService",
+                      "name": "Service Registry",
+                      "serviceId": "registry-service-001",
+                      "serviceVersion": "1.0.0",
+                      "description": "A service for registering and discovering available services in the system.",
+                      "registryType": "Central",
+                      "endpoint": "https://api.example.com/registry"
+                      }
+                    ]
+                  }
+                }
+              
+                
+        },
+        {
+          "@id": "http://example.org/caSRC",
+          "@type": "http://example.org/SRCs",
+          "name": "SRCs",
+          "isComposedBy": {
+            "@type": "SRC",
+            "name": "caSRC",
+            "location": {
+              "@type": "Place",
+              "name": "CADC",
+              "isInAcountry": {
+                "@type": "Country",
+                "name": "Canada",
+                "membership":"NorthAmerica",
+                "Locality": "Victoria",
+                "addressLocality": {
+                  "type": "postalAddress",
+                  "address": "LLLLLLLLLLLLLL"
+                }
+              },
+              "isInAregion": {
+                "@type": "region",
+                "name": "not defined",
+                "postalCode": "",
+                "addressRegion": ""
+              },
+              "has_geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 48.43,
+                "longitude": -123.36
+              }
+            },
+              
+            "has-contactPoint": {
+                "@type": "ContactPoint",
+                "name": "caSRC Team",
+                "telephone":"+1 410 123 3566",
+                "email": "infosrc@canadian.src.ca",
+                "address": "Cedar Lane 45, Victoria, BC V8X 2Y9, Canada",
+                "faxNumber":  "+1 416 123 3360",
+                "URL": "not defined"
+              },
+            
+
+
+        
+            "has_PI": {
+              "@type": "Person",
+              "name": "Colton Lalonde",
+              "email": "clalonde@canadiansrc.ca",
+              "telephone": "+1 416 123 4567",
+              "worksIn": {
+                "@type": "Organization",
+                "name": "CADC"
+              }
+            },
+            "hasComputing": {
+              "@type": "Computing",
+              "PowerConsumption":"",
+              "hasCPU": {
+                "@type": "CPU",
+                "numberOfCPUs":160,
+                "cores": 3840,
+                "pflops":{
+                  "@type":"QuantityValue",
+                  "unit":"Petaflops",
+                  "value":0.042
+            },
+                "clock": {
+                  "@type": "QuantityValue",
+                  "unit": "GHz",
+                  "value": 2.60
+                }
+              },
+              
+              "hasGPU":{
+                "@type":"GPU",
+                "numberOfGPUs":10,
+                "type":"H200"
+              },
+
+              "hasMemory": {
+                "@type": "QuantityValue",
+                "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                "value": 20480
+              },
+              "hasDisk": {
+                "@type": "Disk",
+                "size": {
+                  "@type": "QuantityValue",
+                  "unit": "http://qudt.org/vocab/unit/Terabyte",
+                  "value": 1024
+                },
+                "type": "HDD"
+              }
+            },
+    
+            "hasStorage":{
+              "@type":"Storage",
+                "size":{
+                  "@type":"QuantityValue",
+                  "unit": "http://qudt.org/vocab/unit/Terabyte",
+                  "value": 7618.56
+                }
+              },
+            
+                "hasNetwork":{
+                  "@type":"Network",
+                  "hasInternalbandawidth":{
+                    "@type": "QuantityValue",
+                    "unit": "http://qudt.org/vocab/unit/Gbps",
+                    "value": 400
+                  },
+                  "hasExternalBandawidth":{
+                    "@type":"QuantityValue",
+                    "unit":"http://qudt.org/vocab/unit/Gbps",
+                    "value":400
+                  }
+                },
+
+                "has-energyLabel":{
+                  "@type":"energyLabel",
+                  "has-energySource":{
+                    "@type":"energySource",
+                    "renewableEnergyFactor":"",
+                    "energyReuseFactor":""
+                  },
+                  "has-energyEfficiency":{
+                    "@type":"efficiencyEnergy",
+                    "energyEfficiencyPUE":"",
+                    "waterEfficiencyWUE":""
+                  }
+                },
+                
+            "providesLocalServiceCatalogue": {
+                "@type": "LocalServiceCatalogue",
+                "localServiceCatalogue": [
+                    {
+                    
+                        "@type": "NotebookService",
+                        "name": "Notebook",
+                        "serviceId": "notebook-service-001",
+                        "serviceVersion": "1.0.0",
+                        "description": "A service that allows users to create and share notebooks for data analysis and collaboration.",
+                        "hasJupyterNotebook":{
+                            "@type":"JupyterNotebook",
+                            "name":"Jupyternotebook"
+                        },
+                        
+                        "resourceRequirements": {
+                            "@type": "Requirements",
+                            "cpu": {
+                                "@type": "CPU",
+                                "cores": 8,
+                                "clockSpeed": {
+                                    "@type": "QuantityValue",
+                                    "unit": "GHz",
+                                    "value": 2.5
+                                },
+                                "memory": {
+                                    "@type": "QuantityValue",
+                                    "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                                    "value": 64
+                            }
+                        }
+                    }
+                },
+                {
+                    "@type": "SciencePlatformService",
+                    "name": "Science Platform",
+                    "serviceId": "science-platform-service-001",
+                    "serviceVersion": "1.0.0",
+                    "description": "A platform for conducting scientific research, offering tools and resources for scientists.",
+                    "hasResearchTool": {
+                      "@type": "ResearchTool",
+                      "name": "Research Assistant",
+                      "version": "1.0",
+                      "description": "A tool for managing and analyzing research data."
+                    }
+                },
+                {
+                  
+                    "@type": "SODAService",
+                    "name": "SODA",
+                    "serviceId": "soda-service-001",
+                    "serviceVersion": "1.0.0",
+                    "description": "A service for providing access to streaming data and real-time analytics.",
+                    "dataAccess": {
+                      "@type": "DataAccess",
+                      "protocol": "HTTP",
+                      "endpoint": "https://api.example.com/soda"
+                      }
+                    
+                },
+                {   
+                  "@type": "MonitoringService",
+                  "name": "Monitoring Service",
+                  "serviceId": "monitoring-service-001",
+                  "serviceVersion": "1.0.0",
+                  "description": "A service that provides monitoring and alerting capabilities for applications and systems.",
+                  "alertType": {
+                    "@type": "Alert",
+                    "name": "Health Check",
+                    "frequency": "5 minutes",
+                    "threshold": "2 failures"
+                  }
+                }
+              ]
+            },
+              
+        "providesGlobalServiceCatalogue": {
+        "@type": "GlobalServiceCatalogue",
+        "globalServiceCatalogue": [
+          
+          {
+            "@type": "ScienceGatewayService",
+            "name": "Science Gateway",
+            "serviceId": "science-gateway-service-001",
+            "serviceVersion": "1.0.0",
+            "description": "A web-based platform for accessing scientific resources, tools, and applications.",
+            "supportedDomains": ["astronomy", "biology", "physics"]
+          },
+          {
+            "@type": "AuthService",
+            "name": "Authentication Service",
+            "serviceId": "auth-service-001",
+            "serviceVersion": "1.0.0",
+            "description": "A service that provides authentication and authorization for access to applications and data.",
+            "authMethods": [
+              {
+                "type": "OAuth2",
+                "description": "OAuth 2.0 based authentication method."
+              },
+                    {
+                        "type": "SAML",
+                        "description": "Security Assertion Markup Language (SAML) for single sign-on."
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "DataDistributionPlatformService",
+                    "name": "Data Distribution Platform",
+                    "serviceId": "data-distribution-service-001",
+                    "serviceVersion": "1.0.0",
+                    "description": "A platform for distributing data across various services and applications.",
+                    "supportedFormats": ["CSV", "JSON", "XML"],
+                    "deliveryMethods": {
+                      "api": {
+                        "protocol": "REST",
+                        "endpoint": "https://api.example.com/distribute"
+                        },
+                        "files": {
+                        "method": "FTP",
+                        "endpoint": "ftp://ftp.example.com/data"
+                        }
+                      }
+                    },
+                    {
+                      "@type": "RegistryService",
+                      "name": "Service Registry",
+                      "serviceId": "registry-service-001",
+                      "serviceVersion": "1.0.0",
+                      "description": "A service for registering and discovering available services in the system.",
+                      "registryType": "Central",
+                      "endpoint": "https://api.example.com/registry"
+                      }
+                    ]
+                  }
+                }
+           
+        },
+            
+            {
+              "@id": "http://example.org/itSRC",
+              "@type": "http://example.org/SRCs",
+              "name": "SRCs",
+              "isComposedBy": {
+                "@type": "SRC",
+                "name": "itSRC",
+                "location": {
+                  "@type": "Place",
+                  "name": "CINECA ",
+                  "isInAcountry": {
+                    "@type": "Country",
+                    "name": "Italy",
+                    "membership":"EU",
+                    "Locality": "Bologna",
+                    "addressLocality": {
+                      "type": "postalAddress",
+                      "address": "not defined"
+                    }
+                  },
+                  "isInAregion": {
+                    "@type": "region",
+                    "name": "not defined",
+                    "postalCode": "",
+                    "addressRegion": ""
+                  },
+                  "has_geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 44.49,
+                    "longitude": 11.26
+                  }
+                },
+
+
+               "has-contactPoint": {
+                    "@type": "ContactPoint",
+                    "name": "itSRC Team",
+                    "telephone": "958121311",
+                    "email": "info@itsrc.it",
+                    "address": "Piazza delle Stelle 32, 40123 Bologna, Italy",
+                    "faxNumber": "+39 0612345000",
+                    "URL": "not defined"
+                  },
+                
+
+
+                "has_PI": {
+                  "@type": "Person",
+                  "name": "Giulia Moretti",
+                  "email": "gmoretti@example.it",
+                  "telephone": "+39 0612345678",
+                  "worksIn": {
+                    "@type": "Organization",
+                    "name": "CINECA"
+                  }
+                },
+                "hasComputing": {
+                  "@type": "Computing",
+                  "PowerConsumption":"",
+                  "hasCPU": {
+                    "@type": "CPU",
+                    "numberOfCPUs":8,
+                    "cores": 210,
+                    "pflops":{
+                      "@type":"QuantityValue",
+                      "unit":"Petaflops",
+                      "value":0.0005 
+                    },
+                    "clock": {
+                      "@type": "QuantityValue",
+                      "unit": "GHz",
+                      "value": 3.5
+                    }
+                  },
+                  "hasMemory": {
+                    "@type": "QuantityValue",
+                    "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                    "value": 800   
+                  },
+                  "hasDisk": {
+                    "@type": "Disk",
+                    "size": {
+                      "@type": "QuantityValue",
+                      "unit": "http://qudt.org/vocab/unit/Terabyte",
+                      "value": 2
+                    },
+                    "type": "not defined"
+                  }
+                },
+        
+                "hasStorage":{
+                  "@type":"Storage",
+                    "size":{
+                      "@type":"QuantityValue",
+                      "unit": "http://qudt.org/vocab/unit/Terabyte",
+                      "value": 27
+                    }
+                  },
+                
+                  "hasControl":{
+                      "@type":"Control",
+                      "hasCPU":{
+                        "@type":"CPU",
+                        "cores":120
+                      },
+                      "hasMemory": {
+                        "@type": "QuantityValue",
+                        "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                        "value": 0
+                      }
+                    },
+                  
+                    "hasNetwork":{
+                      "@type":"Network",
+                      "hasInternalbandawidth":{
+                        "@type": "QuantityValue",
+                        "unit": "http://qudt.org/vocab/unit/Gbps",
+                        "value": 1
+                      },
+                      "hasExternalBandawidth":{
+                        "@type":"QuantityValue",
+                        "unit":"http://qudt.org/vocab/unit/Gbps",
+                        "value":7
+                      }
+                    }
+                  },
+
+                  "has-energyLabel":{
+                    "@type":"energyLabel",
+                    "has-energySource":{
+                      "@type":"energySource",
+                      "renewableEnergyFactor":"",
+                      "energyReuseFactor":""
+                    },
+                    
+                    "has-energyEfficiency":{
+                      "@type":"efficiencyEnergy",
+                      "energyEfficiencyPUE":"",
+                      "waterEfficiencyWUE":""
+                    }
+                  },
+
+            "providesLocalServiceCatalogue": {
+                "@type": "LocalServiceCatalogue",
+                "localServiceCatalogue": [
+                    {
+                    
+                        "@type": "NotebookService",
+                        "name": "Notebook",
+                        "serviceId": "notebook-service-001",
+                        "serviceVersion": "1.0.0",
+                        "description": "A service that allows users to create and share notebooks for data analysis and collaboration.",
+                        "hasJupyterNotebook":{
+                            "@type":"JupyterNotebook",
+                            "name":"Jupyternotebook"
+                        },
+                        
+                        "resourceRequirements": {
+                            "@type": "Requirements",
+                            "cpu": {
+                                "@type": "CPU",
+                                "cores": 8,
+                                "clockSpeed": {
+                                    "@type": "QuantityValue",
+                                    "unit": "GHz",
+                                    "value": 2.5
+                                },
+                                "memory": {
+                                    "@type": "QuantityValue",
+                                    "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                                    "value": 64
+                            }
+                        }
+                    }
+                },
+                {
+                    "@type": "SciencePlatformService",
+                    "name": "Science Platform",
+                    "serviceId": "science-platform-service-001",
+                    "serviceVersion": "1.0.0",
+                    "description": "A platform for conducting scientific research, offering tools and resources for scientists.",
+                    "hasResearchTool": {
+                      "@type": "ResearchTool",
+                      "name": "Research Assistant",
+                      "version": "1.0",
+                      "description": "A tool for managing and analyzing research data."
+                    }
+                },
+                {
+                  
+                    "@type": "SODAService",
+                    "name": "SODA",
+                    "serviceId": "soda-service-001",
+                    "serviceVersion": "1.0.0",
+                    "description": "A service for providing access to streaming data and real-time analytics.",
+                    "dataAccess": {
+                      "@type": "DataAccess",
+                      "protocol": "HTTP",
+                      "endpoint": "https://api.example.com/soda"
+                      }
+                    
+                },
+                {   
+                  "@type": "MonitoringService",
+                  "name": "Monitoring Service",
+                  "serviceId": "monitoring-service-001",
+                  "serviceVersion": "1.0.0",
+                  "description": "A service that provides monitoring and alerting capabilities for applications and systems.",
+                  "alertType": {
+                    "@type": "Alert",
+                    "name": "Health Check",
+                    "frequency": "5 minutes",
+                    "threshold": "2 failures"
+                  }
+                }
+              ]
+            },
+  
+        "providesGlobalServiceCatalogue": {
+        "@type": "GlobalServiceCatalogue",
+        "globalServiceCatalogue": [
+          
+          {
+            "@type": "ScienceGatewayService",
+            "name": "Science Gateway",
+            "serviceId": "science-gateway-service-001",
+            "serviceVersion": "1.0.0",
+            "description": "A web-based platform for accessing scientific resources, tools, and applications.",
+            "supportedDomains": ["astronomy", "biology", "physics"]
+          },
+          {
+            "@type": "AuthService",
+            "name": "Authentication Service",
+            "serviceId": "auth-service-001",
+            "serviceVersion": "1.0.0",
+            "description": "A service that provides authentication and authorization for access to applications and data.",
+            "authMethods": [
+              {
+                "type": "OAuth2",
+                "description": "OAuth 2.0 based authentication method."
+              },
+                    {
+                        "type": "SAML",
+                        "description": "Security Assertion Markup Language (SAML) for single sign-on."
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "DataDistributionPlatformService",
+                    "name": "Data Distribution Platform",
+                    "serviceId": "data-distribution-service-001",
+                    "serviceVersion": "1.0.0",
+                    "description": "A platform for distributing data across various services and applications.",
+                    "supportedFormats": ["CSV", "JSON", "XML"],
+                    "deliveryMethods": {
+                      "api": {
+                        "protocol": "REST",
+                        "endpoint": "https://api.example.com/distribute"
+                        },
+                        "files": {
+                        "method": "FTP",
+                        "endpoint": "ftp://ftp.example.com/data"
+                        }
+                      }
+                    },
+                    {
+                      "@type": "RegistryService",
+                      "name": "Service Registry",
+                      "serviceId": "registry-service-001",
+                      "serviceVersion": "1.0.0",
+                      "description": "A service for registering and discovering available services in the system.",
+                      "registryType": "Central",
+                      "endpoint": "https://api.example.com/registry"
+                      }
+                    ]
+                  }
+                },
+
+                {
+                  "@id": "http://example.org/swissSRC",
+                  "@type": "http://example.org/SRCs",
+                  "name": "SRCs",
+                  "isComposedBy": {
+                    "@type": "SRC",
+                    "name": "swissSRC",
+                    "location": {
+                      "@type": "Place",
+                      "name": "Lungano",
+                      "isInAcountry": {
+                        "@type": "Country",
+                        "name": "Switzerland",
+                        "membership":"Europe",
+                        "Locality": "Lungano",
+                        "addressLocality": {
+                          "type": "postalAddress",
+                          "address": 18008
+                        }
+                      },
+                      "isInAregion": {
+                        "@type": "region",
+                        "name": "not defined",
+                        "postalCode": "",
+                        "addressRegion": ""
+                      },
+                      "has_geo": {
+                        "@type": "GeoCoordinates",
+                        "latitude": 46.01,
+                        "longitude": 9.06
+                      }
+                    },
+
+
+                    "has-contactPoint": {
+                        "@type": "ContactPoint",
+                        "name": "swissSRC Team",
+                        "telephone": "+41 358823701",
+                        "email": "infoswissrc@src.sw",
+                       "address": "Via delle Tristezze 15, 6900 Lugano, Switzerland",
+                        "faxNumber": "+34 958814530",
+                        "URL": "https://swissrc.sw"
+                      },
+                    
+
+
+                    "has_PI": {
+                      "@type": "Person",
+                      "name": "Lucia Meier",
+                      "email": "lmeier@example.swi",
+                      "telephone": "+41 728823799",
+                      "worksIn": {
+                        "@type": "Organization",
+                        "name": "University of Zurich"
+                      }
+                    },
+                    "hasComputing": {
+                      "@type": "Computing",
+                      "PowerConsumption":"",
+                      "hasCPU": {
+                        "@type": "CPU",
+                        "numberOfCPUs":2,
+                        "cores": 44,
+                        "pflops":{
+                          "@type":"QuantityValue",
+                          "unit":"Petaflops",
+                          "value":0.014
+                        },
+                        "clock": {
+                          "@type": "QuantityValue",
+                          "unit": "GHz",
+                          "value": 3.5
+                        }
+                      },
+                      "hasMemory": {
+                        "@type": "QuantityValue",
+                        "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                        "value": 88
+                      },
+                      "hasDisk": {
+                        "@type": "Disk",
+                        "size": {
+                          "@type": "QuantityValue",
+                          "unit": "http://qudt.org/vocab/unit/Terabyte",
+                          "value": 0
+                        },
+                        "type": "not defined"
+                      }
+                    },
+            
+                    "hasStorage":{
+                      "@type":"Storage",
+                        "size":{
+                          "@type":"QuantityValue",
+                          "unit": "http://qudt.org/vocab/unit/Terabyte",
+                          "value": 50
+                        }
+                      },
+                    
+                        "hasNetwork":{
+                          "@type":"Network",
+                          "hasInternalbandawidth":{
+                            "@type": "QuantityValue",
+                            "unit": "http://qudt.org/vocab/unit/Gbps",
+                            "value": 0
+                          },
+                          "hasExternalBandawidth":{
+                            "@type":"QuantityValue",
+                            "unit":"http://qudt.org/vocab/unit/Gbps",
+                            "value":10
+                          }
+                        },
+
+                      "has-energyLabel":{
+                        "@type":"energyLabel",
+                        "has-energySource":{
+                          "@type":"energySource",
+                          "renewableEnergyFactor":"",
+                          "energyReuseFactor":""
+                        },
+                        
+                        "has-energyEfficiency":{
+                          "@type":"efficiencyEnergy",
+                          "energyEfficiencyPUE":"",
+                          "waterEfficiencyWUE":""
+                        }
+                      },
+          
+        "providesLocalServiceCatalogue": {
+            "@type": "LocalServiceCatalogue",
+            "localServiceCatalogue": [
+                {
+                    "@type": "DatalakeService",
+                    "name": "Datalake",
+                    "serviceId": "datalake-service-001",
+                    "serviceVersion": "1.2.0",
+                    "description": "A scalable data lake service for storing and processing large volumes of data.",
+                    "hasDataset": {
+                        "@type": "Dataset",
+                        "name": "Wallaby Dataset",
+                        "ivo": "ivo://espsrc.../test/wallaby-center-fits",
+                        "did": "paramtest:wallaby-center-fits",
+                        "localPath": "/test/af/07/wallaby-center-fits",
+                        "createdDate": "2023-01-01",
+                        "description": "A dataset containing wallaby observation data."
+                    }
+                },
+                {
+                    "@type": "VisualizationService",
+                    "name": "Visualization",
+                    "serviceId": "visualization-service-001",
+                    "serviceVersion": "1.0.0",
+                    "description": "A service that provides visualization tools for analyzing wallaby data.",
+                    "hasVisualizationTool": {
+                        "@type": "VisualizationTool",
+                        "name": "Carta",
+                        "version": "7.0",
+                        "description": "A tool for visualizing data in various formats."
+                    }
+                },
+                {
+                    "@type": "NotebookService",
+                    "name": "Notebook",
+                    "serviceId": "notebook-service-001",
+                    "serviceVersion": "1.0.0",
+                    "description": "A service that allows users to create and share notebooks for data analysis and collaboration.",
+                    "hasJupyterNotebook":{
+                        "@type":"JupyterNotebook",
+                        "name":"Jupyternotebook"
+                    },
+                    "resourceRequirements": {
+                        "@type": "Requirements",
+                        "cpu": {
+                            "@type": "CPU",
+                            "cores": 4,
+                            "clockSpeed": {
+                                "@type": "QuantityValue",
+                                "unit": "GHz",
+                                "value": 2.5
+                            },
+                             "memory": {
+                                "@type": "QuantityValue",
+                                "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                                "value": 16
+                            }
+                        }
+                    }
+                },
+                {
+                    "@type": "SciencePlatformService",
+                    "name": "Science Platform",
+                    "serviceId": "science-platform-service-001",
+                    "serviceVersion": "1.0.0",
+                    "description": "A platform for conducting scientific research, offering tools and resources for scientists.",
+                    "hasResearchTool": {
+                      "@type": "ResearchTool",
+                      "name": "Research Assistant",
+                      "version": "1.0",
+                      "description": "A tool for managing and analyzing research data."
+                    }
+                },
+                {
+                  
+                    "@type": "SODAService",
+                    "name": "SODA",
+                    "serviceId": "soda-service-001",
+                    "serviceVersion": "1.0.0",
+                    "description": "A service for providing access to streaming data and real-time analytics.",
+                    "dataAccess": {
+                      "@type": "DataAccess",
+                      "protocol": "HTTP",
+                      "endpoint": "https://api.example.com/soda"
+                      }
+                    
+                },
+                {   
+                  "@type": "MonitoringService",
+                  "name": "Monitoring Service",
+                  "serviceId": "monitoring-service-001",
+                  "serviceVersion": "1.0.0",
+                  "description": "A service that provides monitoring and alerting capabilities for applications and systems.",
+                  "alertType": {
+                    "@type": "Alert",
+                    "name": "Health Check",
+                    "frequency": "5 minutes",
+                    "threshold": "2 failures"
+                  }
+                }
+
+            ]
+          },
+     
+        "providesGlobalServiceCatalogue": {
+        "@type": "GlobalServiceCatalogue",
+        "globalServiceCatalogue": [
+          
+          {
+            "@type": "ScienceGatewayService",
+            "name": "Science Gateway",
+            "serviceId": "science-gateway-service-001",
+            "serviceVersion": "1.0.0",
+            "description": "A web-based platform for accessing scientific resources, tools, and applications.",
+            "supportedDomains": ["astronomy", "biology", "physics"]
+          },
+          {
+            "@type": "AuthService",
+            "name": "Authentication Service",
+            "serviceId": "auth-service-001",
+            "serviceVersion": "1.0.0",
+            "description": "A service that provides authentication and authorization for access to applications and data.",
+            "authMethods": [
+              {
+                "type": "OAuth2",
+                "description": "OAuth 2.0 based authentication method."
+              },
+                    {
+                        "type": "SAML",
+                        "description": "Security Assertion Markup Language (SAML) for single sign-on."
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "DataDistributionPlatformService",
+                    "name": "Data Distribution Platform",
+                    "serviceId": "data-distribution-service-001",
+                    "serviceVersion": "1.0.0",
+                    "description": "A platform for distributing data across various services and applications.",
+                    "supportedFormats": ["CSV", "JSON", "XML"],
+                    "deliveryMethods": {
+                      "api": {
+                        "protocol": "REST",
+                        "endpoint": "https://api.example.com/distribute"
+                        },
+                        "files": {
+                        "method": "FTP",
+                        "endpoint": "ftp://ftp.example.com/data"
+                        }
+                      }
+                    },
+                    {
+                      "@type": "RegistryService",
+                      "name": "Service Registry",
+                      "serviceId": "registry-service-001",
+                      "serviceVersion": "1.0.0",
+                      "description": "A service for registering and discovering available services in the system.",
+                      "registryType": "Central",
+                      "endpoint": "https://api.example.com/registry"
+                      }
+                    ]
+                  }
+                }
+              
+              },
+
+                {
+                  "@id": "http://example.org/chinaSRC",
+                  "@type": "http://example.org/SRCs",
+                  "name": "SRCs",
+                  "isComposedBy": {
+                    "@type": "SRC",
+                    "name": "chinaSRC",
+                    "location": {
+                      "@type": "Place",
+                      "name": "Shangai",
+                      "isInAcountry": {
+                        "@type": "Country",
+                        "name": "China",
+                        "membership":"Asia",
+                        "Locality": "Shangai",
+                        "addressLocality": {
+                          "type": "postalAddress",
+                          "address": 18008
+                        }
+                      },
+                      "isInAregion": {
+                        "@type": "region",
+                        "name": "not defined",
+                        "postalCode": "",
+                        "addressRegion": ""
+                      },
+                      "has_geo": {
+                        "@type": "GeoCoordinates",
+                        "latitude": 31.24,
+                        "longitude": 121.47
+                      }
+                    },
+                      
+
+                    "has-contactPoint": {
+                        "@type": "ContactPoint",
+                        "name": "ChinaSRC Team",
+                        "telephone": "+34 958121311",
+                        "email": "info@chinasrc.ch",
+                        "address": "Nanjing Road East 88, Huangpu District, Shanghai, 200001, China",
+                        "faxNumber":  "+86 15812345669",
+                        "URL": "https://iaa.es"
+                      },
+                    
+
+
+                    "has_PI": {
+                      "@type": "Person",
+                      "name": "Ying Zhao",
+                      "email": "yzhao@example.ch",
+                      "telephone": "+86 13812345678",
+                      "worksIn": {
+                        "@type": "Organization",
+                        "name": "University of Shangai"
+                      }
+                    },
+                    "hasComputing": {
+                      "@type": "Computing",
+                      "PowerConsumption":"",
+                      "hasCPU": {
+                        "@type": "CPU",
+                        "numberOfCPUs":8,
+                        "cores": 200,
+                        "pflops":{
+                          "@type":"QuantityValue",
+                          "unit":"Petaflops",
+                          "value":0.0125
+                        },
+                        "clock": {
+                          "@type": "QuantityValue",
+                          "unit": "GHz",
+                          "value": 3.5
+                        }
+                      },
+            
+                      "hasGPU":{
+                        "@type":"GPU",
+                        "numberOfGPUs":0,
+                        "type":"not defined"
+                      },
+            
+                      "hasMemory": {
+                        "@type": "QuantityValue",
+                        "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                        "value": 0
+                      },
+                      "hasDisk": {
+                        "@type": "Disk",
+                        "size": {
+                          "@type": "QuantityValue",
+                          "unit": "http://qudt.org/vocab/unit/Terabyte",
+                          "value": 40
+                        },
+                        "type": "not defined"
+                      }
+                    },
+            
+                    "hasStorage":{
+                      "@type":"Storage",
+                        "size":{
+                          "@type":"QuantityValue",
+                          "unit": "http://qudt.org/vocab/unit/Terabyte",
+                          "value": 1024
+                        }
+                      },
+                       
+                      "hasNetwork":{
+                        "@type":"Network",
+                        "hasInternalbandawidth":{
+                          "@type": "QuantityValue",
+                          "unit": "http://qudt.org/vocab/unit/Gbps",
+                          "value": 2
+                        },
+                        "hasExternalBandawidth":{
+                            "@type":"QuantityValue",
+                            "unit":"http://qudt.org/vocab/unit/Gbps",
+                            "value":8
+                          }
+                        },
+
+                        "has-energyLabel":{
+                          "@type":"energyLabel",
+                          "has-energySource":{
+                            "@type":"energySource",
+                            "renewableEnergyFactor":"",
+                            "energyReuseFactor":""
+                          },
+                          
+                          "has-energyEfficiency":{
+                            "@type":"efficiencyEnergy",
+                            "energyEfficiencyPUE":"",
+                            "waterEfficiencyWUE":""
+                          }
+                        },
+
+       
+        "providesLocalServiceCatalogue": {
+            "@type": "LocalServiceCatalogue",
+            "localServiceCatalogue": [
+                {
+                    "@type": "DatalakeService",
+                    "name": "Datalake",
+                    "serviceId": "datalake-service-001",
+                    "serviceVersion": "1.2.0",
+                    "description": "A scalable data lake service for storing and processing large volumes of data.",
+                    "hasDataset": {
+                        "@type": "Dataset",
+                        "name": "Wallaby Dataset",
+                        "ivo": "ivo://espsrc.../test/wallaby-center-fits",
+                        "did": "paramtest:wallaby-center-fits",
+                        "localPath": "/test/af/07/wallaby-center-fits",
+                        "createdDate": "2023-01-01",
+                        "description": "A dataset containing wallaby observation data."
+                    }
+                },
+                {
+                    "@type": "VisualizationService",
+                    "name": "Visualization",
+                    "serviceId": "visualization-service-001",
+                    "serviceVersion": "1.0.0",
+                    "description": "A service that provides visualization tools for analyzing wallaby data.",
+                    "hasVisualizationTool": {
+                        "@type": "VisualizationTool",
+                        "name": "Carta",
+                        "version": "7.0",
+                        "description": "A tool for visualizing data in various formats."
+                    }
+                },
+                {
+                    "@type": "NotebookService",
+                    "name": "Notebook",
+                    "serviceId": "notebook-service-001",
+                    "serviceVersion": "1.0.0",
+                    "description": "A service that allows users to create and share notebooks for data analysis and collaboration.",
+                    "hasJupyterNotebook":{
+                        "@type":"JupyterNotebook",
+                        "name":"Jupyternotebook"
+                    },
+                    "resourceRequirements": {
+                        "@type": "Requirements",
+                        "cpu": {
+                            "@type": "CPU",
+                            "cores": 4,
+                            "clockSpeed": {
+                                "@type": "QuantityValue",
+                                "unit": "GHz",
+                                "value": 2.5
+                            },
+                             "memory": {
+                                "@type": "QuantityValue",
+                                "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                                "value": 16
+                            }
+                        }
+                    }
+                },
+                {
+                    "@type": "SciencePlatformService",
+                    "name": "Science Platform",
+                    "serviceId": "science-platform-service-001",
+                    "serviceVersion": "1.0.0",
+                    "description": "A platform for conducting scientific research, offering tools and resources for scientists.",
+                    "hasResearchTool": {
+                      "@type": "ResearchTool",
+                      "name": "Research Assistant",
+                      "version": "1.0",
+                      "description": "A tool for managing and analyzing research data."
+                    }
+                },
+                {
+                  
+                    "@type": "SODAService",
+                    "name": "SODA",
+                    "serviceId": "soda-service-001",
+                    "serviceVersion": "1.0.0",
+                    "description": "A service for providing access to streaming data and real-time analytics.",
+                    "dataAccess": {
+                      "@type": "DataAccess",
+                      "protocol": "HTTP",
+                      "endpoint": "https://api.example.com/soda"
+                      }
+                    
+                },
+                {   
+                  "@type": "MonitoringService",
+                  "name": "Monitoring Service",
+                  "serviceId": "monitoring-service-001",
+                  "serviceVersion": "1.0.0",
+                  "description": "A service that provides monitoring and alerting capabilities for applications and systems.",
+                  "alertType": {
+                    "@type": "Alert",
+                    "name": "Health Check",
+                    "frequency": "5 minutes",
+                    "threshold": "2 failures"
+                  }
+                }
+              ]
+            },
+
+        "providesGlobalServiceCatalogue": {
+        "@type": "GlobalServiceCatalogue",
+        "globalServiceCatalogue": [
+          
+          {
+            "@type": "ScienceGatewayService",
+            "name": "Science Gateway",
+            "serviceId": "science-gateway-service-001",
+            "serviceVersion": "1.0.0",
+            "description": "A web-based platform for accessing scientific resources, tools, and applications.",
+            "supportedDomains": ["astronomy", "biology", "physics"]
+          },
+          {
+            "@type": "AuthService",
+            "name": "Authentication Service",
+            "serviceId": "auth-service-001",
+            "serviceVersion": "1.0.0",
+            "description": "A service that provides authentication and authorization for access to applications and data.",
+            "authMethods": [
+              {
+                "type": "OAuth2",
+                "description": "OAuth 2.0 based authentication method."
+              },
+                    {
+                        "type": "SAML",
+                        "description": "Security Assertion Markup Language (SAML) for single sign-on."
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "DataDistributionPlatformService",
+                    "name": "Data Distribution Platform",
+                    "serviceId": "data-distribution-service-001",
+                    "serviceVersion": "1.0.0",
+                    "description": "A platform for distributing data across various services and applications.",
+                    "supportedFormats": ["CSV", "JSON", "XML"],
+                    "deliveryMethods": {
+                      "api": {
+                        "protocol": "REST",
+                        "endpoint": "https://api.example.com/distribute"
+                        },
+                        "files": {
+                        "method": "FTP",
+                        "endpoint": "ftp://ftp.example.com/data"
+                        }
+                      }
+                    },
+                    {
+                      "@type": "RegistryService",
+                      "name": "Service Registry",
+                      "serviceId": "registry-service-001",
+                      "serviceVersion": "1.0.0",
+                      "description": "A service for registering and discovering available services in the system.",
+                      "registryType": "Central",
+                      "endpoint": "https://api.example.com/registry"
+                      }
+                    ]
+                  }
+                }
+              },
+                {
+                  "@id": "http://example.org/japanSRC",
+                  "@type": "http://example.org/SRCs",
+                  "name": "SRCs",
+                  "isComposedBy": {
+                    "@type": "SRC",
+                    "name": "japanSRC",
+                    "location": {
+                      "@type": "Place",
+                      "name": "Tokyo",
+                      "isInAcountry": {
+                        "@type": "Country",
+                        "name": "Japan",
+                        "membership":"Asia",
+                        "Locality": "Tokyo",
+                        "addressLocality": {
+                          "type": "postalAddress",
+                          "address": 18008
+                        }
+                      },
+                      "isInAregion": {
+                        "@type": "region",
+                        "name": "not defined",
+                        "postalCode": "",
+                        "addressRegion": ""
+                      },
+                      "has_geo": {
+                        "@type": "GeoCoordinates",
+                        "latitude": 36.66,
+                        "longitude": 138.19
+                      }
+                    },
+
+                    "has-contactPoint": {
+                        "@type": "ContactPoint",
+                        "name": "japanSRC Team",
+                        "telephone": "+34 958121311",
+                        "email": "info@jsrc.es",
+                        "address": "Shinjuku Street 45-7, Shinjuku-ku, Tokyo, 160-0022, Japan",
+                        "faxNumber": "+81 31-1234-5669",
+                        "URL": "https://iaa.es"
+                      },
+                    
+
+                    "has_PI": {
+                      "@type": "Person",
+                      "name": "Yumi Sato",
+                      "email": "ysato@example.ja",
+                      "telephone": "+81 90-1234-5678",
+                      "worksIn": {
+                        "@type": "Organization",
+                        "name": "University of Tokyo"
+                      }
+                    },
+                    "hasComputing": {
+                      "@type": "Computing",
+                      "PowerConsumption":"",
+                      "hasCPU": {
+                        "@type": "CPU",
+                        "numberOfCPUs":2,
+                        "cores": 64,
+                        "pflops":{
+                          "@type":"QuantityValue",
+                          "unit":"Petaflops",
+                          "value":0.014
+                        },
+                        "clock": {
+                          "@type": "QuantityValue",
+                          "unit": "GHz",
+                          "value": 3.5
+                        }
+                      },
+            
+                      "hasGPU":{
+                        "@type":"GPU",
+                        "numberOfGPUs":0,
+                        "type":"not defined"
+                      },
+            
+                      "hasMemory": {
+                        "@type": "QuantityValue",
+                        "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                        "value": 0
+                      },
+                      "hasDisk": {
+                        "@type": "Disk",
+                        "size": {
+                          "@type": "QuantityValue",
+                          "unit": "http://qudt.org/vocab/unit/Terabyte",
+                          "value": 0
+                        },
+                        "type": "HDD"
+                      }
+                    },
+            
+                    "hasStorage":{
+                      "@type":"Storage",
+                        "size":{
+                          "@type":"QuantityValue",
+                          "unit": "http://qudt.org/vocab/unit/Terabyte",
+                          "value": 600
+                        }
+                      },
+                       
+                      "hasNetwork":{
+                        "@type":"Network",
+                        "hasExternalBandawidth":{
+                            "@type":"QuantityValue",
+                            "unit":"http://qudt.org/vocab/unit/Gbps",
+                            "value":10
+                          }
+                        },
+
+                      "has-energyLabel":{
+                        "@type":"energyLabel",
+                        "has-energySource":{
+                          "@type":"energySource",
+                          "renewableEnergyFactor":"",
+                          "energyReuseFactor":""
+                        },
+                        
+                        "has-energyEfficiency":{
+                          "@type":"efficiencyEnergy",
+                          "energyEfficiencyPUE":"",
+                          "waterEfficiencyWUE":""
+                        }
+                      },
+                        
+                        "providesLocalServiceCatalogue": {
+                          "@type": "LocalServiceCatalogue",
+                          "localServiceCatalogue": [
+                            {
+                              "@type": "DatalakeService",
+                              "name": "Datalake",
+                              "serviceId": "datalake-service-001",
+                              "serviceVersion": "1.2.0",
+                              "description": "A scalable data lake service for storing and processing large volumes of data.",
+                              "hasDataset": {
+                                "@type": "Dataset",
+                                "name": "Wallaby Dataset",
+                                "ivo": "ivo://espsrc.../test/wallaby-center-fits",
+                                "did": "paramtest:wallaby-center-fits",
+                                "localPath": "/test/af/07/wallaby-center-fits",
+                                "createdDate": "2023-01-01",
+                                "description": "A dataset containing wallaby observation data."
+                              }
+                            },
+                            
+                            {
+                              "@type": "VisualizationService",
+                              "name": "Visualization",
+                              "serviceId": "visualization-service-001",
+                              "serviceVersion": "1.0.0",
+                              "description": "A service that provides visualization tools for analyzing wallaby data.",
+                              "hasVisualizationTool": {
+                                "@type": "VisualizationTool",
+                                "name": "Carta",
+                                "version": "7.0",
+                                "description": "A tool for visualizing data in various formats."
+                              }
+                            },
+                            {
+                              "@type": "NotebookService",
+                              "name": "Notebook",
+                              "serviceId": "notebook-service-001",
+                              "serviceVersion": "1.0.0",
+                              "description": "A service that allows users to create and share notebooks for data analysis and collaboration.",
+                              "hasJupyterNotebook":{
+                                "@type":"JupyterNotebook",
+                                "name":"Jupyternotebook"
+                              },
+                              "resourceRequirements": {
+                                "@type": "Requirements",
+                                "cpu": {
+                                  "@type": "CPU",
+                                  "cores": 4,
+                                  "clockSpeed": {
+                                    "@type": "QuantityValue",
+                                    "unit": "GHz",
+                                    "value": 2.5
+                                  },
+                                  "memory": {
+                                    "@type": "QuantityValue",
+                                    "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                                    "value": 16
+                                  }
+                                }
+                            }
+                          },
+                          {
+                            "@type": "SciencePlatformService",
+                            "name": "Science Platform",
+                            "serviceId": "science-platform-service-001",
+                            "serviceVersion": "1.0.0",
+                            "description": "A platform for conducting scientific research, offering tools and resources for scientists.",
+                            "hasResearchTool": {
+                              "@type": "ResearchTool",
+                              "name": "Research Assistant",
+                              "version": "1.0",
+                              "description": "A tool for managing and analyzing research data."
+                            }
+                          },
+                          
+                          {
+                            "@type": "SODAService",
+                            "name": "SODA",
+                            "serviceId": "soda-service-001",
+                            "serviceVersion": "1.0.0",
+                            "description": "A service for providing access to streaming data and real-time analytics.",
+                            "dataAccess": {
+                              "@type": "DataAccess",
+                              "protocol": "HTTP",
+                              "endpoint": "https://api.example.com/soda"
+                              }
+                            },
+                            
+                            {
+                            
+                            "@type": "MonitoringService",
+                            "name": "Monitoring Service",
+                            "serviceId": "monitoring-service-001",
+                            "serviceVersion": "1.0.0",
+                            "description": "A service that provides monitoring and alerting capabilities for applications and systems.",
+                            "alertType": {
+                              "@type": "Alert",
+                              "name": "Health Check",
+                              "frequency": "5 minutes",
+                              "threshold": "2 failures"
+                            }
+                          }
+                        ]
+                      },
+                      
+        "providesGlobalServiceCatalogue": {
+        "@type": "GlobalServiceCatalogue",
+        "globalServiceCatalogue": [
+          
+          {
+            "@type": "ScienceGatewayService",
+            "name": "Science Gateway",
+            "serviceId": "science-gateway-service-001",
+            "serviceVersion": "1.0.0",
+            "description": "A web-based platform for accessing scientific resources, tools, and applications.",
+            "supportedDomains": ["astronomy", "biology", "physics"]
+          },
+          {
+            "@type": "AuthService",
+            "name": "Authentication Service",
+            "serviceId": "auth-service-001",
+            "serviceVersion": "1.0.0",
+            "description": "A service that provides authentication and authorization for access to applications and data.",
+            "authMethods": [
+              {
+                "type": "OAuth2",
+                "description": "OAuth 2.0 based authentication method."
+              },
+                    {
+                        "type": "SAML",
+                        "description": "Security Assertion Markup Language (SAML) for single sign-on."
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "DataDistributionPlatformService",
+                    "name": "Data Distribution Platform",
+                    "serviceId": "data-distribution-service-001",
+                    "serviceVersion": "1.0.0",
+                    "description": "A platform for distributing data across various services and applications.",
+                    "supportedFormats": ["CSV", "JSON", "XML"],
+                    "deliveryMethods": {
+                      "api": {
+                        "protocol": "REST",
+                        "endpoint": "https://api.example.com/distribute"
+                        },
+                        "files": {
+                        "method": "FTP",
+                        "endpoint": "ftp://ftp.example.com/data"
+                        }
+                      }
+                    },
+                    {
+                      "@type": "RegistryService",
+                      "name": "Service Registry",
+                      "serviceId": "registry-service-001",
+                      "serviceVersion": "1.0.0",
+                      "description": "A service for registering and discovering available services in the system.",
+                      "registryType": "Central",
+                      "endpoint": "https://api.example.com/registry"
+                      }
+                    ]
+                  }
+                }
+              },
+
+                {
+                    "@id": "http://example.org/ukSRCsCollection",
+                    "@type": "http://example.org/SRCsCollection",
+                    "name": "SRCs Collection",
+                    "isComposedBy": [
+                        {
+                            "@type": "SRC",
+                            "name": "ukSRC1",
+                            "location": {
+                                "@type": "Place",
+                                "name": "Jodrell Bank Observatory",
+                                "isInAcountry": {
+                                    "@type": "Country",
+                                    "name": "United Kingdom",
+                                    "membership": "Europe",
+                                    "Locality": "Jodrell Bank",
+                                    "addressLocality": {
+                                        "type": "postalAddress",
+                                        "address": 18008
+                                    }
+                                },
+                                "has_geo": {
+                                    "@type": "GeoCoordinates",
+                                    "latitude": 53.24,
+                                    "longitude": -2.30
+                                }
+                            },
+                            "has-contactPoint": {
+                                "@type": "ContactPoint",
+                                "name": "ukSRC Team",
+                                "telephone": "+44 10 7946 0970",
+                                "email": "info@uksrc.uk",
+                                "address": "Observatory Lane 12, Jodrell Bank, Cheshire, SK11 9DL, England",
+                                "faxNumber": "+34 958814530",
+                                "URL": "https://jodrellbanko.uk"
+                                },
+
+                            "has_PI": {
+                                "@type": "Person",
+                                "name": "Jasper Blakemore",
+                                "email": "jblakemore@example.uk",
+                                "telephone": "+44 20 7946 0958",
+                                "worksIn": {
+                                    "@type": "Organization",
+                                    "name": "Jodrell Bank Observatory"
+                                }
+                            },
+                            
+                            "hasComputing": {
+                                "@type": "Computing",
+                                "PowerConsumption":"",
+                                "hasCPU": {
+                                    "@type": "CPU",
+                                    "numberOfCPUs": 5,
+                                    "cores": 120,
+                                    "pflops": {
+                                        "@type": "QuantityValue",
+                                        "unit": "Petaflops",
+                                        "value": 0
+                                    },
+                                    "clock": {
+                                        "@type": "QuantityValue",
+                                        "unit": "GHz",
+                                        "value": 3.5
+                                    }
+                                },
+                                
+                                "hasMemory": {
+                                    "@type": "QuantityValue",
+                                    "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                                    "value": 0
+                                },
+                                
+                                "hasDisk": {
+                                    "@type": "Disk",
+                                    "size": {
+                                        "@type": "QuantityValue",
+                                        "unit": "http://qudt.org/vocab/unit/Terabyte",
+                                        "value": 0
+                                    },
+                                    "type": "not defined"
+                                }
+                            },
+                            
+                            "hasStorage": {
+                                "@type": "Storage",
+                                "size": {
+                                    "@type": "QuantityValue",
+                                    "unit": "http://qudt.org/vocab/unit/Terabyte",
+                                    "value": 0
+                                }
+                            },
+                            "hasNetwork": {
+                                "@type": "Network",
+                                "hasExternalBandwidth": {
+                                    "@type": "QuantityValue",
+                                    "unit": "http://qudt.org/vocab/unit/Gbps",
+                                    "value": 10
+                                }
+                            },
+
+                            "has-energyLabel":{
+                              "@type":"energyLabel",
+                              "has-energySource":{
+                                "@type":"energySource",
+                                "renewableEnergyFactor":"",
+                                "energyReuseFactor":""
+                              },
+                              
+                              "has-energyEfficiency":{
+                                "@type":"efficiencyEnergy",
+                                "energyEfficiencyPUE":"",
+                                "waterEfficiencyWUE":""
+                              }
+                            },
+
+                              "providesLocalServiceCatalogue": {
+                                "@type": "LocalServiceCatalogue",
+                                "localServiceCatalogue": [
+                                  {
+                                    "@type": "DatalakeService",
+                                    "name": "Datalake",
+                                    "serviceId": "datalake-service-001",
+                                    "serviceVersion": "1.2.0",
+                                    "description": "A scalable data lake service for storing and processing large volumes of data.",
+                                    "hasDataset": {
+                                      "@type": "Dataset",
+                                      "name": "Wallaby Dataset",
+                                      "ivo": "ivo://espsrc.../test/wallaby-center-fits",
+                                      "did": "paramtest:wallaby-center-fits",
+                                      "localPath": "/test/af/07/wallaby-center-fits",
+                                      "createdDate": "2023-01-01",
+                                      "description": "A dataset containing wallaby observation data."
+                                    }
+                                  },
+                                  {
+                                    "@type": "VisualizationService",
+                                    "name": "Visualization",
+                                    "serviceId": "visualization-service-001",
+                                    "serviceVersion": "1.0.0",
+                                    "description": "A service that provides visualization tools for analyzing wallaby data.",
+                                    "hasVisualizationTool": {
+                                      "@type": "VisualizationTool",
+                                      "name": "Carta",
+                                      "version": "7.0",
+                                      "description": "A tool for visualizing data in various formats."
+                                    }
+                                  },
+                                  {
+                                    "@type": "NotebookService",
+                                    "name": "Notebook",
+                                    "serviceId": "notebook-service-001",
+                                    "serviceVersion": "1.0.0",
+                                    "description": "A service that allows users to create and share notebooks for data analysis and collaboration.",
+                                    "hasJupyterNotebook":{
+                                      "@type":"JupyterNotebook",
+                                      "name":"Jupyternotebook"
+                                    },
+                                    "resourceRequirements": {
+                                      "@type": "Requirements",
+                                      "cpu": {
+                                        "@type": "CPU",
+                                        "cores": 4,
+                                        "clockSpeed": {
+                                          "@type": "QuantityValue",
+                                          "unit": "GHz",
+                                          "value": 2.5
+                                        },
+                                        "memory": {
+                                          "@type": "QuantityValue",
+                                          "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                                          "value": 16
+                                  }
+                                }
+                            }
+                          },
+                          {
+                            "@type": "SciencePlatformService",
+                            "name": "Science Platform",
+                            "serviceId": "science-platform-service-001",
+                            "serviceVersion": "1.0.0",
+                            "description": "A platform for conducting scientific research, offering tools and resources for scientists.",
+                            "hasResearchTool": {
+                              "@type": "ResearchTool",
+                              "name": "Research Assistant",
+                              "version": "1.0",
+                              "description": "A tool for managing and analyzing research data."
+                            }
+                          },
+                          
+                          {
+                            "@type": "SODAService",
+                            "name": "SODA",
+                            "serviceId": "soda-service-001",
+                            "serviceVersion": "1.0.0",
+                            "description": "A service for providing access to streaming data and real-time analytics.",
+                            "dataAccess": {
+                              "@type": "DataAccess",
+                              "protocol": "HTTP",
+                              "endpoint": "https://api.example.com/soda"
+                              }
+                            },
+                            
+                            {
+                            
+                            "@type": "MonitoringService",
+                            "name": "Monitoring Service",
+                            "serviceId": "monitoring-service-001",
+                            "serviceVersion": "1.0.0",
+                            "description": "A service that provides monitoring and alerting capabilities for applications and systems.",
+                            "alertType": {
+                              "@type": "Alert",
+                              "name": "Health Check",
+                              "frequency": "5 minutes",
+                              "threshold": "2 failures"
+                            }
+                          }
+                        ]
+                      },
+
+        "providesGlobalServiceCatalogue": {
+        "@type": "GlobalServiceCatalogue",
+        "globalServiceCatalogue": [
+          
+          {
+            "@type": "ScienceGatewayService",
+            "name": "Science Gateway",
+            "serviceId": "science-gateway-service-001",
+            "serviceVersion": "1.0.0",
+            "description": "A web-based platform for accessing scientific resources, tools, and applications.",
+            "supportedDomains": ["astronomy", "biology", "physics"]
+          },
+          {
+            "@type": "AuthService",
+            "name": "Authentication Service",
+            "serviceId": "auth-service-001",
+            "serviceVersion": "1.0.0",
+            "description": "A service that provides authentication and authorization for access to applications and data.",
+            "authMethods": [
+              {
+                "type": "OAuth2",
+                "description": "OAuth 2.0 based authentication method."
+              },
+                    {
+                        "type": "SAML",
+                        "description": "Security Assertion Markup Language (SAML) for single sign-on."
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "DataDistributionPlatformService",
+                    "name": "Data Distribution Platform",
+                    "serviceId": "data-distribution-service-001",
+                    "serviceVersion": "1.0.0",
+                    "description": "A platform for distributing data across various services and applications.",
+                    "supportedFormats": ["CSV", "JSON", "XML"],
+                    "deliveryMethods": {
+                      "api": {
+                        "protocol": "REST",
+                        "endpoint": "https://api.example.com/distribute"
+                        },
+                        "files": {
+                        "method": "FTP",
+                        "endpoint": "ftp://ftp.example.com/data"
+                        }
+                      }
+                    },
+                    {
+                      "@type": "RegistryService",
+                      "name": "Service Registry",
+                      "serviceId": "registry-service-001",
+                      "serviceVersion": "1.0.0",
+                      "description": "A service for registering and discovering available services in the system.",
+                      "registryType": "Central",
+                      "endpoint": "https://api.example.com/registry"
+                      }
+                    ]
+                  }
+                },
+
+                    {
+                        "@type": "SRC",
+                        "name": "ukSRC2",
+                        "location": {
+                            "@type": "Place",
+                            "name": "University of Manchester",
+                            "isInAcountry": {
+                                "@type": "Country",
+                                "name": "United Kingdom",
+                                "membership": "Europe",
+                                "Locality": "Manchester",
+                                "addressLocality": {
+                                    "type": "postalAddress",
+                                    "address": 170001
+                                }
+                            },
+                            "has_geo": {
+                                "@type": "GeoCoordinates",
+                                "latitude": 51.50,
+                                "longitude":-0.12
+                            }
+                        },
+                        "has-contactPoint": {
+                            "@type": "ContactPoint",
+                            "name": "ukSRC2",
+                            "telephone": "+44 20 7946 0958",
+                            "email": "info@uksrc1.uk",
+                            "address": "123 Baker Street, Marylebone, London, NW1 6XE, United Kingdom",
+                            "faxNumber": "+34 958814530",
+                            "URL": "https://jodrellbanko.uk"
+                            },
+                            
+                        "has_PI": {
+                            "@type": "Person",
+                            "name": "Charlotte Smith",
+                            "email": "jblakemore@example.uk",
+                            "telephone":  "+44 10 7946 0951",
+                            "worksIn": {
+                                "@type": "Organization",
+                                "name": "University of Manchester"
+                            }
+                        },
+                        "hasComputing": {
+                            "@type": "Computing",
+                            "PowerConsumption":"",
+                            "hasCPU": {
+                                "@type": "CPU",
+                                "numberOfCPUs": 4,
+                                "cores": 100,
+                                "pflops": {
+                                    "@type": "QuantityValue",
+                                    "unit": "Petaflops",
+                                    "value": 0
+                                },
+                                "clock": {
+                                    "@type": "QuantityValue",
+                                    "unit": "GHz",
+                                    "value": 5.2
+                                 }
+                            },
+                            
+                            "hasMemory": {
+                                "@type": "QuantityValue",
+                                "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                                "value": 20
+                            },
+                            
+                            "hasDisk": {
+                                "@type": "Disk",
+                                "size": {
+                                    "@type": "QuantityValue",
+                                    "unit": "http://qudt.org/vocab/unit/Terabyte",
+                                    "value": 0
+                                },
+                                "type": "SSD"
+                            }
+                        },
+
+                        "hasStorage": {
+                            "@type": "Storage",
+                            "size": {
+                                "@type": "QuantityValue",
+                                "unit": "http://qudt.org/vocab/unit/Terabyte",
+                                "value": 30
+                            }
+                        },
+                        
+                        "hasNetwork": {
+                            "@type": "Network",
+                            "hasExternalBandwidth": {
+                                "@type": "QuantityValue",
+                                "unit": "http://qudt.org/vocab/unit/Gbps",
+                                "value": 10
+                            }
+                        },
+
+                        "has-energyLabel":{
+                          "@type":"energyLabel",
+                          "has-energySource":{
+                            "@type":"energySource",
+                            "renewableEnergyFactor":"",
+                            "energyReuseFactor":""
+                          },
+                          
+                          "has-energyEfficiency":{
+                            "@type":"efficiencyEnergy",
+                            "energyEfficiencyPUE":"",
+                            "waterEfficiencyWUE":""
+                          }
+                        },
+                       
+                        "providesLocalServiceCatalogue": {
+                                "@type": "LocalServiceCatalogue",
+                                "localServiceCatalogue": [
+                                  {
+                                    "@type": "DatalakeService",
+                                    "name": "Datalake",
+                                    "serviceId": "datalake-service-001",
+                                    "serviceVersion": "1.2.0",
+                                    "description": "A scalable data lake service for storing and processing large volumes of data.",
+                                    "hasDataset": {
+                                      "@type": "Dataset",
+                                      "name": "Wallaby Dataset",
+                                      "ivo": "ivo://espsrc.../test/wallaby-center-fits",
+                                      "did": "paramtest:wallaby-center-fits",
+                                      "localPath": "/test/af/07/wallaby-center-fits",
+                                      "createdDate": "2023-01-01",
+                                      "description": "A dataset containing wallaby observation data."
+                                    }
+                                  },
+                                  {
+                                    "@type": "VisualizationService",
+                                    "name": "Visualization",
+                                    "serviceId": "visualization-service-001",
+                                    "serviceVersion": "1.0.0",
+                                    "description": "A service that provides visualization tools for analyzing wallaby data.",
+                                    "hasVisualizationTool": {
+                                      "@type": "VisualizationTool",
+                                      "name": "Carta",
+                                      "version": "7.0",
+                                      "description": "A tool for visualizing data in various formats."
+                                    }
+                                  },
+                                  {
+                                    "@type": "NotebookService",
+                                    "name": "Notebook",
+                                    "serviceId": "notebook-service-001",
+                                    "serviceVersion": "1.0.0",
+                                    "description": "A service that allows users to create and share notebooks for data analysis and collaboration.",
+                                    "hasJupyterNotebook":{
+                                      "@type":"JupyterNotebook",
+                                      "name":"Jupyternotebook"
+                                    },
+                                    "resourceRequirements": {
+                                      "@type": "Requirements",
+                                      "cpu": {
+                                        "@type": "CPU",
+                                        "cores": 4,
+                                        "clockSpeed": {
+                                          "@type": "QuantityValue",
+                                          "unit": "GHz",
+                                          "value": 2.5
+                                        },
+                                        "memory": {
+                                          "@type": "QuantityValue",
+                                          "unit": "http://qudt.org/vocab/unit/Gigabyte",
+                                          "value": 16
+                                  }
+                                }
+                            }
+                          },
+                          {
+                            "@type": "SciencePlatformService",
+                            "name": "Science Platform",
+                            "serviceId": "science-platform-service-001",
+                            "serviceVersion": "1.0.0",
+                            "description": "A platform for conducting scientific research, offering tools and resources for scientists.",
+                            "hasResearchTool": {
+                              "@type": "ResearchTool",
+                              "name": "Research Assistant",
+                              "version": "1.0",
+                              "description": "A tool for managing and analyzing research data."
+                            }
+                          },
+                          
+                          {
+                            "@type": "SODAService",
+                            "name": "SODA",
+                            "serviceId": "soda-service-001",
+                            "serviceVersion": "1.0.0",
+                            "description": "A service for providing access to streaming data and real-time analytics.",
+                            "dataAccess": {
+                              "@type": "DataAccess",
+                              "protocol": "HTTP",
+                              "endpoint": "https://api.example.com/soda"
+                              }
+                            },
+                            
+                            {
+                            
+                            "@type": "MonitoringService",
+                            "name": "Monitoring Service",
+                            "serviceId": "monitoring-service-001",
+                            "serviceVersion": "1.0.0",
+                            "description": "A service that provides monitoring and alerting capabilities for applications and systems.",
+                            "alertType": {
+                              "@type": "Alert",
+                              "name": "Health Check",
+                              "frequency": "5 minutes",
+                              "threshold": "2 failures"
+                            }
+                          }
+                        ]
+                      },
+                                        
+        "providesGlobalServiceCatalogue": {
+        "@type": "GlobalServiceCatalogue",
+        "globalServiceCatalogue": [
+          
+          {
+            "@type": "ScienceGatewayService",
+            "name": "Science Gateway",
+            "serviceId": "science-gateway-service-001",
+            "serviceVersion": "1.0.0",
+            "description": "A web-based platform for accessing scientific resources, tools, and applications.",
+            "supportedDomains": ["astronomy", "biology", "physics"]
+          },
+          {
+            "@type": "AuthService",
+            "name": "Authentication Service",
+            "serviceId": "auth-service-001",
+            "serviceVersion": "1.0.0",
+            "description": "A service that provides authentication and authorization for access to applications and data.",
+            "authMethods": [
+              {
+                "type": "OAuth2",
+                "description": "OAuth 2.0 based authentication method."
+              },
+                    {
+                        "type": "SAML",
+                        "description": "Security Assertion Markup Language (SAML) for single sign-on."
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "DataDistributionPlatformService",
+                    "name": "Data Distribution Platform",
+                    "serviceId": "data-distribution-service-001",
+                    "serviceVersion": "1.0.0",
+                    "description": "A platform for distributing data across various services and applications.",
+                    "supportedFormats": ["CSV", "JSON", "XML"],
+                    "deliveryMethods": {
+                      "api": {
+                        "protocol": "REST",
+                        "endpoint": "https://api.example.com/distribute"
+                        },
+                        "files": {
+                        "method": "FTP",
+                        "endpoint": "ftp://ftp.example.com/data"
+                        }
+                      }
+                    },
+                    {
+                      "@type": "RegistryService",
+                      "name": "Service Registry",
+                      "serviceId": "registry-service-001",
+                      "serviceVersion": "1.0.0",
+                      "description": "A service for registering and discovering available services in the system.",
+                      "registryType": "Central",
+                      "endpoint": "https://api.example.com/registry"
+                      }
+                    ]
+                  }
+                }
+                    
+                ]
+              }
+            ]
+          }
