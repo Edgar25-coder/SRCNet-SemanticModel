@@ -1,0 +1,2682 @@
+{
+  "@context": {
+    "@vocab": "",
+    "SRCNet": "",
+    "SRC": "",
+    "Place": "",
+    "Country": "",
+    "EU":"",
+    "Europe":"",
+    "Asia":"",
+    "NorthAmerica":"",
+    "Region": "",
+    "postalAddress":"",
+    "Geo": "",
+    "ContactPoint": "",
+    "Person": "",
+    "Organization": "",
+    "Computing": "",
+    "CPU": "",
+    "Disk": "",
+    "Memory": "",
+    "Storage":"",
+    "Control":"",
+    "LocalServiceCatalogue":"",
+    "GlobalServiceCatalogue":"",
+    "DataLake":"",
+    "Dataset":"",
+    "Visualisation":"",
+    "Notebook":"",
+    "VisualizationTool":"",
+    "qudt": "",
+    "Architecture": "",
+    "Network": "",
+    "energyLabel":""
+   
+  },
+  "@graph": [
+    {
+      "@id": "",
+      "@type": "",
+      "name": "",
+      "isComposedBy": {
+        "@type": "",
+        "name": "",
+        "location": {
+          "@type": "",
+          "name": "",
+          "isInAcountry": {
+            "@type": "",
+            "name": "",
+            "membership":"",
+            "Locality": "",
+            "addressLocality": {
+              "type": "",
+              "address": ""
+            }
+          },
+          "isInAregion": {
+            "@type": "",
+            "name": "",
+            "postalCode": "",
+            "addressRegion": ""
+          },
+          "has_geo": {
+            "@type": "",
+            "latitude": "",
+            "longitude": ""
+          }
+        },
+        
+        "has-contactPoint": {
+            "@type": "",
+            "name": "",
+            "telephone": "",
+            "email": "",
+            "address": "",
+            "faxNumber": "",
+            "URL": ""
+          },
+
+
+        "has_PI": {
+          "@type": "",
+          "name": "",
+          "email": "",
+          "telephone": "",
+          "worksIn": {
+            "@type": "",
+            "name": ""
+          }
+        },
+        "hasComputing": {
+          "@type": "",
+          "PowerConsumption":"",
+          "hasCPU": {
+            "@type": "",
+            "numberOfCPUs":"",
+            "cores": "",
+            "pflops":{
+              "@type":"",
+              "unit":"",
+              "value":""
+            },
+            "clock": {
+              "@type": "",
+              "unit": "",
+              "value":"" 
+            }
+          },
+          
+          "hasGPU":{
+            "@type":"",
+            "numberOfGPUs":"",
+            "type":""
+          },
+
+          "hasMemory": {
+            "@type": "",
+            "unit": "",
+            "value": ""
+          },
+          "hasDisk": {
+            "@type": "",
+            "size": {
+              "@type": "",
+              "unit": "",
+              "value": ""
+            },
+            "type": ""
+          }
+        },
+
+        "hasStorage":{
+          "@type":"",
+            "size":{
+              "@type":"",
+              "unit": "",
+              "value": ""
+            }
+          },
+             
+          "hasNetwork":{
+            "@type":"",
+            "hasInternalbandawidth":{
+              "@type": "",
+              "unit": "",
+              "value": ""
+            },
+            "hasExternalBandawidth":{
+                "@type":"",
+                "unit":"",
+                "value":""
+              }
+            },
+          
+          "has-energyLabel":{
+            "@type":"",
+            "has-energySource":{
+              "@type":"",
+              "renewableEnergyFactor":"",
+              "energyReuseFactor":""
+            },
+            "has-energyEfficiency":{
+              "@type":"",
+              "energyEfficiencyPUE":"",
+              "waterEfficiencyWUE":""
+            }
+
+          },
+
+        "providesLocalServiceCatalogue": {
+            "@type": "",
+            "localServiceCatalogue": [
+                {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "hasDataset": {
+                        "@type": "",
+                        "name": "",
+                        "ivo": "",
+                        "did": "",
+                        "localPath": "",
+                        "createdDate": "",
+                        "description": ""
+                    }
+                },
+                {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "hasVisualizationTool": {
+                        "@type": "",
+                        "name": "",
+                        "version": "",
+                        "description": ""
+                    }
+                },
+                {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "hasJupyterNotebook":{
+                        "@type":"",
+                        "name":""
+                    },
+                    "resourceRequirements": {
+                        "@type": "",
+                        "cpu": {
+                            "@type": "",
+                            "cores": "",
+                            "clockSpeed": {
+                                "@type": "",
+                                "unit": "",
+                                "value": ""
+                            },
+                             "memory": {
+                                "@type": "",
+                                "unit": "",
+                                "value":""
+                            }
+                        }
+                    }
+                },
+                {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "hasResearchTool": {
+                      "@type": "",
+                      "name": "",
+                      "version": "",
+                      "description": ""
+                    }
+                },
+                {
+                  
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "dataAccess": {
+                      "@type": "",
+                      "protocol": "",
+                      "endpoint": ""
+                      }
+                    
+                },
+                {   
+                  "@type": "",
+                  "name": "",
+                  "serviceId": "",
+                  "serviceVersion": "",
+                  "description": "",
+                  "alertType": {
+                    "@type": "",
+                    "name": "",
+                    "frequency": "",
+                    "threshold": ""
+                  }
+                }
+
+            ]
+        },
+
+    "providesGlobalServiceCatalogue": {
+        "@type": "",
+        "globalServiceCatalogue": [
+          
+          {
+            "@type": "",
+            "name": "",
+            "serviceId": "",
+            "serviceVersion": "",
+            "description": "",
+            "supportedDomains": ""
+          },
+          {
+            "@type": "",
+            "name": "",
+            "serviceId": "",
+            "serviceVersion": "",
+            "description": "",
+            "authMethods": [
+              {
+                "type": "",
+                "description": ""
+              },
+                    {
+                        "type": "",
+                        "description": ""
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "supportedFormats": "",
+                    "deliveryMethods": {
+                      "api": {
+                        "protocol": "",
+                        "endpoint": ""
+                        },
+                        "files": {
+                        "method": "",
+                        "endpoint": ""
+                        }
+                      }
+                    },
+                    {
+                      "@type": "",
+                      "name": "",
+                      "serviceId": "",
+                      "serviceVersion": "",
+                      "description": "",
+                      "registryType": "",
+                      "endpoint": ""
+                      }
+                    ]
+                  }
+                }
+              },
+            
+
+
+    {
+      "@id": "",
+      "@type": "",
+      "name": "",
+      "isComposedBy": {
+        "@type": "",
+        "name": "",
+        "location": {
+          "@type": "",
+          "name": "",
+          "isInAcountry": {
+            "@type": "",
+            "name": "",
+            "membership":"",
+            "Locality": "",
+            "addressLocality": {
+              "type": "",
+              "address": ""
+            }
+          },
+          "isInAregion": {
+            "@type": "",
+            "name": "",
+            "postalCode": "",
+            "addressRegion": ""
+          },
+          "has_geo": {
+            "@type": "",
+            "latitude": "",
+            "longitude": ""
+          }
+        },
+        
+        "has-contactPoint": {
+            "@type": "",
+            "name": "",
+            "telephone": "",
+            "email": "",
+            "address": "",
+            "faxNumber": "",
+            "URL": ""
+          },
+
+
+        "has_PI": {
+          "@type": "",
+          "name": "",
+          "email": "",
+          "telephone": "",
+          "worksIn": {
+            "@type": "",
+            "name": ""
+          }
+        },
+        "hasComputing": {
+          "@type": "",
+          "PowerConsumption":"",
+          "hasCPU": {
+            "@type": "",
+            "numberOfCPUs":"",
+            "cores": "",
+            "pflops":{
+              "@type":"",
+              "unit":"",
+              "value":""
+            },
+            "clock": {
+              "@type": "",
+              "unit": "",
+              "value":"" 
+            }
+          },
+          
+          "hasGPU":{
+            "@type":"",
+            "numberOfGPUs":"",
+            "type":""
+          },
+
+          "hasMemory": {
+            "@type": "",
+            "unit": "",
+            "value": ""
+          },
+          "hasDisk": {
+            "@type": "",
+            "size": {
+              "@type": "",
+              "unit": "",
+              "value": ""
+            },
+            "type": ""
+          }
+        },
+
+        "hasStorage":{
+          "@type":"",
+            "size":{
+              "@type":"",
+              "unit": "",
+              "value": ""
+            }
+          },
+             
+          "hasNetwork":{
+            "@type":"",
+            "hasInternalbandawidth":{
+              "@type": "",
+              "unit": "",
+              "value": ""
+            },
+            "hasExternalBandawidth":{
+                "@type":"",
+                "unit":"",
+                "value":""
+              }
+            },
+          
+          "has-energyLabel":{
+            "@type":"",
+            "has-energySource":{
+              "@type":"",
+              "renewableEnergyFactor":"",
+              "energyReuseFactor":""
+            },
+            "has-energyEfficiency":{
+              "@type":"",
+              "energyEfficiencyPUE":"",
+              "waterEfficiencyWUE":""
+            }
+
+          },
+
+        "providesLocalServiceCatalogue": {
+            "@type": "",
+            "localServiceCatalogue": [
+                {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "hasDataset": {
+                        "@type": "",
+                        "name": "",
+                        "ivo": "",
+                        "did": "",
+                        "localPath": "",
+                        "createdDate": "",
+                        "description": ""
+                    }
+                },
+                {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "hasVisualizationTool": {
+                        "@type": "",
+                        "name": "",
+                        "version": "",
+                        "description": ""
+                    }
+                },
+                {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "hasJupyterNotebook":{
+                        "@type":"",
+                        "name":""
+                    },
+                    "resourceRequirements": {
+                        "@type": "",
+                        "cpu": {
+                            "@type": "",
+                            "cores": "",
+                            "clockSpeed": {
+                                "@type": "",
+                                "unit": "",
+                                "value": ""
+                            },
+                             "memory": {
+                                "@type": "",
+                                "unit": "",
+                                "value":""
+                            }
+                        }
+                    }
+                },
+                {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "hasResearchTool": {
+                      "@type": "",
+                      "name": "",
+                      "version": "",
+                      "description": ""
+                    }
+                },
+                {
+                  
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "dataAccess": {
+                      "@type": "",
+                      "protocol": "",
+                      "endpoint": ""
+                      }
+                    
+                },
+                {   
+                  "@type": "",
+                  "name": "",
+                  "serviceId": "",
+                  "serviceVersion": "",
+                  "description": "",
+                  "alertType": {
+                    "@type": "",
+                    "name": "",
+                    "frequency": "",
+                    "threshold": ""
+                  }
+                }
+
+            ]
+        },
+
+    "providesGlobalServiceCatalogue": {
+        "@type": "",
+        "globalServiceCatalogue": [
+          
+          {
+            "@type": "",
+            "name": "",
+            "serviceId": "",
+            "serviceVersion": "",
+            "description": "",
+            "supportedDomains": ""
+          },
+          {
+            "@type": "",
+            "name": "",
+            "serviceId": "",
+            "serviceVersion": "",
+            "description": "",
+            "authMethods": [
+              {
+                "type": "",
+                "description": ""
+              },
+                    {
+                        "type": "",
+                        "description": ""
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "supportedFormats": "",
+                    "deliveryMethods": {
+                      "api": {
+                        "protocol": "",
+                        "endpoint": ""
+                        },
+                        "files": {
+                        "method": "",
+                        "endpoint": ""
+                        }
+                      }
+                    },
+                    {
+                      "@type": "",
+                      "name": "",
+                      "serviceId": "",
+                      "serviceVersion": "",
+                      "description": "",
+                      "registryType": "",
+                      "endpoint": ""
+                      }
+                    ]
+                  }
+                }
+              },
+        {
+      "@id": "",
+      "@type": "",
+      "name": "",
+      "isComposedBy": {
+        "@type": "",
+        "name": "",
+        "location": {
+          "@type": "",
+          "name": "",
+          "isInAcountry": {
+            "@type": "",
+            "name": "",
+            "membership":"",
+            "Locality": "",
+            "addressLocality": {
+              "type": "",
+              "address": ""
+            }
+          },
+          "isInAregion": {
+            "@type": "",
+            "name": "",
+            "postalCode": "",
+            "addressRegion": ""
+          },
+          "has_geo": {
+            "@type": "",
+            "latitude": "",
+            "longitude": ""
+          }
+        },
+        
+        "has-contactPoint": {
+            "@type": "",
+            "name": "",
+            "telephone": "",
+            "email": "",
+            "address": "",
+            "faxNumber": "",
+            "URL": ""
+          },
+
+
+        "has_PI": {
+          "@type": "",
+          "name": "",
+          "email": "",
+          "telephone": "",
+          "worksIn": {
+            "@type": "",
+            "name": ""
+          }
+        },
+        "hasComputing": {
+          "@type": "",
+          "PowerConsumption":"",
+          "hasCPU": {
+            "@type": "",
+            "numberOfCPUs":"",
+            "cores": "",
+            "pflops":{
+              "@type":"",
+              "unit":"",
+              "value":""
+            },
+            "clock": {
+              "@type": "",
+              "unit": "",
+              "value":"" 
+            }
+          },
+          
+          "hasGPU":{
+            "@type":"",
+            "numberOfGPUs":"",
+            "type":""
+          },
+
+          "hasMemory": {
+            "@type": "",
+            "unit": "",
+            "value": ""
+          },
+          "hasDisk": {
+            "@type": "",
+            "size": {
+              "@type": "",
+              "unit": "",
+              "value": ""
+            },
+            "type": ""
+          }
+        },
+
+        "hasStorage":{
+          "@type":"",
+            "size":{
+              "@type":"",
+              "unit": "",
+              "value": ""
+            }
+          },
+             
+          "hasNetwork":{
+            "@type":"",
+            "hasInternalbandawidth":{
+              "@type": "",
+              "unit": "",
+              "value": ""
+            },
+            "hasExternalBandawidth":{
+                "@type":"",
+                "unit":"",
+                "value":""
+              }
+            },
+          
+          "has-energyLabel":{
+            "@type":"",
+            "has-energySource":{
+              "@type":"",
+              "renewableEnergyFactor":"",
+              "energyReuseFactor":""
+            },
+            "has-energyEfficiency":{
+              "@type":"",
+              "energyEfficiencyPUE":"",
+              "waterEfficiencyWUE":""
+            }
+
+          },
+
+        "providesLocalServiceCatalogue": {
+            "@type": "",
+            "localServiceCatalogue": [
+                {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "hasDataset": {
+                        "@type": "",
+                        "name": "",
+                        "ivo": "",
+                        "did": "",
+                        "localPath": "",
+                        "createdDate": "",
+                        "description": ""
+                    }
+                },
+                {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "hasVisualizationTool": {
+                        "@type": "",
+                        "name": "",
+                        "version": "",
+                        "description": ""
+                    }
+                },
+                {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "hasJupyterNotebook":{
+                        "@type":"",
+                        "name":""
+                    },
+                    "resourceRequirements": {
+                        "@type": "",
+                        "cpu": {
+                            "@type": "",
+                            "cores": "",
+                            "clockSpeed": {
+                                "@type": "",
+                                "unit": "",
+                                "value": ""
+                            },
+                             "memory": {
+                                "@type": "",
+                                "unit": "",
+                                "value":""
+                            }
+                        }
+                    }
+                },
+                {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "hasResearchTool": {
+                      "@type": "",
+                      "name": "",
+                      "version": "",
+                      "description": ""
+                    }
+                },
+                {
+                  
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "dataAccess": {
+                      "@type": "",
+                      "protocol": "",
+                      "endpoint": ""
+                      }
+                    
+                },
+                {   
+                  "@type": "",
+                  "name": "",
+                  "serviceId": "",
+                  "serviceVersion": "",
+                  "description": "",
+                  "alertType": {
+                    "@type": "",
+                    "name": "",
+                    "frequency": "",
+                    "threshold": ""
+                  }
+                }
+
+            ]
+        },
+
+    "providesGlobalServiceCatalogue": {
+        "@type": "",
+        "globalServiceCatalogue": [
+          
+          {
+            "@type": "",
+            "name": "",
+            "serviceId": "",
+            "serviceVersion": "",
+            "description": "",
+            "supportedDomains": ""
+          },
+          {
+            "@type": "",
+            "name": "",
+            "serviceId": "",
+            "serviceVersion": "",
+            "description": "",
+            "authMethods": [
+              {
+                "type": "",
+                "description": ""
+              },
+                    {
+                        "type": "",
+                        "description": ""
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "supportedFormats": "",
+                    "deliveryMethods": {
+                      "api": {
+                        "protocol": "",
+                        "endpoint": ""
+                        },
+                        "files": {
+                        "method": "",
+                        "endpoint": ""
+                        }
+                      }
+                    },
+                    {
+                      "@type": "",
+                      "name": "",
+                      "serviceId": "",
+                      "serviceVersion": "",
+                      "description": "",
+                      "registryType": "",
+                      "endpoint": ""
+                      }
+                    ]
+                  }
+                }
+              },
+            
+            {
+      "@id": "",
+      "@type": "",
+      "name": "",
+      "isComposedBy": {
+        "@type": "",
+        "name": "",
+        "location": {
+          "@type": "",
+          "name": "",
+          "isInAcountry": {
+            "@type": "",
+            "name": "",
+            "membership":"",
+            "Locality": "",
+            "addressLocality": {
+              "type": "",
+              "address": ""
+            }
+          },
+          "isInAregion": {
+            "@type": "",
+            "name": "",
+            "postalCode": "",
+            "addressRegion": ""
+          },
+          "has_geo": {
+            "@type": "",
+            "latitude": "",
+            "longitude": ""
+          }
+        },
+        
+        "has-contactPoint": {
+            "@type": "",
+            "name": "",
+            "telephone": "",
+            "email": "",
+            "address": "",
+            "faxNumber": "",
+            "URL": ""
+          },
+
+
+        "has_PI": {
+          "@type": "",
+          "name": "",
+          "email": "",
+          "telephone": "",
+          "worksIn": {
+            "@type": "",
+            "name": ""
+          }
+        },
+        "hasComputing": {
+          "@type": "",
+          "PowerConsumption":"",
+          "hasCPU": {
+            "@type": "",
+            "numberOfCPUs":"",
+            "cores": "",
+            "pflops":{
+              "@type":"",
+              "unit":"",
+              "value":""
+            },
+            "clock": {
+              "@type": "",
+              "unit": "",
+              "value":"" 
+            }
+          },
+          
+          "hasGPU":{
+            "@type":"",
+            "numberOfGPUs":"",
+            "type":""
+          },
+
+          "hasMemory": {
+            "@type": "",
+            "unit": "",
+            "value": ""
+          },
+          "hasDisk": {
+            "@type": "",
+            "size": {
+              "@type": "",
+              "unit": "",
+              "value": ""
+            },
+            "type": ""
+          }
+        },
+
+        "hasStorage":{
+          "@type":"",
+            "size":{
+              "@type":"",
+              "unit": "",
+              "value": ""
+            }
+          },
+             
+          "hasNetwork":{
+            "@type":"",
+            "hasInternalbandawidth":{
+              "@type": "",
+              "unit": "",
+              "value": ""
+            },
+            "hasExternalBandawidth":{
+                "@type":"",
+                "unit":"",
+                "value":""
+              }
+            },
+          
+          "has-energyLabel":{
+            "@type":"",
+            "has-energySource":{
+              "@type":"",
+              "renewableEnergyFactor":"",
+              "energyReuseFactor":""
+            },
+            "has-energyEfficiency":{
+              "@type":"",
+              "energyEfficiencyPUE":"",
+              "waterEfficiencyWUE":""
+            }
+
+          },
+
+        "providesLocalServiceCatalogue": {
+            "@type": "",
+            "localServiceCatalogue": [
+                {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "hasDataset": {
+                        "@type": "",
+                        "name": "",
+                        "ivo": "",
+                        "did": "",
+                        "localPath": "",
+                        "createdDate": "",
+                        "description": ""
+                    }
+                },
+                {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "hasVisualizationTool": {
+                        "@type": "",
+                        "name": "",
+                        "version": "",
+                        "description": ""
+                    }
+                },
+                {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "hasJupyterNotebook":{
+                        "@type":"",
+                        "name":""
+                    },
+                    "resourceRequirements": {
+                        "@type": "",
+                        "cpu": {
+                            "@type": "",
+                            "cores": "",
+                            "clockSpeed": {
+                                "@type": "",
+                                "unit": "",
+                                "value": ""
+                            },
+                             "memory": {
+                                "@type": "",
+                                "unit": "",
+                                "value":""
+                            }
+                        }
+                    }
+                },
+                {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "hasResearchTool": {
+                      "@type": "",
+                      "name": "",
+                      "version": "",
+                      "description": ""
+                    }
+                },
+                {
+                  
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "dataAccess": {
+                      "@type": "",
+                      "protocol": "",
+                      "endpoint": ""
+                      }
+                    
+                },
+                {   
+                  "@type": "",
+                  "name": "",
+                  "serviceId": "",
+                  "serviceVersion": "",
+                  "description": "",
+                  "alertType": {
+                    "@type": "",
+                    "name": "",
+                    "frequency": "",
+                    "threshold": ""
+                  }
+                }
+
+            ]
+        },
+
+    "providesGlobalServiceCatalogue": {
+        "@type": "",
+        "globalServiceCatalogue": [
+          
+          {
+            "@type": "",
+            "name": "",
+            "serviceId": "",
+            "serviceVersion": "",
+            "description": "",
+            "supportedDomains": ""
+          },
+          {
+            "@type": "",
+            "name": "",
+            "serviceId": "",
+            "serviceVersion": "",
+            "description": "",
+            "authMethods": [
+              {
+                "type": "",
+                "description": ""
+              },
+                    {
+                        "type": "",
+                        "description": ""
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "supportedFormats": "",
+                    "deliveryMethods": {
+                      "api": {
+                        "protocol": "",
+                        "endpoint": ""
+                        },
+                        "files": {
+                        "method": "",
+                        "endpoint": ""
+                        }
+                      }
+                    },
+                    {
+                      "@type": "",
+                      "name": "",
+                      "serviceId": "",
+                      "serviceVersion": "",
+                      "description": "",
+                      "registryType": "",
+                      "endpoint": ""
+                      }
+                    ]
+                  }
+                }
+              },
+
+                {
+      "@id": "",
+      "@type": "",
+      "name": "",
+      "isComposedBy": {
+        "@type": "",
+        "name": "",
+        "location": {
+          "@type": "",
+          "name": "",
+          "isInAcountry": {
+            "@type": "",
+            "name": "",
+            "membership":"",
+            "Locality": "",
+            "addressLocality": {
+              "type": "",
+              "address": ""
+            }
+          },
+          "isInAregion": {
+            "@type": "",
+            "name": "",
+            "postalCode": "",
+            "addressRegion": ""
+          },
+          "has_geo": {
+            "@type": "",
+            "latitude": "",
+            "longitude": ""
+          }
+        },
+        
+        "has-contactPoint": {
+            "@type": "",
+            "name": "",
+            "telephone": "",
+            "email": "",
+            "address": "",
+            "faxNumber": "",
+            "URL": ""
+          },
+
+
+        "has_PI": {
+          "@type": "",
+          "name": "",
+          "email": "",
+          "telephone": "",
+          "worksIn": {
+            "@type": "",
+            "name": ""
+          }
+        },
+        "hasComputing": {
+          "@type": "",
+          "PowerConsumption":"",
+          "hasCPU": {
+            "@type": "",
+            "numberOfCPUs":"",
+            "cores": "",
+            "pflops":{
+              "@type":"",
+              "unit":"",
+              "value":""
+            },
+            "clock": {
+              "@type": "",
+              "unit": "",
+              "value":"" 
+            }
+          },
+          
+          "hasGPU":{
+            "@type":"",
+            "numberOfGPUs":"",
+            "type":""
+          },
+
+          "hasMemory": {
+            "@type": "",
+            "unit": "",
+            "value": ""
+          },
+          "hasDisk": {
+            "@type": "",
+            "size": {
+              "@type": "",
+              "unit": "",
+              "value": ""
+            },
+            "type": ""
+          }
+        },
+
+        "hasStorage":{
+          "@type":"",
+            "size":{
+              "@type":"",
+              "unit": "",
+              "value": ""
+            }
+          },
+             
+          "hasNetwork":{
+            "@type":"",
+            "hasInternalbandawidth":{
+              "@type": "",
+              "unit": "",
+              "value": ""
+            },
+            "hasExternalBandawidth":{
+                "@type":"",
+                "unit":"",
+                "value":""
+              }
+            },
+          
+          "has-energyLabel":{
+            "@type":"",
+            "has-energySource":{
+              "@type":"",
+              "renewableEnergyFactor":"",
+              "energyReuseFactor":""
+            },
+            "has-energyEfficiency":{
+              "@type":"",
+              "energyEfficiencyPUE":"",
+              "waterEfficiencyWUE":""
+            }
+
+          },
+
+        "providesLocalServiceCatalogue": {
+            "@type": "",
+            "localServiceCatalogue": [
+                {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "hasDataset": {
+                        "@type": "",
+                        "name": "",
+                        "ivo": "",
+                        "did": "",
+                        "localPath": "",
+                        "createdDate": "",
+                        "description": ""
+                    }
+                },
+                {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "hasVisualizationTool": {
+                        "@type": "",
+                        "name": "",
+                        "version": "",
+                        "description": ""
+                    }
+                },
+                {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "hasJupyterNotebook":{
+                        "@type":"",
+                        "name":""
+                    },
+                    "resourceRequirements": {
+                        "@type": "",
+                        "cpu": {
+                            "@type": "",
+                            "cores": "",
+                            "clockSpeed": {
+                                "@type": "",
+                                "unit": "",
+                                "value": ""
+                            },
+                             "memory": {
+                                "@type": "",
+                                "unit": "",
+                                "value":""
+                            }
+                        }
+                    }
+                },
+                {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "hasResearchTool": {
+                      "@type": "",
+                      "name": "",
+                      "version": "",
+                      "description": ""
+                    }
+                },
+                {
+                  
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "dataAccess": {
+                      "@type": "",
+                      "protocol": "",
+                      "endpoint": ""
+                      }
+                    
+                },
+                {   
+                  "@type": "",
+                  "name": "",
+                  "serviceId": "",
+                  "serviceVersion": "",
+                  "description": "",
+                  "alertType": {
+                    "@type": "",
+                    "name": "",
+                    "frequency": "",
+                    "threshold": ""
+                  }
+                }
+
+            ]
+        },
+
+    "providesGlobalServiceCatalogue": {
+        "@type": "",
+        "globalServiceCatalogue": [
+          
+          {
+            "@type": "",
+            "name": "",
+            "serviceId": "",
+            "serviceVersion": "",
+            "description": "",
+            "supportedDomains": ""
+          },
+          {
+            "@type": "",
+            "name": "",
+            "serviceId": "",
+            "serviceVersion": "",
+            "description": "",
+            "authMethods": [
+              {
+                "type": "",
+                "description": ""
+              },
+                    {
+                        "type": "",
+                        "description": ""
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "supportedFormats": "",
+                    "deliveryMethods": {
+                      "api": {
+                        "protocol": "",
+                        "endpoint": ""
+                        },
+                        "files": {
+                        "method": "",
+                        "endpoint": ""
+                        }
+                      }
+                    },
+                    {
+                      "@type": "",
+                      "name": "",
+                      "serviceId": "",
+                      "serviceVersion": "",
+                      "description": "",
+                      "registryType": "",
+                      "endpoint": ""
+                      }
+                    ]
+                  }
+                }
+              },
+
+               {
+      "@id": "",
+      "@type": "",
+      "name": "",
+      "isComposedBy": {
+        "@type": "",
+        "name": "",
+        "location": {
+          "@type": "",
+          "name": "",
+          "isInAcountry": {
+            "@type": "",
+            "name": "",
+            "membership":"",
+            "Locality": "",
+            "addressLocality": {
+              "type": "",
+              "address": ""
+            }
+          },
+          "isInAregion": {
+            "@type": "",
+            "name": "",
+            "postalCode": "",
+            "addressRegion": ""
+          },
+          "has_geo": {
+            "@type": "",
+            "latitude": "",
+            "longitude": ""
+          }
+        },
+        
+        "has-contactPoint": {
+            "@type": "",
+            "name": "",
+            "telephone": "",
+            "email": "",
+            "address": "",
+            "faxNumber": "",
+            "URL": ""
+          },
+
+
+        "has_PI": {
+          "@type": "",
+          "name": "",
+          "email": "",
+          "telephone": "",
+          "worksIn": {
+            "@type": "",
+            "name": ""
+          }
+        },
+        "hasComputing": {
+          "@type": "",
+          "PowerConsumption":"",
+          "hasCPU": {
+            "@type": "",
+            "numberOfCPUs":"",
+            "cores": "",
+            "pflops":{
+              "@type":"",
+              "unit":"",
+              "value":""
+            },
+            "clock": {
+              "@type": "",
+              "unit": "",
+              "value":"" 
+            }
+          },
+          
+          "hasGPU":{
+            "@type":"",
+            "numberOfGPUs":"",
+            "type":""
+          },
+
+          "hasMemory": {
+            "@type": "",
+            "unit": "",
+            "value": ""
+          },
+          "hasDisk": {
+            "@type": "",
+            "size": {
+              "@type": "",
+              "unit": "",
+              "value": ""
+            },
+            "type": ""
+          }
+        },
+
+        "hasStorage":{
+          "@type":"",
+            "size":{
+              "@type":"",
+              "unit": "",
+              "value": ""
+            }
+          },
+             
+          "hasNetwork":{
+            "@type":"",
+            "hasInternalbandawidth":{
+              "@type": "",
+              "unit": "",
+              "value": ""
+            },
+            "hasExternalBandawidth":{
+                "@type":"",
+                "unit":"",
+                "value":""
+              }
+            },
+          
+          "has-energyLabel":{
+            "@type":"",
+            "has-energySource":{
+              "@type":"",
+              "renewableEnergyFactor":"",
+              "energyReuseFactor":""
+            },
+            "has-energyEfficiency":{
+              "@type":"",
+              "energyEfficiencyPUE":"",
+              "waterEfficiencyWUE":""
+            }
+
+          },
+
+        "providesLocalServiceCatalogue": {
+            "@type": "",
+            "localServiceCatalogue": [
+                {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "hasDataset": {
+                        "@type": "",
+                        "name": "",
+                        "ivo": "",
+                        "did": "",
+                        "localPath": "",
+                        "createdDate": "",
+                        "description": ""
+                    }
+                },
+                {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "hasVisualizationTool": {
+                        "@type": "",
+                        "name": "",
+                        "version": "",
+                        "description": ""
+                    }
+                },
+                {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "hasJupyterNotebook":{
+                        "@type":"",
+                        "name":""
+                    },
+                    "resourceRequirements": {
+                        "@type": "",
+                        "cpu": {
+                            "@type": "",
+                            "cores": "",
+                            "clockSpeed": {
+                                "@type": "",
+                                "unit": "",
+                                "value": ""
+                            },
+                             "memory": {
+                                "@type": "",
+                                "unit": "",
+                                "value":""
+                            }
+                        }
+                    }
+                },
+                {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "hasResearchTool": {
+                      "@type": "",
+                      "name": "",
+                      "version": "",
+                      "description": ""
+                    }
+                },
+                {
+                  
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "dataAccess": {
+                      "@type": "",
+                      "protocol": "",
+                      "endpoint": ""
+                      }
+                    
+                },
+                {   
+                  "@type": "",
+                  "name": "",
+                  "serviceId": "",
+                  "serviceVersion": "",
+                  "description": "",
+                  "alertType": {
+                    "@type": "",
+                    "name": "",
+                    "frequency": "",
+                    "threshold": ""
+                  }
+                }
+
+            ]
+        },
+
+    "providesGlobalServiceCatalogue": {
+        "@type": "",
+        "globalServiceCatalogue": [
+          
+          {
+            "@type": "",
+            "name": "",
+            "serviceId": "",
+            "serviceVersion": "",
+            "description": "",
+            "supportedDomains": ""
+          },
+          {
+            "@type": "",
+            "name": "",
+            "serviceId": "",
+            "serviceVersion": "",
+            "description": "",
+            "authMethods": [
+              {
+                "type": "",
+                "description": ""
+              },
+                    {
+                        "type": "",
+                        "description": ""
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "supportedFormats": "",
+                    "deliveryMethods": {
+                      "api": {
+                        "protocol": "",
+                        "endpoint": ""
+                        },
+                        "files": {
+                        "method": "",
+                        "endpoint": ""
+                        }
+                      }
+                    },
+                    {
+                      "@type": "",
+                      "name": "",
+                      "serviceId": "",
+                      "serviceVersion": "",
+                      "description": "",
+                      "registryType": "",
+                      "endpoint": ""
+                      }
+                    ]
+                  }
+                }
+              },
+                {
+      "@id": "",
+      "@type": "",
+      "name": "",
+      "isComposedBy": {
+        "@type": "",
+        "name": "",
+        "location": {
+          "@type": "",
+          "name": "",
+          "isInAcountry": {
+            "@type": "",
+            "name": "",
+            "membership":"",
+            "Locality": "",
+            "addressLocality": {
+              "type": "",
+              "address": ""
+            }
+          },
+          "isInAregion": {
+            "@type": "",
+            "name": "",
+            "postalCode": "",
+            "addressRegion": ""
+          },
+          "has_geo": {
+            "@type": "",
+            "latitude": "",
+            "longitude": ""
+          }
+        },
+        
+        "has-contactPoint": {
+            "@type": "",
+            "name": "",
+            "telephone": "",
+            "email": "",
+            "address": "",
+            "faxNumber": "",
+            "URL": ""
+          },
+
+
+        "has_PI": {
+          "@type": "",
+          "name": "",
+          "email": "",
+          "telephone": "",
+          "worksIn": {
+            "@type": "",
+            "name": ""
+          }
+        },
+        "hasComputing": {
+          "@type": "",
+          "PowerConsumption":"",
+          "hasCPU": {
+            "@type": "",
+            "numberOfCPUs":"",
+            "cores": "",
+            "pflops":{
+              "@type":"",
+              "unit":"",
+              "value":""
+            },
+            "clock": {
+              "@type": "",
+              "unit": "",
+              "value":"" 
+            }
+          },
+          
+          "hasGPU":{
+            "@type":"",
+            "numberOfGPUs":"",
+            "type":""
+          },
+
+          "hasMemory": {
+            "@type": "",
+            "unit": "",
+            "value": ""
+          },
+          "hasDisk": {
+            "@type": "",
+            "size": {
+              "@type": "",
+              "unit": "",
+              "value": ""
+            },
+            "type": ""
+          }
+        },
+
+        "hasStorage":{
+          "@type":"",
+            "size":{
+              "@type":"",
+              "unit": "",
+              "value": ""
+            }
+          },
+             
+          "hasNetwork":{
+            "@type":"",
+            "hasInternalbandawidth":{
+              "@type": "",
+              "unit": "",
+              "value": ""
+            },
+            "hasExternalBandawidth":{
+                "@type":"",
+                "unit":"",
+                "value":""
+              }
+            },
+          
+          "has-energyLabel":{
+            "@type":"",
+            "has-energySource":{
+              "@type":"",
+              "renewableEnergyFactor":"",
+              "energyReuseFactor":""
+            },
+            "has-energyEfficiency":{
+              "@type":"",
+              "energyEfficiencyPUE":"",
+              "waterEfficiencyWUE":""
+            }
+
+          },
+
+        "providesLocalServiceCatalogue": {
+            "@type": "",
+            "localServiceCatalogue": [
+                {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "hasDataset": {
+                        "@type": "",
+                        "name": "",
+                        "ivo": "",
+                        "did": "",
+                        "localPath": "",
+                        "createdDate": "",
+                        "description": ""
+                    }
+                },
+                {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "hasVisualizationTool": {
+                        "@type": "",
+                        "name": "",
+                        "version": "",
+                        "description": ""
+                    }
+                },
+                {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "hasJupyterNotebook":{
+                        "@type":"",
+                        "name":""
+                    },
+                    "resourceRequirements": {
+                        "@type": "",
+                        "cpu": {
+                            "@type": "",
+                            "cores": "",
+                            "clockSpeed": {
+                                "@type": "",
+                                "unit": "",
+                                "value": ""
+                            },
+                             "memory": {
+                                "@type": "",
+                                "unit": "",
+                                "value":""
+                            }
+                        }
+                    }
+                },
+                {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "hasResearchTool": {
+                      "@type": "",
+                      "name": "",
+                      "version": "",
+                      "description": ""
+                    }
+                },
+                {
+                  
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "dataAccess": {
+                      "@type": "",
+                      "protocol": "",
+                      "endpoint": ""
+                      }
+                    
+                },
+                {   
+                  "@type": "",
+                  "name": "",
+                  "serviceId": "",
+                  "serviceVersion": "",
+                  "description": "",
+                  "alertType": {
+                    "@type": "",
+                    "name": "",
+                    "frequency": "",
+                    "threshold": ""
+                  }
+                }
+
+            ]
+        },
+
+    "providesGlobalServiceCatalogue": {
+        "@type": "",
+        "globalServiceCatalogue": [
+          
+          {
+            "@type": "",
+            "name": "",
+            "serviceId": "",
+            "serviceVersion": "",
+            "description": "",
+            "supportedDomains": ""
+          },
+          {
+            "@type": "",
+            "name": "",
+            "serviceId": "",
+            "serviceVersion": "",
+            "description": "",
+            "authMethods": [
+              {
+                "type": "",
+                "description": ""
+              },
+                    {
+                        "type": "",
+                        "description": ""
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "supportedFormats": "",
+                    "deliveryMethods": {
+                      "api": {
+                        "protocol": "",
+                        "endpoint": ""
+                        },
+                        "files": {
+                        "method": "",
+                        "endpoint": ""
+                        }
+                      }
+                    },
+                    {
+                      "@type": "",
+                      "name": "",
+                      "serviceId": "",
+                      "serviceVersion": "",
+                      "description": "",
+                      "registryType": "",
+                      "endpoint": ""
+                      }
+                    ]
+                  }
+                }
+              },
+
+                {
+                    "@id": "",
+                    "@type": "",
+                    "name": "",
+                    "isComposedBy": [
+                        {
+                            "@type": "",
+                            "name": "",
+                            "location": {
+                                "@type": "",
+                                "name": "",
+                                "isInAcountry": {
+                                    "@type": "",
+                                    "name": "",
+                                    "membership": "",
+                                    "Locality": "",
+                                    "addressLocality": {
+                                        "type": "",
+                                        "address": ""
+                                    }
+                                },
+                                "has_geo": {
+                                    "@type": "",
+                                    "latitude": "",
+                                    "longitude":""
+                                }
+                            },
+                            "has-contactPoint": {
+                                "@type": "",
+                                "name": "",
+                                "telephone": "",
+                                "email": "",
+                                "address": "",
+                                "faxNumber": "",
+                                "URL": ""
+                                },
+
+                            "has_PI": {
+                                "@type": "",
+                                "name": "",
+                                "email": "",
+                                "telephone": "",
+                                "worksIn": {
+                                    "@type": "",
+                                    "name": ""
+                                }
+                            },
+                            
+                            "hasComputing": {
+                                "@type": "",
+                                "PowerConsumption":"",
+                                "hasCPU": {
+                                    "@type": "",
+                                    "numberOfCPUs": "",
+                                    "cores":"",
+                                    "pflops": {
+                                        "@type": "",
+                                        "unit": "",
+                                        "value": ""
+                                    },
+                                    "clock": {
+                                        "@type": "",
+                                        "unit": "",
+                                        "value": ""
+                                    }
+                                },
+                                
+                                "hasMemory": {
+                                    "@type": "",
+                                    "unit": "",
+                                    "value": ""
+                                },
+                                
+                                "hasDisk": {
+                                    "@type": "",
+                                    "size": {
+                                        "@type": "",
+                                        "unit": "",
+                                        "value": ""
+                                    },
+                                    "type": ""
+                                }
+                            },
+                            
+                            "hasStorage": {
+                                "@type": "",
+                                "size": {
+                                    "@type": "",
+                                    "unit": "",
+                                    "value": ""
+                                }
+                            },
+                            "hasNetwork": {
+                                "@type": "",
+                                "hasExternalBandwidth": {
+                                    "@type": "",
+                                    "unit": "",
+                                    "value": ""
+                                }
+                            },
+
+                            "has-energyLabel":{
+                              "@type":"",
+                              "has-energySource":{
+                                "@type":"",
+                                "renewableEnergyFactor":"",
+                                "energyReuseFactor":""
+                              },
+                              
+                              "has-energyEfficiency":{
+                                "@type":"",
+                                "energyEfficiencyPUE":"",
+                                "waterEfficiencyWUE":""
+                              }
+                            },
+
+                              "providesLocalServiceCatalogue": {
+                                "@type": "",
+                                "localServiceCatalogue": [
+                                  {
+                                    "@type": "",
+                                    "name": "",
+                                    "serviceId": "",
+                                    "serviceVersion": "",
+                                    "description": "",
+                                    "hasDataset": {
+                                      "@type": "",
+                                      "name": "",
+                                      "ivo": "",
+                                      "did": "",
+                                      "localPath": "",
+                                      "createdDate": "",
+                                      "description": ""
+                                    }
+                                  },
+                                  {
+                                    "@type": "",
+                                    "name": "",
+                                    "serviceId": "",
+                                    "serviceVersion": "",
+                                    "description": "",
+                                    "hasVisualizationTool": {
+                                      "@type": "",
+                                      "name": "",
+                                      "version": "",
+                                      "description": ""
+                                    }
+                                  },
+                                  {
+                                    "@type": "",
+                                    "name": "",
+                                    "serviceId": "",
+                                    "serviceVersion": "",
+                                    "description": "",
+                                    "hasJupyterNotebook":{
+                                      "@type":"",
+                                      "name":""
+                                    },
+                                    "resourceRequirements": {
+                                      "@type": "Requirements",
+                                      "cpu": {
+                                        "@type": "",
+                                        "cores": "",
+                                        "clockSpeed": {
+                                          "@type": "",
+                                          "unit": "",
+                                          "value": ""
+                                        },
+                                        "memory": {
+                                          "@type": "",
+                                          "unit": "",
+                                          "value": ""
+                                  }
+                                }
+                            }
+                          },
+                          {
+                            "@type": "",
+                            "name": "",
+                            "serviceId": "",
+                            "serviceVersion": "",
+                            "description": "",
+                            "hasResearchTool": {
+                              "@type": "",
+                              "name": "",
+                              "version": "",
+                              "description": ""
+                            }
+                          },
+                          
+                          {
+                            "@type": "",
+                            "name": "",
+                            "serviceId": "",
+                            "serviceVersion": "",
+                            "description": "",
+                            "dataAccess": {
+                              "@type": "",
+                              "protocol": "",
+                              "endpoint": ""
+                              }
+                            },
+                            
+                            {
+                            
+                            "@type": "",
+                            "name": "",
+                            "serviceId": "",
+                            "serviceVersion": "",
+                            "description": "",
+                            "alertType": {
+                              "@type": "",
+                              "name": "",
+                              "frequency": "",
+                              "threshold": ""
+                            }
+                          }
+                        ]
+                      },
+
+        "providesGlobalServiceCatalogue": {
+        "@type": "",
+        "globalServiceCatalogue": [
+          
+          {
+            "@type": "",
+            "name": "",
+            "serviceId": "",
+            "serviceVersion": "",
+            "description": "",
+            "supportedDomains": ""
+          },
+          {
+            "@type": "",
+            "name": "",
+            "serviceId": "",
+            "serviceVersion": "",
+            "description": "",
+            "authMethods": [
+              {
+                "type": "",
+                "description": ""
+              },
+                    {
+                        "type": "",
+                        "description": ""
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "supportedFormats": "",
+                    "deliveryMethods": {
+                      "api": {
+                        "protocol": "",
+                        "endpoint": ""
+                        },
+                        "files": {
+                        "method": "",
+                        "endpoint": ""
+                        }
+                      }
+                    },
+                    {
+                      "@type": "",
+                      "name": "",
+                      "serviceId": "",
+                      "serviceVersion": "",
+                      "description": "",
+                      "registryType": "",
+                      "endpoint": ""
+                      }
+                    ]
+                  }
+                },
+
+                    {
+                        "@type": "",
+                        "name": "",
+                        "location": {
+                            "@type": "",
+                            "name": "",
+                            "isInAcountry": {
+                                "@type": "",
+                                "name": "",
+                                "membership": "",
+                                "Locality": "",
+                                "addressLocality": {
+                                    "type": "",
+                                    "address": ""
+                                }
+                            },
+                            "has_geo": {
+                                "@type": "",
+                                "latitude": "",
+                                "longitude":""
+                            }
+                        },
+                        "has-contactPoint": {
+                            "@type": "",
+                            "name": "",
+                            "telephone": "",
+                            "email": "",
+                            "address": "",
+                            "faxNumber": "",
+                            "URL": ""
+                            },
+                            
+                        "has_PI": {
+                            "@type": "",
+                            "name": "",
+                            "email": "",
+                            "telephone":  "",
+                            "worksIn": {
+                                "@type": "",
+                                "name": "U"
+                            }
+                        },
+                        "hasComputing": {
+                            "@type": "",
+                            "PowerConsumption":"",
+                            "hasCPU": {
+                                "@type": "",
+                                "numberOfCPUs":"",
+                                "cores": "",
+                                "pflops": {
+                                    "@type": "",
+                                    "unit": "",
+                                    "value": ""
+                                },
+                                "clock": {
+                                    "@type": "",
+                                    "unit": "",
+                                    "value": ""
+                                 }
+                            },
+                            
+                            "hasMemory": {
+                                "@type": "",
+                                "unit": "",
+                                "value": ""
+                            },
+                            
+                            "hasDisk": {
+                                "@type": "",
+                                "size": {
+                                    "@type": "",
+                                    "unit": "",
+                                    "value": ""
+                                },
+                                "type": ""
+                            }
+                        },
+
+                        "hasStorage": {
+                            "@type": "",
+                            "size": {
+                                "@type": "",
+                                "unit": "",
+                                "value": ""
+                            }
+                        },
+                        
+                        "hasNetwork": {
+                            "@type": "",
+                            "hasExternalBandwidth": {
+                                "@type": "",
+                                "unit": "",
+                                "value":""
+                            }
+                        },
+
+                        "has-energyLabel":{
+                          "@type":"",
+                          "has-energySource":{
+                            "@type":"",
+                            "renewableEnergyFactor":"",
+                            "energyReuseFactor":""
+                          },
+                          
+                          "has-energyEfficiency":{
+                            "@type":"",
+                            "energyEfficiencyPUE":"",
+                            "waterEfficiencyWUE":""
+                          }
+                        },
+                       
+                        "providesLocalServiceCatalogue": {
+                                "@type": "",
+                                "localServiceCatalogue": [
+                                  {
+                                    "@type": "",
+                                    "name": "",
+                                    "serviceId": "",
+                                    "serviceVersion": "",
+                                    "description": "",
+                                    "hasDataset": {
+                                      "@type": "",
+                                      "name": "",
+                                      "ivo": "",
+                                      "did": "",
+                                      "localPath": "",
+                                      "createdDate": "",
+                                      "description": ""
+                                    }
+                                  },
+                                  {
+                                    "@type": "",
+                                    "name": "",
+                                    "serviceId": "",
+                                    "serviceVersion": "",
+                                    "description": "",
+                                    "hasVisualizationTool": {
+                                      "@type": "",
+                                      "name": "",
+                                      "version": "",
+                                      "description": ""
+                                    }
+                                  },
+                                  {
+                                    "@type": "",
+                                    "name": "",
+                                    "serviceId": "n",
+                                    "serviceVersion": "",
+                                    "description": "",
+                                    "hasJupyterNotebook":{
+                                      "@type":"",
+                                      "name":""
+                                    },
+                                    "resourceRequirements": {
+                                      "@type": "",
+                                      "cpu": {
+                                        "@type": "",
+                                        "cores": "",
+                                        "clockSpeed": {
+                                          "@type": "",
+                                          "unit": "",
+                                          "value": ""
+                                        },
+                                        "memory": {
+                                          "@type": "",
+                                          "unit": "",
+                                          "value": ""
+                                  }
+                                }
+                            }
+                          },
+                          {
+                            "@type": "",
+                            "name": "",
+                            "serviceId": "",
+                            "serviceVersion": "",
+                            "description": "",
+                            "hasResearchTool": {
+                              "@type": "",
+                              "name": "",
+                              "version": "",
+                              "description": ""
+                            }
+                          },
+                          
+                          {
+                            "@type": "",
+                            "name": "",
+                            "serviceId": "",
+                            "serviceVersion": "",
+                            "description": "",
+                            "dataAccess": {
+                              "@type": "",
+                              "protocol": "",
+                              "endpoint": ""
+                              }
+                            },
+                            
+                            {
+                            
+                            "@type": "",
+                            "name": "",
+                            "serviceId": "",
+                            "serviceVersion": "",
+                            "description": "",
+                            "alertType": {
+                              "@type": "",
+                              "name": "",
+                              "frequency": "",
+                              "threshold": ""
+                            }
+                          }
+                        ]
+                      },
+                                        
+        "providesGlobalServiceCatalogue": {
+        "@type": "",
+        "globalServiceCatalogue": [
+          
+          {
+            "@type": "",
+            "name": "",
+            "serviceId": "",
+            "serviceVersion": "",
+            "description": "",
+            "supportedDomains": ""
+          },
+          {
+            "@type": "",
+            "name": "",
+            "serviceId": "",
+            "serviceVersion": "",
+            "description": "",
+            "authMethods": [
+              {
+                "type": "",
+                "description": ""
+              },
+                    {
+                        "type": "",
+                        "description": ""
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "",
+                    "name": "",
+                    "serviceId": "",
+                    "serviceVersion": "",
+                    "description": "",
+                    "supportedFormats": "",
+                    "deliveryMethods": {
+                      "api": {
+                        "protocol": "",
+                        "endpoint": ""
+                        },
+                        "files": {
+                        "method": "",
+                        "endpoint": ""
+                        }
+                      }
+                    },
+                    {
+                      "@type": "",
+                      "name": "",
+                      "serviceId": "",
+                      "serviceVersion": "",
+                      "description": "",
+                      "registryType": "",
+                      "endpoint": ""
+                      }
+                    ]
+                  }
+                }
+                    
+                ]
+              }
+            ]
+          }
