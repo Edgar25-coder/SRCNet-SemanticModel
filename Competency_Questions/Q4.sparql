@@ -1,0 +1,20 @@
+PREFIX SRCNet: <http://example.org/SRCNet>
+PREFIX SRC: <http://example.org/SRC>
+PREFIX schema: <http://schema.org/>
+
+SELECT ?SRC_name   ?availableService 
+WHERE {
+  ?node a SRC: .
+  ?node schema:name ?SRC_name .
+  
+  ?node schema:providesLocalServiceCatalogue ?LocalServiceCatalogue.
+  ?LocalServiceCatalogue schema:localServiceCatalogue ?localServiceCatalogue.
+  
+  ?localServiceCatalogue schema:name ?availableService.
+  
+  
+  FILTER(?SRC_name = "espSRC")
+
+}
+
+ORDER BY(?availableService)
