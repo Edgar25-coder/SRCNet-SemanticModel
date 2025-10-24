@@ -12,5 +12,7 @@ WHERE {
   
   ?localServiceCatalogue schema:hasDataset ?Dataset.
   ?Dataset schema:ivo ?Wallaby_file.
+
+  FILTER(?Wallaby_file)
   
 }
