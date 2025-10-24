@@ -1,0 +1,5 @@
+"SRCNode_Name","country_name","geopoliticalClassification","Band","Unit"
+"swedishSRC","Sweden","EU","6","http://qudt.org/vocab/unit/Gbps"
+"itSRC","Italy","EU","7","http://qudt.org/vocab/unit/Gbps"
+"espSRC","Spain","EU","10","http://qudt.org/vocab/unit/Gbps"
+"swissSRC","Switzerland","Europe","10","http://qudt.org/vocab/unit/Gbps"
