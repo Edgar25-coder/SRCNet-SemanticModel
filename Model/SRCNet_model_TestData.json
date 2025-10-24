@@ -1359,7 +1359,7 @@
                     "hasDataset": {
                         "@type": "Dataset",
                         "name": "Wallaby Dataset",
-                        "ivo": "ivo://espsrc.../test/wallaby-center-fits",
+                        "ivo": "",
                         "did": "paramtest:wallaby-center-fits",
                         "localPath": "/test/af/07/wallaby-center-fits",
                         "createdDate": "2023-01-01",
@@ -1661,7 +1661,7 @@
                     "hasDataset": {
                         "@type": "Dataset",
                         "name": "Wallaby Dataset",
-                        "ivo": "ivo://espsrc.../test/wallaby-center-fits",
+                        "ivo": "",
                         "did": "paramtest:wallaby-center-fits",
                         "localPath": "/test/af/07/wallaby-center-fits",
                         "createdDate": "2023-01-01",
@@ -1952,7 +1952,7 @@
                               "hasDataset": {
                                 "@type": "Dataset",
                                 "name": "Wallaby Dataset",
-                                "ivo": "ivo://espsrc.../test/wallaby-center-fits",
+                                "ivo": "",
                                 "did": "paramtest:wallaby-center-fits",
                                 "localPath": "/test/af/07/wallaby-center-fits",
                                 "createdDate": "2023-01-01",
@@ -2234,7 +2234,7 @@
                                     "hasDataset": {
                                       "@type": "Dataset",
                                       "name": "Wallaby Dataset",
-                                      "ivo": "ivo://espsrc.../test/wallaby-center-fits",
+                                      "ivo": "",
                                       "did": "paramtest:wallaby-center-fits",
                                       "localPath": "/test/af/07/wallaby-center-fits",
                                       "createdDate": "2023-01-01",
@@ -2509,7 +2509,7 @@
                                     "hasDataset": {
                                       "@type": "Dataset",
                                       "name": "Wallaby Dataset",
-                                      "ivo": "ivo://espsrc.../test/wallaby-center-fits",
+                                      "ivo": "",
                                       "did": "paramtest:wallaby-center-fits",
                                       "localPath": "/test/af/07/wallaby-center-fits",
                                       "createdDate": "2023-01-01",
@@ -2665,3 +2665,4 @@
               }
             ]
           }
+
