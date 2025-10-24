@@ -1,0 +1,30 @@
+PREFIX SRCNet: <http://example.org/SRCNet>
+PREFIX SRC: <http://example.org/SRC>
+PREFIX schema: <http://schema.org/>
+
+SELECT ?country_name ?SRC_Name ?Locality
+WHERE {
+  {
+    SELECT ?country_name
+    WHERE {
+      ?node a SRC: .
+      ?node schema:name ?SRC_Name .
+      
+      ?node schema:location ?location.
+      ?location schema:isInAcountry ?country.
+      ?country schema:name ?country_name.
+    }
+    GROUP BY ?country_name
+    HAVING (COUNT(?SRC_Name) > 1)
+  }
+  ?node a SRC: .
+  ?node schema:name ?SRC_Name .
+  
+  ?node schema:location ?location.
+  ?location schema:isInAcountry ?country.
+  ?country schema:name ?country_name.
+
+  ?location schema:isInAcountry ?country.
+  ?country schema:Locality ?Locality.
+}
+ORDER BY ?country_name ?SRC_Name
