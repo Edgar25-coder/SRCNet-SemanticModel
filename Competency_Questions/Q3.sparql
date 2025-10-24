@@ -1,0 +1,24 @@
+PREFIX aschema: <https://schema.ld.admin.ch/>
+PREFIX schema:  <http://schema.org/>
+PREFIX qudt: <http://qudt.org/vocab/unit/>
+PREFIX SRC: <http://example.org/SRC>
+
+SELECT ?SRC_name ?numOfCores ?DiskSize ?Unit
+WHERE {
+  
+  ?node a SRC: .
+  ?node schema:name ?SRC_name .
+  
+  ?node schema:hasComputing?Computing.
+  ?Computing schema:hasCPU ?CPU .
+  ?CPU  schema:cores?numOfCores.
+  
+  ?Computing schema:hasDisk?Disk.
+  ?Disk schema:size?size.
+  ?size a schema:QuantityValue;
+        schema:value ?DiskSize ;
+        schema:unit ?Unit .
+  
+  FILTER(?numOfCores >= 200 && ?DiskSize >= 40)
+   
+}
