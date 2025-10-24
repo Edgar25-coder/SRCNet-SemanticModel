@@ -1,0 +1,26 @@
+PREFIX aschema: <https://schema.ld.admin.ch/>
+PREFIX SRCNet: <http://example.org/SRCNet>
+PREFIX SRC: <http://example.org/SRC>
+PREFIX schema: <http://schema.org/>
+
+PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+PREFIX qudt: <http://qudt.org/vocab/unit/>
+
+SELECT ?SRCNode_Name ?country_name ?geopoliticalClassification?Band ?Unit
+WHERE {
+  ?node a SRC: .
+  ?node schema:name ?SRCNode_Name .
+  
+  ?node schema:location?location.
+  ?location schema:isInAcountry?country.
+  ?country schema:name?country_name.
+  ?country schema:membership ?geopoliticalClassification.
+  
+ ?node schema:hasNetwork ?Network.
+  ?Network schema:hasExternalBandawidth ?Bandwidth.
+  ?Bandwidth a schema:QuantityValue;
+            schema:value?Band;
+            schema:unit?Unit
+  
+  FILTER(?geopoliticalClassification IN("EU","Europe"))
+}
