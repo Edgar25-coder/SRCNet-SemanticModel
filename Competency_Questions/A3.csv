@@ -1,0 +1,3 @@
+"SRC_name","numOfCores","DiskSize","Unit"
+"chinaSRC","200","40","http://qudt.org/vocab/unit/Terabyte"
+"caSRC","3840","1024","http://qudt.org/vocab/unit/Terabyte"
