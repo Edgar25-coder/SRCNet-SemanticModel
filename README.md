@@ -26,7 +26,7 @@ Replicate the SRCNet_model json file, load it with your data, convert it into RD
 
 ## Citation
 
-	10.5281/zenodo.17608322
+	https://doi.org10.5281/zenodo.17608322
 
 ## License
 
