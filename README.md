@@ -26,14 +26,8 @@ Replicate the SRCNet_model json file, load it with your data, convert it into RD
 
 ## Citation
 
-	@misc{Edgar2025,
-  		author = {Edgar},
-  		title = {SRCNet-SemanticModel},
-  		year = {2025},
-  		publisher = {GitHub},
-  		journal = {GitHub repository},
-  		howpublished = {\url{URL_OF_THIS_REPO}}
-		}
+	10.5281/zenodo.17608322
+
 ## License
 
 CCB License
