@@ -30,4 +30,4 @@ Replicate the SRCNet_model json file, load it with your data, convert it into RD
 
 ## License
 
-CCB License
+MIT License
