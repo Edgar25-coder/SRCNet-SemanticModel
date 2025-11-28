@@ -1,7 +1,7 @@
 # SRCNet-SemanticModel
 
 ## Description
-This repository contains important files related to the semantic model for the SKA Regional Centre Network (SRCNet). It is organized into three main folders:
+This repository contains the semantic model of the SKA Regional Centre Network (SRCNet). It is organized into three main folders:
 
 - **Model/**
   Hosts JSON files (SRCNet_model and SRCNet_model_TestData)
@@ -26,7 +26,18 @@ Replicate the SRCNet_model json file, load it with your data, convert it into RD
 
 ## Citation
 
-	https://doi.org/10.5281/zenodo.17714699
+  Edgar João, Manuel Parra, Julián Garrido. (2025). SRCNet-SemanticModel: Second release (v1.1.0). Zenodo. https://doi.org/10.5281/zenodo.17608321
+  Bibtex entry:
+@software{edgar_2025_17608322,
+  author      = {Joao, Edgar Ribeiro and Parra-Rayón, Manuel and Garrido, Julián},
+  title       = {SRCNet semantic model: Second release},
+  month       = nov,
+  year        = 2025,
+  publisher   = {Zenodo},
+  version     = {v1.0.0},
+  doi         = {10.5281/zenodo.17608322},
+  url         = {https://doi.org/10.5281/zenodo.17608321},
+ }
 
 ## License
 
