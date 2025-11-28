@@ -27,17 +27,20 @@ Replicate the SRCNet_model json file, load it with your data, convert it into RD
 ## Citation
 
   Edgar João, Manuel Parra, Julián Garrido. (2025). SRCNet-SemanticModel: Second release (v1.1.0). Zenodo. https://doi.org/10.5281/zenodo.17608321
+  
   Bibtex entry:
+  
+```bibtex
 @software{edgar_2025_17608322,
   author      = {Joao, Edgar Ribeiro and Parra-Rayón, Manuel and Garrido, Julián},
-  title       = {SRCNet semantic model: Second release},
+  title       = {SRCNet semantic model: Third release},
   month       = nov,
   year        = 2025,
   publisher   = {Zenodo},
-  version     = {v1.0.0},
-  doi         = {10.5281/zenodo.17608322},
+  doi         = {10.5281/zenodo.17608321},
   url         = {https://doi.org/10.5281/zenodo.17608321},
- }
+}
+```
 
 ## License
 
