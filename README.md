@@ -32,7 +32,7 @@ Replicate the SRCNet_model json file, load it with your data, convert it into RD
   
 ```bibtex
 @software{edgar_2025_17608322,
-  author      = {Joao, Edgar Ribeiro and Parra-Rayón, Manuel and Garrido, Julián},
+  author      = {João, Edgar Ribeiro and Parra-Rayón, Manuel and Garrido, Julián},
   title       = {SRCNet semantic model: Third release},
   month       = nov,
   year        = 2025,
