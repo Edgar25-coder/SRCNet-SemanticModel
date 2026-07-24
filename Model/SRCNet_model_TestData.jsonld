@@ -165,7 +165,7 @@
                                 "dcat:dataset": {
                                     "@id":"https://w3id.org/srcnet/dataset/wallaby-center-fits",
                                     "@type":"dcat:Dataset",
-                                    "dcterms:title": "",
+                                    "dcterms:title": "wallaby-center.fits",
                                     "dcterms:identifier": "ivo://espsrc.../test/wallaby-center-fits",
                                     "src:localPath": "/test/af/07/wallaby-center-fits",
                                     "schema:description": "A dataset containing wallaby observation data.",
@@ -464,12 +464,12 @@
                                 "src:serviceVersion": "1.2.0",
                                 "schema:description": "A scalable data lake service for storing and processing large volumes of data.",
                                 "dcat:dataset": {
-                                    "@id":"https://w3id.org/srcnet/dataset/wallaby-center-fits",
+                                    "@id":"https://w3id.org/srcnet/dataset/mightee-cube",
                                     "@type":"dcat:Dataset",
-                                    "dcterms:title": "",
-                                    "dcterms:identifier": "ivo://espsrc.../test/wallaby-center-fits",
-                                    "src:localPath": "/test/af/07/wallaby-center-fits",
-                                    "schema:description": "A dataset containing wallaby observation data.",
+                                    "dcterms:title": "mightee-cube.fits",
+                                    "dcterms:identifier": "ivo://srcnet/dataset/mightee-cube",
+                                    "src:localPath": "/test/af/08/mightee-cube",
+                                    "schema:description": "MeerKAT MIGHTEE spectral data cube.",
                                     "dcat:distribution":{
                                         "@type":"dcat:Distribution",
                                         "dcat:downloadURL":""
