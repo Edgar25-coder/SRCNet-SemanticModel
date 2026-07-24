@@ -1,0 +1,1234 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix schema: <https://schema.org/> .
+@prefix src: <https://w3id.org/srcnet#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/srcnet> a src:SRCNet ;
+    dcterms:hasPart <https://w3id.org/srcnet/node/cansrc>,
+        <https://w3id.org/srcnet/node/chinasrc>,
+        <https://w3id.org/srcnet/node/espsrc>,
+        <https://w3id.org/srcnet/node/itsrc>,
+        <https://w3id.org/srcnet/node/japansrc>,
+        <https://w3id.org/srcnet/node/swedsrc>,
+        <https://w3id.org/srcnet/node/swisrc>,
+        <https://w3id.org/srcnet/node/uksrccollection> .
+
+<https://w3id.org/srcnet/catalog/cansrc-local> a dcat:Catalog ;
+    dcat:service <https://w3id.org/srcnet/service/cansrc-monitoring>,
+        <https://w3id.org/srcnet/service/cansrc-notebook>,
+        <https://w3id.org/srcnet/service/cansrc-scienceplatform>,
+        <https://w3id.org/srcnet/service/cansrc-soda> .
+
+<https://w3id.org/srcnet/catalog/chinasrc-local> a dcat:Catalog ;
+    dcat:service <https://w3id.org/srcnet/service/chinasrc-notebook>,
+        <https://w3id.org/srcnet/service/chinasrc-scienceplatform>,
+        <https://w3id.org/srcnet/service/chinasrc-soda> .
+
+<https://w3id.org/srcnet/catalog/espsrc-local> a dcat:Catalog ;
+    dcat:service <https://w3id.org/srcnet/service/espsrc-datalake>,
+        <https://w3id.org/srcnet/service/espsrc-notebook>,
+        <https://w3id.org/srcnet/service/espsrc-visualization>,
+        <https://w3id.org/srcnet/service/espsrcmonitoring>,
+        <https://w3id.org/srcnet/service/espsrcscienceplatform>,
+        <https://w3id.org/srcnet/service/espsrcsoda> .
+
+<https://w3id.org/srcnet/catalog/itsrc-local> a dcat:Catalog ;
+    dcat:service <https://w3id.org/srcnet/service/itsrc-monitoring>,
+        <https://w3id.org/srcnet/service/itsrc-notebook>,
+        <https://w3id.org/srcnet/service/itsrc-scienceplatform>,
+        <https://w3id.org/srcnet/service/itsrc-soda> .
+
+<https://w3id.org/srcnet/catalog/japansrc-local> a dcat:Catalog ;
+    dcat:service <https://w3id.org/srcnet/service/japansrc-monitoring>,
+        <https://w3id.org/srcnet/service/japansrc-notebook>,
+        <https://w3id.org/srcnet/service/japansrc-scienceplatform>,
+        <https://w3id.org/srcnet/service/japansrc-soda>,
+        <https://w3id.org/srcnet/service/japansrc-visualization> .
+
+<https://w3id.org/srcnet/catalog/swedsrc-local> a dcat:Catalog ;
+    dcat:service <https://w3id.org/srcnet/service/swedsrc-datalake>,
+        <https://w3id.org/srcnet/service/swedsrc-monitoring>,
+        <https://w3id.org/srcnet/service/swedsrc-notebook>,
+        <https://w3id.org/srcnet/service/swedsrc-scienceplatform>,
+        <https://w3id.org/srcnet/service/swedsrc-soda>,
+        <https://w3id.org/srcnet/service/swedsrc-visualization> .
+
+<https://w3id.org/srcnet/catalog/swisrc-local> a dcat:Catalog ;
+    dcat:service <https://w3id.org/srcnet/service/swisrc-monitoring>,
+        <https://w3id.org/srcnet/service/swisrc-notebook>,
+        <https://w3id.org/srcnet/service/swisrc-scienceplatform>,
+        <https://w3id.org/srcnet/service/swisrc-visualization> .
+
+<https://w3id.org/srcnet/catalog/uksrc1-local> a dcat:Catalog ;
+    dcat:service <https://w3id.org/srcnet/service/uksrc1-soda>,
+        <https://w3id.org/srcnet/service/uksrc1-visualization> .
+
+<https://w3id.org/srcnet/catalog/uksrc2-local> a dcat:Catalog ;
+    dcat:service <https://w3id.org/srcnet/service/uksrc2-monitoring>,
+        <https://w3id.org/srcnet/service/uksrc2-notebook>,
+        <https://w3id.org/srcnet/service/uksrc2-scienceplatform> .
+
+<https://w3id.org/srcnet/node/cansrc> a src:RegionalNode ;
+    schema:name "canSRC" ;
+    src:operatedBy [ a schema:Organization ;
+            schema:contactPoint [ a schema:ContactPoint ;
+                    schema:email "infosrc@canadian.src.ca" ;
+                    schema:faxNumber "+1 416 123 3360" ;
+                    schema:name "canSRC Team" ;
+                    schema:telephone "+1 410 123 3566" ;
+                    schema:url "not defined" ] ;
+            schema:location [ a schema:Place ;
+                    schema:address [ a schema:PostalAddress ;
+                            schema:addressCountry [ a schema:Country ;
+                                    schema:containedInPlace [ a schema:AdministrativeArea ;
+                                            schema:name "North America" ] ;
+                                    schema:name "Canada" ] ;
+                            schema:addressLocality "Victoria" ;
+                            schema:addressRegion "not defined" ;
+                            schema:postalCode "not available" ;
+                            schema:streetAddress "Cedar Lane 45, Victoria, BC V8X 2Y9, Canada" ] ;
+                    schema:geo [ a schema:GeoCoordinates ;
+                            schema:latitude 4.843e+01 ;
+                            schema:longitude -1.2336e+02 ] ] ;
+            schema:name "CADC" ;
+            src:globalServiceCatalog <https://w3id.org/srcnet/catalog/srcnet-global> ;
+            src:hasComputeResource [ a src:ComputeResource ;
+                    src:hasDisk [ a src:Disk ;
+                            schema:additionalType "HDD" ;
+                            src:diskCapacity [ a schema:QuantitativeValue ;
+                                    schema:unitCode "TB" ;
+                                    schema:value 1024 ] ] ;
+                    src:hasGPU [ a src:GPU ;
+                            schema:additionalType "H200" ;
+                            src:numberOfGPUs 10 ] ;
+                    src:hasProcessor [ a src:Processor ;
+                            src:clock [ a schema:QuantitativeValue ;
+                                    schema:unitCode "GHz" ;
+                                    schema:value 2.6e+00 ] ;
+                            src:coreCount 3840 ;
+                            src:numberOfProcessors 160 ;
+                            src:performance [ a schema:QuantitativeValue ;
+                                    schema:unitCode "PETAFLOPS" ;
+                                    schema:value 4.2e-02 ] ;
+                            src:processorModel "" ] ;
+                    src:memoryCapacity [ a schema:QuantitativeValue ;
+                            schema:unitCode "GB" ;
+                            schema:value 20480 ] ;
+                    src:powerConsumption [ a schema:QuantitativeValue ;
+                            schema:unitCode "" ;
+                            schema:value "" ] ] ;
+            src:hasEnergyLabel [ a src:EnergyLabel ;
+                    src:hasEnergyEfficiency [ a src:EnergyEfficiency ;
+                            src:energyEfficiencyPUE "" ;
+                            src:waterEfficiencyWUE "" ] ;
+                    src:hasEnergySource [ a src:EnergySource ;
+                            src:energyReuseFactor "" ;
+                            src:renewableEnergyFactor "" ] ] ;
+            src:hasNetworkResource [ a src:NetworkResource ;
+                    src:externalBandwidth [ a schema:QuantitativeValue ;
+                            schema:unitCode "Gbps" ;
+                            schema:value 400 ] ;
+                    src:internalBandwidth [ a schema:QuantitativeValue ;
+                            schema:unitCode "Gbps" ;
+                            schema:value 400 ] ] ;
+            src:hasStorageResource [ a src:StorageResource ;
+                    src:storageCapacity [ a schema:QuantitativeValue ;
+                            schema:unitCode "TB" ;
+                            schema:value 7.61856e+03 ] ] ;
+            src:localServiceCatalog <https://w3id.org/srcnet/catalog/cansrc-local> ;
+            src:principalInvestigator [ a schema:Person ;
+                    schema:email "clalonde@canadiansrc.ca" ;
+                    schema:name "Colton Lalonde" ;
+                    schema:telephone "+1 416 123 4567" ;
+                    schema:worksFor [ a schema:Organization ;
+                            schema:name "CADC" ] ] ] .
+
+<https://w3id.org/srcnet/node/chinasrc> a src:RegionalNode ;
+    schema:name "chinaSRC" ;
+    src:operatedBy [ a schema:Organization ;
+            schema:contactPoint [ a schema:ContactPoint ;
+                    schema:email "info@chinasrc.ch" ;
+                    schema:faxNumber "200001" ;
+                    schema:name "ChinaSRC Team" ;
+                    schema:telephone "958121311" ;
+                    schema:url "not available" ] ;
+            schema:location [ a schema:Place ;
+                    schema:address [ a schema:PostalAddress ;
+                            schema:addressCountry [ a schema:Country ;
+                                    schema:containedInPlace [ a schema:AdministrativeArea ;
+                                            schema:name "Asia" ] ;
+                                    schema:name "China" ] ;
+                            schema:addressLocality "Shangai" ;
+                            schema:addressRegion "not defined" ;
+                            schema:postalCode "200001" ;
+                            schema:streetAddress "Nanjing Road East 88, Huangpu District" ] ;
+                    schema:geo [ a schema:GeoCoordinates ;
+                            schema:latitude 3.124e+01 ;
+                            schema:longitude 1.2147e+02 ] ] ;
+            schema:name "University of Shangai" ;
+            src:globalServiceCatalog <https://w3id.org/srcnet/catalog/srcnet-global> ;
+            src:hasComputeResource [ a src:ComputeResource ;
+                    src:hasDisk [ a src:Disk ;
+                            schema:additionalType "" ;
+                            src:diskCapacity [ a schema:QuantitativeValue ;
+                                    schema:unitCode "TB" ;
+                                    schema:value 40 ] ] ;
+                    src:hasGPU [ a src:GPU ;
+                            schema:additionalType "" ;
+                            src:numberOfGPUs "" ] ;
+                    src:hasProcessor [ a src:Processor ;
+                            src:clock [ a schema:QuantitativeValue ;
+                                    schema:unitCode "GHz" ;
+                                    schema:value 3.5e+00 ] ;
+                            src:coreCount 200 ;
+                            src:numberOfProcessors 8 ;
+                            src:performance [ a schema:QuantitativeValue ;
+                                    schema:unitCode "PETAFLOPS" ;
+                                    schema:value 1.25e-02 ] ;
+                            src:processorModel "" ] ;
+                    src:memoryCapacity [ a schema:QuantitativeValue ;
+                            schema:unitCode "GB" ;
+                            schema:value 12 ] ;
+                    src:powerConsumption [ a schema:QuantitativeValue ;
+                            schema:unitCode "" ;
+                            schema:value "" ] ] ;
+            src:hasEnergyLabel [ a src:EnergyLabel ;
+                    src:hasEnergyEfficiency [ a src:EnergyEfficiency ;
+                            src:energyEfficiencyPUE "" ;
+                            src:waterEfficiencyWUE "" ] ;
+                    src:hasEnergySource [ a src:EnergySource ;
+                            src:energyReuseFactor "" ;
+                            src:renewableEnergyFactor "" ] ] ;
+            src:hasNetworkResource [ a src:NetworkResource ;
+                    src:externalBandwidth [ a schema:QuantitativeValue ;
+                            schema:unitCode "Gbps" ;
+                            schema:value 8 ] ;
+                    src:internalBandwidth [ a schema:QuantitativeValue ;
+                            schema:unitCode "Gbps" ;
+                            schema:value 2 ] ] ;
+            src:hasStorageResource [ a src:StorageResource ;
+                    src:storageCapacity [ a schema:QuantitativeValue ;
+                            schema:unitCode "TB" ;
+                            schema:value 1024 ] ] ;
+            src:localServiceCatalog <https://w3id.org/srcnet/catalog/chinasrc-local> ;
+            src:principalInvestigator [ a schema:Person ;
+                    schema:email "yzhao@example.ch" ;
+                    schema:name "Ying Zhao" ;
+                    schema:telephone "+86 13812345678" ;
+                    schema:worksFor [ a schema:Organization ;
+                            schema:name "University of Shangai" ] ] ] .
+
+<https://w3id.org/srcnet/node/espsrc> a src:RegionalNode ;
+    schema:name "espSRC" ;
+    src:operatedBy [ a schema:Organization ;
+            schema:contactPoint [ a schema:ContactPoint ;
+                    schema:email "infospsrc@iaa.es" ;
+                    schema:faxNumber "+34 958814530" ;
+                    schema:name "espSRC Team" ;
+                    schema:telephone "+34 958121311" ;
+                    schema:url "https://iaa.es" ] ;
+            schema:location [ a schema:Place ;
+                    schema:address [ a schema:PostalAddress ;
+                            schema:addressCountry [ a schema:Country ;
+                                    schema:containedInPlace [ a schema:AdministrativeArea ;
+                                            schema:name "European Union" ] ;
+                                    schema:name "Spain" ] ;
+                            schema:addressLocality "Granada" ;
+                            schema:addressRegion "Andalucía" ;
+                            schema:postalCode "18008" ;
+                            schema:streetAddress "Gta de la Astronomía, s/n, Genil" ] ;
+                    schema:geo [ a schema:GeoCoordinates ;
+                            schema:latitude 3.716e+01 ;
+                            schema:longitude -3.59e+00 ] ] ;
+            schema:name "IAA-CSIC" ;
+            src:globalServiceCatalog <https://w3id.org/srcnet/catalog/srcnet-global> ;
+            src:hasComputeResource [ a src:ComputeResource ;
+                    src:hasDisk [ a src:Disk ;
+                            schema:additionalType "SSD" ;
+                            src:diskCapacity [ a schema:QuantitativeValue ;
+                                    schema:unitCode "TB" ;
+                                    schema:value 1 ] ] ;
+                    src:hasGPU [ a src:GPU ;
+                            schema:additionalType "not defined" ;
+                            src:numberOfGPUs 1 ] ;
+                    src:hasProcessor [ a src:Processor ;
+                            src:clock [ a schema:QuantitativeValue ;
+                                    schema:unitCode "GHz" ;
+                                    schema:value 3.5e+00 ] ;
+                            src:coreCount 240 ;
+                            src:numberOfProcessors 12 ;
+                            src:performance [ a schema:QuantitativeValue ;
+                                    schema:unitCode "PETAFLOPS" ;
+                                    schema:value 3.4e-02 ] ;
+                            src:processorModel "" ] ;
+                    src:memoryCapacity [ a schema:QuantitativeValue ;
+                            schema:unitCode "GB" ;
+                            schema:value 1392 ] ;
+                    src:powerConsumption [ a schema:QuantitativeValue ;
+                            schema:unitCode "" ;
+                            schema:value "" ] ] ;
+            src:hasEnergyLabel [ a src:EnergyLabel ;
+                    src:hasEnergyEfficiency [ a src:EnergyEfficiency ;
+                            src:energyEfficiencyPUE "" ;
+                            src:waterEfficiencyWUE "" ] ;
+                    src:hasEnergySource [ a src:EnergySource ;
+                            src:energyReuseFactor "" ;
+                            src:renewableEnergyFactor "" ] ] ;
+            src:hasNetworkResource [ a src:NetworkResource ;
+                    src:externalBandwidth [ a schema:QuantitativeValue ;
+                            schema:unitCode "Gbps" ;
+                            schema:value 10 ] ;
+                    src:internalBandwidth [ a schema:QuantitativeValue ;
+                            schema:unitCode "Gbps" ;
+                            schema:value 100 ] ] ;
+            src:hasStorageResource [ a src:StorageResource ;
+                    src:storageCapacity [ a schema:QuantitativeValue ;
+                            schema:unitCode "TB" ;
+                            schema:value 750 ] ] ;
+            src:localServiceCatalog <https://w3id.org/srcnet/catalog/espsrc-local> ;
+            src:principalInvestigator [ a schema:Person ;
+                    schema:email "mparra@example.es" ;
+                    schema:name "Manu Parra" ;
+                    schema:telephone "+34 668500600" ;
+                    schema:worksFor [ a schema:Organization ;
+                            schema:name "IAA-CSIC" ] ] ] .
+
+<https://w3id.org/srcnet/node/itsrc> a src:RegionalNode ;
+    schema:name "itSRC" ;
+    src:operatedBy [ a schema:Organization ;
+            schema:contactPoint [ a schema:ContactPoint ;
+                    schema:email "info@itsrc.it" ;
+                    schema:faxNumber "+39 0612345000" ;
+                    schema:name "itSRC Team" ;
+                    schema:telephone "958121311" ;
+                    schema:url "not available" ] ;
+            schema:location [ a schema:Place ;
+                    schema:address [ a schema:PostalAddress ;
+                            schema:addressCountry [ a schema:Country ;
+                                    schema:containedInPlace [ a schema:AdministrativeArea ;
+                                            schema:name "European Union" ] ;
+                                    schema:name "Italy" ] ;
+                            schema:addressLocality "Bologna" ;
+                            schema:addressRegion "not defined" ;
+                            schema:postalCode "40123 " ;
+                            schema:streetAddress "Piazza delle Stelle 32, Bologna, Italy" ] ;
+                    schema:geo [ a schema:GeoCoordinates ;
+                            schema:latitude 4.449e+01 ;
+                            schema:longitude 1.126e+01 ] ] ;
+            schema:name "CINECA " ;
+            src:globalServiceCatalog <https://w3id.org/srcnet/catalog/srcnet-global> ;
+            src:hasComputeResource [ a src:ComputeResource ;
+                    src:hasDisk [ a src:Disk ;
+                            schema:additionalType "not defined" ;
+                            src:diskCapacity [ a schema:QuantitativeValue ;
+                                    schema:unitCode "TB" ;
+                                    schema:value 2 ] ] ;
+                    src:hasGPU [ a src:GPU ;
+                            schema:additionalType "" ;
+                            src:numberOfGPUs "" ] ;
+                    src:hasProcessor [ a src:Processor ;
+                            src:clock [ a schema:QuantitativeValue ;
+                                    schema:unitCode "GHz" ;
+                                    schema:value 3.5e+00 ] ;
+                            src:coreCount 200 ;
+                            src:numberOfProcessors "" ;
+                            src:performance [ a schema:QuantitativeValue ;
+                                    schema:unitCode "PETAFLOPS" ;
+                                    schema:value 5e-04 ] ;
+                            src:processorModel "" ] ;
+                    src:memoryCapacity [ a schema:QuantitativeValue ;
+                            schema:unitCode "GB" ;
+                            schema:value 800 ] ;
+                    src:powerConsumption [ a schema:QuantitativeValue ;
+                            schema:unitCode "" ;
+                            schema:value "" ] ] ;
+            src:hasEnergyLabel [ a src:EnergyLabel ;
+                    src:hasEnergyEfficiency [ a src:EnergyEfficiency ;
+                            src:energyEfficiencyPUE "" ;
+                            src:waterEfficiencyWUE "" ] ;
+                    src:hasEnergySource [ a src:EnergySource ;
+                            src:energyReuseFactor "" ;
+                            src:renewableEnergyFactor "" ] ] ;
+            src:hasNetworkResource [ a src:NetworkResource ;
+                    src:externalBandwidth [ a schema:QuantitativeValue ;
+                            schema:unitCode "Gbps" ;
+                            schema:value 7 ] ;
+                    src:internalBandwidth [ a schema:QuantitativeValue ;
+                            schema:unitCode "Gbps" ;
+                            schema:value 1 ] ] ;
+            src:hasStorageResource [ a src:StorageResource ;
+                    src:storageCapacity [ a schema:QuantitativeValue ;
+                            schema:unitCode "TB" ;
+                            schema:value 27 ] ] ;
+            src:localServiceCatalog <https://w3id.org/srcnet/catalog/itsrc-local> ;
+            src:principalInvestigator [ a schema:Person ;
+                    schema:email "gmoretti@example.it" ;
+                    schema:name "Giulia Moretti" ;
+                    schema:telephone "+39 0612345678" ;
+                    schema:worksFor [ a schema:Organization ;
+                            schema:name "CINECA" ] ] ] .
+
+<https://w3id.org/srcnet/node/japansrc> a src:RegionalNode ;
+    schema:name "japanSRC" ;
+    src:operatedBy [ a schema:Organization ;
+            schema:contactPoint [ a schema:ContactPoint ;
+                    schema:email "info@jsrc.es" ;
+                    schema:faxNumber "+81 31-1234-5669" ;
+                    schema:name "japanSRC Team" ;
+                    schema:telephone "+34 958121311" ;
+                    schema:url "not available" ] ;
+            schema:location [ a schema:Place ;
+                    schema:address [ a schema:PostalAddress ;
+                            schema:addressCountry [ a schema:Country ;
+                                    schema:containedInPlace [ a schema:AdministrativeArea ;
+                                            schema:name "Asia" ] ;
+                                    schema:name "Japan" ] ;
+                            schema:addressLocality "Tokyo" ;
+                            schema:addressRegion "not defined" ;
+                            schema:postalCode "160-0022" ;
+                            schema:streetAddress "Shinjuku Street 45-7, Shinjuku-ku, Tokyo" ] ;
+                    schema:geo [ a schema:GeoCoordinates ;
+                            schema:latitude 3.666e+01 ;
+                            schema:longitude 1.3819e+02 ] ] ;
+            schema:name "University of Tokyo" ;
+            src:globalServiceCatalog <https://w3id.org/srcnet/catalog/srcnet-global> ;
+            src:hasComputeResource [ a src:ComputeResource ;
+                    src:hasDisk [ a src:Disk ;
+                            schema:additionalType "" ;
+                            src:diskCapacity [ a schema:QuantitativeValue ;
+                                    schema:unitCode "TB" ;
+                                    schema:value 0 ] ] ;
+                    src:hasGPU [ a src:GPU ;
+                            schema:additionalType "" ;
+                            src:numberOfGPUs "" ] ;
+                    src:hasProcessor [ a src:Processor ;
+                            src:clock [ a schema:QuantitativeValue ;
+                                    schema:unitCode "GHz" ;
+                                    schema:value 3.5e+00 ] ;
+                            src:coreCount 64 ;
+                            src:numberOfProcessors 2 ;
+                            src:performance [ a schema:QuantitativeValue ;
+                                    schema:unitCode "PETAFLOPS" ;
+                                    schema:value 1.4e-02 ] ;
+                            src:processorModel "" ] ;
+                    src:memoryCapacity [ a schema:QuantitativeValue ;
+                            schema:unitCode "GB" ;
+                            schema:value 0 ] ;
+                    src:powerConsumption [ a schema:QuantitativeValue ;
+                            schema:unitCode "" ;
+                            schema:value "" ] ] ;
+            src:hasEnergyLabel [ a src:EnergyLabel ;
+                    src:hasEnergyEfficiency [ a src:EnergyEfficiency ;
+                            src:energyEfficiencyPUE "" ;
+                            src:waterEfficiencyWUE "" ] ;
+                    src:hasEnergySource [ a src:EnergySource ;
+                            src:energyReuseFactor "" ;
+                            src:renewableEnergyFactor "" ] ] ;
+            src:hasNetworkResource [ a src:NetworkResource ;
+                    src:externalBandwidth [ a schema:QuantitativeValue ;
+                            schema:unitCode "Gbps" ;
+                            schema:value "5" ] ;
+                    src:internalBandwidth [ a schema:QuantitativeValue ;
+                            schema:unitCode "Gbps" ;
+                            schema:value 10 ] ] ;
+            src:hasStorageResource [ a src:StorageResource ;
+                    src:storageCapacity [ a schema:QuantitativeValue ;
+                            schema:unitCode "TB" ;
+                            schema:value 600 ] ] ;
+            src:localServiceCatalog <https://w3id.org/srcnet/catalog/japansrc-local> ;
+            src:principalInvestigator [ a schema:Person ;
+                    schema:email "ysato@example.ja" ;
+                    schema:name "Yumi Sato" ;
+                    schema:telephone "+81 90-1234-5678" ;
+                    schema:worksFor [ a schema:Organization ;
+                            schema:name "University of Tokyo" ] ] ] .
+
+<https://w3id.org/srcnet/node/swedsrc> a src:RegionalNode ;
+    schema:name "swedishSRC" ;
+    src:operatedBy [ a schema:Organization ;
+            schema:contactPoint [ a schema:ContactPoint ;
+                    schema:email "infospsrc@swedish.src.sw" ;
+                    schema:faxNumber "958814530" ;
+                    schema:name "swedishSRC Team" ;
+                    schema:telephone "+46 601234510" ;
+                    schema:url "not available" ] ;
+            schema:location [ a schema:Place ;
+                    schema:address [ a schema:PostalAddress ;
+                            schema:addressCountry [ a schema:Country ;
+                                    schema:containedInPlace [ a schema:AdministrativeArea ;
+                                            schema:name "European Union" ] ;
+                                    schema:name "Sweden" ] ;
+                            schema:addressLocality "Gothenburg" ;
+                            schema:addressRegion "not defined" ;
+                            schema:postalCode "41110" ;
+                            schema:streetAddress "SkÃ¤rgÃ¥rdsgatan 45, Gothenburg, Sweden" ] ;
+                    schema:geo [ a schema:GeoCoordinates ;
+                            schema:latitude 5.771e+01 ;
+                            schema:longitude 1.197e+01 ] ] ;
+            schema:name "University of Sweden" ;
+            src:globalServiceCatalog <https://w3id.org/srcnet/catalog/srcnet-global> ;
+            src:hasComputeResource [ a src:ComputeResource ;
+                    src:hasDisk [ a src:Disk ;
+                            schema:additionalType "SSD" ;
+                            src:diskCapacity [ a schema:QuantitativeValue ;
+                                    schema:unitCode "TB" ;
+                                    schema:value 960 ] ] ;
+                    src:hasGPU [ a src:GPU ;
+                            schema:additionalType "" ;
+                            src:numberOfGPUs 3 ] ;
+                    src:hasProcessor [ a src:Processor ;
+                            src:clock [ a schema:QuantitativeValue ;
+                                    schema:unitCode "GHz" ;
+                                    schema:value 2.6e+00 ] ;
+                            src:coreCount 64 ;
+                            src:numberOfProcessors 2 ;
+                            src:performance [ a schema:QuantitativeValue ;
+                                    schema:unitCode "PETAFLOPS" ;
+                                    schema:value 3.9e-02 ] ;
+                            src:processorModel "" ] ;
+                    src:memoryCapacity [ a schema:QuantitativeValue ;
+                            schema:unitCode "GB" ;
+                            schema:value 512 ] ;
+                    src:powerConsumption [ a schema:QuantitativeValue ;
+                            schema:unitCode "" ;
+                            schema:value "" ] ] ;
+            src:hasEnergyLabel [ a src:EnergyLabel ;
+                    src:hasEnergyEfficiency [ a src:EnergyEfficiency ;
+                            src:energyEfficiencyPUE "" ;
+                            src:waterEfficiencyWUE "" ] ;
+                    src:hasEnergySource [ a src:EnergySource ;
+                            src:energyReuseFactor "" ;
+                            src:renewableEnergyFactor "" ] ] ;
+            src:hasNetworkResource [ a src:NetworkResource ;
+                    src:externalBandwidth [ a schema:QuantitativeValue ;
+                            schema:unitCode "Gbps" ;
+                            schema:value 6 ] ;
+                    src:internalBandwidth [ a schema:QuantitativeValue ;
+                            schema:unitCode "Gbps" ;
+                            schema:value 100 ] ] ;
+            src:hasStorageResource [ a src:StorageResource ;
+                    src:storageCapacity [ a schema:QuantitativeValue ;
+                            schema:unitCode "TB" ;
+                            schema:value 50 ] ] ;
+            src:localServiceCatalog <https://w3id.org/srcnet/catalog/swedsrc-local> ;
+            src:principalInvestigator [ a schema:Person ;
+                    schema:email "kforsberg@example.sw" ;
+                    schema:name "Kalle Forsberg" ;
+                    schema:telephone "+46 701234567" ;
+                    schema:worksFor [ a schema:Organization ;
+                            schema:name "University of Sweden" ] ] ] .
+
+<https://w3id.org/srcnet/node/swisrc> a src:RegionalNode ;
+    schema:name "swisSRC" ;
+    src:operatedBy [ a schema:Organization ;
+            schema:contactPoint [ a schema:ContactPoint ;
+                    schema:email "infoswissrc@src.sw" ;
+                    schema:faxNumber "+34 958814530" ;
+                    schema:name "swisSRC Team" ;
+                    schema:telephone "+41 358823701" ;
+                    schema:url "not available" ] ;
+            schema:location [ a schema:Place ;
+                    schema:address [ a schema:PostalAddress ;
+                            schema:addressCountry [ a schema:Country ;
+                                    schema:containedInPlace [ a schema:AdministrativeArea ;
+                                            schema:name "European Union" ] ;
+                                    schema:name "Switzerland" ] ;
+                            schema:addressLocality "Lungano" ;
+                            schema:addressRegion "not defined" ;
+                            schema:postalCode "6900" ;
+                            schema:streetAddress "Via delle Tristezze 15, Lugano" ] ;
+                    schema:geo [ a schema:GeoCoordinates ;
+                            schema:latitude 4.601e+01 ;
+                            schema:longitude 9.06e+00 ] ] ;
+            schema:name "University of Zurich" ;
+            src:globalServiceCatalog <https://w3id.org/srcnet/catalog/srcnet-global> ;
+            src:hasComputeResource [ a src:ComputeResource ;
+                    src:hasDisk [ a src:Disk ;
+                            schema:additionalType "not defined" ;
+                            src:diskCapacity [ a schema:QuantitativeValue ;
+                                    schema:unitCode "TB" ;
+                                    schema:value 20 ] ] ;
+                    src:hasGPU [ a src:GPU ;
+                            schema:additionalType "" ;
+                            src:numberOfGPUs "" ] ;
+                    src:hasProcessor [ a src:Processor ;
+                            src:clock [ a schema:QuantitativeValue ;
+                                    schema:unitCode "GHz" ;
+                                    schema:value 3.5e+00 ] ;
+                            src:coreCount 44 ;
+                            src:numberOfProcessors 2 ;
+                            src:performance [ a schema:QuantitativeValue ;
+                                    schema:unitCode "PETAFLOPS" ;
+                                    schema:value 1.4e-02 ] ;
+                            src:processorModel "" ] ;
+                    src:memoryCapacity [ a schema:QuantitativeValue ;
+                            schema:unitCode "GB" ;
+                            schema:value 88 ] ;
+                    src:powerConsumption [ a schema:QuantitativeValue ;
+                            schema:unitCode "" ;
+                            schema:value "" ] ] ;
+            src:hasEnergyLabel [ a src:EnergyLabel ;
+                    src:hasEnergyEfficiency [ a src:EnergyEfficiency ;
+                            src:energyEfficiencyPUE "" ;
+                            src:waterEfficiencyWUE "" ] ;
+                    src:hasEnergySource [ a src:EnergySource ;
+                            src:energyReuseFactor "" ;
+                            src:renewableEnergyFactor "" ] ] ;
+            src:hasNetworkResource [ a src:NetworkResource ;
+                    src:externalBandwidth [ a schema:QuantitativeValue ;
+                            schema:unitCode "Gbps" ;
+                            schema:value 10 ] ;
+                    src:internalBandwidth [ a schema:QuantitativeValue ;
+                            schema:unitCode "Gbps" ;
+                            schema:value 15 ] ] ;
+            src:hasStorageResource [ a src:StorageResource ;
+                    src:storageCapacity [ a schema:QuantitativeValue ;
+                            schema:unitCode "TB" ;
+                            schema:value 50 ] ] ;
+            src:localServiceCatalog <https://w3id.org/srcnet/catalog/swisrc-local> ;
+            src:principalInvestigator [ a schema:Person ;
+                    schema:email "lmeier@example.swi" ;
+                    schema:name "Lucia Meier" ;
+                    schema:telephone "+41 728823799" ;
+                    schema:worksFor [ a schema:Organization ;
+                            schema:name "University of Zurich" ] ] ] .
+
+<https://w3id.org/srcnet/node/uksrc1> a src:RegionalNode ;
+    schema:name "uksrc1" ;
+    src:operatedBy [ a schema:Organization ;
+            schema:contactPoint [ a schema:ContactPoint ;
+                    schema:email "info@uksrc.uk" ;
+                    schema:faxNumber "+34 958814530" ;
+                    schema:name "ukSRC1 Team" ;
+                    schema:telephone "+44 10 7946 0970" ;
+                    schema:url "" ] ;
+            schema:location [ a schema:Place ;
+                    schema:address [ a schema:PostalAddress ;
+                            schema:addressCountry [ a schema:Country ;
+                                    schema:containedInPlace [ a schema:AdministrativeArea ;
+                                            schema:name "Europe" ] ;
+                                    schema:name "United Kingdom" ] ;
+                            schema:addressLocality "Jodrell Bank" ;
+                            schema:addressRegion "not defined" ;
+                            schema:postalCode "not available" ;
+                            schema:streetAddress "Observatory Lane 12, Jodrell Bank, Cheshire" ] ;
+                    schema:geo [ a schema:GeoCoordinates ;
+                            schema:latitude 5.324e+01 ;
+                            schema:longitude -2.3e+00 ] ] ;
+            schema:name "Jodrell Bank Observatory" ;
+            src:globalServiceCatalog <https://w3id.org/srcnet/catalog/srcnet-global> ;
+            src:hasComputeResource [ a src:ComputeResource ;
+                    src:hasDisk [ a src:Disk ;
+                            schema:additionalType "not defined" ;
+                            src:diskCapacity [ a schema:QuantitativeValue ;
+                                    schema:unitCode "TB" ;
+                                    schema:value 0 ] ] ;
+                    src:hasGPU [ a src:GPU ;
+                            schema:additionalType "" ;
+                            src:numberOfGPUs "" ] ;
+                    src:hasProcessor [ a src:Processor ;
+                            src:clock [ a schema:QuantitativeValue ;
+                                    schema:unitCode "GHz" ;
+                                    schema:value 3.5e+00 ] ;
+                            src:coreCount 120 ;
+                            src:numberOfProcessors 5 ;
+                            src:performance [ a schema:QuantitativeValue ;
+                                    schema:unitCode "PETAFLOPS" ;
+                                    schema:value 0 ] ;
+                            src:processorModel "" ] ;
+                    src:memoryCapacity [ a schema:QuantitativeValue ;
+                            schema:unitCode "GB" ;
+                            schema:value 0 ] ;
+                    src:powerConsumption [ a schema:QuantitativeValue ;
+                            schema:unitCode "" ;
+                            schema:value "" ] ] ;
+            src:hasEnergyLabel [ a src:EnergyLabel ;
+                    src:hasEnergyEfficiency [ a src:EnergyEfficiency ;
+                            src:energyEfficiencyPUE "" ;
+                            src:waterEfficiencyWUE "" ] ;
+                    src:hasEnergySource [ a src:EnergySource ;
+                            src:energyReuseFactor "" ;
+                            src:renewableEnergyFactor "" ] ] ;
+            src:hasNetworkResource [ a src:NetworkResource ;
+                    src:externalBandwidth [ a schema:QuantitativeValue ;
+                            schema:unitCode "Gbps" ;
+                            schema:value "4" ] ;
+                    src:internalBandwidth [ a schema:QuantitativeValue ;
+                            schema:unitCode "Gbps" ;
+                            schema:value 10 ] ] ;
+            src:hasStorageResource [ a src:StorageResource ;
+                    src:storageCapacity [ a schema:QuantitativeValue ;
+                            schema:unitCode "TB" ;
+                            schema:value 0 ] ] ;
+            src:localServiceCatalog <https://w3id.org/srcnet/catalog/uksrc1-local> ;
+            src:principalInvestigator [ a schema:Person ;
+                    schema:email "jblakemore@example.uk" ;
+                    schema:name "Jasper Blakemore" ;
+                    schema:telephone "+44 20 7946 0958" ;
+                    schema:worksFor [ a schema:Organization ;
+                            schema:name "Jodrell Bank Observatory" ] ] ] .
+
+<https://w3id.org/srcnet/node/uksrc2> a src:RegionalNode ;
+    schema:name "uksrc2" ;
+    src:operatedBy [ a schema:Organization ;
+            schema:contactPoint [ a schema:ContactPoint ;
+                    schema:email "info@uksrc2.uk" ;
+                    schema:faxNumber "958814530" ;
+                    schema:name "uksrc2 Team" ;
+                    schema:telephone "+44 20 7946 0958" ;
+                    schema:url "not available" ] ;
+            schema:location [ a schema:Place ;
+                    schema:address [ a schema:PostalAddress ;
+                            schema:addressCountry [ a schema:Country ;
+                                    schema:containedInPlace [ a schema:AdministrativeArea ;
+                                            schema:name "Europe" ] ;
+                                    schema:name "United Kingdom" ] ;
+                            schema:addressLocality "Cambridge" ;
+                            schema:addressRegion "not defined" ;
+                            schema:postalCode "not available" ;
+                            schema:streetAddress "The Old School, Trinity, Cambridge, CB2 1TN" ] ;
+                    schema:geo [ a schema:GeoCoordinates ;
+                            schema:latitude 5.22e+01 ;
+                            schema:longitude 1.13e-01 ] ] ;
+            schema:name "University of Cambridge" ;
+            src:globalServiceCatalog <https://w3id.org/srcnet/catalog/srcnet-global> ;
+            src:hasComputeResource [ a src:ComputeResource ;
+                    src:hasDisk [ a src:Disk ;
+                            schema:additionalType "SSD" ;
+                            src:diskCapacity [ a schema:QuantitativeValue ;
+                                    schema:unitCode "TB" ;
+                                    schema:value 0 ] ] ;
+                    src:hasGPU [ a src:GPU ;
+                            schema:additionalType "" ;
+                            src:numberOfGPUs "" ] ;
+                    src:hasProcessor [ a src:Processor ;
+                            src:clock [ a schema:QuantitativeValue ;
+                                    schema:unitCode "GHz" ;
+                                    schema:value 5.2e+00 ] ;
+                            src:coreCount 100 ;
+                            src:numberOfProcessors 4 ;
+                            src:performance [ a schema:QuantitativeValue ;
+                                    schema:unitCode "PETAFLOPS" ;
+                                    schema:value 0 ] ;
+                            src:processorModel "" ] ;
+                    src:memoryCapacity [ a schema:QuantitativeValue ;
+                            schema:unitCode "GB" ;
+                            schema:value 20 ] ;
+                    src:powerConsumption [ a schema:QuantitativeValue ;
+                            schema:unitCode "" ;
+                            schema:value "" ] ] ;
+            src:hasEnergyLabel [ a src:EnergyLabel ;
+                    src:hasEnergyEfficiency [ a src:EnergyEfficiency ;
+                            src:energyEfficiencyPUE "" ;
+                            src:waterEfficiencyWUE "" ] ;
+                    src:hasEnergySource [ a src:EnergySource ;
+                            src:energyReuseFactor "" ;
+                            src:renewableEnergyFactor "" ] ] ;
+            src:hasNetworkResource [ a src:NetworkResource ;
+                    src:externalBandwidth [ a schema:QuantitativeValue ;
+                            schema:unitCode "Gbps" ;
+                            schema:value 10 ] ;
+                    src:internalBandwidth [ a schema:QuantitativeValue ;
+                            schema:unitCode "Gbps" ;
+                            schema:value 20 ] ] ;
+            src:hasStorageResource [ a src:StorageResource ;
+                    src:storageCapacity [ a schema:QuantitativeValue ;
+                            schema:unitCode "TB" ;
+                            schema:value 30 ] ] ;
+            src:localServiceCatalog <https://w3id.org/srcnet/catalog/uksrc2-local> ;
+            src:principalInvestigator [ a schema:Person ;
+                    schema:email "jblakemore@example.uk" ;
+                    schema:name "Charlotte Smith" ;
+                    schema:telephone "+44 10 7946 0951" ;
+                    schema:worksFor [ a schema:Organization ;
+                            schema:name "University of Cambridge" ] ] ] .
+
+<https://w3id.org/srcnet/node/uksrccollection> a src:RegionalNode ;
+    dcterms:hasPart <https://w3id.org/srcnet/node/uksrc1>,
+        <https://w3id.org/srcnet/node/uksrc2> .
+
+<https://w3id.org/srcnet/service/authentication> a dcat:DataService ;
+    schema:description "A service that provides authentication and authorization for access to applications and data." ;
+    schema:name "Authentication Service" ;
+    src:authenticationMethod [ a src:AuthenticationMethod ;
+            schema:name "" ],
+        [ a src:AuthenticationMethod ;
+            schema:name "" ],
+        [ a src:AuthenticationMethod ;
+            schema:name "" ],
+        [ a src:AuthenticationMethod ;
+            schema:name "" ],
+        [ a src:AuthenticationMethod ;
+            schema:name "" ],
+        [ a src:AuthenticationMethod ;
+            schema:name "" ],
+        [ a src:AuthenticationMethod ;
+            schema:name "" ],
+        [ a src:AuthenticationMethod ;
+            schema:name "" ],
+        [ a src:AuthenticationMethod ;
+            schema:name "" ],
+        [ a src:AuthenticationMethod ;
+            schema:name "" ],
+        [ a src:AuthenticationMethod ;
+            schema:name "" ],
+        [ a src:AuthenticationMethod ;
+            schema:name "" ],
+        [ a src:AuthenticationMethod ;
+            schema:name "" ],
+        [ a src:AuthenticationMethod ;
+            schema:name "" ],
+        [ a src:AuthenticationMethod ;
+            schema:name "" ],
+        [ a src:AuthenticationMethod ;
+            schema:name "" ],
+        [ a src:AuthenticationMethod ;
+            schema:name "" ],
+        [ a src:AuthenticationMethod ;
+            schema:name "" ] ;
+    src:serviceId "auth-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/service/cansrc-monitoring> a dcat:DataService ;
+    schema:description "A service that provides monitoring and alerting capabilities for applications and systems." ;
+    schema:name "Monitoring Service" ;
+    src:hasAlert [ a src:Alert ;
+            schema:name "" ;
+            src:frequency "" ;
+            src:threshold "" ] ;
+    src:serviceId "monitoring-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/service/cansrc-notebook> a dcat:DataService ;
+    schema:description "A service that allows users to create and share notebooks for data analysis and collaboration." ;
+    schema:name "Notebook" ;
+    src:hasJupyterNotebook [ a src:JupyterNotebook ;
+            schema:name "Jupyter" ] ;
+    src:resourceRequirements [ a src:ResourceRequirements ;
+            src:hasProcessor [ a src:Processor ;
+                    src:clock [ a schema:QuantitativeValue ;
+                            schema:unitCode "GHz" ;
+                            schema:value 2.5e+00 ] ;
+                    src:coreCount 8 ;
+                    src:memoryCapacity [ a schema:QuantitativeValue ;
+                            schema:unitCode "GB" ;
+                            schema:value 128 ] ] ] ;
+    src:serviceId "notebook-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/service/cansrc-scienceplatform> a dcat:DataService ;
+    schema:description "A platform for conducting scientific research, offering tools and resources for scientists." ;
+    schema:name "Science Platform" ;
+    src:hasResearchTool [ a src:ResearchTool ;
+            schema:name "Research Assistant" ;
+            src:toolVersion "1.0" ] ;
+    src:serviceId "science-platform-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/service/cansrc-soda> a dcat:DataService ;
+    dcterms:conformsTo "" ;
+    dcat:endpointURL "" ;
+    schema:description "A service for providing access to streaming data and real-time analytics." ;
+    schema:name "SODA" ;
+    src:serviceId "soda-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/service/chinasrc-notebook> a dcat:DataService ;
+    schema:description "A service that allows users to create and share notebooks for data analysis and collaboration." ;
+    schema:name "Notebook" ;
+    src:hasJupyterNotebook [ a src:JupyterNotebook ;
+            schema:name "Jupyternotebook" ] ;
+    src:resourceRequirements [ a src:ResourceRequirements ;
+            src:hasProcessor [ a src:Processor ;
+                    src:clock [ a schema:QuantitativeValue ;
+                            schema:unitCode "GHz" ;
+                            schema:value 2.5e+00 ] ;
+                    src:coreCount 4 ;
+                    src:memoryCapacity [ a schema:QuantitativeValue ;
+                            schema:unitCode "GB" ;
+                            schema:value 16 ] ] ] ;
+    src:serviceId "notebook-service-001" ;
+    src:serviceVersion "1.0.1" .
+
+<https://w3id.org/srcnet/service/chinasrc-scienceplatform> a dcat:DataService ;
+    schema:description "A platform for conducting scientific research, offering tools and resources for scientists." ;
+    schema:name "Science Platform" ;
+    src:hasResearchTool [ a src:ResearchTool ;
+            schema:name "Research Assistant" ;
+            src:toolVersion "1.0" ] ;
+    src:serviceId "science-platform-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/service/chinasrc-soda> a dcat:DataService ;
+    dcterms:conformsTo "" ;
+    dcat:endpointURL "" ;
+    schema:description "A service for providing access to streaming data and real-time analytics." ;
+    schema:name "SODA" ;
+    src:serviceId "soda-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/service/datadistributionplatform> a dcat:DataService ;
+    schema:description "A platform for distributing data across various services and applications." ;
+    schema:name "Data Distribution Platform" ;
+    src:serviceId "data-distribution-service-001" ;
+    src:serviceVersion "1.0.0" ;
+    src:supportedFormats "CSV",
+        "JSON",
+        "XML" .
+
+<https://w3id.org/srcnet/service/espsrc-datalake> a dcat:DataService ;
+    dcat:dataset <https://w3id.org/srcnet/dataset/wallaby-center-fits> ;
+    schema:description "A scalable data lake service for storing and processing large volumes of data." ;
+    schema:name "Datalake" ;
+    src:serviceId "datalake-service-001" ;
+    src:serviceVersion "1.2.0" .
+
+<https://w3id.org/srcnet/service/espsrc-notebook> a dcat:DataService ;
+    schema:description "A service that allows users to create and share notebooks for data analysis and collaboration." ;
+    schema:name "Notebook" ;
+    src:hasJupyterNotebook [ a src:JupyterNotebook ;
+            schema:name "Jupyternotebook" ] ;
+    src:resourceRequirements [ a src:ResourceRequirements ;
+            src:hasProcessor [ a src:Processor ;
+                    src:clock [ a schema:QuantitativeValue ;
+                            schema:unitCode "GHz" ;
+                            schema:value 2.5e+00 ] ;
+                    src:coreCount 4 ;
+                    src:memoryCapacity [ a schema:QuantitativeValue ;
+                            schema:unitCode "GB" ;
+                            schema:value 16 ] ] ] ;
+    src:serviceId "notebook-service-001" ;
+    src:serviceVersion "1.0.1" .
+
+<https://w3id.org/srcnet/service/espsrc-visualization> a dcat:DataService ;
+    schema:description "A service that provides visualization tools for analyzing wallaby data." ;
+    schema:name "Visualization" ;
+    src:hasVisualizationTool [ a src:VisualizationTool ;
+            schema:description "A tool for visualizing data in various formats." ;
+            schema:name "Carta" ;
+            src:visualizationToolVersion "7.0" ] ;
+    src:serviceId "visualization-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/service/espsrcmonitoring> a dcat:DataService ;
+    schema:description "A service that provides monitoring and alerting capabilities for applications and systems." ;
+    schema:name "Monitoring Service" ;
+    src:hasAlert [ a src:Alert ;
+            schema:name "" ;
+            src:frequency "" ;
+            src:threshold "" ] ;
+    src:serviceId "monitoring-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/service/espsrcscienceplatform> a dcat:DataService ;
+    schema:description "A platform for conducting scientific research, offering tools and resources for scientists." ;
+    schema:name "Science Platform" ;
+    src:hasResearchTool [ a src:ResearchTool ;
+            schema:name "Research Assistant" ;
+            src:toolVersion "1.0" ] ;
+    src:serviceId "science-platform-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/service/espsrcsoda> a dcat:DataService ;
+    dcterms:conformsTo "" ;
+    dcat:endpointURL "" ;
+    schema:description "A service for providing access to streaming data and real-time analytics." ;
+    schema:name "SODA" ;
+    src:serviceId "soda-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/service/itsrc-monitoring> a dcat:DataService ;
+    schema:description "A service that provides monitoring and alerting capabilities for applications and systems." ;
+    schema:name "Monitoring Service" ;
+    src:hasAlert [ a src:Alert ;
+            schema:name "" ;
+            src:frequency "" ;
+            src:threshold "" ] ;
+    src:serviceId "monitoring-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/service/itsrc-notebook> a dcat:DataService ;
+    schema:description "A service that allows users to create and share notebooks for data analysis and collaboration." ;
+    schema:name "Notebook" ;
+    src:hasJupyterNotebook [ a src:JupyterNotebook ;
+            schema:name "Jupyter" ] ;
+    src:resourceRequirements [ a src:ResourceRequirements ;
+            src:hasProcessor [ a src:Processor ;
+                    src:clock [ a schema:QuantitativeValue ;
+                            schema:unitCode "GHz" ;
+                            schema:value 2.5e+00 ] ;
+                    src:coreCount 6 ;
+                    src:memoryCapacity [ a schema:QuantitativeValue ;
+                            schema:unitCode "GB" ;
+                            schema:value 64 ] ] ] ;
+    src:serviceId "notebook-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/service/itsrc-scienceplatform> a dcat:DataService ;
+    schema:description "A platform for conducting scientific research, offering tools and resources for scientists." ;
+    schema:name "Science Platform" ;
+    src:hasResearchTool [ a src:ResearchTool ;
+            schema:name "Research Assistant" ;
+            src:toolVersion "1.0" ] ;
+    src:serviceId "science-platform-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/service/itsrc-soda> a dcat:DataService ;
+    dcterms:conformsTo "" ;
+    dcat:endpointURL "" ;
+    schema:description "A service for providing access to streaming data and real-time analytics." ;
+    schema:name "SODA" ;
+    src:serviceId "soda-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/service/japansrc-monitoring> a dcat:DataService ;
+    schema:description "A service that provides monitoring and alerting capabilities for applications and systems." ;
+    schema:name "Monitoring Service" ;
+    src:hasAlert [ a src:Alert ;
+            schema:name "" ;
+            src:frequency "" ;
+            src:threshold "" ] ;
+    src:serviceId "monitoring-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/service/japansrc-notebook> a dcat:DataService ;
+    schema:description "A service that allows users to create and share notebooks for data analysis and collaboration." ;
+    schema:name "Notebook" ;
+    src:hasJupyterNotebook [ a src:JupyterNotebook ;
+            schema:name "Jupyter" ] ;
+    src:resourceRequirements [ a src:ResourceRequirements ;
+            src:hasProcessor [ a src:Processor ;
+                    src:clock [ a schema:QuantitativeValue ;
+                            schema:unitCode "GHz" ;
+                            schema:value 2.5e+00 ] ;
+                    src:coreCount 4 ;
+                    src:memoryCapacity [ a schema:QuantitativeValue ;
+                            schema:unitCode "GB" ;
+                            schema:value 16 ] ] ] ;
+    src:serviceId "notebook-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/service/japansrc-scienceplatform> a dcat:DataService ;
+    schema:description "A platform for conducting scientific research, offering tools and resources for scientists." ;
+    schema:name "Science Platform" ;
+    src:hasResearchTool [ a src:ResearchTool ;
+            schema:name "Research Assistant" ;
+            src:toolVersion "1.0" ] ;
+    src:serviceId "science-platform-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/service/japansrc-soda> a dcat:DataService ;
+    dcterms:conformsTo "" ;
+    dcat:endpointURL "" ;
+    schema:description "A service for providing access to streaming data and real-time analytics." ;
+    schema:name "SODA" ;
+    src:serviceId "soda-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/service/japansrc-visualization> a dcat:DataService ;
+    schema:description "A service that provides visualization tools for analyzing wallaby data." ;
+    schema:name "Visualization" ;
+    src:hasVisualizationTool [ a src:VisualizationTool ;
+            schema:description "A tool for visualizing data in various formats." ;
+            schema:name "Carta" ;
+            src:visualizationToolVersion "7.0" ] ;
+    src:serviceId "visualization-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/service/registryservice> a dcat:DataService ;
+    dcat:endpointURL "",
+        "https://api.example.com/registry" ;
+    schema:description "A service for registering and discovering available services in the system." ;
+    schema:name "Service Registry" ;
+    src:registryType "Central" ;
+    src:serviceId "registry-service-001" ;
+    src:serviceVersion "1.0.0",
+        "1.0.2" .
+
+<https://w3id.org/srcnet/service/sciencegateway> a dcat:DataService ;
+    schema:description "A web-based platform for accessing scientific resources, tools, and applications." ;
+    schema:name "Science Gateway" ;
+    src:serviceId "science-gateway-service-001" ;
+    src:serviceVersion "1.0.0" ;
+    src:supportedDomains "astronomy",
+        "biology",
+        "physics" .
+
+<https://w3id.org/srcnet/service/swedsrc-datalake> a dcat:DataService ;
+    dcat:dataset <https://w3id.org/srcnet/dataset/wallaby-center-fits> ;
+    schema:description "A scalable data lake service for storing and processing large volumes of data." ;
+    schema:name "Datalake" ;
+    src:serviceId "datalake-service-001" ;
+    src:serviceVersion "1.2.0" .
+
+<https://w3id.org/srcnet/service/swedsrc-monitoring> a dcat:DataService ;
+    schema:description "A service that provides monitoring and alerting capabilities for applications and systems." ;
+    schema:name "Monitoring Service" ;
+    src:hasAlert [ a src:Alert ;
+            schema:name "" ;
+            src:frequency "" ;
+            src:threshold "" ] ;
+    src:serviceId "monitoring-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/service/swedsrc-notebook> a dcat:DataService ;
+    schema:description "A service that allows users to create and share notebooks for data analysis and collaboration." ;
+    schema:name "Notebook" ;
+    src:hasJupyterNotebook [ a src:JupyterNotebook ;
+            schema:name "Jupyternotebook" ] ;
+    src:resourceRequirements [ a src:ResourceRequirements ;
+            src:hasProcessor [ a src:Processor ;
+                    src:clock [ a schema:QuantitativeValue ;
+                            schema:unitCode "GHz" ;
+                            schema:value 2.5e+00 ] ;
+                    src:coreCount 4 ;
+                    src:memoryCapacity [ a schema:QuantitativeValue ;
+                            schema:unitCode "GB" ;
+                            schema:value 16 ] ] ] ;
+    src:serviceId "notebook-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/service/swedsrc-scienceplatform> a dcat:DataService ;
+    schema:description "A platform for conducting scientific research, offering tools and resources for scientists." ;
+    schema:name "Science Platform" ;
+    src:hasResearchTool [ a src:ResearchTool ;
+            schema:name "Research Assistant" ;
+            src:toolVersion "1.0" ] ;
+    src:serviceId "science-platform-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/service/swedsrc-soda> a dcat:DataService ;
+    dcterms:conformsTo "" ;
+    dcat:endpointURL "" ;
+    schema:description "A service for providing access to streaming data and real-time analytics." ;
+    schema:name "SODA" ;
+    src:serviceId "soda-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/service/swedsrc-visualization> a dcat:DataService ;
+    schema:description "" ;
+    schema:name "visualization-service-001" ;
+    src:hasVisualizationTool [ a src:VisualizationTool ;
+            schema:description "A tool for visualizing data in various formats." ;
+            schema:name "Carta" ;
+            src:visualizationToolVersion "7.0" ] ;
+    src:serviceId "1.0.0" ;
+    src:serviceVersion "A service that provides visualization tools for analyzing wallaby data." .
+
+<https://w3id.org/srcnet/service/swisrc-monitoring> a dcat:DataService ;
+    schema:description "A service that provides monitoring and alerting capabilities for applications and systems." ;
+    schema:name "Monitoring Service" ;
+    src:hasAlert [ a src:Alert ;
+            schema:name "" ;
+            src:frequency "" ;
+            src:threshold "" ] ;
+    src:serviceId "monitoring-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/service/swisrc-notebook> a dcat:DataService ;
+    schema:description "A service that allows users to create and share notebooks for data analysis and collaboration." ;
+    schema:name "Notebook" ;
+    src:hasJupyterNotebook [ a src:JupyterNotebook ;
+            schema:name "Jupyter" ] ;
+    src:resourceRequirements [ a src:ResourceRequirements ;
+            src:hasProcessor [ a src:Processor ;
+                    src:clock [ a schema:QuantitativeValue ;
+                            schema:unitCode "GHz" ;
+                            schema:value 2.5e+00 ] ;
+                    src:coreCount 4 ;
+                    src:memoryCapacity [ a schema:QuantitativeValue ;
+                            schema:unitCode "GB" ;
+                            schema:value 16 ] ] ] ;
+    src:serviceId "notebook-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/service/swisrc-scienceplatform> a dcat:DataService ;
+    schema:description "A platform for conducting scientific research, offering tools and resources for scientists." ;
+    schema:name "Science Platform" ;
+    src:hasResearchTool [ a src:ResearchTool ;
+            schema:name "Research Assistant" ;
+            src:toolVersion "1.0" ] ;
+    src:serviceId "science-platform-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/service/swisrc-visualization> a dcat:DataService ;
+    schema:description "A service that provides visualization tools for analyzing wallaby data." ;
+    schema:name "Visualization" ;
+    src:hasVisualizationTool [ a src:VisualizationTool ;
+            schema:description "A tool for visualizing data in various formats." ;
+            schema:name "Carta" ;
+            src:visualizationToolVersion "7.0" ] ;
+    src:serviceId "visualization-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/service/uksrc1-soda> a dcat:DataService ;
+    dcterms:conformsTo "" ;
+    dcat:endpointURL "" ;
+    schema:description "A service for providing access to streaming data and real-time analytics." ;
+    schema:name "SODA" ;
+    src:serviceId "soda-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/service/uksrc1-visualization> a dcat:DataService ;
+    schema:description "A service that provides visualization tools for analyzing wallaby data." ;
+    schema:name "Visualization" ;
+    src:hasVisualizationTool [ a src:VisualizationTool ;
+            schema:description "A tool for visualizing data in various formats." ;
+            schema:name "Carta" ;
+            src:visualizationToolVersion "7.0" ] ;
+    src:serviceId "visualization-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/service/uksrc2-monitoring> a dcat:DataService ;
+    schema:description "A service that provides monitoring and alerting capabilities for applications and systems." ;
+    schema:name "Monitoring Service" ;
+    src:hasAlert [ a src:Alert ;
+            schema:name "" ;
+            src:frequency "" ;
+            src:threshold "" ] ;
+    src:serviceId "monitoring-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/service/uksrc2-notebook> a dcat:DataService ;
+    schema:description "A service that allows users to create and share notebooks for data analysis and collaboration." ;
+    schema:name "Notebook" ;
+    src:hasJupyterNotebook [ a src:JupyterNotebook ;
+            schema:name "Jupyter" ] ;
+    src:resourceRequirements [ a src:ResourceRequirements ;
+            src:hasProcessor [ a src:Processor ;
+                    src:clock [ a schema:QuantitativeValue ;
+                            schema:unitCode "GHz" ;
+                            schema:value 2.5e+00 ] ;
+                    src:coreCount 4 ;
+                    src:memoryCapacity [ a schema:QuantitativeValue ;
+                            schema:unitCode "GB" ;
+                            schema:value 16 ] ] ] ;
+    src:serviceId "notebook-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/service/uksrc2-scienceplatform> a dcat:DataService ;
+    schema:description "A platform for conducting scientific research, offering tools and resources for scientists." ;
+    schema:name "Science Platform" ;
+    src:hasResearchTool [ a src:ResearchTool ;
+            schema:name "Research Assistant" ;
+            src:toolVersion "1.0" ] ;
+    src:serviceId "science-platform-service-001" ;
+    src:serviceVersion "1.0.0" .
+
+<https://w3id.org/srcnet/dataset/wallaby-center-fits> a dcat:Dataset ;
+    dcterms:identifier "ivo://espsrc.../test/wallaby-center-fits" ;
+    dcterms:title "" ;
+    dcat:distribution [ a dcat:Distribution ;
+            dcat:downloadURL "" ],
+        [ a dcat:Distribution ;
+            dcat:downloadURL "" ] ;
+    schema:description "A dataset containing wallaby observation data." ;
+    src:localPath "/test/af/07/wallaby-center-fits" .
+
+<https://w3id.org/srcnet/catalog/srcnet-global> a dcat:Catalog ;
+    dcat:service <https://w3id.org/srcnet/service/authentication>,
+        <https://w3id.org/srcnet/service/datadistributionplatform>,
+        <https://w3id.org/srcnet/service/registryservice>,
+        <https://w3id.org/srcnet/service/sciencegateway> .
+
