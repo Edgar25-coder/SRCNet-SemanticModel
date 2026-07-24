@@ -1,0 +1,195 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix schema: <https://schema.org/> .
+@prefix src: <https://w3id.org/srcnet#> .
+
+<https://w3id.org/srcnet/node/espsrc> a src:RegionalNode ;
+    schema:name "" ;
+    src:operatedBy [ a schema:Organization ;
+            schema:contactPoint [ a schema:ContactPoint ;
+                    schema:email "" ;
+                    schema:faxNumber "" ;
+                    schema:name "" ;
+                    schema:telephone "" ;
+                    schema:url "" ] ;
+            schema:location [ a schema:Place ;
+                    schema:address [ a schema:PostalAddress ;
+                            schema:addressCountry [ a schema:Country ;
+                                    schema:containedInPlace [ a schema:AdministrativeArea ;
+                                            schema:name "" ] ;
+                                    schema:name "" ] ;
+                            schema:addressLocality "" ;
+                            schema:addressRegion "" ;
+                            schema:postalCode "" ;
+                            schema:streetAddress "" ] ;
+                    schema:geo [ a schema:GeoCoordinates ;
+                            schema:latitude "" ;
+                            schema:longitude "" ] ] ;
+            schema:name "" ;
+            src:globalServiceCatalog <https://w3id.org/srcnet/catalog/srcnet-global> ;
+            src:hasComputeResource [ a src:ComputeResource ;
+                    src:hasDisk [ a src:Disk ;
+                            schema:additionalType "" ;
+                            src:diskCapacity [ a schema:QuantitativeValue ;
+                                    schema:unitCode "" ;
+                                    schema:value "" ] ] ;
+                    src:hasGPU [ a src:GPU ;
+                            schema:additionalType "" ;
+                            src:numberOfGPUs "" ] ;
+                    src:hasProcessor [ a src:Processor ;
+                            src:clock [ a schema:QuantitativeValue ;
+                                    schema:unitCode "" ;
+                                    schema:value "" ] ;
+                            src:coreCount "" ;
+                            src:numberOfProcessors "" ;
+                            src:performance [ a schema:QuantitativeValue ;
+                                    schema:unitCode "" ;
+                                    schema:value "" ] ;
+                            src:processorModel "" ] ;
+                    src:hasStorageResource [ a src:StorageResource ;
+                            src:storageCapacity [ a schema:QuantitativeValue ;
+                                    schema:unitCode "" ;
+                                    schema:value "" ] ] ;
+                    src:memoryCapacity [ a schema:QuantitativeValue ;
+                            schema:unitCode "" ;
+                            schema:value "" ] ;
+                    src:powerConsumption [ a schema:QuantitativeValue ;
+                            schema:unitCode "" ;
+                            schema:value "" ] ] ;
+            src:hasEnergyLabel [ a src:EnergyLabel ;
+                    src:hasEnergyEfficiency [ a src:EnergyEfficiency ;
+                            src:energyEfficiencyPUE "" ;
+                            src:waterEfficiencyWUE "" ] ;
+                    src:hasEnergySource [ a src:EnergySource ;
+                            src:energyReuseFactor "" ;
+                            src:renewableEnergyFactor "" ] ] ;
+            src:hasNetworkResource [ a src:NetworkResource ;
+                    src:externalBandwidth [ a schema:QuantitativeValue ;
+                            schema:unitCode "" ;
+                            schema:value "" ] ;
+                    src:internalBandwidth [ a schema:QuantitativeValue ;
+                            schema:unitCode "" ;
+                            schema:value "" ] ] ;
+            src:localServiceCatalog <https://w3id.org/srcnet/catalog/espsrc-local> ;
+            src:principalInvestigator [ a schema:Person ;
+                    schema:email "" ;
+                    schema:name "" ;
+                    schema:telephone "" ;
+                    schema:worksFor [ a schema:Organization ;
+                            schema:name "" ] ] ] .
+
+<https://w3id.org/srcnet/catalog/espsrc-local> a dcat:Catalog ;
+    dcat:service <https://w3id.org/srcnet/service/espsrc-datalake>,
+        <https://w3id.org/srcnet/service/espsrc-notebook>,
+        <https://w3id.org/srcnet/service/espsrc-visualization>,
+        <https://w3id.org/srcnet/service/espsrcmonitoring>,
+        <https://w3id.org/srcnet/service/espsrcscienceplatform>,
+        <https://w3id.org/srcnet/service/espsrcsoda> .
+
+<https://w3id.org/srcnet/catalog/srcnet-global> a dcat:Catalog ;
+    dcat:service <https://w3id.org/srcnet/service/authentication>,
+        <https://w3id.org/srcnet/service/datadistributionplatform>,
+        <https://w3id.org/srcnet/service/registryservice>,
+        <https://w3id.org/srcnet/service/sciencegateway> .
+
+<https://w3id.org/srcnet/dataset/wallaby-center-fits> a dcat:Dataset ;
+    dcterms:identifier "" ;
+    dcterms:title "" ;
+    dcat:distribution [ a dcat:Distribution ;
+            dcat:downloadURL "" ] ;
+    schema:description "" ;
+    src:localPath "" .
+
+<https://w3id.org/srcnet/service/authentication> a dcat:DataService ;
+    schema:description "" ;
+    schema:name "" ;
+    src:authenticationMethod [ a src:AuthenticationMethod ;
+            schema:name "" ],
+        [ a src:AuthenticationMethod ;
+            schema:name "" ] ;
+    src:serviceId "" ;
+    src:serviceVersion "" .
+
+<https://w3id.org/srcnet/service/datadistributionplatform> a dcat:DataService ;
+    schema:description "" ;
+    schema:name "" ;
+    src:serviceId "" ;
+    src:serviceVersion "" ;
+    src:supportedFormats "" .
+
+<https://w3id.org/srcnet/service/espsrc-datalake> a dcat:DataService ;
+    dcat:dataset <https://w3id.org/srcnet/dataset/wallaby-center-fits> ;
+    schema:description "" ;
+    schema:name "Datalake" ;
+    src:serviceId "" ;
+    src:serviceVersion "" .
+
+<https://w3id.org/srcnet/service/espsrc-notebook> a dcat:DataService ;
+    schema:description "" ;
+    schema:name "" ;
+    src:hasJupyterNotebook [ a src:JupyterNotebook ;
+            schema:name "" ] ;
+    src:resourceRequirements [ a src:ResourceRequirements ;
+            src:hasProcessor [ a src:Processor ;
+                    src:clock [ a schema:QuantitativeValue ;
+                            schema:unitCode "" ;
+                            schema:value "" ] ;
+                    src:coreCount "" ;
+                    src:memoryCapacity [ a schema:QuantitativeValue ;
+                            schema:unitCode "" ;
+                            schema:value "" ] ] ] ;
+    src:serviceId "" ;
+    src:serviceVersion "" .
+
+<https://w3id.org/srcnet/service/espsrc-visualization> a dcat:DataService ;
+    schema:description "" ;
+    schema:name "" ;
+    src:hasVisualizationTool [ a src:VisualizationTool ;
+            schema:description "" ;
+            schema:name "" ;
+            src:visualizationToolVersion "" ] ;
+    src:serviceId "" ;
+    src:serviceVersion "" .
+
+<https://w3id.org/srcnet/service/espsrcmonitoring> a dcat:DataService ;
+    schema:description "" ;
+    schema:name "" ;
+    src:hasAlert [ a src:Alert ;
+            schema:name "" ;
+            src:frequency "" ;
+            src:threshold "" ] ;
+    src:serviceId "" ;
+    src:serviceVersion "" .
+
+<https://w3id.org/srcnet/service/espsrcscienceplatform> a dcat:DataService ;
+    schema:description "" ;
+    schema:name "" ;
+    src:hasResearchTool [ a src:ResearchTool ;
+            schema:name "" ;
+            src:toolVersion "" ] ;
+    src:serviceId "" ;
+    src:serviceVersion "" .
+
+<https://w3id.org/srcnet/service/espsrcsoda> a dcat:DataService ;
+    dcterms:conformsTo "" ;
+    dcat:endpointURL "" ;
+    schema:description "" ;
+    schema:name "" ;
+    src:serviceId "" ;
+    src:serviceVersion "" .
+
+<https://w3id.org/srcnet/service/registryservice> a dcat:DataService ;
+    dcat:endpointURL "" ;
+    schema:description "" ;
+    schema:name "" ;
+    src:registryType "" ;
+    src:serviceId "" ;
+    src:serviceVersion "" .
+
+<https://w3id.org/srcnet/service/sciencegateway> a dcat:DataService ;
+    schema:description "" ;
+    schema:name "" ;
+    src:serviceId "" ;
+    src:serviceVersion "" ;
+    src:supportedDomains "" .
+
