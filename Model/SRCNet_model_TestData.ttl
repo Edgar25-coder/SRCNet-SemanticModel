@@ -69,6 +69,22 @@
         <https://w3id.org/srcnet/service/uksrc2-notebook>,
         <https://w3id.org/srcnet/service/uksrc2-scienceplatform> .
 
+<https://w3id.org/srcnet/dataset/mightee-cube> a dcat:Dataset ;
+    dcterms:identifier "ivo://srcnet/dataset/mightee-cube" ;
+    dcterms:title "mightee-cube.fits" ;
+    dcat:distribution [ a dcat:Distribution ;
+            dcat:downloadURL "" ] ;
+    schema:description "MeerKAT MIGHTEE spectral data cube." ;
+    src:localPath "/test/af/08/mightee-cube" .
+
+<https://w3id.org/srcnet/dataset/wallaby-center-fits> a dcat:Dataset ;
+    dcterms:identifier "ivo://espsrc.../test/wallaby-center-fits" ;
+    dcterms:title "wallaby-center.fits" ;
+    dcat:distribution [ a dcat:Distribution ;
+            dcat:downloadURL "" ] ;
+    schema:description "A dataset containing wallaby observation data." ;
+    src:localPath "/test/af/07/wallaby-center-fits" .
+
 <https://w3id.org/srcnet/node/cansrc> a src:RegionalNode ;
     schema:name "canSRC" ;
     src:operatedBy [ a schema:Organization ;
@@ -1056,7 +1072,7 @@
         "physics" .
 
 <https://w3id.org/srcnet/service/swedsrc-datalake> a dcat:DataService ;
-    dcat:dataset <https://w3id.org/srcnet/dataset/wallaby-center-fits> ;
+    dcat:dataset <https://w3id.org/srcnet/dataset/mightee-cube> ;
     schema:description "A scalable data lake service for storing and processing large volumes of data." ;
     schema:name "Datalake" ;
     src:serviceId "datalake-service-001" ;
@@ -1215,16 +1231,6 @@
             src:toolVersion "1.0" ] ;
     src:serviceId "science-platform-service-001" ;
     src:serviceVersion "1.0.0" .
-
-<https://w3id.org/srcnet/dataset/wallaby-center-fits> a dcat:Dataset ;
-    dcterms:identifier "ivo://espsrc.../test/wallaby-center-fits" ;
-    dcterms:title "" ;
-    dcat:distribution [ a dcat:Distribution ;
-            dcat:downloadURL "" ],
-        [ a dcat:Distribution ;
-            dcat:downloadURL "" ] ;
-    schema:description "A dataset containing wallaby observation data." ;
-    src:localPath "/test/af/07/wallaby-center-fits" .
 
 <https://w3id.org/srcnet/catalog/srcnet-global> a dcat:Catalog ;
     dcat:service <https://w3id.org/srcnet/service/authentication>,
