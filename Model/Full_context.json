@@ -1,0 +1,27 @@
+{
+"@context": {
+"src": "https://w3id.org/srcnet#",
+"schema": "https://schema.org/",
+"dcat": "http://www.w3.org/ns/dcat#",
+"dcterms": "http://purl.org/dc/terms/",
+"qudt": "http://qudt.org/schema/qudt/",
+"unit": "http://qudt.org/vocab/unit/",
+"xsd": "http://www.w3.org/2001/XMLSchema#",
+"RegionalNode": "src:RegionalNode",
+"ComputeResource": "src:ComputeResource",
+"Processor": "src:Processor",
+"GPU": "src:GPU",
+"Disk": "src:Disk",
+"StorageResource": "src:StorageResource",
+"NetworkResource": "src:NetworkResource",
+"EnergyLabel": "src:EnergyLabel",
+"EnergySource": "src:EnergySource",
+"EnergyEfficiency": "src:EnergyEfficiency",
+"VisualizationTool": "src:VisualizationTool",
+"ResearchTool": "src:ResearchTool",
+"JupyterNotebook": "src:JupyterNotebook",
+"AuthenticationMethod": "src:AuthenticationMethod",
+"ResourceRequirements": "src:ResourceRequirements",
+"Alert": "src:Alert"
+}
+}
