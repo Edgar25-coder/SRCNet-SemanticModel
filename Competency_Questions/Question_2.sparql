@@ -1,0 +1,18 @@
+PREFIX src: <https://w3id.org/srcnet#>
+PREFIX schema: <https://schema.org/>
+
+SELECT ?SRCname ?contactPointName # ?telephone ?email ?fax
+##just in case you also need the contact details for the contact point.
+WHERE {
+  ?node a src:RegionalNode ;
+       schema:name ?SRCname;
+       src:operatedBy ?org .
+  
+  ?org schema:contactPoint ?cp .
+  ?cp schema:name ?contactPointName ;
+      # schema:telephone ?telephone ;
+      # schema:email ?email ;
+      # schema:faxNumber ?fax .
+  
+   FILTER(?SRCname = "canSRC")
+}

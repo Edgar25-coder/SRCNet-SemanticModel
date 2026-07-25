@@ -1,0 +1,26 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX src: <https://w3id.org/srcnet#>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX schema: <https://schema.org/>
+
+SELECT DISTINCT ?SRCname ?datasetIdentifier ?localPath ?toolName
+WHERE {
+  
+  ?node a src:RegionalNode ;
+          schema:name ?SRCname ;
+          src:operatedBy ?org .
+  
+  ?org src:localServiceCatalog ?catalog .
+  ?catalog dcat:service ?dataService .
+  ?dataService dcat:dataset ?dataset .
+  
+  ?dataset dcterms:title ?title ;
+           dcterms:identifier ?datasetIdentifier ;
+           src:localPath ?localPath .
+  
+  FILTER(LCASE(?title) = "wallaby-center.fits")
+  
+  ?catalog dcat:service ?visService .
+  ?visService src:hasVisualizationTool ?tool .
+  ?tool schema:name ?toolName .
+}

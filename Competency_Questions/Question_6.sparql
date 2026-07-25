@@ -1,0 +1,33 @@
+PREFIX src: <https://w3id.org/srcnet#>
+PREFIX schema: <https://schema.org/>
+
+SELECT ?countryName ?SRCname ?locality
+WHERE {
+  
+  {
+SELECT ?countryName
+WHERE {
+      ?node a src:RegionalNode ;
+              src:operatedBy ?org .
+      ?org schema:location ?place .
+      ?place schema:address ?address .
+      
+      ?address schema:addressCountry ?country .
+      ?country schema:name ?countryName .
+    }
+    
+    GROUP BY ?countryName
+    HAVING (COUNT(?node) > 1)
+  }
+  
+  ?node a src:RegionalNode ;
+               schema:name ?SRCname ;
+               src:operatedBy ?org .
+  ?org schema:location ?place .
+  ?place schema:address ?address .
+  
+  ?address schema:addressLocality ?locality ;
+           schema:addressCountry ?country .
+  
+  ?country schema:name ?countryName .
+}

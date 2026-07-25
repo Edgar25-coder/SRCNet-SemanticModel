@@ -1,0 +1,27 @@
+PREFIX src: <https://w3id.org/srcnet#>
+PREFIX schema: <https://schema.org/>
+
+SELECT ?SRCname ?countryName ?regionName ?bandwidth ?unit
+WHERE {
+  
+  ?node a src:RegionalNode ;
+          schema:name ?SRCname ;
+          src:operatedBy ?org .
+  
+  ?org schema:location ?place .
+  ?place schema:address ?address .
+  ?address schema:addressCountry ?country .
+  
+  ?country schema:name ?countryName ;
+           schema:containedInPlace ?region .
+  
+  ?region schema:name ?regionName .
+  ?org src:hasNetworkResource ?network .
+  ?network src:externalBandwidth ?bw .
+  
+  ?bw schema:value ?bandwidth ;
+      schema:unitCode ?unit .
+
+FILTER(?regionName = "European Union")
+}
+ORDER BY ?countryName ?SRCname

@@ -1,0 +1,26 @@
+PREFIX src: <https://w3id.org/srcnet#>
+PREFIX schema: <https://schema.org/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+
+SELECT ?SRCname ?notebookName ?memoryCapacity ?unit
+WHERE {
+  ?node a src:RegionalNode ;
+          schema:name ?SRCname ;
+          src:operatedBy ?org .
+  
+  ?org src:localServiceCatalog ?catalog .
+  ?catalog dcat:service ?service .
+  
+  ?service src:hasJupyterNotebook ?notebook ;
+           src:resourceRequirements ?requirements .
+
+  ?notebook schema:name ?notebookName .
+  ?requirements src:hasProcessor ?processor .
+
+  ?processor src:memoryCapacity ?memory .
+  ?memory schema:value ?memoryCapacity ;
+          schema:unitCode ?unit .
+  
+  FILTER(?memoryCapacity > 32)
+}
+ORDER BY DESC(?memoryCapacity)
