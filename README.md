@@ -6,13 +6,14 @@ This repository contains an early but functional semantic prototype of the SKA R
 - **Model/**
 
 The following files are provided to support the execution and validation of the semantic model:
-Full_context.json
-SRCNet_model_TestData.json
-SRCNet_model_TestData.ttl
-SRCnode_model.json
-SRCnode_model.ttl
-conversor_json_rdf.py
-src_ontology.owl
+
+* Full_context.json
+* SRCNet_model_TestData.json
+* SRCNet_model_TestData.ttl
+* SRCnode_model.json
+* SRCnode_model.ttl
+* conversor_json_rdf.py
+* src_ontology.owl
 
 - **Competency_Questions/**
 
