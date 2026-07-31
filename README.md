@@ -3,7 +3,7 @@
 ## Description
 This repository contains an early but functional semantic prototype of the SKA Regional Centre Network (SRCNet), including an OWL ontology, JSON-LD representations, example instances and SPARQL queries intended to support ongoing development and evaluation of a common semantic model for SRCNet resources and services. The repository is structured around three main directories, each serving a distinct purpose within the semantic framework:
 
-- **Model**
+**Model**
 
 The following files are provided to support the execution and validation of the semantic model:
 
@@ -15,17 +15,17 @@ The following files are provided to support the execution and validation of the 
 + conversor_json_rdf.py
 + src_ontology.owl
 
-- **Competency_Questions/**
+**Competency_Questions/**
 
 Contains SPARQL queries and the corresponding outputs generated from the example SRCNet knowledge graph.
 
-- **Diagrams**
+**Diagrams**
 
-  Provides graphical representations of the semantic model and its constituent components.
+Provides graphical representations of the semantic model and its constituent components.
 
 This structure helps demonstrate the consistency and robustness of the proposed SRCNet semantic model, while improving transparency, facilitating reproducibility, and providing a clearer understanding of its architecture and underlying components.
 
-- **Future Work**
+**Future Work**
 
 The following activities are required to consolidate the model into a fully operational SRCNet knowledge representation framework:
   
