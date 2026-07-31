@@ -1,203 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:dcterms="http://purl.org/dc/terms/"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xmlns:vann="http://purl.org/vocab/vann/"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:vann="http://purl.org/vocab/vann/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 >
-  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#serviceId">
-    <rdfs:label xml:lang="en">service identifier</rdfs:label>
-    <rdfs:comment xml:lang="en">A unique identifier assigned to a data service within the SRCNet infrastructure.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </owl:DatatypeProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasComputeResource">
-    <rdfs:label xml:lang="en">has compute resource</rdfs:label>
-    <rdfs:comment xml:lang="en">Relates a Regional Node to a compute resource providing computational capabilities within that node.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://w3id.org/srcnet#RegionalNode"/>
-    <rdfs:range rdf:resource="https://w3id.org/srcnet#ComputeResource"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasGPU">
-    <rdfs:label xml:lang="en">has GPU</rdfs:label>
-    <rdfs:comment xml:lang="en">Relates a compute resource to a graphics processing unit (GPU) available within that resource.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://w3id.org/srcnet#ComputeResource"/>
-    <rdfs:range rdf:resource="https://w3id.org/srcnet#GPU"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#performance">
-    <rdfs:label xml:lang="en">processor performance</rdfs:label>
-    <rdfs:comment xml:lang="en">Relates a processor to its computational performance, represented as a quantitative value with an associated measurement unit.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://w3id.org/srcnet#Processor"/>
-    <rdfs:range rdf:resource="https://schema.org/QuantitativeValue"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#diskCapacity">
-    <rdfs:label xml:lang="en">disk capacity</rdfs:label>
-    <rdfs:comment xml:lang="en">Relates a disk resource to its storage capacity</rdfs:comment>
-    <rdfs:domain rdf:resource="https://w3id.org/srcnet#Disk"/>
-    <rdfs:range rdf:resource="https://schema.org/QuantitativeValue"/>
-  </owl:ObjectProperty>
-  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#processorModel">
-    <rdfs:label xml:lang="en">processor model</rdfs:label>
-    <rdfs:comment xml:lang="en">Specifies the manufacturer, family, or model designation of a processor.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://w3id.org/srcnet#Processor"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </owl:DatatypeProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#storageCapacity">
-    <rdfs:label xml:lang="en">storage capacity</rdfs:label>
-    <rdfs:comment xml:lang="en">Relates a storage resource to its available storage capacity.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://w3id.org/srcnet#StorageResource"/>
-    <rdfs:range rdf:resource="https://schema.org/QuantitativeValue"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#globalServiceCatalog">
-    <rdfs:label xml:lang="en">global service catalog</rdfs:label>
-    <rdfs:comment xml:lang="en">Relates a Regional Node to a global catalog describing datasets and services available across the SRCNet infrastructure.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://w3id.org/srcnet#RegionalNode"/>
-    <rdfs:range rdf:resource="https://w3id.org/srcnet#GlobalServiceCatalog"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#principalInvestigator">
-    <rdfs:label xml:lang="en">principal investigator</rdfs:label>
-    <rdfs:comment xml:lang="en">Relates a Regional Node to the person responsible for its scientific or technical coordination.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://w3id.org/srcnet#RegionalNode"/>
-    <rdfs:range rdf:resource="https://schema.org/Person"/>
-  </owl:ObjectProperty>
-  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#renewableEnergyFactor">
-    <rdfs:label xml:lang="en">renewable energy factor</rdfs:label>
-    <rdfs:comment xml:lang="en">Specifies the proportion of energy obtained from renewable energy sources for a given energy source profile.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://w3id.org/srcnet#EnergySource"/>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#dataTransferCost">
+    <rdfs:label xml:lang="en">data transfer cost</rdfs:label>
+    <rdfs:comment xml:lang="en">Cost of data transfer operations.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#StorageCost"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
   </owl:DatatypeProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#localServiceCatalog">
-    <rdfs:label xml:lang="en">local service catalog</rdfs:label>
-    <rdfs:comment xml:lang="en">Relates a Regional Node to a catalog describing the datasets and data services provided by that node.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://w3id.org/srcnet#RegionalNode"/>
-    <rdfs:range rdf:resource="https://w3id.org/srcnet#LocalServiceCatalog"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasJupyterNotebook">
-    <rdfs:label xml:lang="en">has Jupyter notebook</rdfs:label>
-    <rdfs:comment xml:lang="en">Relates a data service to a Jupyter Notebook environment used for interactive data analysis, visualization, and scientific computing.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
-    <rdfs:range rdf:resource="https://w3id.org/srcnet#JupyterNotebook"/>
-  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasAlert">
     <rdfs:label xml:lang="en">alert type</rdfs:label>
     <rdfs:comment xml:lang="en">Relates a monitoring service to the alert types it generates, monitors, or reports.</rdfs:comment>
     <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
     <rdfs:range rdf:resource="https://w3id.org/srcnet#Alert"/>
   </owl:ObjectProperty>
-  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#numberOfGPUs">
-    <rdfs:label xml:lang="en">number of GPUs</rdfs:label>
-    <rdfs:comment xml:lang="en">Specifies the number of graphics processing units (GPUs) available in a compute resource.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://w3id.org/srcnet#ComputeResource"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-  </owl:DatatypeProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasDisk">
-    <rdfs:label xml:lang="en">has disk</rdfs:label>
-    <rdfs:comment xml:lang="en">Relates a compute resource to a disk resource available within that resource.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://w3id.org/srcnet#ComputeResource"/>
-    <rdfs:range rdf:resource="https://w3id.org/srcnet#Disk"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#operatedBy">
-    <rdfs:label xml:lang="en">operated by</rdfs:label>
-    <rdfs:comment xml:lang="en">Relates a Regional Node to the organization responsible for its operation and management.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://w3id.org/srcnet#RegionalNode"/>
-    <rdfs:range rdf:resource="https://schema.org/Organization"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasEnergyEfficiency">
-    <rdfs:label xml:lang="en">has energy efficiency profile</rdfs:label>
-    <rdfs:comment xml:lang="en">Relates an energy label to energy efficiency metrics describing the operational efficiency of a Regional Node infrastructure.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://w3id.org/srcnet#EnergyLabel"/>
-    <rdfs:range rdf:resource="https://w3id.org/srcnet#EnergyEfficiency"/>
-  </owl:ObjectProperty>
-  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#energyEfficiencyPUE">
-    <rdfs:label xml:lang="en">power usage effectiveness</rdfs:label>
-    <rdfs:comment xml:lang="en">Specifies the Power Usage Effectiveness (PUE) value associated with an energy efficiency profile. PUE is the ratio between the total facility energy consumption and the energy consumed by IT equipment.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://w3id.org/srcnet#EnergyEfficiency"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#serviceVersion">
-    <rdfs:label xml:lang="en">service version</rdfs:label>
-    <rdfs:comment xml:lang="en">Specifies the version of a data service deployed within the SRCNet infrastructure.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#toolVersion">
-    <rdfs:label xml:lang="en">tool version</rdfs:label>
-    <rdfs:comment xml:lang="en">Specifies the version of a software tool used by a SRCNet service.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://w3id.org/srcnet#VisualizationTool"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </owl:DatatypeProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasEnergyLabel">
-    <rdfs:label xml:lang="en">has energy label</rdfs:label>
-    <rdfs:comment xml:lang="en">Relates a Regional Node to an energy profile describing energy sources and efficiency metrics associated with the node infrastructure.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://w3id.org/srcnet#RegionalNode"/>
-    <rdfs:range rdf:resource="https://w3id.org/srcnet#EnergyLabel"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasEnergySource">
-    <rdfs:label xml:lang="en">has energy source</rdfs:label>
-    <rdfs:comment xml:lang="en">Relates an energy label to the energy source or mix of energy sources used by a Regional Node.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://w3id.org/srcnet#EnergyLabel"/>
-    <rdfs:range rdf:resource="https://w3id.org/srcnet#EnergySource"/>
-  </owl:ObjectProperty>
-  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#energyReuseFactor">
-    <rdfs:label xml:lang="en">energy reuse factor</rdfs:label>
-    <rdfs:comment xml:lang="en">Specifies the proportion of recovered, recycled, or reused energy associated with an energy source profile.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://w3id.org/srcnet#EnergySource"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-  </owl:DatatypeProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#powerConsumption">
-    <rdfs:label xml:lang="en">power consumption</rdfs:label>
-    <rdfs:comment xml:lang="en">Relates a compute resource to its power consumption, expressed as a quantitative value with an associated measurement unit.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://w3id.org/srcnet#ComputeResource"/>
-    <rdfs:range rdf:resource="https://schema.org/QuantitativeValue"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#internalBandwidth">
-    <rdfs:label xml:lang="en">internal network bandwidth</rdfs:label>
-    <rdfs:comment xml:lang="en">Specifies the internal network throughput capacity available within a network infrastructure resource.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://w3id.org/srcnet#NetworkResource"/>
-    <rdfs:range rdf:resource="https://schema.org/QuantitativeValue"/>
-  </owl:ObjectProperty>
-  <owl:Ontology rdf:about="https://w3id.org/srcnet">
-    <dcterms:title xml:lang="en">SRCNet Resource and Service Vocabulary</dcterms:title>
-    <dcterms:description xml:lang="en">Preliminary vocabulary for describing SRCNet nodes, computing resources and local service catalogs.</dcterms:description>
-    <dcterms:creator>SRCNet</dcterms:creator>
-    <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-    <owl:versionInfo>0.1.0</owl:versionInfo>
-    <vann:preferredNamespacePrefix>src</vann:preferredNamespacePrefix>
-    <vann:preferredNamespaceUri>https://w3id.org/srcnet#</vann:preferredNamespaceUri>
-  </owl:Ontology>
-  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasStorageResource">
-    <rdfs:label xml:lang="en">has storage resource</rdfs:label>
-    <rdfs:comment xml:lang="en">Relates a Regional Node to a storage resource available within that node.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://w3id.org/srcnet#RegionalNode"/>
-    <rdfs:range rdf:resource="https://w3id.org/srcnet#StorageResource"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#externalBandwidth">
-    <rdfs:label xml:lang="en">external bandwidth</rdfs:label>
-    <rdfs:comment xml:lang="en">Relates a network resource to its external data transfer bandwidth available for communication with external networks and services.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://w3id.org/srcnet#NetworkResource"/>
-    <rdfs:range rdf:resource="https://schema.org/QuantitativeValue"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#clock">
-    <rdfs:label xml:lang="en">processor clock frequency</rdfs:label>
-    <rdfs:comment xml:lang="en">Specifies the operating clock rate of a CPU or processor used in a computing resource</rdfs:comment>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#coreCount">
+    <rdfs:label xml:lang="en">core count</rdfs:label>
+    <rdfs:comment xml:lang="en">Specifies the number of processing cores available in a processor.</rdfs:comment>
     <rdfs:domain rdf:resource="https://w3id.org/srcnet#Processor"/>
-    <rdfs:range rdf:resource="https://schema.org/QuantitativeValue"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasVisualizationTool">
-    <rdfs:label xml:lang="en">has visualization tool</rdfs:label>
-    <rdfs:comment xml:lang="en">Relates a data service to the visualization tool used for data exploration and visual representation of data.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
-    <rdfs:range rdf:resource="https://w3id.org/srcnet#VisualizationTool"/>
-  </owl:ObjectProperty>
-  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#numberOfProcessors">
-    <rdfs:label xml:lang="en">number of processors</rdfs:label>
-    <rdfs:comment xml:lang="en">Specifies the number of processors available within a compute resource.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://w3id.org/srcnet#ComputeResource"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
   </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#supportedDomains">
-    <rdfs:label xml:lang="en">supported domains</rdfs:label>
-    <rdfs:comment xml:lang="en">Specifies the scientific or application domains supported by a data service.</rdfs:comment>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#coverageRadius">
+    <rdfs:label xml:lang="en">coverage radius</rdfs:label>
+    <rdfs:comment xml:lang="en">Network coverage radius.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#AreaCoverage"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasJupyterNotebook">
+    <rdfs:label xml:lang="en">has Jupyter notebook</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a data service to a Jupyter Notebook environment used for interactive data analysis, visualization, and scientific computing.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+    <rdfs:range rdf:resource="https://w3id.org/srcnet#JupyterNotebook"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#registryType">
+    <rdfs:label xml:lang="en">registry type</rdfs:label>
+    <rdfs:comment xml:lang="en">Specifies the type or role of a registry service within SRCNet, such as dataset registry, service registry, metadata registry, or resource registry.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#supportedFormats">
+    <rdfs:label xml:lang="en">supported formats</rdfs:label>
+    <rdfs:comment xml:lang="en">Specifies one or more data formats supported, produced, consumed, or delivered by a data service.</rdfs:comment>
     <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </owl:DatatypeProperty>
@@ -207,39 +54,59 @@
     <rdfs:domain rdf:resource="https://w3id.org/srcnet#Alert"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </owl:DatatypeProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasProcessor">
-    <rdfs:label xml:lang="en">has processor</rdfs:label>
-    <rdfs:comment xml:lang="en">Relates a compute resource to a processor available within that resource.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://w3id.org/srcnet#ComputeResource"/>
-    <rdfs:range rdf:resource="https://w3id.org/srcnet#Processor"/>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasBandwidth">
+    <rdfs:label xml:lang="en">has bandwidth</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a network resource to its bandwidth characteristics.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#NetworkResource"/>
+    <rdfs:range rdf:resource="https://w3id.org/srcnet#Bandwidth"/>
   </owl:ObjectProperty>
-  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#coreCount">
-    <rdfs:label xml:lang="en">core count</rdfs:label>
-    <rdfs:comment xml:lang="en">Specifies the number of processing cores available in a processor.</rdfs:comment>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#latency">
+    <rdfs:label xml:lang="en">latency</rdfs:label>
+    <rdfs:comment xml:lang="en">RAM access latency.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#RAM"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#performance">
+    <rdfs:label xml:lang="en">processor performance</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a processor to its computational performance, represented as a quantitative value with an associated measurement unit.</rdfs:comment>
     <rdfs:domain rdf:resource="https://w3id.org/srcnet#Processor"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:range rdf:resource="https://schema.org/QuantitativeValue"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#voltage">
+    <rdfs:label xml:lang="en">voltage</rdfs:label>
+    <rdfs:comment xml:lang="en">RAM operating voltage.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#RAM"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
   </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#frequency">
-    <rdfs:label xml:lang="en">alert frequency</rdfs:label>
-    <rdfs:comment xml:lang="en">Specifies the frequency at which an alert is generated, evaluated, or reported by a monitoring service.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://w3id.org/srcnet#Alert"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </owl:DatatypeProperty>
-  <owl:Class rdf:about="https://w3id.org/srcnet#SRCNet">
-    <rdfs:label xml:lang="en">SRCNet</rdfs:label>
-    <rdfs:comment xml:lang="en">The SKA Regional Centre Network, composed of multiple Regional Nodes and providing globally accessible services and resources for the scientific exploitation of SKA data.</rdfs:comment>
-  </owl:Class>
-  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#localPath">
-    <rdfs:label xml:lang="en">local storage path</rdfs:label>
-    <rdfs:comment xml:lang="en">Specifies the internal storage location or file system path where a dataset is physically stored within an SRCNet infrastructure.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </owl:DatatypeProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#resourceRequirements">
-    <rdfs:label xml:lang="en">resource requirements</rdfs:label>
-    <rdfs:comment xml:lang="en">Relates a data service to the computing resources required for its execution, including processor, memory, and other infrastructure requirements.</rdfs:comment>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#serviceId">
+    <rdfs:label xml:lang="en">service identifier</rdfs:label>
+    <rdfs:comment xml:lang="en">A unique identifier assigned to a data service within the SRCNet infrastructure.</rdfs:comment>
     <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
-    <rdfs:range rdf:resource="https://w3id.org/srcnet#ResourceRequirements"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#equipment">
+    <rdfs:label xml:lang="en">equipment</rdfs:label>
+    <rdfs:comment xml:lang="en">Network equipment cost.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#NetworkCost"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasPowerConsumption">
+    <rdfs:label xml:lang="en">has power consumption</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a storage resource to its power consumption metrics.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#StorageResource"/>
+    <rdfs:range rdf:resource="https://w3id.org/srcnet#PowerConsumption"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#environmentalFactors">
+    <rdfs:label xml:lang="en">environmental factors</rdfs:label>
+    <rdfs:comment xml:lang="en">Environmental factors affecting latency.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#Latency"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasEnergySource">
+    <rdfs:label xml:lang="en">has energy source</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates an energy label to the energy source or mix of energy sources used by a node.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#EnergyLabel"/>
+    <rdfs:range rdf:resource="https://w3id.org/srcnet#EnergySource"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasResearchTool">
     <rdfs:label xml:lang="en">has research tool</rdfs:label>
@@ -247,88 +114,469 @@
     <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
     <rdfs:range rdf:resource="https://w3id.org/srcnet#ResearchTool"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasNetworkResource">
-    <rdfs:label xml:lang="en">has network resource</rdfs:label>
-    <rdfs:comment xml:lang="en">Relates a Regional Node to a network resource available within that node.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://w3id.org/srcnet#RegionalNode"/>
-    <rdfs:range rdf:resource="https://w3id.org/srcnet#NetworkResource"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#memoryCapacity">
-    <rdfs:label xml:lang="en">memory capacity</rdfs:label>
-    <rdfs:comment xml:lang="en">Relates a compute resource to its total memory capacity, represented as a quantitative value with an associated measurement unit.</rdfs:comment>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#frequencyBand">
+    <rdfs:label xml:lang="en">frequency band</rdfs:label>
+    <rdfs:comment xml:lang="en">Network operating frequency band.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#AreaCoverage"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#powerConsumption">
+    <rdfs:label xml:lang="en">power consumption</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a compute resource to its power consumption, expressed as a quantitative value with an associated measurement unit.</rdfs:comment>
     <rdfs:domain rdf:resource="https://w3id.org/srcnet#ComputeResource"/>
     <rdfs:range rdf:resource="https://schema.org/QuantitativeValue"/>
   </owl:ObjectProperty>
-  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#supportedFormats">
-    <rdfs:label xml:lang="en">supported formats</rdfs:label>
-    <rdfs:comment xml:lang="en">Specifies one or more data formats supported, produced, consumed, or delivered by a data service.</rdfs:comment>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#activePowerConsumption">
+    <rdfs:label xml:lang="en">active power consumption</rdfs:label>
+    <rdfs:comment xml:lang="en">Power consumption during active operation.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#PowerConsumption"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasStorageResource">
+    <rdfs:label xml:lang="en">has storage resource</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a node to a storage resource available within that node.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#Node"/>
+    <rdfs:range rdf:resource="https://w3id.org/srcnet#StorageResource"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#supportedDomains">
+    <rdfs:label xml:lang="en">supported domains</rdfs:label>
+    <rdfs:comment xml:lang="en">Specifies the scientific or application domains supported by a data service.</rdfs:comment>
     <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </owl:DatatypeProperty>
+  <owl:Ontology rdf:about="https://w3id.org/srcnet">
+    <dcterms:title xml:lang="en">SRCNet Resource and Service Vocabulary</dcterms:title>
+    <dcterms:description xml:lang="en">Preliminary vocabulary for describing SRCNet nodes, computing resources and local service catalogs.</dcterms:description>
+    <dcterms:creator>SRCNet</dcterms:creator>
+    <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+    <owl:versionInfo>0.1.0</owl:versionInfo>
+    <vann:preferredNamespacePrefix>src</vann:preferredNamespacePrefix>
+    <vann:preferredNamespaceUri>https://w3id.org/srcnet#</vann:preferredNamespaceUri>
+  </owl:Ontology>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#dataPath">
+    <rdfs:label xml:lang="en">data path</rdfs:label>
+    <rdfs:comment xml:lang="en">Processor data path characteristics.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#Architecture"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasVisualizationTool">
+    <rdfs:label xml:lang="en">has visualization tool</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a data service to the visualization tool used for data exploration and visual representation of data.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+    <rdfs:range rdf:resource="https://w3id.org/srcnet#VisualizationTool"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#DTN">
+    <rdfs:label xml:lang="en">data transfer node</rdfs:label>
+    <rdfs:comment xml:lang="en">Associated Data Transfer Node.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#DataCapabilities"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#signalStrength">
+    <rdfs:label xml:lang="en">signal strength</rdfs:label>
+    <rdfs:comment xml:lang="en">Network signal strength.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#AreaCoverage"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#visualizationToolVersion">
+    <rdfs:label xml:lang="en">visualization tool version</rdfs:label>
+    <rdfs:comment xml:lang="en">Version of the visualization tool.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#VisualizationTool"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#numberOfGPUs">
+    <rdfs:label xml:lang="en">number of GPUs</rdfs:label>
+    <rdfs:comment xml:lang="en">Specifies the number of graphics processing units (GPUs) available in a compute resource.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#GPU"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#deploymentDensity">
+    <rdfs:label xml:lang="en">deployment density</rdfs:label>
+    <rdfs:comment xml:lang="en">Network deployment density.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#AreaCoverage"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#congestion">
+    <rdfs:label xml:lang="en">congestion</rdfs:label>
+    <rdfs:comment xml:lang="en">Network congestion indicator.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#Bandwidth"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#serviceVersion">
+    <rdfs:label xml:lang="en">service version</rdfs:label>
+    <rdfs:comment xml:lang="en">Specifies the version of a data service deployed within the SRCNet infrastructure.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#throughput">
+    <rdfs:label xml:lang="en">throughput</rdfs:label>
+    <rdfs:comment xml:lang="en">Effective data throughput.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#Bandwidth"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#frequency">
+    <rdfs:label xml:lang="en">alert frequency</rdfs:label>
+    <rdfs:comment xml:lang="en">Specifies the frequency at which an alert is generated, evaluated, or reported by a monitoring service.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#Alert"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasProcessor">
+    <rdfs:label xml:lang="en">has processor</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a compute resource to a processor available within that resource.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#ComputeResource"/>
+    <rdfs:range rdf:resource="https://w3id.org/srcnet#Processor"/>
+  </owl:ObjectProperty>
   <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#waterEfficiencyWUE">
     <rdfs:label xml:lang="en">water usage effectiveness</rdfs:label>
     <rdfs:comment xml:lang="en">Specifies the Water Usage Effectiveness (WUE) value associated with an energy efficiency profile. WUE measures the amount of water used by a facility relative to the energy consumed by its IT equipment.</rdfs:comment>
     <rdfs:domain rdf:resource="https://w3id.org/srcnet#EnergyEfficiency"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
   </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#registryType">
-    <rdfs:label xml:lang="en">registry type</rdfs:label>
-    <rdfs:comment xml:lang="en">Specifies the type or role of a registry service within SRCNet, such as dataset registry, service registry, metadata registry, or resource registry.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#costOfDowntime">
+    <rdfs:label xml:lang="en">cost of downtime</rdfs:label>
+    <rdfs:comment xml:lang="en">Cost of service downtime.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#NetworkCost"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#computationalPerformance">
+    <rdfs:label xml:lang="en">computational performance</rdfs:label>
+    <rdfs:comment xml:lang="en">GPU computational performance.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#GPU"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="https://w3id.org/srcnet#SRCNet">
+    <rdfs:label xml:lang="en">SRCNet</rdfs:label>
+    <rdfs:comment xml:lang="en">The SKA Regional Centre Network composed of multiple SRCs and providing globally accessible services and resources for the scientific exploitation of SKA data.</rdfs:comment>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasRAM">
+    <rdfs:label xml:lang="en">has RAM</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a compute resource to its RAM resource.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#ComputeResource"/>
+    <rdfs:range rdf:resource="https://w3id.org/srcnet#RAM"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#capacityCost">
+    <rdfs:label xml:lang="en">capacity cost</rdfs:label>
+    <rdfs:comment xml:lang="en">Cost of storage capacity.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#StorageCost"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasArchitecture">
+    <rdfs:label xml:lang="en">has architecture</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a processor to its architecture description.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#Processor"/>
+    <rdfs:range rdf:resource="https://w3id.org/srcnet#Architecture"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#memoryCapacity">
+    <rdfs:label xml:lang="en">memory capacity</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a compute resource to its total memory capacity, represented as a quantitative value with an associated measurement unit.</rdfs:comment>
+    <rdfs:range rdf:resource="https://schema.org/QuantitativeValue"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#costOfExpansion">
+    <rdfs:label xml:lang="en">cost of expansion</rdfs:label>
+    <rdfs:comment xml:lang="en">Network expansion cost.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#AreaCoverage"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#numberOfProcessors">
+    <rdfs:label xml:lang="en">number of processors</rdfs:label>
+    <rdfs:comment xml:lang="en">Specifies the number of processors available within a compute resource.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#Processor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#idlePowerConsumption">
+    <rdfs:label xml:lang="en">idle power consumption</rdfs:label>
+    <rdfs:comment xml:lang="en">Power consumption during idle operation.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#PowerConsumption"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#processorModel">
+    <rdfs:label xml:lang="en">processor model</rdfs:label>
+    <rdfs:comment xml:lang="en">Specifies the manufacturer, family, or model designation of a processor.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#Processor"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </owl:DatatypeProperty>
-  <owl:Class rdf:about="https://w3id.org/srcnet#AuthenticationMethod">
-    <rdfs:label xml:lang="en">Authentication Method</rdfs:label>
-    <rdfs:comment xml:lang="en">An authentication mechanism supported by an SRCNet service to verify user identities and control access to protected resources.</rdfs:comment>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#energyEfficiencyPUE">
+    <rdfs:label xml:lang="en">power usage effectiveness</rdfs:label>
+    <rdfs:comment xml:lang="en">Specifies the Power Usage Effectiveness (PUE) value associated with an energy efficiency profile. PUE is the ratio between the total facility energy consumption and the energy consumed by IT equipment.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#EnergyEfficiency"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#energyReuseFactor">
+    <rdfs:label xml:lang="en">energy reuse factor</rdfs:label>
+    <rdfs:comment xml:lang="en">Specifies the proportion of recovered, recycled, or reused energy associated with an energy source profile.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#EnergySource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#maintenance">
+    <rdfs:label xml:lang="en">maintenance</rdfs:label>
+    <rdfs:comment xml:lang="en">Network maintenance cost.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#NetworkCost"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasDisk">
+    <rdfs:label xml:lang="en">has disk</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a compute resource to a disk resource available within that resource.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#ComputeResource"/>
+    <rdfs:range rdf:resource="https://w3id.org/srcnet#Disk"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#training">
+    <rdfs:label xml:lang="en">training</rdfs:label>
+    <rdfs:comment xml:lang="en">Training cost.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#NetworkCost"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#totalCostOfOwnership">
+    <rdfs:label xml:lang="en">total cost of ownership</rdfs:label>
+    <rdfs:comment xml:lang="en">Total storage ownership cost.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#StorageCost"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasStorageCost">
+    <rdfs:label xml:lang="en">has storage cost</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a storage resource to its cost metrics.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#StorageResource"/>
+    <rdfs:range rdf:resource="https://w3id.org/srcnet#StorageCost"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#opportunityCosts">
+    <rdfs:label xml:lang="en">opportunity costs</rdfs:label>
+    <rdfs:comment xml:lang="en">Opportunity costs of storage resources.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#StorageCost"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#jitter">
+    <rdfs:label xml:lang="en">jitter</rdfs:label>
+    <rdfs:comment xml:lang="en">Variation in network latency.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#Latency"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasDataCapabilities">
+    <rdfs:label xml:lang="en">has data capabilities</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a storage resource to its data capabilities.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#StorageResource"/>
+    <rdfs:range rdf:resource="https://w3id.org/srcnet#DataCapabilities"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#powerSupplyEfficiency">
+    <rdfs:label xml:lang="en">power supply efficiency</rdfs:label>
+    <rdfs:comment xml:lang="en">Power supply efficiency indicator.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#PowerConsumption"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasEnergyEfficiency">
+    <rdfs:label xml:lang="en">has energy efficiency profile</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates an energy label to energy efficiency metrics describing the operational efficiency of a node infrastructure.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#EnergyLabel"/>
+    <rdfs:range rdf:resource="https://w3id.org/srcnet#EnergyEfficiency"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#authenticationMethod">
+    <rdfs:label xml:lang="en">authentication method</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a service to a supported authentication method.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+    <rdfs:range rdf:resource="https://w3id.org/srcnet#AuthenticationMethod"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#diskCapacity">
+    <rdfs:label xml:lang="en">disk capacity</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a disk resource to its storage capacity</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#Disk"/>
+    <rdfs:range rdf:resource="https://schema.org/QuantitativeValue"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#speed">
+    <rdfs:label xml:lang="en">speed</rdfs:label>
+    <rdfs:comment xml:lang="en">RAM operating speed.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#RAM"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#localServiceCatalog">
+    <rdfs:label xml:lang="en">local service catalog</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a node to a catalog describing the datasets and data services provided by that node.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#Node"/>
+    <rdfs:range rdf:resource="https://w3id.org/srcnet#LocalServiceCatalog"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#distance">
+    <rdfs:label xml:lang="en">distance</rdfs:label>
+    <rdfs:comment xml:lang="en">Communication distance.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#Latency"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#symmetry">
+    <rdfs:label xml:lang="en">symmetry</rdfs:label>
+    <rdfs:comment xml:lang="en">Symmetry of network traffic.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#Bandwidth"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasComputeResource">
+    <rdfs:label xml:lang="en">has compute resource</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a node to a compute resource providing computational capabilities within that node.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#Node"/>
+    <rdfs:range rdf:resource="https://w3id.org/srcnet#ComputeResource"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#toolVersion">
+    <rdfs:label xml:lang="en">tool version</rdfs:label>
+    <rdfs:comment xml:lang="en">Specifies the version of a software tool used by a SRCNet service.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#ResearchTool"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="https://w3id.org/srcnet#SRC">
+    <rdfs:label xml:lang="en">SRC</rdfs:label>
+    <rdfs:comment xml:lang="en">A SKA Regional Centre participating in SRCNet.</rdfs:comment>
   </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/srcnet#ResourceRequirements">
-    <rdfs:label xml:lang="en">Resource Requirements</rdfs:label>
-    <rdfs:comment xml:lang="en">A description of the processor, memory, storage, and other infrastructure resources required to execute a data service within the SRCNet environment.</rdfs:comment>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#clock">
+    <rdfs:label xml:lang="en">processor clock frequency</rdfs:label>
+    <rdfs:comment xml:lang="en">Specifies the operating clock rate of a CPU or processor used in a computing resource</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#Processor"/>
+    <rdfs:range rdf:resource="https://schema.org/QuantitativeValue"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasLatency">
+    <rdfs:label xml:lang="en">has latency</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a network resource to its latency characteristics.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#NetworkResource"/>
+    <rdfs:range rdf:resource="https://w3id.org/srcnet#Latency"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#licensingFees">
+    <rdfs:label xml:lang="en">licensing fees</rdfs:label>
+    <rdfs:comment xml:lang="en">Network licensing fees.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#NetworkCost"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasAreaCoverage">
+    <rdfs:label xml:lang="en">has area coverage</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a network resource to its coverage characteristics.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#NetworkResource"/>
+    <rdfs:range rdf:resource="https://w3id.org/srcnet#AreaCoverage"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasEnergyLabel">
+    <rdfs:label xml:lang="en">has energy label</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a node to an energy profile describing energy sources and efficiency metrics associated with the node infrastructure.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#Node"/>
+    <rdfs:range rdf:resource="https://w3id.org/srcnet#EnergyLabel"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasGPU">
+    <rdfs:label xml:lang="en">has GPU</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a compute resource to a graphics processing unit (GPU) available within that resource.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#ComputeResource"/>
+    <rdfs:range rdf:resource="https://w3id.org/srcnet#GPU"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#globalServiceCatalog">
+    <rdfs:label xml:lang="en">global service catalog</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a node to a global catalog describing datasets and services available across the SRCNet infrastructure.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#Node"/>
+    <rdfs:range rdf:resource="https://w3id.org/srcnet#GlobalServiceCatalog"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#principalInvestigator">
+    <rdfs:label xml:lang="en">principal investigator</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates an SRC or node to the person responsible for its scientific or technical coordination.</rdfs:comment>
+    <rdfs:range rdf:resource="https://schema.org/Person"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#interface">
+    <rdfs:label xml:lang="en">storage interface</rdfs:label>
+    <rdfs:comment xml:lang="en">Disk interface type.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#Disk"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#storageCapacity">
+    <rdfs:label xml:lang="en">storage capacity</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a storage resource to its available storage capacity.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#DataCapabilities"/>
+    <rdfs:range rdf:resource="https://schema.org/QuantitativeValue"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#resourceRequirements">
+    <rdfs:label xml:lang="en">resource requirements</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a data service to the computing resources required for its execution, including processor, memory, and other infrastructure requirements.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+    <rdfs:range rdf:resource="https://w3id.org/srcnet#ResourceRequirements"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#electricityCost">
+    <rdfs:label xml:lang="en">electricity cost</rdfs:label>
+    <rdfs:comment xml:lang="en">Electricity cost indicator.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#PowerConsumption"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#operational">
+    <rdfs:label xml:lang="en">operational</rdfs:label>
+    <rdfs:comment xml:lang="en">Network operational cost.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#NetworkCost"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#internalBandwidth">
+    <rdfs:label xml:lang="en">internal network bandwidth</rdfs:label>
+    <rdfs:comment xml:lang="en">Specifies the internal network throughput capacity available within a network infrastructure resource.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#NetworkResource"/>
+    <rdfs:range rdf:resource="https://schema.org/QuantitativeValue"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#localPath">
+    <rdfs:label xml:lang="en">local storage path</rdfs:label>
+    <rdfs:comment xml:lang="en">Specifies the internal storage location or file system path where a dataset is physically stored within an SRCNet infrastructure.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#averagePowerCosts">
+    <rdfs:label xml:lang="en">average power costs</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#PowerConsumption"/>
+    <rdfs:comment xml:lang="en">Average power-related costs.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasNetworkCost">
+    <rdfs:label xml:lang="en">has network cost</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a network resource to its cost metrics.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#NetworkResource"/>
+    <rdfs:range rdf:resource="https://w3id.org/srcnet#NetworkCost"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#accessTime">
+    <rdfs:label xml:lang="en">access time</rdfs:label>
+    <rdfs:comment xml:lang="en">Average data access time.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#DataCapabilities"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#energyEfficiency">
+    <rdfs:label xml:lang="en">energy efficiency</rdfs:label>
+    <rdfs:comment xml:lang="en">Architecture energy efficiency indicator.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#Architecture"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#renewableEnergyFactor">
+    <rdfs:label xml:lang="en">renewable energy factor</rdfs:label>
+    <rdfs:comment xml:lang="en">Specifies the proportion of energy obtained from renewable energy sources for a given energy source profile.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#EnergySource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#externalBandwidth">
+    <rdfs:label xml:lang="en">external bandwidth</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a network resource to its external data transfer bandwidth available for communication with external networks and services.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#NetworkResource"/>
+    <rdfs:range rdf:resource="https://schema.org/QuantitativeValue"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#controlUnit">
+    <rdfs:label xml:lang="en">control unit</rdfs:label>
+    <rdfs:comment xml:lang="en">Processor control unit characteristics.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#Architecture"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#operatedBy">
+    <rdfs:label xml:lang="en">operated by</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates an SRC or node to the organization responsible for its operation and management.</rdfs:comment>
+    <rdfs:range rdf:resource="https://schema.org/Organization"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/srcnet#hasNetworkResource">
+    <rdfs:label xml:lang="en">has network resource</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a node to a network resource available within that node.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#Node"/>
+    <rdfs:range rdf:resource="https://w3id.org/srcnet#NetworkResource"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/srcnet#dataSecurity">
+    <rdfs:label xml:lang="en">data security</rdfs:label>
+    <rdfs:comment xml:lang="en">Disk security characteristics.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/srcnet#Disk"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="https://w3id.org/srcnet#Processor">
+    <rdfs:label xml:lang="en">Processor</rdfs:label>
+    <rdfs:comment xml:lang="en">A central processing unit (CPU) providing general-purpose computational capabilities within a compute resource.</rdfs:comment>
   </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/srcnet#EnergyEfficiency">
-    <rdfs:label xml:lang="en">Energy Efficiency</rdfs:label>
-    <rdfs:comment xml:lang="en">A collection of indicators used to evaluate the operational efficiency of a Regional Node infrastructure, including power and water efficiency metrics.</rdfs:comment>
+  <owl:Class rdf:about="https://w3id.org/srcnet#RAM">
+    <rdfs:label xml:lang="en">RAM</rdfs:label>
+    <rdfs:comment xml:lang="en">Main memory available in a compute resource.</rdfs:comment>
   </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/srcnet#GPU">
-    <rdfs:label xml:lang="en">GPU</rdfs:label>
-    <rdfs:comment xml:lang="en">A graphics processing unit (GPU) providing hardware acceleration capabilities within a compute resource for high-performance computing and data-intensive scientific applications.</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/srcnet#JupyterNotebook">
-    <rdfs:label xml:lang="en">Jupyter Notebook</rdfs:label>
-    <rdfs:comment xml:lang="en">A Jupyter-based interactive environment provided by SRCNet services for scientific computing, data analysis, visualization, and collaborative research workflows.</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/srcnet#Disk">
-    <rdfs:label xml:lang="en">Disk</rdfs:label>
-    <rdfs:comment xml:lang="en">A local storage device associated with a compute resource and providing storage capacity for operating systems, applications, temporary data, and processing workloads.</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/srcnet#ComputeResource">
-    <rdfs:label xml:lang="en">Compute Resource</rdfs:label>
-    <rdfs:comment xml:lang="en">A physical or virtual computing resource providing processing, memory, and accelerator capabilities for data processing and scientific workloads within a Regional Node.</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/srcnet#EnergySource">
-    <rdfs:label xml:lang="en">Energy Source</rdfs:label>
-    <rdfs:comment xml:lang="en">A source of energy used by a Regional Node infrastructure, characterized by renewable energy and energy reuse factors.</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/srcnet#NetworkResource">
-    <rdfs:label xml:lang="en">Network Resource</rdfs:label>
-    <rdfs:comment xml:lang="en">A network infrastructure resource providing internal and external connectivity, bandwidth, and data transfer capabilities required for SRCNet operations.</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/srcnet#LocalServiceCatalog">
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
-    <rdfs:label xml:lang="en">Local Service Catalog</rdfs:label>
-    <rdfs:comment xml:lang="en">A catalog describing the datasets, data services, and resources provided by a Regional Node within the SRCNet infrastructure.</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/srcnet#Alert">
-    <rdfs:label xml:lang="en">Alert</rdfs:label>
-    <rdfs:comment xml:lang="en">A notification or monitoring rule associated with a service and used to report operational conditions or threshold violations.</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/srcnet#VisualizationTool">
-    <rdfs:label xml:lang="en">Visualization Tool</rdfs:label>
-    <rdfs:comment xml:lang="en">A software application used within SRCNet services for the visualization, exploration, and analysis of astronomical datasets and derived scientific products.</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/srcnet#RegionalNode">
-    <rdfs:label xml:lang="en">Regional Node</rdfs:label>
-    <rdfs:comment xml:lang="en">A regional node participating in the SKA Regional Centre Network, providing computing, storage, networking resources, and scientific data services.</rdfs:comment>
+  <owl:Class rdf:about="https://w3id.org/srcnet#NetworkCost">
+    <rdfs:label xml:lang="en">Network Cost</rdfs:label>
+    <rdfs:comment xml:lang="en">Cost metrics associated with network resources.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://w3id.org/srcnet#StorageResource">
     <rdfs:label xml:lang="en">Storage Resource</rdfs:label>
@@ -339,16 +587,93 @@
     <rdfs:label xml:lang="en">Global Service Catalog</rdfs:label>
     <rdfs:comment xml:lang="en">A catalog describing data services and shared capabilities that are available across the entire SRCNet infrastructure.</rdfs:comment>
   </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/srcnet#PowerConsumption">
+    <rdfs:label xml:lang="en">Power Consumption</rdfs:label>
+    <rdfs:comment xml:lang="en">Power usage metrics of a storage resource.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/srcnet#ResourceRequirements">
+    <rdfs:label xml:lang="en">Resource Requirements</rdfs:label>
+    <rdfs:comment xml:lang="en">A description of the processor, memory, storage, and other infrastructure resources required to execute a data service within the SRCNet environment.</rdfs:comment>
+  </owl:Class>
   <owl:Class rdf:about="https://w3id.org/srcnet#ResearchTool">
     <rdfs:label xml:lang="en">Research Tool</rdfs:label>
     <rdfs:comment xml:lang="en">A software tool used for scientific research, data analysis, data processing, and the execution of research workflows within SRCNet services.</rdfs:comment>
   </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/srcnet#GPU">
+    <rdfs:label xml:lang="en">GPU</rdfs:label>
+    <rdfs:comment xml:lang="en">A graphics processing unit (GPU) providing hardware acceleration capabilities within a compute resource for high-performance computing and data-intensive scientific applications.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/srcnet#Disk">
+    <rdfs:label xml:lang="en">Disk</rdfs:label>
+    <rdfs:comment xml:lang="en">A local storage device associated with a compute resource and providing storage capacity for operating systems, applications, temporary data, and processing workloads.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/srcnet#EnergySource">
+    <rdfs:label xml:lang="en">Energy Source</rdfs:label>
+    <rdfs:comment xml:lang="en">A source of energy used by a node infrastructure, characterized by renewable energy and energy reuse factors.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/srcnet#Bandwidth">
+    <rdfs:label xml:lang="en">Bandwidth</rdfs:label>
+    <rdfs:comment xml:lang="en">Network bandwidth characteristics.</rdfs:comment>
+  </owl:Class>
   <owl:Class rdf:about="https://w3id.org/srcnet#EnergyLabel">
     <rdfs:label xml:lang="en">Energy Label</rdfs:label>
-    <rdfs:comment xml:lang="en">Describes the energy characteristics of a Regional Node, including energy sources and efficiency indicators.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Describes the energy characteristics of a node, including energy sources and efficiency indicators.</rdfs:comment>
   </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/srcnet#Processor">
-    <rdfs:label xml:lang="en">Processor</rdfs:label>
-    <rdfs:comment xml:lang="en">A central processing unit (CPU) providing general-purpose computational capabilities within a compute resource.</rdfs:comment>
+  <owl:Class rdf:about="https://w3id.org/srcnet#ComputeResource">
+    <rdfs:label xml:lang="en">Compute Resource</rdfs:label>
+    <rdfs:comment xml:lang="en">A physical or virtual computing resource providing processing, memory, and accelerator capabilities for data processing and scientific workloads within a node.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/srcnet#NetworkResource">
+    <rdfs:label xml:lang="en">Network Resource</rdfs:label>
+    <rdfs:comment xml:lang="en">A network infrastructure resource providing internal and external connectivity, bandwidth, and data transfer capabilities required for SRCNet operations.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/srcnet#Latency">
+    <rdfs:label xml:lang="en">Latency</rdfs:label>
+    <rdfs:comment xml:lang="en">Network latency characteristics.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/srcnet#JupyterNotebook">
+    <rdfs:label xml:lang="en">Jupyter Notebook</rdfs:label>
+    <rdfs:comment xml:lang="en">A Jupyter-based interactive environment provided by SRCNet services for scientific computing, data analysis, visualization, and collaborative research workflows.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/srcnet#AuthenticationMethod">
+    <rdfs:label xml:lang="en">Authentication Method</rdfs:label>
+    <rdfs:comment xml:lang="en">An authentication mechanism supported by an SRCNet service to verify user identities and control access to protected resources.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/srcnet#EnergyEfficiency">
+    <rdfs:label xml:lang="en">Energy Efficiency</rdfs:label>
+    <rdfs:comment xml:lang="en">A collection of indicators used to evaluate the operational efficiency of a node infrastructure, including power and water efficiency metrics.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/srcnet#Architecture">
+    <rdfs:label xml:lang="en">Architecture</rdfs:label>
+    <rdfs:comment xml:lang="en">Processor architecture characteristics.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/srcnet#Alert">
+    <rdfs:label xml:lang="en">Alert</rdfs:label>
+    <rdfs:comment xml:lang="en">A notification or monitoring rule associated with a service and used to report operational conditions or threshold violations.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/srcnet#VisualizationTool">
+    <rdfs:label xml:lang="en">Visualization Tool</rdfs:label>
+    <rdfs:comment xml:lang="en">A software application used within SRCNet services for the visualization, exploration, and analysis of astronomical datasets and derived scientific products.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/srcnet#DataCapabilities">
+    <rdfs:label xml:lang="en">Data Capabilities</rdfs:label>
+    <rdfs:comment xml:lang="en">Data storage and transfer capabilities.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/srcnet#LocalServiceCatalog">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+    <rdfs:label xml:lang="en">Local Service Catalog</rdfs:label>
+    <rdfs:comment xml:lang="en">A catalog describing the datasets, data services, and resources provided by a node within the SRCNet infrastructure.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/srcnet#StorageCost">
+    <rdfs:label xml:lang="en">Storage Cost</rdfs:label>
+    <rdfs:comment xml:lang="en">Cost metrics associated with storage resources.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/srcnet#AreaCoverage">
+    <rdfs:label xml:lang="en">Area Coverage</rdfs:label>
+    <rdfs:comment xml:lang="en">Coverage characteristics of a network resource.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/srcnet#Node">
+    <rdfs:label xml:lang="en">Node</rdfs:label>
+    <rdfs:comment xml:lang="en">Operational node belonging to an SRC and hosting resources and services.</rdfs:comment>
   </owl:Class>
 </rdf:RDF>

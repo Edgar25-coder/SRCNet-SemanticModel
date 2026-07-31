@@ -1,0 +1,3272 @@
+{
+  "@context": {
+
+    "src": "https://w3id.org/srcnet#",
+    "schema": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "qudt": "http://qudt.org/schema/qudt/",
+    "unit": "http://qudt.org/vocab/unit/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+    
+  },
+
+  "@graph": [
+    {
+        "@id": "https://w3id.org/srcnet",
+        "@type": "src:SRCNet",
+        "dcterms:hasPart": [
+            
+            {
+                "@id": "https://w3id.org/srcnet/node/espsrc",
+                "@type": "src:SRC",
+                "schema:name": "espSRC",
+                "src:operatedBy": {
+                    "@type": "schema:Organization",
+                    "schema:name":"IAA-CSIC",
+                    "schema:location": {
+                        "@type": "schema:Place",
+                        "schema:address":{
+                            "@type": "schema:PostalAddress",
+                            "schema:streetAddress": "Gta de la Astronom\u00eda, s/n, Genil",
+                            "schema:addressLocality": "Granada",
+                            "schema:addressRegion": "Andalucía",
+                            "schema:postalCode": "18008",
+                            "schema:addressCountry":{
+                                "@type": "schema:Country",
+                                "schema:name":"Spain",
+                                "schema:containedInPlace":{
+                                    "@type": "schema:AdministrativeArea",
+                                    "schema:name": "European Union"
+                                }
+                            }
+                        },
+                        
+                        "schema:geo": {
+                            "@type": "schema:GeoCoordinates",
+                            "schema:latitude": 37.16,
+                            "schema:longitude": -3.59
+                        }
+                    },
+                    
+                    "schema:contactPoint": {
+                        "@type": "schema:ContactPoint",
+                        "schema:name": "espSRC Team",
+                        "schema:telephone": "+34 958121311",
+                        "schema:email": "infospsrc@iaa.es",
+                        "schema:faxNumber": "+34 958814530",
+                        "schema:url": "https://iaa.es"
+                    }
+                },
+
+                    
+                    "src:principalInvestigator": {
+                        "@type": "schema:Person",
+                        "schema:name": "Manu Parra",
+                        "schema:email": "mparra@example.es",
+                        "schema:telephone": "+34 668500600",
+                        "schema:worksFor": {
+                            "@type": "schema:Organization",
+                            "schema:name": "IAA-CSIC"
+                        }
+                    },
+
+                    "dcterms:hasPart": {
+                        "@id": "https://w3id.org/srcnet/node/espsrc-node",
+                        "@type": "src:Node",
+
+
+                    "src:hasComputeResource": {
+                        "@type": "src:ComputeResource",
+                        "src:powerConsumption":{
+                            "@type": "schema:QuantitativeValue",
+                            "schema:value": "",
+                            "schema:unitCode": ""
+                        },
+                        "src:hasProcessor": {
+                            "@type": "src:Processor",
+                            "src:numberOfProcessors": 12,
+                            "src:processorModel": "",
+                            "src:coreCount": 240,
+
+                            "src:hasArchitecture":{
+                                "@type": "src:Architecture",
+                                "src:dataPath": "",
+                                "src:controlUnit": "",
+                                "src:energyEfficiency": ""
+                            },
+                            "src:performance":{
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 0.034,
+                                "schema:unitCode": "PETAFLOPS"
+                            },
+                            "src:clock": {
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 3.5,
+                                "schema:unitCode": "GHz"
+                            }
+                        },
+                        
+                        "src:hasGPU":{
+                            "@type": "src:GPU",
+                            "src:numberOfGPUs": 1,
+                            "src:computationalPerformance": "",
+                            "schema:additionalType": "not defined",
+                            "src:memoryCapacity": {
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": "",
+                                "schema:unitCode": ""
+                            }
+                        },
+
+                        "src:hasRAM":{
+                            "@type":"src:RAM",
+                            "src:memoryCapacity": {
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 1392,
+                                "schema:unitCode": "GB"
+                            },
+                            "src:voltage": "",
+                            "src:latency": "",
+                            "schema:additionalType": "",
+                            "src:speed": ""
+                        },
+
+                        "src:hasDisk":{
+                            "@type": "src:Disk",
+                            "schema:additionalType": "SSD",
+                            "src:diskCapacity":{
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 1,
+                                "schema:unitCode": "TB"
+                            },
+                            "src:interface": "",
+                            "src:dataSecurity": "",
+                            "src:speed": ""
+                        }
+                    },
+                    
+                        "src:hasStorageResource":{
+                            "@type": "src:StorageResource",
+                            "schema:additionalType": "",
+                            "src:hasPowerConsumption":{
+                                "@type": "src:PowerConsumption",
+                                "src:powerSupplyEfficiency": "",
+                                "src:averagePowerCosts": "",
+                                "src:idlePowerConsumption": "",
+                                "src:activePowerConsumption": "",
+                                "src:electricityCost": ""
+                            },
+                            "src:hasDataCapabilities": {
+                                "@type": "src:DataCapabilities",
+                                "src:storageCapacity":{
+                                    "@type": "schema:QuantitativeValue",
+                                    "schema:value": 750,
+                                    "schema:unitCode": "TB"
+                                },
+                                "src:accessTime": "",
+                                "src:DTN": ""
+                            },
+
+                            "src:hasStorageCost":{
+                                "@type": "src:StorageCost",
+                                "src:capacityCost": "",
+                                "src:dataTransferCost": "",
+                                "src:totalCostOfOwnership": "",
+                                "src:opportunityCosts": ""
+                            }
+                        },
+                    
+                        
+                        "src:hasNetworkResource":{
+                            "@type": "src:NetworkResource",
+                            "src:hasBandwidth":{
+                                "@type": "src:Bandwidth",
+                                "src:internalBandwidth":{
+                                    "@type": "schema:QuantitativeValue",
+                                    "schema:value": 100,
+                                    "schema:unitCode": "Gbps"
+                                },
+                                "src:externalBandwidth":{
+                                    "@type": "schema:QuantitativeValue",
+                                    "schema:value": 10,
+                                    "schema:unitCode": "Gbps"
+                                },
+                                "src:throughput": "",
+                                "src:congestion": "",
+                                "src:symmetry": ""
+                            },
+
+                            "src:hasAreaCoverage":{
+                                "@type": "src:AreaCoverage",
+                                "schema:additionalType": "",
+                                "src:deploymentDensity": "",
+                                "src:coverageRadius": "",
+                                "src:signalStrength": "",
+                                "src:frequencyBand": "",
+                                "src:costOfExpansion": ""
+                            },
+
+                            "src:hasLatency":{
+                                "@type": "src:Latency",
+                                "schema:additionalType": "",
+                                "src:performance": "",
+                                "src:jitter": "",
+                                "src:distance": "",
+                                "src:environmentalFactors": ""
+                            },
+
+                            "src:hasNetworkCost":{
+                                "@type": "src:NetworkCost",
+                                "src:maintenance": "",
+                                "src:operational": "",
+                                "src:equipment": "",
+                                "src:licensingFees": "",
+                                "src:training": "",
+                                "src:costOfDowntime": ""
+                            }
+                        },                            
+                        
+                        "src:hasEnergyLabel":{
+                            "@type": "src:EnergyLabel",
+                            "src:hasEnergySource":{
+                                "@type": "src:EnergySource",
+                                "src:renewableEnergyFactor": "",
+                                "src:energyReuseFactor": ""
+                            },
+                            "src:hasEnergyEfficiency":{
+                                "@type": "src:EnergyEfficiency",
+                                "src:energyEfficiencyPUE": "",
+                                "src:waterEfficiencyWUE": ""
+                            }
+                        },
+                        
+                        "src:localServiceCatalog": {
+                            "@id":"https://w3id.org/srcnet/catalog/espsrc-local",
+                            "@type":"dcat:Catalog",
+                            "dcat:service": [
+                            {
+                               
+                                "@id": "https://w3id.org/srcnet/service/espsrc-datalake",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Datalake",
+                                "src:serviceId": "datalake-service-001",
+                                "src:serviceVersion": "1.2.0",
+                                "schema:description": "A scalable data lake service for storing and processing large volumes of data.",
+                                "dcat:dataset": {
+                                    "@id":"https://w3id.org/srcnet/dataset/wallaby-center-fits",
+                                    "@type":"dcat:Dataset",
+                                    "dcterms:title": "wallaby-center.fits",
+                                    "dcterms:identifier": "ivo://espsrc.../test/wallaby-center-fits",
+                                    "src:localPath": "/test/af/07/wallaby-center-fits",
+                                    "schema:description": "A dataset containing wallaby observation data.",
+                                    "dcat:distribution":{
+                                        "@type":"dcat:Distribution",
+                                        "dcat:downloadURL":""
+                                    }
+                                }
+                            },
+                            
+                            {
+                                "@id": "https://w3id.org/srcnet/service/espsrc-visualization", 
+                                "@type": "dcat:DataService",
+                                "schema:name": "Visualization",
+                                "src:serviceId": "visualization-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service that provides visualization tools for analyzing wallaby data.",
+                                "src:hasVisualizationTool": {
+                                    "@type":"src:VisualizationTool",
+                                    "schema:name": "Carta",
+                                    "src:visualizationToolVersion": "7.0",
+                                    "schema:description": "A tool for visualizing data in various formats."
+                                }
+                            },
+                            
+                            {
+                                "@id": "https://w3id.org/srcnet/service/espsrc-notebook",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Notebook",
+                                "src:serviceId": "notebook-service-001",
+                                "src:serviceVersion": "1.0.1",
+                                "schema:description": "A service that allows users to create and share notebooks for data analysis and collaboration.",
+                                "src:hasJupyterNotebook":{
+                                    "@type":"src:JupyterNotebook",
+                                    "schema:name":"Jupyternotebook"
+                                },
+                                "src:resourceRequirements": {
+                                    "@type": "src:ResourceRequirements",
+                                    "src:hasProcessor": {
+                                        "@type": "src:Processor",
+                                        "src:coreCount": 4,
+                                        "src:clock": {
+                                            "@type": "schema:QuantitativeValue",
+                                            "schema:value": 2.5,
+                                            "schema:unitCode": "GHz"
+                                        }
+                                    },
+                                        "src:memoryCapacity": {
+                                            "@type": "schema:QuantitativeValue",
+                                            "schema:value": 16,
+                                            "schema:unitCode": "GB"
+                                        }
+                                    }
+                            },
+                            
+                            {
+                                "@id": "https://w3id.org/srcnet/service/espsrcscienceplatform",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Science Platform",
+                                "src:serviceId": "science-platform-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A platform for conducting scientific research, offering tools and resources for scientists.",
+                                "src:hasResearchTool": {
+                                    "@type": "src:ResearchTool",
+                                    "schema:name": "Research Assistant",
+                                    "src:toolVersion": "1.0"
+                                }
+                            },
+                            {
+                                "@id": "https://w3id.org/srcnet/service/espsrcsoda",
+                                "@type":"dcat:DataService",
+                                "schema:name": "SODA",
+                                "src:serviceId": "soda-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service for providing access to streaming data and real-time analytics.",
+                                "dcat:endpointURL": "",
+                                "dcterms:conformsTo":""
+                            },
+                            {   
+                                "@id": "https://w3id.org/srcnet/service/espsrcmonitoring",
+                                 "@type": "dcat:DataService",
+                                 "schema:name": "Monitoring Service",
+                                 "src:serviceId": "monitoring-service-001",
+                                 "src:serviceVersion": "1.0.0",
+                                 "schema:description": "A service that provides monitoring and alerting capabilities for applications and systems.",
+                                 "src:hasAlert": {
+                                    "@type": "src:Alert",
+                                    "schema:name": "",
+                                    "src:frequency": "",
+                                    "src:threshold": ""
+                                }
+                            }
+                        ]
+                    },
+                    
+                    "src:globalServiceCatalog": {
+                        "@id":"https://w3id.org/srcnet/catalog/srcnet-global",
+                        "@type":"dcat:Catalog",
+                        "dcat:service": [
+                            {
+                                "@id": "https://w3id.org/srcnet/service/sciencegateway",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Science Gateway",
+                                "src:serviceId": "science-gateway-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A web-based platform for accessing scientific resources, tools, and applications.",
+                                "src:supportedDomains": ["astronomy", "biology", "physics"]
+                            },
+                            
+                            {
+                                "@id": "https://w3id.org/srcnet/service/authentication",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Authentication Service",
+                                "src:serviceId": "auth-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service that provides authentication and authorization for access to applications and data.",
+                                "src:authenticationMethod": [
+                                    {
+                                        "@type": "src:AuthenticationMethod",
+                                        "schema:name": ""
+                                    },
+                                    {
+                                        "@type": "src:AuthenticationMethod",
+                                        "schema:name": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "@id": "https://w3id.org/srcnet/service/datadistributionplatform",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Data Distribution Platform",
+                                "src:serviceId": "data-distribution-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A platform for distributing data across various services and applications.",
+                                "src:supportedFormats": ["CSV", "JSON", "XML"]
+                            },
+                            {
+                                "@id":"https://w3id.org/srcnet/service/registryservice",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Service Registry",
+                                "src:serviceId": "registry-service-001",
+                                "src:serviceVersion": "1.0.2",
+                                "schema:description": "A service for registering and discovering available services in the system.",
+                                "src:registryType": "Central",
+                                "dcat:endpointURL": "https://api.example.com/registry"
+                            }
+                        ]
+                    }
+                }
+            },
+            
+            
+
+
+            {
+                "@id": "https://w3id.org/srcnet/node/swedsrc",
+                "@type": "src:SRC",
+                "schema:name": "swedishSRC",
+                "src:operatedBy": {
+                    "@type": "schema:Organization",
+                    "schema:name":"University of Sweden",
+                    "schema:location": {
+                        "@type": "schema:Place",
+                        "schema:address":{
+                            "@type": "schema:PostalAddress",
+                            "schema:streetAddress": "SkÃ¤rgÃ¥rdsgatan 45, Gothenburg, Sweden",
+                            "schema:addressLocality": "Gothenburg",
+                            "schema:addressRegion": "not defined",
+                            "schema:postalCode": "41110",
+                            "schema:addressCountry":{
+                                "@type": "schema:Country",
+                                "schema:name":"Sweden",
+                                "schema:containedInPlace":{
+                                    "@type": "schema:AdministrativeArea",
+                                    "schema:name": "European Union"
+                                }
+                            }
+                        },
+                        
+                        "schema:geo": {
+                            "@type": "schema:GeoCoordinates",
+                            "schema:latitude": 57.71,
+                            "schema:longitude": 11.97
+                        }
+                    },
+                    
+                    "schema:contactPoint": {
+                        "@type": "schema:ContactPoint",
+                        "schema:name": "swedishSRC Team",
+                        "schema:telephone": "+46 601234510",
+                        "schema:email": "infospsrc@swedish.src.sw",
+                        "schema:faxNumber": "958814530",
+                        "schema:url": "not available"
+                    }
+                },
+                    
+                    "src:principalInvestigator": {
+                        "@type": "schema:Person",
+                        "schema:name": "Kalle Forsberg",
+                        "schema:email": "kforsberg@example.sw",
+                        "schema:telephone": "+46 701234567",
+                        "schema:worksFor": {
+                            "@type": "schema:Organization",
+                            "schema:name": "University of Sweden"                        
+                        }
+                    },
+
+                    "dcterms:hasPart": {
+                        "@id": "https://w3id.org/srcnet/node/swedsrc-node",
+                        "@type": "src:Node",
+
+                    
+                    "src:hasComputeResource": {
+                        "@type": "src:ComputeResource",
+                        "src:powerConsumption":{
+                            "@type": "schema:QuantitativeValue",
+                            "schema:value": "",
+                            "schema:unitCode": ""
+                        },
+                        "src:hasProcessor": {
+                            "@type": "src:Processor",
+                            "src:numberOfProcessors": 2,
+                            "src:processorModel":"",
+                            "src:coreCount": 64,
+                            "src:hasArchitecture":{
+                                "@type": "src:Architecture",
+                                "src:dataPath": "",
+                                "src:controlUnit": "",
+                                "src:energyEfficiency": ""
+                            },
+                            "src:performance":{
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 0.039,
+                                "schema:unitCode": "PETAFLOPS"
+                            },
+                            "src:clock": {
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 2.60,
+                                "schema:unitCode": "GHz"
+                            }
+                        },
+                        
+                        "src:hasGPU":{
+                            "@type": "src:GPU",
+                            "src:numberOfGPUs": 3,
+                            "src:computationalPerformance": "",
+                            "schema:additionalType": "",
+                            "src:memoryCapacity": {
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": "",
+                                "schema:unitCode": ""
+                            }
+                        },
+                        
+                        "src:hasRAM":{
+                            "@type":"src:RAM",
+                            "src:memoryCapacity": {
+                            "@type": "schema:QuantitativeValue",
+                            "schema:value": 512,
+                            "schema:unitCode": "GB"
+                        },
+
+                        "src:voltage": "",
+                        "src:latency": "",
+                        "schema:additionalType": "",
+                        "src:speed": ""
+                    },
+
+
+
+
+                        "src:hasDisk":{
+                            "@type": "src:Disk",
+                            "schema:additionalType": "SSD",
+                            "src:diskCapacity":{
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 960,
+                                "schema:unitCode": "TB"
+                            },
+                            "src:interface": "",
+                            "src:dataSecurity": "",
+                            "src:speed": ""
+                        }
+                    },
+                
+
+
+                        "src:hasStorageResource":{
+                            "@type": "src:StorageResource",
+                            "schema:additionalType": "",
+                            "src:hasPowerConsumption":{
+                                "@type": "src:PowerConsumption",
+                                "src:powerSupplyEfficiency": "",
+                                "src:averagePowerCosts": "",
+                                "src:idlePowerConsumption": "",
+                                "src:activePowerConsumption": "",
+                                "src:electricityCost": ""
+                            },
+                            "src:hasDataCapabilities": {
+                                "@type": "src:DataCapabilities",
+                                "src:storageCapacity":{
+                                    "@type": "schema:QuantitativeValue",
+                                    "schema:value": 50,
+                                    "schema:unitCode": "TB"
+                                },
+                                "src:accessTime": "",
+                                "src:DTN": ""
+                            },
+                            "src:hasStorageCost":{
+                                "@type": "src:StorageCost",
+                                "src:capacityCost": "",
+                                "src:dataTransferCost": "",
+                                "src:totalCostOfOwnership": "",
+                                "src:opportunityCosts": ""
+                            }
+                            
+                        },
+                        
+                        "src:hasNetworkResource":{
+                            "@type": "src:NetworkResource",
+                            "src:hasBandwidth":{
+                                "@type": "src:Bandwidth",
+                                "src:internalBandwidth":{
+                                    "@type": "schema:QuantitativeValue",
+                                    "schema:value": 100,
+                                    "schema:unitCode": "Gbps"
+                                },
+                                "src:externalBandwidth":{
+                                    "@type": "schema:QuantitativeValue",
+                                    "schema:value": 6,
+                                    "schema:unitCode": "Gbps"
+                                },
+                                "src:throughput": "",
+                                "src:congestion": "",
+                                "src:symmetry": "" 
+                            },
+
+                            "src:hasAreaCoverage":{
+                                "@type": "src:AreaCoverage",
+                                "schema:additionalType": "",
+                                "src:deploymentDensity": "",
+                                "src:coverageRadius": "",
+                                "src:signalStrength": "",
+                                "src:frequencyBand": "",
+                                "src:costOfExpansion": ""
+                            },
+                            "src:hasLatency":{
+                                "@type": "src:Latency",
+                                "schema:additionalType": "",
+                                "src:performance": "",
+                                "src:jitter": "",
+                                "src:distance": "",
+                                "src:environmentalFactors": ""
+                            },
+
+                            "src:hasNetworkCost":{
+                                "@type": "src:NetworkCost",
+                                "src:maintenance": "",
+                                "src:operational": "",
+                                "src:equipment": "",
+                                "src:licensingFees": "",
+                                "src:training": "",
+                                "src:costOfDowntime": ""
+                            }
+                        },
+                        
+                        "src:hasEnergyLabel":{
+                            "@type": "src:EnergyLabel",
+                            "src:hasEnergySource":{
+                                "@type": "src:EnergySource",
+                                "src:renewableEnergyFactor": "",
+                                "src:energyReuseFactor": ""
+                            },
+                            "src:hasEnergyEfficiency":{
+                                "@type": "src:EnergyEfficiency",
+                                "src:energyEfficiencyPUE": "",
+                                "src:waterEfficiencyWUE": ""
+                            }
+                        },
+                        
+                        "src:localServiceCatalog": {
+                            "@id":"https://w3id.org/srcnet/catalog/swedsrc-local",
+                            "@type":"dcat:Catalog",
+                            "dcat:service": [
+                            {
+                               
+                                "@id": "https://w3id.org/srcnet/service/swedsrc-datalake",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Datalake",
+                                "src:serviceId": "datalake-service-001",
+                                "src:serviceVersion": "1.2.0",
+                                "schema:description": "A scalable data lake service for storing and processing large volumes of data.",
+                                "dcat:dataset": {
+                                    "@id":"https://w3id.org/srcnet/dataset/mightee-cube",
+                                    "@type":"dcat:Dataset",
+                                    "dcterms:title": "mightee-cube.fits",
+                                    "dcterms:identifier": "ivo://srcnet/dataset/mightee-cube",
+                                    "src:localPath": "/test/af/08/mightee-cube",
+                                    "schema:description": "MeerKAT MIGHTEE spectral data cube.",
+                                    "dcat:distribution":{
+                                        "@type":"dcat:Distribution",
+                                        "dcat:downloadURL":""
+                                    }
+                                }
+                            },
+                            
+                            {
+                                "@id": "https://w3id.org/srcnet/service/swedsrc-visualization", 
+                                "@type": "dcat:DataService",
+                                "schema:name": "visualization",
+                                "src:serviceId": "visualization-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service that provides visualization tools for analyzing wallaby data.",
+                                "src:hasVisualizationTool": {
+                                    "@type":"src:VisualizationTool",
+                                    "schema:name": "Carta",
+                                    "src:visualizationToolVersion": "7.0",
+                                    "schema:description": "A tool for visualizing data in various formats."
+                                }
+                            },
+                            
+                            {
+                                "@id": "https://w3id.org/srcnet/service/swedsrc-notebook",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Notebook",
+                                "src:serviceId": "notebook-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service that allows users to create and share notebooks for data analysis and collaboration.",
+                                "src:hasJupyterNotebook":{
+                                    "@type":"src:JupyterNotebook",
+                                    "schema:name": "Jupyternotebook"
+                                },
+                                "src:resourceRequirements": {
+                                    "@type": "src:ResourceRequirements",
+                                    "src:hasProcessor": {
+                                        "@type": "src:Processor",
+                                        "src:coreCount": 4,
+                                        "src:clock": {
+                                            "@type": "schema:QuantitativeValue",
+                                            "schema:value": 2.5,
+                                            "schema:unitCode": "GHz"
+                                        }
+                                    },
+                                        "src:memoryCapacity": {
+                                            "@type": "schema:QuantitativeValue",
+                                            "schema:value": 16,
+                                            "schema:unitCode": "GB"
+                                        }
+                                    }
+                                },
+                            
+                            
+                            {
+                                "@id": "https://w3id.org/srcnet/service/swedsrc-scienceplatform",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Science Platform",
+                                "src:serviceId": "science-platform-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A platform for conducting scientific research, offering tools and resources for scientists.",
+                                "src:hasResearchTool": {
+                                    "@type": "src:ResearchTool",
+                                    "schema:name": "Research Assistant",
+                                    "src:toolVersion": "1.0"
+                                }
+                            },
+                            {
+                                "@id": "https://w3id.org/srcnet/service/swedsrc-soda",
+                                "@type":"dcat:DataService",
+                                "schema:name": "SODA",
+                                "src:serviceId": "soda-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service for providing access to streaming data and real-time analytics.",
+                                "dcat:endpointURL": "",
+                                "dcterms:conformsTo":""
+                            },
+                            {   
+                                "@id": "https://w3id.org/srcnet/service/swedsrc-monitoring",
+                                 "@type": "dcat:DataService",
+                                 "schema:name": "Monitoring Service",
+                                 "src:serviceId": "monitoring-service-001",
+                                 "src:serviceVersion": "1.0.0",
+                                 "schema:description": "A service that provides monitoring and alerting capabilities for applications and systems.",
+                                 "src:hasAlert": {
+                                    "@type": "src:Alert",
+                                    "schema:name": "",
+                                    "src:frequency": "",
+                                    "src:threshold": ""
+                                }
+                            }
+                        ]
+                    },
+                    
+                    "src:globalServiceCatalog": {
+                        "@id":"https://w3id.org/srcnet/catalog/srcnet-global",
+                        "@type":"dcat:Catalog",
+                        "dcat:service": [
+                            {
+                                "@id": "https://w3id.org/srcnet/service/sciencegateway",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Science Gateway",
+                                "src:serviceId": "science-gateway-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A web-based platform for accessing scientific resources, tools, and applications.",
+                                "src:supportedDomains": ["astronomy", "biology", "physics"]
+                            },
+                            
+                            {
+                                "@id": "https://w3id.org/srcnet/service/authentication",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Authentication Service",
+                                "src:serviceId": "auth-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service that provides authentication and authorization for access to applications and data.",
+                                "src:authenticationMethod": [
+                                    {
+                                        "@type": "src:AuthenticationMethod",
+                                        "schema:name": ""
+                                    },
+                                    {
+                                        "@type": "src:AuthenticationMethod",
+                                        "schema:name": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "@id": "https://w3id.org/srcnet/service/datadistributionplatform",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Data Distribution Platform",
+                                "src:serviceId": "data-distribution-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A platform for distributing data across various services and applications.",
+                                "src:supportedFormats": ["CSV", "JSON", "XML"]
+                            },
+                            {
+                                "@id":"https://w3id.org/srcnet/service/registryservice",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Service Registry",
+                                "src:serviceId": "registry-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service for registering and discovering available services in the system.",
+                                "src:registryType": "Central",
+                                "dcat:endpointURL": "https://api.example.com/registry"
+                            }
+                        ]
+                    }
+                }
+            },
+            
+            
+
+
+            {
+                "@id": "https://w3id.org/srcnet/node/cansrc",
+                "@type": "src:SRC",
+                "schema:name": "canSRC",
+                "src:operatedBy": {
+                    "@type": "schema:Organization",
+                    "schema:name": "CADC",
+                    "schema:location": {
+                        "@type": "schema:Place",
+                        "schema:address":{
+                            "@type": "schema:PostalAddress",
+                            "schema:streetAddress": "Cedar Lane 45, Victoria, BC V8X 2Y9, Canada",
+                            "schema:addressLocality": "Victoria",
+                            "schema:addressRegion": "not defined",
+                            "schema:postalCode": "not available",
+                            "schema:addressCountry":{
+                                "@type": "schema:Country",
+                                "schema:name":"Canada",
+                                "schema:containedInPlace":{
+                                    "@type": "schema:AdministrativeArea",
+                                    "schema:name": "North America"
+                                }
+                            }
+                        },
+                        
+                        "schema:geo": {
+                            "@type": "schema:GeoCoordinates",
+                            "schema:latitude": 48.43,
+                            "schema:longitude": -123.36
+                        }
+                    },
+                    
+                    "schema:contactPoint": {
+                        "@type": "schema:ContactPoint",
+                        "schema:name": "canSRC Team",
+                        "schema:telephone": "+1 410 123 3566",
+                        "schema:email": "infosrc@canadian.src.ca",
+                        "schema:faxNumber": "+1 416 123 3360",
+                        "schema:url": "not defined"
+                    }
+                },
+                    
+                    "src:principalInvestigator": {
+                        "@type": "schema:Person",
+                        "schema:name": "Colton Lalonde",
+                        "schema:email": "clalonde@canadiansrc.ca",
+                        "schema:telephone": "+1 416 123 4567",
+                        "schema:worksFor": {
+                            "@type": "schema:Organization",
+                            "schema:name": "CADC"
+                        }
+                    },
+
+                    "dcterms:hasPart": {
+                        "@id": "https://w3id.org/srcnet/node/cansrc-node",
+                        "@type": "src:Node",
+
+                    
+                    "src:hasComputeResource": {
+                        "@type": "src:ComputeResource",
+                        "src:powerConsumption":{
+                            "@type": "schema:QuantitativeValue",
+                            "schema:value": "",
+                            "schema:unitCode": ""
+                        },
+                        "src:hasProcessor": {
+                            "@type": "src:Processor",
+                            "src:numberOfProcessors": 160,
+                            "src:processorModel":"",
+                            "src:coreCount": 3840,
+                            "src:hasArchitecture":{
+                                "@type": "src:Architecture",
+                                "src:dataPath": "",
+                                "src:controlUnit": "",
+                                "src:energyEfficiency": ""
+                            },
+                            "src:performance":{
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 0.042,
+                                "schema:unitCode": "PETAFLOPS"
+                            },
+                            "src:clock": {
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 2.60,
+                                "schema:unitCode": "GHz"
+                            }
+                        },
+                        
+                        "src:hasGPU":{
+                            "@type": "src:GPU",
+                            "src:numberOfGPUs": 10,
+                            "src:computationalPerformance": "",
+                            "schema:additionalType": "H200",
+                            "src:memoryCapacity": {
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": "",
+                                "schema:unitCode": ""
+                            }
+                        },
+                        "src:hasRAM":{
+                            "@type":"src:RAM",
+                            "src:memoryCapacity": {
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 20480,
+                                "schema:unitCode": "GB"
+                            },
+                            "src:voltage": "",
+                            "src:latency": "",
+                            "schema:additionalType": "",
+                            "src:speed": ""
+                        },
+
+                        "src:hasDisk":{
+                            "@type": "src:Disk",
+                            "schema:additionalType": "HDD",
+                            "src:diskCapacity":{
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 1024,
+                                "schema:unitCode": "TB"
+                            },
+                            "src:interface": "",
+                            "src:dataSecurity": "",
+                            "src:speed": ""
+                        }
+                    },
+                
+                        "src:hasStorageResource":{
+                            "@type": "src:StorageResource",
+                            "schema:additionalType": "",
+                            "src:hasPowerConsumption":{
+                                "@type": "src:PowerConsumption",
+                                "src:powerSupplyEfficiency": "",
+                                "src:averagePowerCosts": "",
+                                "src:idlePowerConsumption": "",
+                                "src:activePowerConsumption": "",
+                                "src:electricityCost": ""
+                            },
+
+                            "src:hasDataCapabilities": {
+                                "@type": "src:DataCapabilities",
+                                "src:storageCapacity":{
+                                    "@type": "schema:QuantitativeValue",
+                                    "schema:value": 7618.56,
+                                    "schema:unitCode": "TB"
+                                },
+                                "src:accessTime": "",
+                                "src:DTN": ""
+                            },
+                            
+                            "src:hasStorageCost":{
+                                "@type": "src:StorageCost",
+                                "src:capacityCost": "",
+                                "src:dataTransferCost": "",
+                                "src:totalCostOfOwnership": "",
+                                "src:opportunityCosts": ""
+                            }
+                        },
+                    
+                        
+                        "src:hasNetworkResource":{
+                            "@type": "src:NetworkResource",
+                            "src:hasBandwidth":{
+                                "@type": "src:Bandwidth",
+                                "src:internalBandwidth":{
+                                    "@type": "schema:QuantitativeValue",
+                                    "schema:value": 400,
+                                    "schema:unitCode": "Gbps"
+                                },
+                                "src:externalBandwidth":{
+                                    "@type": "schema:QuantitativeValue",
+                                    "schema:value": 400,
+                                    "schema:unitCode": "Gbps"
+                                },
+                                "src:throughput": "",
+                                "src:congestion": "",
+                                "src:symmetry": ""
+                        
+                            },
+
+                            "src:hasAreaCoverage":{
+                                "@type": "src:AreaCoverage",
+                                "schema:additionalType": "",
+                                "src:deploymentDensity": "",
+                                "src:coverageRadius": "",
+                                "src:signalStrength": "",
+                                "src:frequencyBand": "",
+                                "src:costOfExpansion": ""
+                            },
+                            
+                            "src:hasLatency":{
+                                "@type": "src:Latency",
+                                "schema:additionalType": "",
+                                "src:performance": "",
+                                "src:jitter": "",
+                                "src:distance": "",
+                                "src:environmentalFactors": ""
+                            },
+                            "src:hasNetworkCost":{
+                                "@type": "src:NetworkCost",
+                                "src:maintenance": "",
+                                "src:operational": "",
+                                "src:equipment": "",
+                                "src:licensingFees": "",
+                                "src:training": "",
+                                "src:costOfDowntime": ""
+                            }
+                        },
+                       
+                        "src:hasEnergyLabel":{
+                            "@type": "src:EnergyLabel",
+                            "src:hasEnergySource":{
+                                "@type": "src:EnergySource",
+                                "src:renewableEnergyFactor": "",
+                                "src:energyReuseFactor": ""
+                            },
+                            "src:hasEnergyEfficiency":{
+                                "@type": "src:EnergyEfficiency",
+                                "src:energyEfficiencyPUE": "",
+                                "src:waterEfficiencyWUE": ""
+                            }
+                        },
+                        
+                        "src:localServiceCatalog": {
+                            "@id":"https://w3id.org/srcnet/catalog/cansrc-local",
+                            "@type":"dcat:Catalog",
+                            "dcat:service": [
+                            
+                            {
+                                "@id": "https://w3id.org/srcnet/service/cansrc-notebook",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Notebook",
+                                "src:serviceId": "notebook-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service that allows users to create and share notebooks for data analysis and collaboration.",
+                                "src:hasJupyterNotebook":{
+                                    "@type":"src:JupyterNotebook",
+                                    "schema:name":"Jupyter"
+                                },
+                                "src:resourceRequirements": {
+                                    "@type": "src:ResourceRequirements",
+                                    "src:hasProcessor": {
+                                        "@type": "src:Processor",
+                                        "src:coreCount": 8,
+                                        "src:clock": {
+                                            "@type": "schema:QuantitativeValue",
+                                            "schema:value": 2.5,
+                                            "schema:unitCode": "GHz"
+                                        }
+                                    },
+                                        "src:memoryCapacity": {
+                                            "@type": "schema:QuantitativeValue",
+                                            "schema:value": 128,
+                                            "schema:unitCode": "GB"
+                                        }
+                                    }
+                                },
+                            
+                            
+                            {
+                                "@id": "https://w3id.org/srcnet/service/cansrc-scienceplatform",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Science Platform",
+                                "src:serviceId": "science-platform-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A platform for conducting scientific research, offering tools and resources for scientists.",
+                                "src:hasResearchTool": {
+                                    "@type": "src:ResearchTool",
+                                    "schema:name": "Research Assistant",
+                                    "src:toolVersion": "1.0"
+                                }
+                            },
+                            {
+                                "@id": "https://w3id.org/srcnet/service/cansrc-soda",
+                                "@type":"dcat:DataService",
+                                "schema:name": "SODA",
+                                "src:serviceId": "soda-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service for providing access to streaming data and real-time analytics.",
+                                "dcat:endpointURL": "",
+                                "dcterms:conformsTo":""
+                            },
+                            {   
+                                "@id": "https://w3id.org/srcnet/service/cansrc-monitoring",
+                                 "@type": "dcat:DataService",
+                                 "schema:name": "Monitoring Service",
+                                 "src:serviceId": "monitoring-service-001",
+                                 "src:serviceVersion": "1.0.0",
+                                 "schema:description": "A service that provides monitoring and alerting capabilities for applications and systems.",
+                                 "src:hasAlert": {
+                                    "@type": "src:Alert",
+                                    "schema:name": "",
+                                    "src:frequency": "",
+                                    "src:threshold": ""
+                                }
+                            }
+                        ]
+                    },
+                    
+                    "src:globalServiceCatalog": {
+                        "@id":"https://w3id.org/srcnet/catalog/srcnet-global",
+                        "@type":"dcat:Catalog",
+                        "dcat:service": [
+                            {
+                                "@id": "https://w3id.org/srcnet/service/sciencegateway",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Science Gateway",
+                                "src:serviceId":"science-gateway-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description":  "A web-based platform for accessing scientific resources, tools, and applications.",
+                                "src:supportedDomains": ["astronomy", "biology", "physics"]
+                            },
+                            
+                            {
+                                "@id": "https://w3id.org/srcnet/service/authentication",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Authentication Service",
+                                "src:serviceId": "auth-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service that provides authentication and authorization for access to applications and data.",
+                                "src:authenticationMethod": [
+                                    {
+                                        "@type": "src:AuthenticationMethod",
+                                        "schema:name": ""
+                                    },
+                                    {
+                                        "@type": "src:AuthenticationMethod",
+                                        "schema:name": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "@id": "https://w3id.org/srcnet/service/datadistributionplatform",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Data Distribution Platform",
+                                "src:serviceId": "data-distribution-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A platform for distributing data across various services and applications.",
+                                "src:supportedFormats": ["CSV", "JSON", "XML"]
+                            },
+                            {
+                                "@id":"https://w3id.org/srcnet/service/registryservice",
+                                "@type": "dcat:DataService",
+                                "schema:name":  "Service Registry",
+                                "src:serviceId": "registry-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service for registering and discovering available services in the system.",
+                                "src:registryType": "Central",
+                                "dcat:endpointURL": "https://api.example.com/registry"
+                            }
+                        ]
+                    }
+                }
+            },
+            
+        
+
+
+
+            {
+                "@id": "https://w3id.org/srcnet/node/itsrc",
+                "@type": "src:SRC",
+                "schema:name": "itSRC",
+                "src:operatedBy": {
+                    "@type": "schema:Organization",
+                    "schema:name": "CINECA ",
+                    "schema:location": {
+                        "@type": "schema:Place",
+                        "schema:address":{
+                            "@type": "schema:PostalAddress",
+                            "schema:streetAddress": "Piazza delle Stelle 32, Bologna, Italy",
+                            "schema:addressLocality": "Bologna",
+                            "schema:addressRegion": "not defined",
+                            "schema:postalCode": "40123 ",
+                            "schema:addressCountry":{
+                                "@type": "schema:Country",
+                                "schema:name":"Italy",
+                                "schema:containedInPlace":{
+                                    "@type": "schema:AdministrativeArea",
+                                    "schema:name": "European Union"
+                                }
+                            }
+                        },
+                        
+                        "schema:geo": {
+                            "@type": "schema:GeoCoordinates",
+                            "schema:latitude": 44.49,
+                            "schema:longitude": 11.26
+                        }
+                    },
+                    
+                    "schema:contactPoint": {
+                        "@type": "schema:ContactPoint",
+                        "schema:name": "itSRC Team",
+                        "schema:telephone": "958121311",
+                        "schema:email": "info@itsrc.it",
+                        "schema:faxNumber": "+39 0612345000",
+                        "schema:url": "not available"
+                    }
+                },
+                    
+                    "src:principalInvestigator": {
+                        "@type": "schema:Person",
+                        "schema:name": "Giulia Moretti",
+                        "schema:email": "gmoretti@example.it",
+                        "schema:telephone": "+39 0612345678",
+                        "schema:worksFor": {
+                            "@type": "schema:Organization",
+                            "schema:name": "CINECA"
+                        }
+                    },
+
+
+                    "dcterms:hasPart": {
+                        "@id": "https://w3id.org/srcnet/node/itsrc-node",
+                        "@type": "src:Node",
+
+
+                    "src:hasComputeResource": {
+                        "@type": "src:ComputeResource",
+                        "src:powerConsumption":{
+                            "@type": "schema:QuantitativeValue",
+                            "schema:value": "",
+                            "schema:unitCode": ""
+                        },
+                        "src:hasProcessor": {
+                            "@type": "src:Processor",
+                            "src:numberOfProcessors": "",
+                            "src:processorModel":"",
+                            "src:coreCount": 200,
+                            "src:hasArchitecture":{
+                                "@type": "src:Architecture",
+                                "src:dataPath": "",
+                                "src:controlUnit": "",
+                                "src:energyEfficiency": ""
+                            },
+                            "src:performance":{
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 0.0005,
+                                "schema:unitCode": "PETAFLOPS"
+                            },
+                            "src:clock": {
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 3.5,
+                                "schema:unitCode": "GHz"
+                            }
+                        },
+                        
+                        "src:hasGPU":{
+                            "@type": "src:GPU",
+                            "src:numberOfGPUs": "",
+                            "src:computationalPerformance": "",
+                            "schema:additionalType": "",
+                            "src:memoryCapacity": {
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": "",
+                                "schema:unitCode": ""
+                            }
+                        },
+
+                        "src:hasRAM":{
+                            "@type":"src:RAM",
+                            "src:memoryCapacity": {
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 800,
+                                "schema:unitCode": "GB"
+                            },
+                            "src:voltage": "",
+                            "src:latency": "",
+                            "schema:additionalType": "",
+                            "src:speed": ""
+                        },
+
+                        "src:hasDisk":{
+                            "@type": "src:Disk",
+                            "schema:additionalType": "not defined",
+                            "src:diskCapacity":{
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 2,
+                                "schema:unitCode": "TB"
+                            },
+                            "src:interface": "",
+                            "src:dataSecurity": "",
+                            "src:speed": ""
+                        }
+                    },
+                
+
+
+                        "src:hasStorageResource":{
+                            "@type": "src:StorageResource",
+                            "schema:additionalType": "",
+                            "src:hasPowerConsumption":{
+                                "@type": "src:PowerConsumption",
+                                "src:powerSupplyEfficiency": "",
+                                "src:averagePowerCosts": "",
+                                "src:idlePowerConsumption": "",
+                                "src:activePowerConsumption": "",
+                                "src:electricityCost": ""
+                            },
+
+                            "src:hasDataCapabilities": {
+                                "@type": "src:DataCapabilities",
+                                "src:storageCapacity":{
+                                    "@type": "schema:QuantitativeValue",
+                                    "schema:value": 27,
+                                    "schema:unitCode": "TB"
+                                },
+                                "src:accessTime": "",
+                                "src:DTN": ""
+                            },
+                            "src:hasStorageCost":{
+                                "@type": "src:StorageCost",
+                                "src:capacityCost": "",
+                                "src:dataTransferCost": "",
+                                "src:totalCostOfOwnership": "",
+                                "src:opportunityCosts": ""
+                            }
+                        },
+                    
+                        
+                        "src:hasNetworkResource":{
+                            "@type": "src:NetworkResource",
+                            "src:hasBandwidth":{
+                                "@type": "src:Bandwidth",
+                                "src:internalBandwidth":{
+                                    "@type": "schema:QuantitativeValue",
+                                    "schema:value": 1,
+                                    "schema:unitCode": "Gbps"
+                                },
+                                "src:externalBandwidth":{
+                                    "@type": "schema:QuantitativeValue",
+                                    "schema:value": 7,
+                                    "schema:unitCode": "Gbps"
+                                },
+                                "src:throughput": "",
+                                "src:congestion": "",
+                                "src:symmetry": ""
+                            },
+
+                            "src:hasAreaCoverage":{
+                                "@type": "src:AreaCoverage",
+                                "schema:additionalType": "",
+                                "src:deploymentDensity": "",
+                                "src:coverageRadius": "",
+                                "src:signalStrength": "",
+                                "src:frequencyBand": "",
+                                "src:costOfExpansion": ""
+                            },
+                            
+                            "src:hasLatency":{
+                                "@type": "src:Latency",
+                                "schema:additionalType": "",
+                                "src:performance": "",
+                                "src:jitter": "",
+                                "src:distance": "",
+                                "src:environmentalFactors": ""
+                            },
+                            "src:hasNetworkCost":{
+                                "@type": "src:NetworkCost",
+                                "src:maintenance": "",
+                                "src:operational": "",
+                                "src:equipment": "",
+                                "src:licensingFees": "",
+                                "src:training": "",
+                                "src:costOfDowntime": ""
+                            }
+                        },
+                        
+                        "src:hasEnergyLabel":{
+                            "@type": "src:EnergyLabel",
+                            "src:hasEnergySource":{
+                                "@type": "src:EnergySource",
+                                "src:renewableEnergyFactor": "",
+                                "src:energyReuseFactor": ""
+                            },
+                            "src:hasEnergyEfficiency":{
+                                "@type": "src:EnergyEfficiency",
+                                "src:energyEfficiencyPUE": "",
+                                "src:waterEfficiencyWUE": ""
+                            }
+                        },
+                        
+                        "src:localServiceCatalog": {
+                            "@id":"https://w3id.org/srcnet/catalog/itsrc-local",
+                            "@type":"dcat:Catalog",
+                            "dcat:service": [
+                            
+                            {
+                                "@id": "https://w3id.org/srcnet/service/itsrc-notebook",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Notebook",
+                                "src:serviceId": "notebook-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service that allows users to create and share notebooks for data analysis and collaboration.",
+                                "src:hasJupyterNotebook":{
+                                    "@type":"src:JupyterNotebook",
+                                    "schema:name":"Jupyter"
+                                },
+                                "src:resourceRequirements": {
+                                    "@type": "src:ResourceRequirements",
+                                    "src:hasProcessor": {
+                                        "@type": "src:Processor",
+                                        "src:coreCount": 6,
+                                        "src:clock": {
+                                            "@type": "schema:QuantitativeValue",
+                                            "schema:value": 2.5,
+                                            "schema:unitCode": "GHz"
+                                        }
+                                    },
+                                        "src:memoryCapacity": {
+                                            "@type": "schema:QuantitativeValue",
+                                            "schema:value": 64,
+                                            "schema:unitCode": "GB"
+                                        }
+                                    }
+                                },
+                            
+                            
+                            {
+                                "@id": "https://w3id.org/srcnet/service/itsrc-scienceplatform",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Science Platform",
+                                "src:serviceId": "science-platform-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A platform for conducting scientific research, offering tools and resources for scientists.",
+                                "src:hasResearchTool": {
+                                    "@type": "src:ResearchTool",
+                                    "schema:name": "Research Assistant",
+                                    "src:toolVersion": "1.0"
+                                }
+                            },
+                            {
+                                "@id": "https://w3id.org/srcnet/service/itsrc-soda",
+                                "@type":"dcat:DataService",
+                                "schema:name": "SODA",
+                                "src:serviceId": "soda-service-001",
+                                "src:serviceVersion":"1.0.0",
+                                "schema:description": "A service for providing access to streaming data and real-time analytics.",
+                                "dcat:endpointURL": "",
+                                "dcterms:conformsTo":""
+                            },
+                            {   
+                                "@id": "https://w3id.org/srcnet/service/itsrc-monitoring",
+                                 "@type": "dcat:DataService",
+                                 "schema:name": "Monitoring Service",
+                                 "src:serviceId": "monitoring-service-001",
+                                 "src:serviceVersion": "1.0.0",
+                                 "schema:description":"A service that provides monitoring and alerting capabilities for applications and systems.",
+                                 "src:hasAlert": {
+                                    "@type": "src:Alert",
+                                    "schema:name": "",
+                                    "src:frequency": "",
+                                    "src:threshold": ""
+                                }
+                            }
+                        ]
+                    },
+                    
+                    "src:globalServiceCatalog": {
+                        "@id":"https://w3id.org/srcnet/catalog/srcnet-global",
+                        "@type":"dcat:Catalog",
+                        "dcat:service": [
+                            {
+                                "@id": "https://w3id.org/srcnet/service/sciencegateway",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Science Gateway",
+                                "src:serviceId": "science-gateway-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A web-based platform for accessing scientific resources, tools, and applications.",
+                                "src:supportedDomains": ["astronomy", "biology", "physics"]
+                            },
+                            
+                            {
+                                "@id": "https://w3id.org/srcnet/service/authentication",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Authentication Service",
+                                "src:serviceId": "auth-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service that provides authentication and authorization for access to applications and data.",
+                                "src:authenticationMethod": [
+                                    {
+                                        "@type": "src:AuthenticationMethod",
+                                        "schema:name": ""
+                                    },
+                                    {
+                                        "@type": "src:AuthenticationMethod",
+                                        "schema:name": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "@id": "https://w3id.org/srcnet/service/datadistributionplatform",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Data Distribution Platform",
+                                "src:serviceId": "data-distribution-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A platform for distributing data across various services and applications.",
+                                "src:supportedFormats": ["CSV", "JSON", "XML"]
+                            },
+                            {
+                                "@id":"https://w3id.org/srcnet/service/registryservice",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Service Registry",
+                                "src:serviceId": "registry-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service for registering and discovering available services in the system.",
+                                "src:registryType": "Central",
+                                "dcat:endpointURL": "https://api.example.com/registry"
+                            }
+                        ]
+                    }
+                }
+            },
+            
+            
+
+
+
+            {
+                "@id": "https://w3id.org/srcnet/node/swisrc",
+                "@type": "src:SRC",
+                "schema:name": "swisSRC",
+                "src:operatedBy": {
+                    "@type": "schema:Organization",
+                    "schema:name":"University of Zurich",
+                    "schema:location": {
+                        "@type": "schema:Place",
+                        "schema:address":{
+                            "@type": "schema:PostalAddress",
+                            "schema:streetAddress": "Via delle Tristezze 15, Lugano",
+                            "schema:addressLocality": "Lungano",
+                            "schema:addressRegion": "not defined",
+                            "schema:postalCode": "6900",
+                            "schema:addressCountry":{
+                                "@type": "schema:Country",
+                                "schema:name":"Switzerland",
+                                "schema:containedInPlace":{
+                                    "@type": "schema:AdministrativeArea",
+                                    "schema:name": "European Union"
+                                }
+                            }
+                        },
+                        
+                        "schema:geo": {
+                            "@type": "schema:GeoCoordinates",
+                            "schema:latitude": 46.01,
+                            "schema:longitude": 9.06
+                        }
+                    },
+                    
+                    "schema:contactPoint": {
+                        "@type": "schema:ContactPoint",
+                        "schema:name": "swisSRC Team",
+                        "schema:telephone": "+41 358823701",
+                        "schema:email": "infoswissrc@src.sw",
+                        "schema:faxNumber": "+34 958814530",
+                        "schema:url": "not available"
+                    }
+                },
+                    
+                    "src:principalInvestigator": {
+                        "@type": "schema:Person",
+                        "schema:name": "Lucia Meier",
+                        "schema:email": "lmeier@example.swi",
+                        "schema:telephone": "+41 728823799",
+                        "schema:worksFor": {
+                            "@type": "schema:Organization",
+                            "schema:name": "University of Zurich"
+                        }
+                    },
+
+                    "dcterms:hasPart": {
+                        "@id": "https://w3id.org/srcnet/node/swisrc-node",
+                        "@type": "src:Node",
+
+                    
+                    "src:hasComputeResource": {
+                        "@type": "src:ComputeResource",
+                        "src:powerConsumption":{
+                            "@type": "schema:QuantitativeValue",
+                            "schema:value": "",
+                            "schema:unitCode": ""
+                        },
+                        "src:hasProcessor": {
+                            "@type": "src:Processor",
+                            "src:numberOfProcessors": 2,
+                            "src:processorModel":"",
+                            "src:coreCount": 44,
+                            "src:hasArchitecture":{
+                                "@type": "src:Architecture",
+                                "src:dataPath": "",
+                                "src:controlUnit": "",
+                                "src:energyEfficiency": ""
+                            },
+                            "src:performance":{
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 0.014,
+                                "schema:unitCode": "PETAFLOPS"
+                            },
+                            "src:clock": {
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 3.5,
+                                "schema:unitCode": "GHz"
+                            }
+                        },
+                        
+                        "src:hasGPU":{
+                            "@type": "src:GPU",
+                            "src:numberOfGPUs": "",
+                            "src:computationalPerformance": "",
+                            "schema:additionalType": "",
+                            "src:memoryCapacity": {
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": "",
+                                "schema:unitCode": ""
+                            }
+                        },
+                        "src:hasRAM":{
+                            "@type":"src:RAM",
+                            "src:memoryCapacity": {
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 88,
+                                "schema:unitCode": "GB"
+                            },
+                            "src:voltage": "",
+                            "src:latency": "",
+                            "schema:additionalType": "",
+                            "src:speed": ""
+                        },
+
+                        "src:hasDisk":{
+                            "@type": "src:Disk",
+                            "schema:additionalType": "not defined",
+                            "src:diskCapacity":{
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 20,
+                                "schema:unitCode": "TB"
+                            },
+                            "src:interface": "",
+                            "src:dataSecurity": "",
+                            "src:speed": ""
+                        }
+                    },
+                
+                        
+                    "src:hasStorageResource":{
+                            "@type": "src:StorageResource",
+                            "schema:additionalType": "",
+                            "src:hasPowerConsumption":{
+                                "@type": "src:PowerConsumption",
+                                "src:powerSupplyEfficiency": "",
+                                "src:averagePowerCosts": "",
+                                "src:idlePowerConsumption": "",
+                                "src:activePowerConsumption": "",
+                                "src:electricityCost": ""
+                            },
+                            "src:hasDataCapabilities": {
+                                "@type": "src:DataCapabilities",
+                                "src:storageCapacity":{
+                                    "@type": "schema:QuantitativeValue",
+                                    "schema:value": 50,
+                                    "schema:unitCode": "TB"
+                                },
+                                "src:accessTime": "",
+                                "src:DTN": ""
+                            },
+                            "src:hasStorageCost":{
+                                "@type": "src:StorageCost",
+                                "src:capacityCost": "",
+                                "src:dataTransferCost": "",
+                                "src:totalCostOfOwnership": "",
+                                "src:opportunityCosts": ""
+                            }
+                        },
+                
+                        
+                        "src:hasNetworkResource":{
+                            "@type": "src:NetworkResource",
+                            "src:hasBandwidth":{
+                                "@type": "src:Bandwidth",
+                                "src:internalBandwidth":{
+                                    "@type": "schema:QuantitativeValue",
+                                    "schema:value": 15,
+                                    "schema:unitCode": "Gbps"
+                                },
+                                "src:externalBandwidth":{
+                                    "@type": "schema:QuantitativeValue",
+                                    "schema:value": 10,
+                                    "schema:unitCode": "Gbps"
+                                },
+                                "src:throughput": "",
+                                "src:congestion": "",
+                                "src:symmetry": ""
+                            },
+                            "src:hasAreaCoverage":{
+                                "@type": "src:AreaCoverage",
+                                "schema:additionalType": "",
+                                "src:deploymentDensity": "",
+                                "src:coverageRadius": "",
+                                "src:signalStrength": "",
+                                "src:frequencyBand": "",
+                                "src:costOfExpansion": ""
+                            },
+                            
+                            "src:hasLatency":{
+                                "@type": "src:Latency",
+                                "schema:additionalType": "",
+                                "src:performance": "",
+                                "src:jitter": "",
+                                "src:distance": "",
+                                "src:environmentalFactors": ""
+                            },
+                            "src:hasNetworkCost":{
+                                "@type": "src:NetworkCost",
+                                "src:maintenance": "",
+                                "src:operational": "",
+                                "src:equipment": "",
+                                "src:licensingFees": "",
+                                "src:training": "",
+                                "src:costOfDowntime": ""
+                            }
+                        },
+                  
+                        "src:hasEnergyLabel":{
+                            "@type": "src:EnergyLabel",
+                            "src:hasEnergySource":{
+                                "@type": "src:EnergySource",
+                                "src:renewableEnergyFactor": "",
+                                "src:energyReuseFactor": ""
+                            },
+                            "src:hasEnergyEfficiency":{
+                                "@type": "src:EnergyEfficiency",
+                                "src:energyEfficiencyPUE": "",
+                                "src:waterEfficiencyWUE": ""
+                            }
+                        },
+                        
+                        "src:localServiceCatalog": {
+                            "@id":"https://w3id.org/srcnet/catalog/swisrc-local",
+                            "@type":"dcat:Catalog",
+                            "dcat:service": [
+                            
+                            
+                            {
+                                "@id": "https://w3id.org/srcnet/service/swisrc-visualization", 
+                                "@type": "dcat:DataService",
+                                "schema:name": "Visualization",
+                                "src:serviceId": "visualization-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description":  "A service that provides visualization tools for analyzing wallaby data.",
+                                "src:hasVisualizationTool": {
+                                    "@type":"src:VisualizationTool",
+                                    "schema:name":"Carta",
+                                    "src:visualizationToolVersion":"7.0",
+                                    "schema:description": "A tool for visualizing data in various formats."
+                                }
+                            },
+                            
+                            {
+                                "@id": "https://w3id.org/srcnet/service/swisrc-notebook",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Notebook",
+                                "src:serviceId": "notebook-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service that allows users to create and share notebooks for data analysis and collaboration.",
+                                "src:hasJupyterNotebook":{
+                                    "@type":"src:JupyterNotebook",
+                                    "schema:name":"Jupyter"
+                                },
+                                "src:resourceRequirements": {
+                                    "@type": "src:ResourceRequirements",
+                                    "src:hasProcessor": {
+                                        "@type": "src:Processor",
+                                        "src:coreCount": 4,
+                                        "src:clock": {
+                                            "@type": "schema:QuantitativeValue",
+                                            "schema:value": 2.5,
+                                            "schema:unitCode": "GHz"
+                                        }
+                                    },
+                                        "src:memoryCapacity": {
+                                            "@type": "schema:QuantitativeValue",
+                                            "schema:value": 16,
+                                            "schema:unitCode": "GB"
+                                        }
+                                    }
+                                },
+                            
+                            
+                            {
+                                "@id": "https://w3id.org/srcnet/service/swisrc-scienceplatform",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Science Platform",
+                                "src:serviceId": "science-platform-service-001",
+                                "src:serviceVersion":"1.0.0",
+                                "schema:description": "A platform for conducting scientific research, offering tools and resources for scientists.",
+                                "src:hasResearchTool": {
+                                    "@type": "src:ResearchTool",
+                                    "schema:name": "Research Assistant",
+                                    "src:toolVersion": "1.0"
+                                }
+                            },
+                            {   
+                                "@id": "https://w3id.org/srcnet/service/swisrc-monitoring",
+                                 "@type": "dcat:DataService",
+                                 "schema:name": "Monitoring Service",
+                                 "src:serviceId": "monitoring-service-001", 
+                                 "src:serviceVersion": "1.0.0",
+                                 "schema:description": "A service that provides monitoring and alerting capabilities for applications and systems.",
+                                 "src:hasAlert": {
+                                    "@type": "src:Alert",
+                                    "schema:name": "",
+                                    "src:frequency": "",
+                                    "src:threshold": ""
+                                }
+                            }
+                        ]
+                    },
+                    
+                    "src:globalServiceCatalog": {
+                        "@id":"https://w3id.org/srcnet/catalog/srcnet-global",
+                        "@type":"dcat:Catalog",
+                        "dcat:service": [
+                            {
+                                "@id": "https://w3id.org/srcnet/service/sciencegateway",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Science Gateway",
+                                "src:serviceId": "science-gateway-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A web-based platform for accessing scientific resources, tools, and applications.",
+                                "src:supportedDomains": ["astronomy", "biology", "physics"]
+                            },
+                            
+                            {
+                                "@id": "https://w3id.org/srcnet/service/authentication",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Authentication Service",
+                                "src:serviceId": "auth-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service that provides authentication and authorization for access to applications and data.",
+                                "src:authenticationMethod": [
+                                    {
+                                        "@type": "src:AuthenticationMethod",
+                                        "schema:name": ""
+                                    },
+                                    {
+                                        "@type": "src:AuthenticationMethod",
+                                        "schema:name": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "@id": "https://w3id.org/srcnet/service/datadistributionplatform",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Data Distribution Platform",
+                                "src:serviceId": "data-distribution-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A platform for distributing data across various services and applications.",
+                                "src:supportedFormats": ["CSV", "JSON", "XML"]
+                            },
+                            {
+                                "@id":"https://w3id.org/srcnet/service/registryservice",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Service Registry",
+                                "src:serviceId": "registry-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service for registering and discovering available services in the system.",
+                                "src:registryType": "Central",
+                                "dcat:endpointURL": "https://api.example.com/registry"
+                            }
+                        ]
+                    }
+                }
+            },
+            
+            
+
+
+            {
+                "@id": "https://w3id.org/srcnet/node/chinasrc",
+                "@type": "src:SRC",
+                "schema:name": "chinaSRC",
+                "src:operatedBy": {
+                    "@type": "schema:Organization",
+                    "schema:name": "University of Shangai",
+                    "schema:location": {
+                        "@type": "schema:Place",
+                        "schema:address":{
+                            "@type": "schema:PostalAddress",
+                            "schema:streetAddress": "Nanjing Road East 88, Huangpu District",
+                            "schema:addressLocality": "Shangai",
+                            "schema:addressRegion": "not defined",
+                            "schema:postalCode": "200001",
+                            "schema:addressCountry":{
+                                "@type": "schema:Country",
+                                "schema:name":"China",
+                                "schema:containedInPlace":{
+                                    "@type": "schema:AdministrativeArea",
+                                    "schema:name": "Asia"
+                                }
+                            }
+                        },
+                        
+                        "schema:geo": {
+                            "@type": "schema:GeoCoordinates",
+                            "schema:latitude": 31.24,
+                            "schema:longitude": 121.47
+                        }
+                    },
+                    
+                    "schema:contactPoint": {
+                        "@type": "schema:ContactPoint",
+                        "schema:name": "ChinaSRC Team",
+                        "schema:telephone": "958121311",
+                        "schema:email": "info@chinasrc.ch",
+                        "schema:faxNumber": "200001",
+                        "schema:url": "not available"
+                    }
+                },
+                    
+                    "src:principalInvestigator": {
+                        "@type": "schema:Person",
+                        "schema:name": "Ying Zhao",
+                        "schema:email": "yzhao@example.ch",
+                        "schema:telephone": "+86 13812345678",
+                        "schema:worksFor": {
+                            "@type": "schema:Organization",
+                            "schema:name": "University of Shangai"
+                        }
+                    },
+
+
+                    "dcterms:hasPart": {
+                        "@id": "https://w3id.org/srcnet/node/chinasrc-node",
+                        "@type": "src:Node",
+
+                    
+                    "src:hasComputeResource": {
+                        "@type": "src:ComputeResource",
+                        "src:powerConsumption":{
+                            "@type": "schema:QuantitativeValue",
+                            "schema:value": "",
+                            "schema:unitCode": ""
+                        },
+                        "src:hasProcessor": {
+                            "@type": "src:Processor",
+                            "src:numberOfProcessors": 8,
+                            "src:processorModel":"",
+                            "src:coreCount": 200,
+                            "src:hasArchitecture":{
+                                 "@type": "src:Architecture",
+                                 "src:dataPath": "",
+                                 "src:controlUnit": "",
+                                 "src:energyEfficiency": ""
+                                },
+                            "src:performance":{
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 0.0125,
+                                "schema:unitCode": "PETAFLOPS"
+                            },
+                            "src:clock": {
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 3.5,
+                                "schema:unitCode": "GHz"
+                            }
+                        },
+                        
+                        "src:hasGPU":{
+                            "@type": "src:GPU",
+                            "src:numberOfGPUs": "",
+                            "src:computationalPerformance": "",
+                            "schema:additionalType": "",
+                            "src:memoryCapacity": {
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": "",
+                                "schema:unitCode": ""
+                            }
+                        },
+
+                        "src:hasRAM":{
+                            "@type":"src:RAM",
+                            "src:memoryCapacity": {
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 12,
+                                "schema:unitCode": "GB"
+                            },
+                            "src:voltage": "",
+                            "src:latency": "",
+                            "schema:additionalType": "",
+                            "src:speed": ""
+                         },
+
+
+                        "src:hasDisk":{
+                            "@type": "src:Disk",
+                            "schema:additionalType": "",
+                            "src:diskCapacity":{
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 40,
+                                "schema:unitCode": "TB"
+                            },
+                            "src:interface": "",
+                            "src:dataSecurity": "",
+                            "src:speed": ""
+                        }
+                    },
+                
+
+
+                        "src:hasStorageResource":{
+                            "@type": "src:StorageResource",
+                            "schema:additionalType": "",
+                            "src:hasPowerConsumption":{
+                                "@type": "src:PowerConsumption",
+                                "src:powerSupplyEfficiency": "",
+                                "src:averagePowerCosts": "",
+                                "src:idlePowerConsumption": "",
+                                "src:activePowerConsumption": "",
+                                "src:electricityCost": ""
+                            },
+                            "src:hasDataCapabilities": {
+                                "@type": "src:DataCapabilities",
+                                "src:storageCapacity":{
+                                    "@type": "schema:QuantitativeValue",
+                                    "schema:value": 1024,
+                                    "schema:unitCode": "TB"
+                                },
+                                "src:accessTime": "",
+                                "src:DTN": ""
+                            },
+                            "src:hasStorageCost":{
+                                "@type": "src:StorageCost",
+                                "src:capacityCost": "",
+                                "src:dataTransferCost": "",
+                                "src:totalCostOfOwnership": "",
+                                "src:opportunityCosts": ""
+                            }
+                        },
+    
+                        
+                        "src:hasNetworkResource":{
+                            "@type": "src:NetworkResource",
+                            "src:hasBandwidth":{
+                                "@type": "src:Bandwidth",
+                                "src:internalBandwidth":{
+                                    "@type": "schema:QuantitativeValue",
+                                    "schema:value": 2,
+                                    "schema:unitCode": "Gbps"
+                                },
+                                "src:externalBandwidth":{
+                                    "@type": "schema:QuantitativeValue",
+                                    "schema:value": 8,
+                                    "schema:unitCode": "Gbps"
+                                },
+                                "src:throughput": "",
+                                "src:congestion": "",
+                                "src:symmetry": ""
+                            },
+                            "src:hasAreaCoverage":{
+                                "@type": "src:AreaCoverage",
+                                "schema:additionalType": "",
+                                "src:deploymentDensity": "",
+                                "src:coverageRadius": "",
+                                "src:signalStrength": "",
+                                "src:frequencyBand": "",
+                                "costOfExpansion": ""
+                            },
+                            
+                            "src:hasLatency":{
+                                "@type": "src:Latency",
+                                "schema:additionalType": "",
+                                "src:performance": "",
+                                "src:jitter": "",
+                                "src:distance": "",
+                                "src:environmentalFactors": ""
+                            },
+                            "src:hasNetworkCost":{
+                                "@type": "src:NetworkCost",
+                                "src:maintenance": "",
+                                "src:operational": "",
+                                "src:equipment": "",
+                                "src:licensingFees": "",
+                                "src:training": "",
+                                "src:costOfDowntime": ""
+                            }
+                        },
+                        
+                        "src:hasEnergyLabel":{
+                            "@type": "src:EnergyLabel",
+                            "src:hasEnergySource":{
+                                "@type": "src:EnergySource",
+                                "src:renewableEnergyFactor": "",
+                                "src:energyReuseFactor": ""
+                            },
+                            "src:hasEnergyEfficiency":{
+                                "@type": "src:EnergyEfficiency",
+                                "src:energyEfficiencyPUE": "",
+                                "src:waterEfficiencyWUE": ""
+                            }
+                        },
+                        
+                        "src:localServiceCatalog": {
+                            "@id":"https://w3id.org/srcnet/catalog/chinasrc-local",
+                            "@type":"dcat:Catalog",
+                            "dcat:service": [
+                             
+                            {
+                                "@id": "https://w3id.org/srcnet/service/chinasrc-notebook",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Notebook",
+                                "src:serviceId": "notebook-service-001",
+                                "src:serviceVersion": "1.0.1",
+                                "schema:description": "A service that allows users to create and share notebooks for data analysis and collaboration.",
+                                "src:hasJupyterNotebook":{
+                                    "@type":"src:JupyterNotebook",
+                                    "schema:name":"Jupyternotebook"
+                                },
+                                "src:resourceRequirements": {
+                                    "@type": "src:ResourceRequirements",
+                                    "src:hasProcessor": {
+                                        "@type": "src:Processor",
+                                        "src:coreCount": 4,
+                                        "src:clock": {
+                                            "@type": "schema:QuantitativeValue",
+                                            "schema:value": 2.5,
+                                            "schema:unitCode": "GHz"
+                                        }
+                                    },
+                                        "src:memoryCapacity": {
+                                            "@type": "schema:QuantitativeValue",
+                                            "schema:value": 16,
+                                            "schema:unitCode": "GB"
+                                        }
+                                    }
+                                },
+                            
+                            
+                            {
+                                "@id": "https://w3id.org/srcnet/service/chinasrc-scienceplatform",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Science Platform",
+                                "src:serviceId": "science-platform-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A platform for conducting scientific research, offering tools and resources for scientists.",
+                                "src:hasResearchTool": {
+                                    "@type": "src:ResearchTool",
+                                    "schema:name": "Research Assistant",
+                                    "src:toolVersion": "1.0"
+                                }
+                            },
+                            {
+                                "@id": "https://w3id.org/srcnet/service/chinasrc-soda",
+                                "@type":"dcat:DataService",
+                                "schema:name": "SODA",
+                                "src:serviceId": "soda-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service for providing access to streaming data and real-time analytics.",
+                                "dcat:endpointURL": "",
+                                "dcterms:conformsTo":""
+                            }
+                        ]
+                    },
+                    
+                    "src:globalServiceCatalog": {
+                        "@id":"https://w3id.org/srcnet/catalog/srcnet-global",
+                        "@type":"dcat:Catalog",
+                        "dcat:service": [
+                            {
+                                "@id": "https://w3id.org/srcnet/service/sciencegateway",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Science Gateway",
+                                "src:serviceId": "science-gateway-service-001",
+                                "src:serviceVersion":  "1.0.0",
+                                "schema:description": "A web-based platform for accessing scientific resources, tools, and applications.",
+                                "src:supportedDomains": ["astronomy", "biology", "physics"]
+                            },
+                            
+                            {
+                                "@id": "https://w3id.org/srcnet/service/authentication",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Authentication Service",
+                                "src:serviceId": "auth-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service that provides authentication and authorization for access to applications and data.",
+                                "src:authenticationMethod": [
+                                    {
+                                        "@type": "src:AuthenticationMethod",
+                                        "schema:name": ""
+                                    },
+                                    {
+                                        "@type": "src:AuthenticationMethod",
+                                        "schema:name": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "@id": "https://w3id.org/srcnet/service/datadistributionplatform",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Data Distribution Platform",
+                                "src:serviceId": "data-distribution-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A platform for distributing data across various services and applications.",
+                                "src:supportedFormats": ["CSV", "JSON", "XML"]
+                            },
+                            {
+                                "@id":"https://w3id.org/srcnet/service/registryservice",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Service Registry",
+                                "src:serviceId": "registry-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service for registering and discovering available services in the system.",
+                                "src:registryType": "Central",
+                                "dcat:endpointURL": "https://api.example.com/registry"
+                            }
+                        ]
+                    }
+                }
+            },
+            
+            
+
+
+
+            {
+                "@id": "https://w3id.org/srcnet/node/japansrc",
+                "@type": "src:SRC",
+                "schema:name": "japanSRC",
+                "src:operatedBy": {
+                    "@type": "schema:Organization",
+                    "schema:name": "University of Tokyo",
+                    "schema:location": {
+                        "@type": "schema:Place",
+                        "schema:address":{
+                            "@type": "schema:PostalAddress",
+                            "schema:streetAddress": "Shinjuku Street 45-7, Shinjuku-ku, Tokyo",
+                            "schema:addressLocality":  "Tokyo",
+                            "schema:addressRegion": "not defined",
+                            "schema:postalCode": "160-0022",
+                            "schema:addressCountry":{
+                                "@type": "schema:Country",
+                                "schema:name":"Japan",
+                                "schema:containedInPlace":{
+                                    "@type": "schema:AdministrativeArea",
+                                    "schema:name": "Asia"
+                                }
+                            }
+                        },
+                        
+                        "schema:geo": {
+                            "@type": "schema:GeoCoordinates",
+                            "schema:latitude": 36.66,
+                            "schema:longitude": 138.19
+                        }
+                    },
+                    
+                    "schema:contactPoint": {
+                        "@type": "schema:ContactPoint",
+                        "schema:name": "japanSRC Team",
+                        "schema:telephone": "+34 958121311",
+                        "schema:email": "info@jsrc.es",
+                        "schema:faxNumber": "+81 31-1234-5669",
+                        "schema:url": "not available"
+                    }
+                },
+                    
+                    "src:principalInvestigator": {
+                        "@type": "schema:Person",
+                        "schema:name":  "Yumi Sato",
+                        "schema:email": "ysato@example.ja",
+                        "schema:telephone": "+81 90-1234-5678",
+                        "schema:worksFor": {
+                            "@type": "schema:Organization",
+                            "schema:name": "University of Tokyo"
+                        }
+                    },
+                    
+                    "dcterms:hasPart": {
+                        "@id": "https://w3id.org/srcnet/node/japansrc-node",
+                        "@type": "src:Node",
+
+
+                    "src:hasComputeResource": {
+                        "@type": "src:ComputeResource",
+                        "src:powerConsumption":{
+                            "@type": "schema:QuantitativeValue",
+                            "schema:value": "",
+                            "schema:unitCode": ""
+                        },
+                        "src:hasProcessor": {
+                            "@type": "src:Processor",
+                            "src:numberOfProcessors": 2,
+                            "src:processorModel":"",
+                            "src:coreCount": 64,
+                            "src:hasArchitecture":{
+                                "@type": "src:Architecture",
+                                "src:dataPath": "",
+                                "src:controlUnit": "",
+                                "src:energyEfficiency": ""
+                            },
+                            "src:performance":{
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 0.014,
+                                "schema:unitCode": "PETAFLOPS"
+                            },
+                            "src:clock": {
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 3.5,
+                                "schema:unitCode": "GHz"
+                            }
+                        },
+                        
+                        "src:hasGPU":{
+                            "@type": "src:GPU",
+                            "src:numberOfGPUs": "",
+                            "src:computationalPerformance": "",
+                            "schema:additionalType": "",
+                            "src:memoryCapacity": {
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": "",
+                                "schema:unitCode": ""
+                            }
+                        },
+
+                        "src:hasRAM":{
+                            "@type":"src:RAM",
+                            "src:memoryCapacity": {
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 0,
+                                "schema:unitCode": "GB"
+                            },
+                            "src:voltage": "",
+                            "src:latency": "",
+                            "schema:additionalType": "",
+                            "src:speed": ""
+                        },
+
+                        "src:hasDisk":{
+                            "@type": "src:Disk",
+                            "schema:additionalType": "",
+                            "src:diskCapacity":{
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 0,
+                                "schema:unitCode": "TB"
+                            },
+                            "src:interface": "",
+                            "src:dataSecurity": "",
+                            "src:speed": ""
+                        }
+                    },
+                
+
+                        "src:hasStorageResource":{
+                            "@type": "src:StorageResource",
+                             "schema:additionalType": "",
+                             "src:hasPowerConsumption":{
+                                "@type": "src:PowerConsumption",
+                                "src:powerSupplyEfficiency": "",
+                                "src:averagePowerCosts": "",
+                                "src:idlePowerConsumption": "",
+                                "src:activePowerConsumption": "",
+                                "src:electricityCost": ""
+                            },
+                            "src:hasDataCapabilities": {
+                                "@type": "src:DataCapabilities",
+                                "src:storageCapacity":{
+                                    "@type": "schema:QuantitativeValue",
+                                    "schema:value": 600,
+                                    "schema:unitCode": "TB"
+                                },
+                                "src:accessTime": "",
+                                "src:DTN": ""
+                            },
+                            "src:hasStorageCost":{
+                                "@type": "src:StorageCost",
+                                "src:capacityCost": "",
+                                "src:dataTransferCost": "",
+                                "src:totalCostOfOwnership": "",
+                                "src:opportunityCosts": ""
+                            }
+                        },
+                    
+                            
+                        "src:hasNetworkResource":{
+                            "@type": "src:NetworkResource",
+                            "src:hasBandwidth":{
+                                "@type": "src:Bandwidth",
+                                "src:internalBandwidth":{
+                                    "@type": "schema:QuantitativeValue",
+                                    "schema:value": 10,
+                                    "schema:unitCode": "Gbps"
+                                },
+                                "src:externalBandwidth":{
+                                    "@type": "schema:QuantitativeValue",
+                                    "schema:value": 5,
+                                    "schema:unitCode": "Gbps"
+                                },
+                                "src:throughput": "",
+                                "src:congestion": "",
+                                "src:symmetry": "" 
+                            },
+
+                            "src:hasAreaCoverage":{
+                                "@type": "src:AreaCoverage",
+                                "schema:additionalType": "",
+                                "src:deploymentDensity": "",
+                                "src:coverageRadius": "",
+                                "src:signalStrength": "",
+                                "src:frequencyBand": "",
+                                "src:costOfExpansion": ""
+                            },
+                            
+                            "src:hasLatency":{
+                                "@type": "src:Latency",
+                                "schema:additionalType": "",
+                                "src:performance": "",
+                                "src:jitter": "",
+                                "src:distance": "",
+                                "src:environmentalFactors": ""
+                            },
+                            "src:hasNetworkCost":{
+                                "@type": "src:NetworkCost",
+                                "src:maintenance": "",
+                                "src:operational": "",
+                                "src:equipment": "",
+                                "src:licensingFees": "",
+                                "src:training": "",
+                                "src:costOfDowntime": ""
+                            }
+                        },
+                        
+                        "src:hasEnergyLabel":{
+                            "@type": "src:EnergyLabel",
+                            "src:hasEnergySource":{
+                                "@type": "src:EnergySource",
+                                "src:renewableEnergyFactor": "",
+                                "src:energyReuseFactor": ""
+                            },
+                            "src:hasEnergyEfficiency":{
+                                "@type": "src:EnergyEfficiency",
+                                "src:energyEfficiencyPUE": "",
+                                "src:waterEfficiencyWUE": ""
+                            }
+                        },
+                        
+                        "src:localServiceCatalog": {
+                            "@id":"https://w3id.org/srcnet/catalog/japansrc-local",
+                            "@type":"dcat:Catalog",
+                            "dcat:service": [
+                            
+                            
+                            {
+                                "@id": "https://w3id.org/srcnet/service/japansrc-visualization", 
+                                "@type": "dcat:DataService",
+                                "schema:name": "Visualization",
+                                "src:serviceId":  "visualization-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service that provides visualization tools for analyzing wallaby data.",
+                                "src:hasVisualizationTool": {
+                                    "@type":"src:VisualizationTool",
+                                    "schema:name": "Carta",
+                                    "src:visualizationToolVersion": "7.0",
+                                    "schema:description": "A tool for visualizing data in various formats."
+                                }
+                            },
+                            
+                            {
+                                "@id": "https://w3id.org/srcnet/service/japansrc-notebook",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Notebook",
+                                "src:serviceId": "notebook-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service that allows users to create and share notebooks for data analysis and collaboration.",
+                                "src:hasJupyterNotebook":{
+                                    "@type":"src:JupyterNotebook",
+                                    "schema:name": "Jupyter"
+                                },
+                                "src:resourceRequirements": {
+                                    "@type": "src:ResourceRequirements",
+                                    "src:hasProcessor": {
+                                        "@type": "src:Processor",
+                                        "src:coreCount": 4,
+                                        "src:clock": {
+                                            "@type": "schema:QuantitativeValue",
+                                            "schema:value": 2.5,
+                                            "schema:unitCode": "GHz"
+                                        }
+                                    },
+                                        "src:memoryCapacity": {
+                                            "@type": "schema:QuantitativeValue",
+                                            "schema:value": 16,
+                                            "schema:unitCode": "GB"
+                                        }
+                                    }
+                                },
+                        
+                            
+                            {
+                                "@id": "https://w3id.org/srcnet/service/japansrc-scienceplatform",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Science Platform",
+                                "src:serviceId": "science-platform-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A platform for conducting scientific research, offering tools and resources for scientists.",
+                                "src:hasResearchTool": {
+                                    "@type": "src:ResearchTool",
+                                    "schema:name": "Research Assistant",
+                                    "src:toolVersion": "1.0"
+                                }
+                            },
+                            {
+                                "@id": "https://w3id.org/srcnet/service/japansrc-soda",
+                                "@type":"dcat:DataService",
+                                "schema:name": "SODA",
+                                "src:serviceId": "soda-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service for providing access to streaming data and real-time analytics.",
+                                "dcat:endpointURL": "",
+                                "dcterms:conformsTo":""
+                            },
+                            {   
+                                "@id": "https://w3id.org/srcnet/service/japansrc-monitoring",
+                                 "@type": "dcat:DataService",
+                                 "schema:name":  "Monitoring Service",
+                                 "src:serviceId": "monitoring-service-001",
+                                 "src:serviceVersion":  "1.0.0",
+                                 "schema:description": "A service that provides monitoring and alerting capabilities for applications and systems.",
+                                 "src:hasAlert": {
+                                    "@type": "src:Alert",
+                                    "schema:name": "",
+                                    "src:frequency": "",
+                                    "src:threshold": ""
+                                }
+                            }
+                        ]
+                    },
+                    
+                    "src:globalServiceCatalog": {
+                        "@id":"https://w3id.org/srcnet/catalog/srcnet-global",
+                        "@type":"dcat:Catalog",
+                        "dcat:service": [
+                            {
+                                "@id": "https://w3id.org/srcnet/service/sciencegateway",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Science Gateway",
+                                "src:serviceId": "science-gateway-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A web-based platform for accessing scientific resources, tools, and applications.",
+                                "src:supportedDomains": ["astronomy", "biology", "physics"]
+                            },
+                            
+                            {
+                                "@id": "https://w3id.org/srcnet/service/authentication",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Authentication Service",
+                                "src:serviceId": "auth-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service that provides authentication and authorization for access to applications and data.",
+                                "src:authenticationMethod": [
+                                    {
+                                        "@type": "src:AuthenticationMethod",
+                                        "schema:name": ""
+                                    },
+                                    {
+                                        "@type": "src:AuthenticationMethod",
+                                        "schema:name": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "@id": "https://w3id.org/srcnet/service/datadistributionplatform",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Data Distribution Platform",
+                                "src:serviceId": "data-distribution-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A platform for distributing data across various services and applications.",
+                                "src:supportedFormats": ["CSV", "JSON", "XML"]
+                            },
+                            {
+                                "@id":"https://w3id.org/srcnet/service/registryservice",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Service Registry",
+                                "src:serviceId": "registry-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service for registering and discovering available services in the system.",
+                                "src:registryType": "Central",
+                                "dcat:endpointURL": ""
+                            }
+                        ]
+                    }
+                }
+            },
+            
+            
+
+
+
+            {
+                "@id": "https://w3id.org/srcnet/node/uksrc",
+                "@type": "src:SRC",
+                "schema:name": "ukSRC",
+                
+                
+                "dcterms:hasPart": [
+                    
+                {
+
+                "@id": "https://w3id.org/srcnet/node/uknode1",
+                "@type": "src:Node",
+                "schema:name": "uknode1",
+
+                "src:operatedBy": {
+                    "@type": "schema:Organization",
+                    "schema:name":"Jodrell Bank Observatory",
+                    "schema:location": {
+                        "@type": "schema:Place",
+                        "schema:address":{
+                            "@type": "schema:PostalAddress",
+                            "schema:streetAddress": "Observatory Lane 12, Jodrell Bank, Cheshire",
+                            "schema:addressLocality": "Jodrell Bank",
+                            "schema:addressRegion": "not defined",
+                            "schema:postalCode": "not available",
+                            "schema:addressCountry":{
+                                "@type": "schema:Country",
+                                "schema:name":"United Kingdom",
+                                "schema:containedInPlace":{
+                                    "@type": "schema:AdministrativeArea",
+                                    "schema:name": "Europe"
+                                }
+                            }
+                        },
+                        
+                        "schema:geo": {
+                            "@type": "schema:GeoCoordinates",
+                            "schema:latitude": 53.24,
+                            "schema:longitude": -2.30
+                        }
+                    },
+                    
+                    "schema:contactPoint": {
+                        "@type": "schema:ContactPoint",
+                        "schema:name": "ukSRC1 Team",
+                        "schema:telephone":"+44 10 7946 0970",
+                        "schema:email": "info@uksrc.uk",
+                        "schema:faxNumber": "+34 958814530",
+                        "schema:url": ""
+                    }
+                },
+                    "src:principalInvestigator": {
+                        "@type": "schema:Person",
+                        "schema:name": "Jasper Blakemore",
+                        "schema:email": "jblakemore@example.uk",
+                        "schema:telephone": "+44 20 7946 0958",
+                        "schema:worksFor": {
+                            "@type": "schema:Organization",
+                            "schema:name": "Jodrell Bank Observatory"
+                        }
+                    },
+                    
+                    "src:hasComputeResource": {
+                        "@type": "src:ComputeResource",
+                        "src:powerConsumption":{
+                            "@type": "schema:QuantitativeValue",
+                            "schema:value": "",
+                            "schema:unitCode": ""
+                        },
+                        "src:hasProcessor": {
+                            "@type": "src:Processor",
+                            "src:numberOfProcessors": 5,
+                            "src:processorModel": "",
+                            "src:coreCount": 120,
+                            "src:hasArchitecture":{
+                                "@type": "src:Architecture",
+                                "src:dataPath": "",
+                                "src:controlUnit": "",
+                                "src:energyEfficiency": ""
+                            },
+                            "src:performance":{
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 0,
+                                "schema:unitCode": "PETAFLOPS"
+                            },
+                            "src:clock": {
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 3.5,
+                                "schema:unitCode": "GHz"
+                            }
+                        },
+                        
+                        "src:hasGPU":{
+                            "@type": "src:GPU",
+                            "src:numberOfGPUs": "",
+                            "src:computationalPerformance": "",
+                            "schema:additionalType": "",
+                            "src:memoryCapacity": {
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": "",
+                                "schema:unitCode": ""
+                            }
+                        },
+
+                         "src:hasRAM":{
+                            "@type":"src:RAM",
+                            "src:memoryCapacity": {
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 0,
+                                "schema:unitCode": "GB"
+                            },
+                            "src:voltage": "",
+                            "src:latency": "",
+                            "schema:additionalType": "",
+                            "src:speed": ""
+                        },
+
+                        "src:hasDisk":{
+                            "@type": "src:Disk",
+                            "schema:additionalType": "not defined",
+                            "src:diskCapacity":{
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 0,
+                                "schema:unitCode": "TB"
+                            },
+                            "src:interface": "",
+                            "src:dataSecurity": "",
+                            "src:speed": ""
+                        }
+                    },
+                
+
+                        "src:hasStorageResource":{
+                            "@type": "src:StorageResource",
+                            "schema:additionalType": "",
+                            "src:hasPowerConsumption":{
+                                "@type": "src:PowerConsumption",
+                                "src:powerSupplyEfficiency": "",
+                                "src:averagePowerCosts": "",
+                                "src:idlePowerConsumption": "",
+                                "src:activePowerConsumption": "",
+                                "src:electricityCost": ""
+                            },
+                            "src:hasDataCapabilities": {
+                                "@type": "src:DataCapabilities",
+                                "src:storageCapacity":{
+                                    "@type": "schema:QuantitativeValue",
+                                    "schema:value": 0,
+                                    "schema:unitCode": "TB"
+                                },
+                                "src:accessTime": "",
+                                "src:DTN": ""
+                            },
+                            "src:hasStorageCost":{
+                                "@type": "src:StorageCost",
+                                "src:capacityCost": "",
+                                "src:dataTransferCost": "",
+                                "src:totalCostOfOwnership": "",
+                                "src:opportunityCosts": ""
+                            }
+                        },
+                    
+                        "src:hasNetworkResource":{
+                            "@type": "src:NetworkResource",
+                            "src:hasBandwidth":{
+                                "@type": "src:Bandwidth",
+                                "src:internalBandwidth":{
+                                    "@type": "schema:QuantitativeValue",
+                                    "schema:value": 10,
+                                    "schema:unitCode": "Gbps"
+                                },
+                                "src:externalBandwidth":{
+                                    "@type": "schema:QuantitativeValue",
+                                    "schema:value": 4,
+                                    "schema:unitCode": "Gbps"
+                               },
+                               "src:throughput": "",
+                               "src:congestion": "",
+                               "src:symmetry": "" 
+                            },
+
+                            "src:hasAreaCoverage":{
+                                "@type": "src:AreaCoverage",
+                                "schema:additionalType": "",
+                                "src:deploymentDensity": "",
+                                "src:coverageRadius": "",
+                                "src:signalStrength": "",
+                                "src:frequencyBand": "",
+                                "src:costOfExpansion": ""
+                            },
+                            
+                            "src:hasLatency":{
+                                "@type": "src:Latency",
+                                "schema:additionalType": "",
+                                "src:performance": "",
+                                "src:jitter": "",
+                                "src:distance": "",
+                                "src:environmentalFactors": ""
+                            },
+                            "src:hasNetworkCost":{
+                                "@type": "src:NetworkCost",
+                                "src:maintenance": "",
+                                "src:operational": "",
+                                "src:equipment": "",
+                                "src:licensingFees": "",
+                                "src:training": "",
+                                "src:costOfDowntime": ""
+                            }
+                        },
+                    
+                        "src:hasEnergyLabel":{
+                            "@type": "src:EnergyLabel",
+                            "src:hasEnergySource":{
+                                "@type": "src:EnergySource",
+                                "src:renewableEnergyFactor": "",
+                                "src:energyReuseFactor": ""
+                            },
+                            "src:hasEnergyEfficiency":{
+                                "@type": "src:EnergyEfficiency",
+                                "src:energyEfficiencyPUE": "",
+                                "src:waterEfficiencyWUE": ""
+                            }
+                        },
+                        
+                        "src:localServiceCatalog": {
+                            "@id":"https://w3id.org/srcnet/catalog/uksrc1-local",
+                            "@type":"dcat:Catalog",
+                            "dcat:service": [
+                            
+                            {
+                                "@id": "https://w3id.org/srcnet/service/uksrc1-visualization", 
+                                "@type": "dcat:DataService",
+                                "schema:name": "Visualization",
+                                "src:serviceId": "visualization-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service that provides visualization tools for analyzing wallaby data.",
+                                "src:hasVisualizationTool": {
+                                    "@type":"src:VisualizationTool",
+                                    "schema:name": "Carta",
+                                    "src:visualizationToolVersion": "7.0",
+                                    "schema:description": "A tool for visualizing data in various formats."
+                                }
+                            },
+                            {
+                                "@id": "https://w3id.org/srcnet/service/uksrc1-soda",
+                                "@type":"dcat:DataService",
+                                "schema:name": "SODA",
+                                "src:serviceId": "soda-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service for providing access to streaming data and real-time analytics.",
+                                "dcat:endpointURL": "",
+                                "dcterms:conformsTo":""
+                            }
+                        ]
+                    },
+                    
+                    "src:globalServiceCatalog": {
+                        "@id":"https://w3id.org/srcnet/catalog/srcnet-global",
+                        "@type":"dcat:Catalog",
+                        "dcat:service": [
+                            {
+                                "@id": "https://w3id.org/srcnet/service/sciencegateway",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Science Gateway",
+                                "src:serviceId": "science-gateway-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A web-based platform for accessing scientific resources, tools, and applications.",
+                                "src:supportedDomains": ["astronomy", "biology", "physics"]
+                            },
+                            
+                            {
+                                "@id": "https://w3id.org/srcnet/service/authentication",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Authentication Service",
+                                "src:serviceId": "auth-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service that provides authentication and authorization for access to applications and data.",
+                                "src:authenticationMethod": [
+                                    {
+                                        "@type": "src:AuthenticationMethod",
+                                        "schema:name": ""
+                                    },
+                                    {
+                                        "@type": "src:AuthenticationMethod",
+                                        "schema:name": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "@id": "https://w3id.org/srcnet/service/datadistributionplatform",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Data Distribution Platform",
+                                "src:serviceId": "data-distribution-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A platform for distributing data across various services and applications.",
+                                "src:supportedFormats": ["CSV", "JSON", "XML"]
+                            },
+                            {
+                                "@id":"https://w3id.org/srcnet/service/registryservice",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Service Registry",
+                                "src:serviceId": "registry-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service for registering and discovering available services in the system.",
+                                "src:registryType": "Central",
+                                "dcat:endpointURL": ""
+                            }
+                        ]
+                    }
+                },
+            
+            
+            {
+                "@id": "https://w3id.org/srcnet/node/uknode2",
+                "@type": "src:Node",
+                "schema:name": "uknode2",
+                "src:operatedBy": {
+                    "@type": "schema:Organization",
+                    "schema:name":"University of Cambridge",
+                    "schema:location": {
+                        "@type": "schema:Place",
+                        "schema:address":{
+                            "@type": "schema:PostalAddress",
+                            "schema:streetAddress": "The Old School, Trinity, Cambridge, CB2 1TN",
+                            "schema:addressLocality": "Cambridge",
+                            "schema:addressRegion": "not defined",
+                            "schema:postalCode": "not available",
+                            "schema:addressCountry":{
+                                "@type": "schema:Country",
+                                "schema:name":"United Kingdom",
+                                "schema:containedInPlace":{
+                                    "@type": "schema:AdministrativeArea",
+                                    "schema:name": "Europe"
+                                }
+                            }
+                        },
+                        
+                        "schema:geo": {
+                            "@type": "schema:GeoCoordinates",
+                            "schema:latitude": 52.20,
+                            "schema:longitude": 0.113
+                        }
+                    },
+                    
+                    "schema:contactPoint": {
+                        "@type": "schema:ContactPoint",
+                        "schema:name": "uksrc2 Team",
+                        "schema:telephone": "+44 20 7946 0958",
+                        "schema:email": "info@uksrc2.uk",
+                        "schema:faxNumber": "958814530",
+                        "schema:url": "not available"
+                    }
+
+                },
+            
+                    
+                    "src:principalInvestigator": {
+                        "@type": "schema:Person",
+                        "schema:name": "Charlotte Smith",
+                        "schema:email": "jblakemore@example.uk",
+                        "schema:telephone": "+44 10 7946 0951",
+                        "schema:worksFor": {
+                            "@type": "schema:Organization",
+                            "schema:name": "University of Cambridge"
+                        }
+                    },
+                    
+                    "src:hasComputeResource": {
+                        "@type": "src:ComputeResource",
+                        "src:powerConsumption":{
+                            "@type": "schema:QuantitativeValue",
+                            "schema:value": "",
+                            "schema:unitCode": ""
+                        },
+                        "src:hasProcessor": {
+                            "@type": "src:Processor",
+                            "src:numberOfProcessors": 4,
+                            "src:processorModel":"",
+                            "src:coreCount": 100,
+                            "src:hasArchitecture":{
+                                "@type": "src:Architecture",
+                                "src:dataPath": "",
+                                "src:controlUnit": "",
+                                "src:energyEfficiency": ""
+                            },
+                            "src:performance":{
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 0,
+                                "schema:unitCode": "PETAFLOPS"
+                            },
+                            "src:clock": {
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 5.2,
+                                "schema:unitCode": "GHz"
+                            }
+                        },
+                        
+                        "src:hasGPU":{
+                            "@type": "src:GPU",
+                            "src:numberOfGPUs": "",
+                            "src:computationalPerformance": "",
+                            "schema:additionalType": "",
+                            "src:memoryCapacity": {
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": "",
+                                "schema:unitCode": ""
+                            }
+                        },
+                        "src:hasRAM":{
+                            "@type":"src:RAM",
+                            "src:memoryCapacity": {
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 20,
+                                "schema:unitCode": "GB"
+                            },
+                            "src:voltage": "",
+                            "src:latency": "",
+                            "schema:additionalType": "",
+                            "src:speed": ""
+                        },
+                            
+                        "src:hasDisk":{
+                            "@type": "src:Disk",
+                            "schema:additionalType": "SSD",
+                            "src:diskCapacity":{
+                                "@type": "schema:QuantitativeValue",
+                                "schema:value": 0,
+                                "schema:unitCode": "TB"
+                            },
+                            "src:interface": "",
+                            "src:dataSecurity": "",
+                            "src:speed": ""
+                        }
+                    },
+
+
+                        "src:hasStorageResource":{
+                            "@type": "src:StorageResource",
+                            "schema:additionalType": "",
+                            "src:hasPowerConsumption":{
+                                "@type": "src:PowerConsumption",
+                                "src:powerSupplyEfficiency": "",
+                                "src:averagePowerCosts": "",
+                                "src:idlePowerConsumption": "",
+                                "src:activePowerConsumption": "",
+                                "src:electricityCost": ""
+                            },
+                            "src:hasDataCapabilities": {
+                                "@type": "src:DataCapabilities",
+                                "src:storageCapacity":{
+                                    "@type": "schema:QuantitativeValue",
+                                    "schema:value": 30,
+                                    "schema:unitCode": "TB"
+                                },
+                                "src:accessTime": "",
+                                "src:DTN": ""
+                            },
+                            "src:hasStorageCost":{
+                                "@type": "src:StorageCost",
+                                "src:capacityCost": "",
+                                "src:dataTransferCost": "",
+                                "src:totalCostOfOwnership": "",
+                                "src:opportunityCosts": ""
+                            }
+                        },
+                    
+                        
+                        "src:hasNetworkResource":{
+                            "@type": "src:NetworkResource",
+                            "src:hasBandwidth":{
+                                "@type": "src:Bandwidth",
+                                "src:internalBandwidth":{
+                                    "@type": "schema:QuantitativeValue",
+                                    "schema:value": 20,
+                                    "schema:unitCode": "Gbps"
+                                },
+                                "src:externalBandwidth":{
+                                    "@type": "schema:QuantitativeValue",
+                                    "schema:value": 10,
+                                    "schema:unitCode": "Gbps"
+                                },
+                                "src:throughput": "",
+                                "src:congestion": "",
+                                "src:symmetry": "" 
+                            },
+
+                            "src:hasAreaCoverage":{
+                                "@type": "src:AreaCoverage",
+                                "schema:additionalType": "",
+                                "src:deploymentDensity": "",
+                                "src:coverageRadius": "",
+                                "src:signalStrength": "",
+                                "src:frequencyBand": "",
+                                "src:costOfExpansion": ""
+                            },
+                            
+                            "src:hasLatency":{
+                                "@type": "src:Latency",
+                                "schema:additionalType": "",
+                                "src:performance": "",
+                                "src:jitter": "",
+                                "src:distance": "",
+                                "src:environmentalFactors": ""
+                            },
+                            "src:hasNetworkCost":{
+                                "@type": "src:NetworkCost",
+                                "src:maintenance": "",
+                                "src:operational": "",
+                                "src:equipment": "",
+                                "src:licensingFees": "",
+                                "src:training": "",
+                                "src:costOfDowntime": ""
+                            }
+                        },
+                        
+                        "src:hasEnergyLabel":{
+                            "@type": "src:EnergyLabel",
+                            "src:hasEnergySource":{
+                                "@type": "src:EnergySource",
+                                "src:renewableEnergyFactor": "",
+                                "src:energyReuseFactor": ""
+                            },
+                            "src:hasEnergyEfficiency":{
+                                "@type": "src:EnergyEfficiency",
+                                "src:energyEfficiencyPUE": "",
+                                "src:waterEfficiencyWUE": ""
+                            }
+                        },
+                        
+                        "src:localServiceCatalog": {
+                            "@id":"https://w3id.org/srcnet/catalog/uksrc2-local",
+                            "@type":"dcat:Catalog",
+                            "dcat:service": [
+                            
+                            {
+                                "@id": "https://w3id.org/srcnet/service/uksrc2-notebook",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Notebook",
+                                "src:serviceId": "notebook-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service that allows users to create and share notebooks for data analysis and collaboration.",
+                                "src:hasJupyterNotebook":{
+                                    "@type":"src:JupyterNotebook",
+                                    "schema:name": "Jupyter"
+                                },
+                                "src:resourceRequirements": {
+                                    "@type": "src:ResourceRequirements",
+                                    "src:hasProcessor": {
+                                        "@type": "src:Processor",
+                                        "src:coreCount": 4,
+                                        "src:clock": {
+                                            "@type": "schema:QuantitativeValue",
+                                            "schema:value": 2.5,
+                                            "schema:unitCode": "GHz"
+                                        },
+                                        "src:memoryCapacity": {
+                                            "@type": "schema:QuantitativeValue",
+                                            "schema:value": 16,
+                                            "schema:unitCode": "GB"
+                                        }
+                                    }
+                                }
+                            },
+                            
+                            {
+                                "@id": "https://w3id.org/srcnet/service/uksrc2-scienceplatform",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Science Platform",
+                                "src:serviceId": "science-platform-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A platform for conducting scientific research, offering tools and resources for scientists.",
+                                "src:hasResearchTool": {
+                                    "@type": "src:ResearchTool",
+                                    "schema:name": "Research Assistant",
+                                    "src:toolVersion": "1.0"
+                                }
+                            },
+                            {   
+                                "@id": "https://w3id.org/srcnet/service/uksrc2-monitoring",
+                                 "@type": "dcat:DataService",
+                                 "schema:name":  "Monitoring Service",
+                                 "src:serviceId": "monitoring-service-001",
+                                 "src:serviceVersion":  "1.0.0",
+                                 "schema:description": "A service that provides monitoring and alerting capabilities for applications and systems.",
+                                 "src:hasAlert": {
+                                    "@type": "src:Alert",
+                                    "schema:name": "",
+                                    "src:frequency": "",
+                                    "src:threshold": ""
+                                }
+                            }
+                        ]
+                    },
+                    
+                    "src:globalServiceCatalog": {
+                        "@id":"https://w3id.org/srcnet/catalog/srcnet-global",
+                        "@type":"dcat:Catalog",
+                        "dcat:service": [
+                            {
+                                "@id": "https://w3id.org/srcnet/service/sciencegateway",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Science Gateway",
+                                "src:serviceId": "science-gateway-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A web-based platform for accessing scientific resources, tools, and applications.",
+                                "src:supportedDomains": ["astronomy", "biology", "physics"]
+                            },
+                            
+                            {
+                                "@id": "https://w3id.org/srcnet/service/authentication",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Authentication Service",
+                                "src:serviceId": "auth-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service that provides authentication and authorization for access to applications and data.",
+                                "src:authenticationMethod": [
+                                    {
+                                        "@type": "src:AuthenticationMethod",
+                                        "schema:name": ""
+                                    },
+                                    {
+                                        "@type": "src:AuthenticationMethod",
+                                        "schema:name": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "@id": "https://w3id.org/srcnet/service/datadistributionplatform",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Data Distribution Platform",
+                                "src:serviceId": "data-distribution-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A platform for distributing data across various services and applications.",
+                                "src:supportedFormats": ["CSV", "JSON", "XML"]
+                            },
+                            {
+                                "@id":"https://w3id.org/srcnet/service/registryservice",
+                                "@type": "dcat:DataService",
+                                "schema:name": "Service Registry",
+                                "src:serviceId": "registry-service-001",
+                                "src:serviceVersion": "1.0.0",
+                                "schema:description": "A service for registering and discovering available services in the system.",
+                                "src:registryType": "Central",
+                                "dcat:endpointURL": ""
+                            }
+                        ]
+                    }
+                }
+        ]
+    }
+
+
+
+]
+        }
+
+
+
+
+
+
+  ]
+}
+
+            
+
