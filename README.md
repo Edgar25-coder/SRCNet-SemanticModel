@@ -7,13 +7,13 @@ This repository contains an early but functional semantic prototype of the SKA R
 
 The following files are provided to support the execution and validation of the semantic model:
 
-* Full_context.json
-* SRCNet_model_TestData.json
-* SRCNet_model_TestData.ttl
-* SRCnode_model.json
-* SRCnode_model.ttl
-* conversor_json_rdf.py
-* src_ontology.owl
++ Full_context.json
++ SRCNet_model_TestData.json
++ SRCNet_model_TestData.ttl
++ SRCnode_model.json
++ SRCnode_model.ttl
++ conversor_json_rdf.py
++ src_ontology.owl
 
 - **Competency_Questions/**
 
@@ -29,13 +29,13 @@ This structure helps demonstrate the consistency and robustness of the proposed 
 
 The following activities are required to consolidate the model into a fully operational SRCNet knowledge representation framework:
   
-  * Validation with the wider SRCNet community and domain experts.
-  * Definition of competency questions and systematic evaluation against user requirements.
-  * Ontology quality assessment and consistency checking.
-  * Extension of the model to cover additional SRCNet operational scenarios and services.
-  * Development of SHACL validation rules and formal data quality constraints.
-  * Testing with real SRCNet deployments and production metadata.
-  * Alignment with additional FAIR and astronomy community standards where appropriate.
++ Validation with the wider SRCNet community and domain experts.
++ Definition of competency questions and systematic evaluation against user requirements.
++ Ontology quality assessment and consistency checking.
++ Extension of the model to cover additional SRCNet operational scenarios and services.
++ Development of SHACL validation rules and formal data quality constraints.
++ Testing with real SRCNet deployments and production metadata.
++ Alignment with additional FAIR and astronomy community standards where appropriate.
 
 
 
