@@ -1,14 +1,17 @@
 PREFIX src: <https://w3id.org/srcnet#>
 PREFIX schema: <https://schema.org/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
 
-SELECT ?SRCname ?diskType
+SELECT ?srcName ?diskType
 WHERE {
-  ?node a src:RegionalNode ;
-          schema:name ?SRCname ;
-          src:operatedBy ?org .
-  ?org src:hasComputeResource ?compute .
+
+  ?src a src:SRC ;
+       schema:name ?srcName ;
+       dcterms:hasPart ?node .
+
+  ?node src:hasComputeResource ?compute .
   ?compute src:hasDisk ?disk .
   ?disk schema:additionalType ?diskType .
 
-FILTER(?SRCname = "espSRC")
+  FILTER(?srcName = "espSRC")
 }

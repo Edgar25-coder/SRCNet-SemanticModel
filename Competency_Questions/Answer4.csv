@@ -1,2 +1,2 @@
-"SRCname","datasetIdentifier","localPath","toolName"
-"espSRC","ivo://espsrc.../test/wallaby-center-fits","/test/af/07/wallaby-center-fits","Carta"
+"srcName","toolName","datasetTitle"
+"espSRC","Carta","wallaby-center.fits"

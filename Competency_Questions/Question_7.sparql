@@ -1,26 +1,24 @@
 PREFIX src: <https://w3id.org/srcnet#>
-PREFIX schema: <https://schema.org/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX schema: <https://schema.org/>
 
-SELECT ?SRCname ?notebookName ?memoryCapacity ?unit
+SELECT ?srcName ?serviceName ?memorySize ?unit
 WHERE {
-  ?node a src:RegionalNode ;
-          schema:name ?SRCname ;
-          src:operatedBy ?org .
-  
-  ?org src:localServiceCatalog ?catalog .
+  ?src a src:SRC ;
+       schema:name ?srcName ;
+       dcterms:hasPart ?node .
+  ?node src:localServiceCatalog ?catalog .
   ?catalog dcat:service ?service .
   
-  ?service src:hasJupyterNotebook ?notebook ;
-           src:resourceRequirements ?requirements .
+  ?service schema:name ?serviceName ;
+           src:hasJupyterNotebook ?notebook ;
+           src:resourceRequirements ?req .
 
-  ?notebook schema:name ?notebookName .
-  ?requirements src:hasProcessor ?processor .
-
-  ?processor src:memoryCapacity ?memory .
-  ?memory schema:value ?memoryCapacity ;
+  ?req src:memoryCapacity ?memory .
+  ?memory schema:value ?memorySize ;
           schema:unitCode ?unit .
-  
-  FILTER(?memoryCapacity > 32)
+
+  FILTER(?memorySize > 32)
 }
-ORDER BY DESC(?memoryCapacity)
+ORDER BY DESC(?memorySize)

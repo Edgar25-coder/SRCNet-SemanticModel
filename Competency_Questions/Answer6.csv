@@ -1,3 +1,2 @@
-"countryName","SRCname","locality"
-"United Kingdom","uksrc1","Jodrell Bank"
-"United Kingdom","uksrc2","Cambridge"
+"srcName","numberOfNodes"
+"ukSRC","2"

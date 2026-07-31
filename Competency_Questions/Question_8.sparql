@@ -1,15 +1,18 @@
 PREFIX src: <https://w3id.org/srcnet#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX schema: <https://schema.org/>
 
-SELECT ?SRCname ?coreCount
+SELECT ?srcName (SUM(?cores) AS ?totalCores)
 WHERE {
-  ?node a src:RegionalNode ;
-        schema:name ?SRCname ;
-        src:operatedBy ?org .
   
-  ?org src:hasComputeResource ?compute .
+  ?src a src:SRC ;
+       schema:name ?srcName ;
+       dcterms:hasPart ?node .
+
+  ?node src:hasComputeResource ?compute .
   ?compute src:hasProcessor ?processor .
-  ?processor src:coreCount ?coreCount .
+  ?processor src:coreCount ?cores .
 }
-ORDER BY DESC(?coreCount)
+GROUP BY ?srcName
+ORDER BY DESC(?totalCores)
 LIMIT 1

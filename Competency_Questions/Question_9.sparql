@@ -1,27 +1,37 @@
 PREFIX src: <https://w3id.org/srcnet#>
 PREFIX schema: <https://schema.org/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
 
-SELECT ?SRCname ?countryName ?regionName ?bandwidth ?unit
+SELECT ?srcName ?nodeName ?countryName ?regionName ?externalBandwidth ?unit
 WHERE {
-  
-  ?node a src:RegionalNode ;
-          schema:name ?SRCname ;
-          src:operatedBy ?org .
-  
+
+  ?src a src:SRC ;
+       schema:name ?srcName ;
+       dcterms:hasPart ?node .
+
+  OPTIONAL { ?node schema:name ?nodeName }
+
+  ?node src:hasNetworkResource ?network .
+  ?network src:hasBandwidth ?bandwidth .
+  ?bandwidth src:externalBandwidth ?external .
+
+  ?external schema:value ?externalBandwidth ;
+            schema:unitCode ?unit .
+  {
+      ?src src:operatedBy ?org .
+  }
+  UNION
+  {
+      ?node src:operatedBy ?org .
+  }
+
   ?org schema:location ?place .
   ?place schema:address ?address .
   ?address schema:addressCountry ?country .
-  
   ?country schema:name ?countryName ;
            schema:containedInPlace ?region .
-  
-  ?region schema:name ?regionName .
-  ?org src:hasNetworkResource ?network .
-  ?network src:externalBandwidth ?bw .
-  
-  ?bw schema:value ?bandwidth ;
-      schema:unitCode ?unit .
 
-FILTER(?regionName = "European Union")
+  ?region schema:name ?regionName .
+
+  FILTER(?regionName = "European Union" || ?regionName = "Europe")
 }
-ORDER BY ?countryName ?SRCname
