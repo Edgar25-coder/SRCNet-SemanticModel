@@ -1,22 +1,31 @@
 # SRCNet-SemanticModel
 
 ## Description
-This repository contains the semantic model of the SKA Regional Centre Network (SRCNet). It is organized into three main folders:
+This repository contains an early but functional semantic prototype of the SKA Regional Centre Network (SRCNet), including an OWL ontology, JSON-LD representations, example instances and SPARQL queries intended to support ongoing development and evaluation of a common semantic model for SRCNet resources and services. The repository is structured around three main directories, each serving a distinct purpose within the semantic framework:
 
 - **Model/**
-  Hosts JSON files (SRCNet_model and SRCNet_model_TestData)
+
+The following files are provided to support the execution and validation of the semantic model:
+Full_context.json
+SRCNet_model_TestData.json
+SRCNet_model_TestData.ttl
+SRCnode_model.json
+SRCnode_model.ttl
+conversor_json_rdf.py
+src_ontology.owl
+
 
 - **Competency_Questions/**
-  Includes SPARQL queries and their respective outputs
+Contains SPARQL queries and the corresponding outputs generated from the example SRCNet knowledge graph.
 
 - **Diagrams/**
-  Visual representations of the model and its components.
+  Provides graphical representations of the semantic model and its constituent components.
 
-This structure enables to demonstrate the consistency and robustness of the semantic model for the SRCNet, providing more clarity and a better understanding of the model.
+This structure helps demonstrate the consistency and robustness of the proposed SRCNet semantic model, while improving transparency, facilitating reproducibility, and providing a clearer understanding of its architecture and underlying components.
 
 ## Usage
 
-Replicate the SRCNet_model json file, load it with your data, convert it into RDF, use the RDF file to create your dataset in Apache Jena Fuseki and make your SPARQL queries.
+Users can replicate the model template and populate it with their own SRC-related information. The resulting JSON-LD document can then be transformed into RDF, imported into an Apache Jena Fuseki dataset, and queried using SPARQL to support data retrieval, validation, and semantic analysis.
 
 
 ## Contributions
