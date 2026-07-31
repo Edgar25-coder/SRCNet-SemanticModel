@@ -27,7 +27,7 @@ This structure helps demonstrate the consistency and robustness of the proposed 
 
 - **Future Work/**
 
-  The following activities are required to consolidate the model into a fully operational SRCNet knowledge representation framework:
+The following activities are required to consolidate the model into a fully operational SRCNet knowledge representation framework:
   
   * Validation with the wider SRCNet community and domain experts.
   * Definition of competency questions and systematic evaluation against user requirements.
