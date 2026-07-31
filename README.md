@@ -14,14 +14,29 @@ SRCnode_model.ttl
 conversor_json_rdf.py
 src_ontology.owl
 
-
 - **Competency_Questions/**
+
 Contains SPARQL queries and the corresponding outputs generated from the example SRCNet knowledge graph.
 
 - **Diagrams/**
+
   Provides graphical representations of the semantic model and its constituent components.
 
 This structure helps demonstrate the consistency and robustness of the proposed SRCNet semantic model, while improving transparency, facilitating reproducibility, and providing a clearer understanding of its architecture and underlying components.
+
+- **Future Work/**
+
+  The following activities are required to consolidate the model into a fully operational SRCNet knowledge representation framework:
+  
+  * Validation with the wider SRCNet community and domain experts.
+  * Definition of competency questions and systematic evaluation against user requirements.
+  * Ontology quality assessment and consistency checking.
+  * Extension of the model to cover additional SRCNet operational scenarios and services.
+  * Development of SHACL validation rules and formal data quality constraints.
+  * Testing with real SRCNet deployments and production metadata.
+  * Alignment with additional FAIR and astronomy community standards where appropriate.
+
+
 
 ## Usage
 
