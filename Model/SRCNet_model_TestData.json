@@ -417,7 +417,7 @@
                 "schema:name": "swedishSRC",
                 "src:operatedBy": {
                     "@type": "schema:Organization",
-                    "schema:name":"University of Sweden",
+                    "schema:name":"University of Gothenburg",
                     "schema:location": {
                         "@type": "schema:Place",
                         "schema:address":{
@@ -460,7 +460,7 @@
                         "schema:telephone": "+46 701234567",
                         "schema:worksFor": {
                             "@type": "schema:Organization",
-                            "schema:name": "University of Sweden"                        
+                            "schema:name": "University of Gothenburg"                        
                         }
                     },
 
@@ -1532,13 +1532,13 @@
                 "schema:name": "swisSRC",
                 "src:operatedBy": {
                     "@type": "schema:Organization",
-                    "schema:name":"University of Zurich",
+                    "schema:name":"ETH Zurich",
                     "schema:location": {
                         "@type": "schema:Place",
                         "schema:address":{
                             "@type": "schema:PostalAddress",
                             "schema:streetAddress": "Via delle Tristezze 15, Lugano",
-                            "schema:addressLocality": "Lungano",
+                            "schema:addressLocality": "Lugano",
                             "schema:addressRegion": "not defined",
                             "schema:postalCode": "6900",
                             "schema:addressCountry":{
@@ -1575,7 +1575,7 @@
                         "schema:telephone": "+41 728823799",
                         "schema:worksFor": {
                             "@type": "schema:Organization",
-                            "schema:name": "University of Zurich"
+                            "schema:name": "ETH Zurich"
                         }
                     },
 
@@ -1892,13 +1892,13 @@
                 "schema:name": "chinaSRC",
                 "src:operatedBy": {
                     "@type": "schema:Organization",
-                    "schema:name": "University of Shangai",
+                    "schema:name": "University of Shanghai",
                     "schema:location": {
                         "@type": "schema:Place",
                         "schema:address":{
                             "@type": "schema:PostalAddress",
                             "schema:streetAddress": "Nanjing Road East 88, Huangpu District",
-                            "schema:addressLocality": "Shangai",
+                            "schema:addressLocality": "Shanghai",
                             "schema:addressRegion": "not defined",
                             "schema:postalCode": "200001",
                             "schema:addressCountry":{
@@ -1935,7 +1935,7 @@
                         "schema:telephone": "+86 13812345678",
                         "schema:worksFor": {
                             "@type": "schema:Organization",
-                            "schema:name": "University of Shangai"
+                            "schema:name": "University of Shanghai"
                         }
                     },
 

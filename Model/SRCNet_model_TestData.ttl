@@ -234,20 +234,20 @@
                                     schema:containedInPlace [ a schema:AdministrativeArea ;
                                             schema:name "Asia" ] ;
                                     schema:name "China" ] ;
-                            schema:addressLocality "Shangai" ;
+                            schema:addressLocality "Shanghai" ;
                             schema:addressRegion "not defined" ;
                             schema:postalCode "200001" ;
                             schema:streetAddress "Nanjing Road East 88, Huangpu District" ] ;
                     schema:geo [ a schema:GeoCoordinates ;
                             schema:latitude 3.124e+01 ;
                             schema:longitude 1.2147e+02 ] ] ;
-            schema:name "University of Shangai" ] ;
+            schema:name "University of Shanghai" ] ;
     src:principalInvestigator [ a schema:Person ;
             schema:email "yzhao@example.ch" ;
             schema:name "Ying Zhao" ;
             schema:telephone "+86 13812345678" ;
             schema:worksFor [ a schema:Organization ;
-                    schema:name "University of Shangai" ] ] .
+                    schema:name "University of Shanghai" ] ] .
 
 <https://w3id.org/srcnet/node/chinasrc-node> a src:Node ;
     src:globalServiceCatalog <https://w3id.org/srcnet/catalog/srcnet-global> ;
@@ -772,13 +772,13 @@
                     schema:geo [ a schema:GeoCoordinates ;
                             schema:latitude 5.771e+01 ;
                             schema:longitude 1.197e+01 ] ] ;
-            schema:name "University of Sweden" ] ;
+            schema:name "University of Gothenburg" ] ;
     src:principalInvestigator [ a schema:Person ;
             schema:email "kforsberg@example.sw" ;
             schema:name "Kalle Forsberg" ;
             schema:telephone "+46 701234567" ;
             schema:worksFor [ a schema:Organization ;
-                    schema:name "University of Sweden" ] ] .
+                    schema:name "University of Gothenburg" ] ] .
 
 <https://w3id.org/srcnet/node/swedsrc-node> a src:Node ;
     src:globalServiceCatalog <https://w3id.org/srcnet/catalog/srcnet-global> ;
@@ -898,20 +898,20 @@
                                     schema:containedInPlace [ a schema:AdministrativeArea ;
                                             schema:name "European Union" ] ;
                                     schema:name "Switzerland" ] ;
-                            schema:addressLocality "Lungano" ;
+                            schema:addressLocality "Lugano" ;
                             schema:addressRegion "not defined" ;
                             schema:postalCode "6900" ;
                             schema:streetAddress "Via delle Tristezze 15, Lugano" ] ;
                     schema:geo [ a schema:GeoCoordinates ;
                             schema:latitude 4.601e+01 ;
                             schema:longitude 9.06e+00 ] ] ;
-            schema:name "University of Zurich" ] ;
+            schema:name "ETH Zurich" ] ;
     src:principalInvestigator [ a schema:Person ;
             schema:email "lmeier@example.swi" ;
             schema:name "Lucia Meier" ;
             schema:telephone "+41 728823799" ;
             schema:worksFor [ a schema:Organization ;
-                    schema:name "University of Zurich" ] ] .
+                    schema:name "ETH Zurich" ] ] .
 
 <https://w3id.org/srcnet/node/swisrc-node> a src:Node ;
     src:globalServiceCatalog <https://w3id.org/srcnet/catalog/srcnet-global> ;
