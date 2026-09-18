@@ -51,19 +51,19 @@ Users can replicate the model template and populate it with their own SRC-relate
 
 ## Citation
 
-  Edgar João, Manuel Parra, Julián Garrido. (2025). SRCNet-SemanticModel: Second release (v1.1.0). Zenodo. https://doi.org/10.5281/zenodo.17608321
+  Edgar Ribeiro João, Julián Garrido, & Manuel Parra-Royón. (2026). Edgar25-coder/SRCNet-SemanticModel: Semantic Model for the SRCNet-Code (Version v1.2.2) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.22831620
   
   Bibtex entry:
   
 ```bibtex
-@software{edgar_2025_17608322,
-  author      = {João, Edgar Ribeiro and Parra-Royón, Manuel and Garrido, Julián},
-  title       = {SRCNet semantic model: Third release},
-  month       = nov,
-  year        = 2025,
-  publisher   = {Zenodo},
-  doi         = {10.5281/zenodo.17608321},
-  url         = {https://doi.org/10.5281/zenodo.17608321},
+@misc{edgar202517608322,
+  author       = {Edgar Ribeiro João and Julián Garrido and Manuel Parra-Royón},
+  title        = {Edgar25-coder/SRCNet-SemanticModel: Semantic Model for the SRCNet-Code},
+  month        = {sep},
+  year         = {2026},
+  publisher    = {Zenodo},
+  version      = {v1.2.2},
+  doi          = {10.5281/zenodo.22831620},
 }
 ```
 
