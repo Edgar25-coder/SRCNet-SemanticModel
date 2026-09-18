@@ -57,7 +57,7 @@ Users can replicate the model template and populate it with their own SRC-relate
   
 ```bibtex
 @software{edgar_2025_17608322,
-  author      = {João, Edgar Ribeiro and Parra-Rayón, Manuel and Garrido, Julián},
+  author      = {João, Edgar Ribeiro and Parra-Royón, Manuel and Garrido, Julián},
   title       = {SRCNet semantic model: Third release},
   month       = nov,
   year        = 2025,
